@@ -1,96 +1,96 @@
 /* =========================================================
-   SOBRE.CSS — PÁGINA SOBRE
-   CSS EXCLUSIVO DO CONTEÚDO CENTRAL.
-   NÃO ALTERA CABEÇALHO NEM RODAPÉ.
+   SOBRE.CSS — IDENTIDADE AZUL / PRATA
+   SOMENTE O CONTEÚDO DA PÁGINA SOBRE
+   NÃO ESTILIZA HEADER NEM FOOTER
 ========================================================= */
 
-main.pagina-sobre {
-    --azul: #063f70;
-    --azul-escuro: #022d55;
-    --azul-vivo: #078fd0;
-    --azul-claro: #55c6f2;
-    --texto: #55778c;
-
-    display: block !important;
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden;
-    background: #ffffff;
-    color: var(--azul);
+.pagina-sobre{
+  --navy:#033a68;
+  --navy2:#062b50;
+  --blue:#087fbd;
+  --cyan:#39b6eb;
+  --silver:#d9e4eb;
+  --ice:#f5f9fb;
+  --text:#42677e;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:#fff;
+  color:var(--navy);
+}
+.pagina-sobre *{box-sizing:border-box}
+.pagina-sobre a{text-decoration:none}
+.sobre-wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.sobre-kicker{
+  margin:0 0 18px;
+  font:700 11px/1.2 "Montserrat",Arial,sans-serif;
+  letter-spacing:4px;text-transform:uppercase;color:#0786c4;
+}
+.sobre-title{
+  margin:0;font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:500;color:var(--navy);line-height:.92;
+}
+.sobre-title em{font-weight:500;color:#078fd0}
+.sobre-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:18px;
+  min-height:50px;padding:0 24px;border-radius:4px;
+  background:linear-gradient(135deg,#075b91,#0797d4);
+  color:#fff;font:700 10px/1 "Montserrat",Arial,sans-serif;
+  box-shadow:0 14px 30px rgba(5,91,145,.16);
 }
 
-.pagina-sobre *,
-.pagina-sobre *::before,
-.pagina-sobre *::after {
-    box-sizing: border-box;
+/* 1 — HERO */
+.sobre-hero{
+  position:relative;min-height:610px;display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(255,255,255,.95),transparent 26%),
+    radial-gradient(circle at 66% 48%,rgba(49,169,222,.16),transparent 28%),
+    linear-gradient(115deg,#e5edf2 0%,#f8fbfc 48%,#d7e5ed 100%);
 }
-
-.pagina-sobre section {
-    width: 100%;
+.sobre-hero:after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
+  background:linear-gradient(90deg,#034878,#31b4eb,#e8f9ff,#31b4eb,#034878);
+  box-shadow:0 0 12px rgba(29,158,219,.35);
 }
-
-.pagina-sobre img {
-    max-width: 100%;
+.sobre-hero-grid{
+  position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;
+  gap:85px;align-items:center;padding:62px 0;
 }
-
-.pagina-sobre .sobre-container {
-    width: min(1180px, calc(100% - 48px));
-    margin: 0 auto;
+.sobre-hero h1{font-size:clamp(72px,7vw,108px);letter-spacing:-3px}
+.sobre-hero h1 em{display:block;margin-left:70px}
+.sobre-hero-sub{
+  margin:24px 0 0;font:italic 600 27px/1.25 "Cormorant Garamond",Georgia,serif;
+  color:#315f7b;
 }
-
-.pagina-sobre .sobre-etiqueta {
-    margin: 0 0 18px;
-    color: #0789c7;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 3.7px;
-    text-transform: uppercase;
+.sobre-rule{display:block;width:78px;height:2px;margin:25px 0;background:#0a96d2}
+.sobre-hero-desc{
+  max-width:570px;margin:0 0 22px;color:#4e7084;
+  font:400 13px/1.75 "Montserrat",Arial,sans-serif;
 }
-
-.pagina-sobre h1,
-.pagina-sobre h2,
-.pagina-sobre h3,
-.pagina-sobre p,
-.pagina-sobre blockquote {
-    margin-top: 0;
+.sobre-ministerio{
+  max-width:570px;margin:0 0 28px;padding:17px 20px;
+  border-left:3px solid #0797d4;background:rgba(255,255,255,.48);
 }
-
-.pagina-sobre h1,
-.pagina-sobre h2 {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-weight: 500;
+.sobre-ministerio span{
+  display:block;margin-bottom:7px;color:#0879b1;
+  font:700 8px/1.2 "Montserrat",Arial,sans-serif;letter-spacing:2px;
 }
-
-.pagina-sobre em {
-    color: var(--azul-vivo);
-    font-style: italic;
+.sobre-ministerio strong{
+  display:block;font:600 29px/.98 "Cormorant Garamond",Georgia,serif;color:#06456f;
 }
-
-
-/* =========================================================
-   1. BANNER PRINCIPAL
-========================================================= */
-
-.pagina-sobre .sobre-hero {
-    position: relative;
-    min-height: 680px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle at 76% 45%,
-            rgba(72, 183, 232, .22),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 15% 8%,
-            rgba(255, 255, 255, .95),
-            transparent 28%
-        ),
-        linear-gradient(
+.sobre-ministerio strong em{color:#078fd0;font-weight:600}
+.sobre-ministerio p{
+  margin:10px 0 0;color:#5c7b8e;font:400 9px/1.65 "Montserrat",Arial,sans-serif;
+}
+.sobre-photo{
+  position:relative;width:min(100%,460px);justify-self:end;padding:18px;
+}
+.sobre-photo:before,.sobre-photo:after{
+  content:"";position:absolute;width:92px;height:92px;border-color:#0d92cb;
+}
+.sobre-photo:before{left:0;top:0;border-left:2px solid;border-top:2px solid}
+.sobre-photo:after{right:0;bottom:0;border-right:2px solid;border-bottom:2px solid}
+.sobre-photo-frame{
+  min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:1px solid rgba(7,101,154,.5);
+  background:
