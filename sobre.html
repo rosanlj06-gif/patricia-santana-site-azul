@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="style.css?v=17">
 
     <!-- CSS EXCLUSIVO DO CONTEÚDO DA PÁGINA SOBRE -->
-    <link rel="stylesheet" href="sobre.css?v=4">
+    <link rel="stylesheet" href="sobre.css?v=6">
 </head>
 
 <body>
@@ -95,63 +95,50 @@
 
 <main class="pagina-sobre">
 
-  <!-- =====================================================
-       1. BANNER PRINCIPAL
-  ====================================================== -->
+  <!-- 1. BANNER PRINCIPAL -->
   <section class="sobre-hero">
-    <div class="sobre-circulo circulo-1"></div>
-    <div class="sobre-circulo circulo-2"></div>
+    <div class="sobre-wrap sobre-hero-grid">
 
-    <div class="sobre-container sobre-hero-grid">
+      <div>
+        <p class="sobre-kicker">QUEM É A APÓSTOLA?</p>
 
-      <div class="sobre-hero-texto">
-        <p class="sobre-etiqueta">QUEM É A APÓSTOLA?</p>
-
-        <h1>
-          Patricia <em>Santana</em>
+        <h1 class="sobre-title">
+          Patricia
+          <em>Santana</em>
         </h1>
 
-        <p class="sobre-subtitulo">
+        <p class="sobre-hero-sub">
           Fé, propósito e uma mensagem que transforma.
         </p>
 
-        <span class="sobre-linha"></span>
+        <span class="sobre-rule"></span>
 
-        <p class="sobre-descricao">
+        <p class="sobre-hero-desc">
           Uma página dedicada à história, propósito e atuação ministerial.
         </p>
 
         <div class="sobre-ministerio">
-          <small>MINISTÉRIO PATRICIA SANTANA</small>
-
-          <h2>
+          <span>MINISTÉRIO PATRICIA SANTANA</span>
+          <strong>
             Batalha Espiritual
             <em>de Alto Nível.</em>
-          </h2>
-
+          </strong>
           <p>
             Ensino, seminários e conteúdos para aprofundamento,
             conhecimento e fortalecimento espiritual.
           </p>
         </div>
 
-        <a class="sobre-botao-contorno" href="#sobre">
-          CONHECER A TRAJETÓRIA <span>↓</span>
+        <a class="sobre-btn" href="#sobre">
+          CONHECER A TRAJETÓRIA ↓
         </a>
       </div>
 
-
-      <div class="sobre-foto-area">
-        <div class="sobre-foto-moldura">
-          <div class="sobre-foto-placeholder">
-            <span>◇</span>
-            <strong>SUA FOTO AQUI</strong>
-            <small>APÓSTOLA PATRICIA SANTANA</small>
-          </div>
-        </div>
-
-        <div class="sobre-foto-legenda">
-          APÓSTOLA PATRICIA SANTANA
+      <div class="sobre-photo">
+        <div class="sobre-photo-frame">
+          <span class="diamond">◇</span>
+          <strong>SUA FOTO AQUI</strong>
+          <small>APÓSTOLA PATRICIA SANTANA</small>
         </div>
       </div>
 
@@ -159,30 +146,17 @@
   </section>
 
 
-  <!-- =====================================================
-       2. SOBRE
-  ====================================================== -->
-  <section class="sobre-apresentacao" id="sobre">
+  <!-- 2. SOBRE -->
+  <section class="sobre-intro" id="sobre">
+    <div class="sobre-wrap">
 
-    <div class="sobre-container sobre-apresentacao-grid">
+      <p class="sobre-kicker">SOBRE</p>
 
-      <div class="sobre-apresentacao-titulo">
-        <p class="sobre-etiqueta">SOBRE</p>
+      <h2 class="sobre-title">
+        Um ministério para esta geração
+      </h2>
 
-        <h2>
-          Um ministério para
-          <em>esta geração</em>
-        </h2>
-
-        <div class="sobre-ornamento">
-          <i></i>
-          <span>◇</span>
-          <i></i>
-        </div>
-      </div>
-
-
-      <div class="sobre-apresentacao-texto">
+      <div class="sobre-intro-copy">
         <p>
           A Apóstola Patricia Santana atua com conteúdos, cursos e seminários
           voltados ao aprofundamento espiritual, fortalecimento da fé e
@@ -193,203 +167,163 @@
           Este espaço está preparado para receber a biografia oficial,
           trajetória ministerial, projetos e demais informações aprovadas.
         </p>
-
-        <blockquote>
-          “Uma caminhada construída com propósito, ensino e fé.”
-        </blockquote>
       </div>
+
+      <blockquote class="sobre-quote">
+        “Uma caminhada construída com propósito, ensino e fé.”
+      </blockquote>
 
     </div>
   </section>
 
 
-  <!-- =====================================================
-       3. TRAJETÓRIA
-  ====================================================== -->
+  <!-- 3. TRAJETÓRIA -->
   <section class="sobre-trajetoria">
+    <div class="sobre-wrap">
 
-    <div class="sobre-container">
+      <p class="sobre-kicker">UMA TRAJETÓRIA CONSTRUÍDA PELA FÉ</p>
 
-      <header class="sobre-titulo-central">
-        <p class="sobre-etiqueta">
-          UMA TRAJETÓRIA CONSTRUÍDA PELA FÉ
-        </p>
+      <h2 class="sobre-title">
+        Marcos de uma história com propósito
+      </h2>
 
-        <h2>
-          Marcos de uma história
-          <em>com propósito</em>
-        </h2>
-      </header>
+      <div class="marcos">
 
-
-      <div class="sobre-marcos">
-
-        <article class="sobre-marco">
-          <div class="sobre-icone">
-            <svg viewBox="0 0 64 64">
-              <path d="M32 53V25M32 32c-8 0-14-5-14-12 8 0 14 4 14 12Zm0 0c8 0 14-5 14-12-8 0-14 4-14 12Z"/>
+        <article class="marco">
+          <div class="marco-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M24 39V22"/>
+              <path d="M24 25C16 25 11 20 11 13c8 0 13 4 13 12Z"/>
+              <path d="M24 25c8 0 13-5 13-12-8 0-13 4-13 12Z"/>
             </svg>
           </div>
-          <span>01</span>
-          <h3>INÍCIO DO MINISTÉRIO</h3>
+          <h3>INÍCIO DO<br>MINISTÉRIO</h3>
           <p>Um chamado que mudou tudo.</p>
         </article>
 
-
-        <article class="sobre-marco">
-          <div class="sobre-icone">
-            <svg viewBox="0 0 64 64">
-              <path d="M9 16c10-2 17 0 23 6v30c-6-5-13-7-23-5V16Zm46 0c-10-2-17 0-23 6v30c6-5 13-7 23-5V16Z"/>
+        <article class="marco">
+          <div class="marco-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M7 12c7-2 12 0 17 5v23c-5-5-10-7-17-5Z"/>
+              <path d="M41 12c-7-2-12 0-17 5v23c5-5 10-7 17-5Z"/>
             </svg>
           </div>
-          <span>02</span>
-          <h3>ENSINO E CAPACITAÇÃO</h3>
+          <h3>ENSINO E<br>CAPACITAÇÃO</h3>
           <p>Formação, conhecimento e ensinamentos profundos.</p>
         </article>
 
-
-        <article class="sobre-marco">
-          <div class="sobre-icone">
-            <svg viewBox="0 0 64 64">
-              <circle cx="32" cy="21" r="7"/>
-              <circle cx="15" cy="27" r="5"/>
-              <circle cx="49" cy="27" r="5"/>
-              <path d="M20 50c1-10 5-15 12-15s11 5 12 15M5 48c1-8 4-12 10-12 3 0 5 1 7 3M59 48c-1-8-4-12-10-12-3 0-5 1-7 3"/>
+        <article class="marco">
+          <div class="marco-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="15" r="5"/>
+              <circle cx="10" cy="20" r="4"/>
+              <circle cx="38" cy="20" r="4"/>
+              <path d="M15 39v-6c0-6 4-10 9-10s9 4 9 10v6"/>
+              <path d="M2 39v-5c0-5 3-8 8-8 3 0 5 1 7 3"/>
+              <path d="M46 39v-5c0-5-3-8-8-8-3 0-5 1-7 3"/>
             </svg>
           </div>
-          <span>03</span>
-          <h3>SEMINÁRIOS E CURSOS</h3>
+          <h3>SEMINÁRIOS<br>E CURSOS</h3>
           <p>Conteúdos que aprofundam e fortalecem a caminhada.</p>
         </article>
 
-
-        <article class="sobre-marco">
-          <div class="sobre-icone">
-            <svg viewBox="0 0 64 64">
-              <circle cx="32" cy="32" r="22"/>
-              <path d="M10 32h44M32 10c8 8 11 15 11 22s-3 14-11 22c-8-8-11-15-11-22s3-14 11-22Z"/>
+        <article class="marco">
+          <div class="marco-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="17"/>
+              <path d="M7 24h34M24 7c6 6 9 11 9 17s-3 11-9 17c-6-6-9-11-9-17s3-11 9-17Z"/>
             </svg>
           </div>
-          <span>04</span>
-          <h3>VIDAS ALCANÇADAS</h3>
+          <h3>VIDAS<br>ALCANÇADAS</h3>
           <p>Espaço para testemunhos e histórias aprovadas.</p>
         </article>
 
-
-        <article class="sobre-marco">
-          <div class="sobre-icone">
-            <svg viewBox="0 0 64 64">
-              <path d="m10 22 10 9 12-17 12 17 10-9-4 28H14l-4-28Zm6 20h32"/>
+        <article class="marco">
+          <div class="marco-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="m7 35 2-21 10 10 5-14 5 14 10-10 2 21Z"/>
+              <path d="M8 39h32"/>
             </svg>
           </div>
-          <span>05</span>
-          <h3>UMA GERAÇÃO MAIS FORTE</h3>
+          <h3>UMA GERAÇÃO<br>MAIS FORTE</h3>
           <p>Avançando no propósito e no fortalecimento da fé.</p>
         </article>
 
       </div>
 
+      <div class="pilares">
 
-      <!-- PILARES -->
-      <div class="sobre-pilares">
+        <p class="sobre-kicker">PILARES DO MINISTÉRIO</p>
 
-        <p class="sobre-etiqueta">PILARES DO MINISTÉRIO</p>
+        <div class="pilares-grid">
 
-        <div class="sobre-pilares-grid">
-
-          <article class="sobre-pilar">
-            <div class="sobre-pilar-icone">
-              <svg viewBox="0 0 64 64">
-                <circle cx="29" cy="35" r="17"/>
-                <circle cx="29" cy="35" r="9"/>
-                <circle cx="29" cy="35" r="2"/>
-                <path d="M41 23 54 10M44 10h10v10"/>
+          <article class="pilar">
+            <div class="pilar-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="21" cy="27" r="12"/>
+                <circle cx="21" cy="27" r="6"/>
+                <path d="m30 18 11-11M32 7h9v9"/>
               </svg>
             </div>
-
             <h3>PROPÓSITO</h3>
-
-            <p>
-              Fortalecer a fé e conduzir vidas a uma caminhada com propósito.
-            </p>
+            <p>Fortalecer a fé e conduzir vidas a uma caminhada com propósito.</p>
           </article>
 
-
-          <article class="sobre-pilar">
-            <div class="sobre-pilar-icone">
-              <svg viewBox="0 0 64 64">
-                <path d="M9 15c10-2 17 0 23 5v31c-6-5-13-7-23-5V15Zm46 0c-10-2-17 0-23 5v31c6-5 13-7 23-5V15Z"/>
+          <article class="pilar">
+            <div class="pilar-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M7 12c7-2 12 0 17 5v23c-5-5-10-7-17-5Z"/>
+                <path d="M41 12c-7-2-12 0-17 5v23c5-5 10-7 17-5Z"/>
               </svg>
             </div>
-
             <h3>MISSÃO</h3>
-
-            <p>
-              Ensinar, orientar e desenvolver conteúdos para crescimento espiritual.
-            </p>
+            <p>Ensinar, orientar e desenvolver conteúdos para crescimento espiritual.</p>
           </article>
 
-
-          <article class="sobre-pilar">
-            <div class="sobre-pilar-icone sobre-pilar-pomba">
+          <article class="pilar">
+            <div class="pilar-icon">
               <img src="pomba-branca.png" alt="">
             </div>
-
             <h3>CHAMADO</h3>
-
-            <p>
-              Servir por meio da Palavra e do ensino com responsabilidade e propósito.
-            </p>
+            <p>Servir por meio da Palavra e do ensino com responsabilidade e propósito.</p>
           </article>
 
+          <div class="pilares-frase">
+            <p>“Ensinar.<br>Libertar.<br>Curar.<br>Restaurar.”</p>
+          </div>
+
         </div>
-
-
-        <blockquote class="sobre-frase-final">
-          <span>“</span>
-
-          <p>
-            Ensinar.<br>
-            Libertar.<br>
-            Curar.<br>
-            Restaurar.
-          </p>
-
-          <span>”</span>
-        </blockquote>
-
       </div>
 
     </div>
   </section>
 
 
-  <!-- =====================================================
-       4. APROFUNDE SEU CONHECIMENTO
-  ====================================================== -->
+  <!-- 4. CURSOS -->
   <section class="sobre-cursos">
+    <div class="sobre-wrap sobre-cursos-grid">
 
-    <div class="sobre-cursos-circulo"></div>
+      <div>
+        <p class="sobre-kicker">APROFUNDE SEU CONHECIMENTO</p>
 
-    <div class="sobre-container sobre-cursos-conteudo">
+        <h2 class="sobre-title">
+          Conheça os cursos
+          <em>e seminários</em>
+        </h2>
 
-      <p class="sobre-etiqueta">
-        APROFUNDE SEU CONHECIMENTO
-      </p>
+        <p>
+          Conteúdos que edificam, aprofundam e fortalecem
+          a caminhada espiritual.
+        </p>
 
-      <h2>
-        Conheça os cursos
-        <em>e seminários</em>
-      </h2>
+        <a class="sobre-btn" href="cursos.html">
+          VER TODOS OS CURSOS →
+        </a>
+      </div>
 
-      <p class="sobre-cursos-texto">
-        Conteúdos que edificam, aprofundam e fortalecem
-        a caminhada espiritual.
-      </p>
-
-      <a class="sobre-botao-cursos" href="cursos.html">
-        VER TODOS OS CURSOS <span>→</span>
-      </a>
+      <div class="sobre-bible">
+        <img src="biblia.png" alt="Bíblia aberta">
+      </div>
 
     </div>
   </section>
