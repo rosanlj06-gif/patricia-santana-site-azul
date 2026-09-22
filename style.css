@@ -3223,3 +3223,51 @@ select {
         letter-spacing: .7px;
     }
 }
+
+
+/* =========================================================
+   V15 — RODAPÉ MOBILE
+   Somente novo fundo + crédito Santiago Digital
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .mobile-footer {
+        background:
+            radial-gradient(
+                ellipse at 50% 4%,
+                rgba(255,255,255,.76) 0%,
+                rgba(235,242,247,.48) 18%,
+                transparent 42%
+            ),
+            linear-gradient(
+                180deg,
+                #d9e1e7 0%,
+                #c8d5df 12%,
+                #91abc0 27%,
+                #4d7698 43%,
+                #174d78 60%,
+                #07365f 76%,
+                #011b38 100%
+            ) !important;
+    }
+
+    /* Suaviza o detalhe decorativo para combinar com o novo degradê */
+    .mobile-footer::after {
+        border-color: rgba(77, 164, 225, .09) !important;
+    }
+
+    .mobile-footer-credit {
+        margin: 13px 0 0 !important;
+        color: #8fb8d1 !important;
+        font-size: 8.5px !important;
+        line-height: 1.4 !important;
+        letter-spacing: .2px !important;
+        text-align: center !important;
+    }
+
+    .mobile-footer-credit strong {
+        color: #c8eaff !important;
+        font-weight: 700 !important;
+    }
+}
