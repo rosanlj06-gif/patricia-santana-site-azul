@@ -2495,3 +2495,117 @@ select {
         height: 132px;
     }
 }
+
+
+/* =========================================================
+   AJUSTE V10 — TRAJETÓRIA MOBILE
+   CORREÇÃO DEFINITIVA DO ALINHAMENTO 2x2
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .trajetoria-showcase {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-flow: row !important;
+        grid-auto-rows: auto !important;
+        width: calc(100% - 16px) !important;
+        max-width: 520px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        column-gap: 10px !important;
+        row-gap: 12px !important;
+        align-items: stretch !important;
+    }
+
+    /* Texto central sempre ocupa uma linha inteira */
+    .trajetoria-centro {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 8px 26px !important;
+    }
+
+    /* Todos os cards voltam ao fluxo automático do Grid */
+    .trajetoria-showcase > .trajetoria-card,
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(1),
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(2),
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(3),
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(4) {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 100% !important;
+        margin: 0 !important;
+        align-self: stretch !important;
+    }
+
+    .trajetoria-card {
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        border-radius: 13px !important;
+    }
+
+    .trajetoria-card > img {
+        display: block !important;
+        width: 100% !important;
+        height: 125px !important;
+        min-height: 125px !important;
+        flex: 0 0 125px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .trajetoria-card-copy {
+        width: 100% !important;
+        min-height: 138px !important;
+        height: 138px !important;
+        flex: 1 1 auto !important;
+        padding: 14px 6px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+    }
+
+    .trajetoria-card-copy h3 {
+        min-height: 36px !important;
+        margin: 0 !important;
+        font-size: 8.2px !important;
+        line-height: 1.3 !important;
+    }
+
+    .trajetoria-card-copy > span {
+        margin: 10px 0 !important;
+    }
+
+    .trajetoria-card-copy p {
+        margin: 0 !important;
+        font-size: 7.7px !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .trajetoria-showcase {
+        width: calc(100% - 12px) !important;
+        column-gap: 8px !important;
+        row-gap: 10px !important;
+    }
+
+    .trajetoria-card > img {
+        height: 116px !important;
+        min-height: 116px !important;
+        flex-basis: 116px !important;
+    }
+
+    .trajetoria-card-copy {
+        min-height: 132px !important;
+        height: 132px !important;
+    }
+}
