@@ -3395,3 +3395,31 @@ select {
             );
     }
 }
+
+
+/* =========================================================
+   V17 — RODAPÉ MOBILE
+   Textos superiores em azul mais escuro
+========================================================= */
+
+@media (max-width: 620px) {
+
+    /* ENSINO • LIBERTAÇÃO • CURA • RESTAURAÇÃO */
+    .mobile-footer-pillars {
+        color: #073f70 !important;
+    }
+
+    .mobile-footer-pillars span {
+        color: #0878b8 !important;
+    }
+
+    /* Equipando vidas para um propósito maior. */
+    .mobile-footer-purpose {
+        color: #285f87 !important;
+    }
+
+    /* NAVEGAÇÃO / SEMINÁRIOS */
+    .mobile-footer-column h4 {
+        color: #073f70 !important;
+    }
+}
