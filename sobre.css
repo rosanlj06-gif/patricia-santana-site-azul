@@ -1,0 +1,125 @@
+  margin:0 0 13px;
+  color:#064875;
+  font-size:11px;
+  letter-spacing:1.5px;
+}
+
+.pagina-sobre .pillar p {
+  margin:0;
+  color:#607f92;
+  font-size:10px;
+  line-height:1.75;
+}
+
+.pagina-sobre .pillar-quote {
+  grid-column:1/-1;
+  margin:35px auto 0;
+  padding:20px 70px 0;
+  border-left:0;
+  color:#07527f;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:37px;
+  font-style:italic;
+  line-height:1;
+  text-align:center;
+}
+
+/* ---------- 4. CURSOS ---------- */
+.pagina-sobre .courses-banner {
+  position:relative;
+  min-height:480px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 75% 35%,rgba(49,177,231,.34),transparent 28%),
+    linear-gradient(115deg,#032d54,#064d80 50%,#0879b1);
+}
+
+.pagina-sobre .courses-banner::after {
+  content:"";
+  position:absolute;
+  width:460px;height:460px;
+  right:-120px;top:-210px;
+  border:1px solid rgba(113,211,250,.16);
+  border-radius:50%;
+}
+
+.pagina-sobre .banner-content {
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.pagina-sobre .courses-banner .eyebrow {color:#73d3f8}
+
+.pagina-sobre .courses-banner h2 {
+  margin:0 0 22px;
+  color:#fff;
+  font-size:clamp(54px,5.5vw,78px);
+  line-height:.9;
+}
+
+.pagina-sobre .courses-banner > .container > p:not(.eyebrow),
+.pagina-sobre .banner-content > p:not(.eyebrow) {
+  max-width:600px;
+  margin:0 auto 28px;
+  color:#c5ddec;
+  font-size:12px;
+  line-height:1.8;
+}
+
+.pagina-sobre .gold-btn {
+  min-height:53px;
+  padding:0 25px;
+  border:1px solid #7bd6fa;
+  display:inline-flex;
+  align-items:center;
+  gap:24px;
+  color:#fff;
+  background:rgba(255,255,255,.05);
+  font-size:9px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width:900px) {
+  .pagina-sobre .hero-grid {grid-template-columns:1fr;gap:45px;text-align:center}
+  .pagina-sobre .hero-copy h1 em {margin-left:0}
+  .pagina-sobre .gold-line {margin-left:auto;margin-right:auto}
+  .pagina-sobre .hero-text,.pagina-sobre .hero-ministry {margin-left:auto;margin-right:auto}
+  .pagina-sobre .hero-ministry {border-left:0;border-top:2px solid var(--azul2)}
+  .pagina-sobre .photo-frame {width:min(100%,470px);margin:0 auto}
+  .pagina-sobre .timeline {grid-template-columns:repeat(2,1fr)}
+  .pagina-sobre .pillars-grid {grid-template-columns:1fr;max-width:520px}
+}
+
+@media (max-width:520px) {
+  .pagina-sobre .container {width:calc(100% - 28px)}
+  .pagina-sobre .hero-grid {padding:45px 0 55px}
+  .pagina-sobre .hero-copy h1 {font-size:58px;line-height:.88}
+  .pagina-sobre .hero-subtitle {font-size:20px}
+  .pagina-sobre .hero-text {font-size:10px}
+  .pagina-sobre .photo-frame {min-height:390px;padding:11px}
+  .pagina-sobre .frame-inner {min-height:366px}
+  .pagina-sobre .about {padding:65px 0}
+  .pagina-sobre .about h2 {font-size:47px}
+  .pagina-sobre .about p {font-size:10px;line-height:1.75}
+  .pagina-sobre .about blockquote {font-size:20px}
+  .pagina-sobre .journey {padding:70px 0}
+  .pagina-sobre .section-heading {margin-bottom:42px}
+  .pagina-sobre .section-heading h2 {font-size:43px}
+  .pagina-sobre .timeline {gap:9px}
+  .pagina-sobre .milestone {min-height:205px;padding:18px 7px;border:1px solid rgba(25,123,171,.14);background:rgba(255,255,255,.46)}
+  .pagina-sobre .icon-circle {width:68px;height:68px}
+  .pagina-sobre .icon-circle svg {width:30px;height:30px}
+  .pagina-sobre .milestone h3 {font-size:7.5px}
+  .pagina-sobre .milestone p {font-size:7.5px}
+  .pagina-sobre .pillars {padding:65px 0}
+  .pagina-sobre .pillar {min-height:auto;padding:28px 20px}
+  .pagina-sobre .pillar-quote {padding:15px 0 0;font-size:32px}
+  .pagina-sobre .courses-banner {min-height:390px}
+  .pagina-sobre .courses-banner h2 {font-size:47px}
+  .pagina-sobre .banner-content > p:not(.eyebrow) {font-size:9px}
+}
