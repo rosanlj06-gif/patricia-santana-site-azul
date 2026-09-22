@@ -2170,3 +2170,190 @@ select {
         font-size: 15px;
     }
 }
+
+
+/* =========================================================
+   AJUSTES V8 — BATALHA + TRAJETÓRIA MOBILE
+========================================================= */
+
+/* ---------------------------------------------------------
+   BATALHA ESPIRITUAL — MENOS ESPAÇAMENTO
+--------------------------------------------------------- */
+
+.feature {
+    padding-top: 68px;
+    padding-bottom: 68px;
+}
+
+.feature-grid {
+    gap: 60px;
+}
+
+.feature p:not(.eyebrow) {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* ---------------------------------------------------------
+   TRAJETÓRIA — CELULAR COM 2 CARDS POR LINHA
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .trajetoria-nova {
+        padding: 52px 0 56px;
+    }
+
+    .trajetoria-showcase {
+        width: min(100% - 24px, 560px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .trajetoria-centro {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        padding: 0 10px 28px;
+    }
+
+    .trajetoria-card {
+        width: 100%;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trajetoria-card > img {
+        width: 100%;
+        height: 135px;
+        aspect-ratio: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .trajetoria-card-copy {
+        min-height: 145px;
+        flex: 1;
+        padding: 16px 8px 17px;
+    }
+
+    .trajetoria-card-copy h3 {
+        min-height: 39px;
+        font-size: 9px;
+        line-height: 1.35;
+    }
+
+    .trajetoria-card-copy > span {
+        width: 34px;
+        height: 2px;
+        margin: 11px 0;
+    }
+
+    .trajetoria-card-copy p {
+        font-size: 8.5px;
+        line-height: 1.55;
+    }
+
+    .trajetoria-centro small {
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
+
+    .trajetoria-mini-line {
+        margin: 12px 0 18px;
+    }
+
+    .trajetoria-centro h2 {
+        font-size: clamp(41px, 12vw, 54px);
+        line-height: .88;
+    }
+
+    .trajetoria-ornamento {
+        margin: 20px 0 17px;
+    }
+
+    .trajetoria-ornamento i {
+        width: 65px;
+    }
+
+    .trajetoria-frase {
+        font-size: 21px;
+    }
+
+    .trajetoria-impacto {
+        margin-top: 12px;
+        max-width: 300px;
+        font-size: 11px;
+        line-height: 1.45;
+        letter-spacing: 1px;
+    }
+
+    .trajetoria-link {
+        margin-top: 19px;
+        padding: 11px 19px;
+        font-size: 8px;
+    }
+
+    /* Ordem dos cards:
+       Bíblia | Pomba
+       Correntes | Caminho */
+    .trajetoria-card:nth-of-type(1) {
+        grid-column: 1;
+    }
+
+    .trajetoria-card:nth-of-type(2) {
+        grid-column: 2;
+    }
+
+    .trajetoria-card:nth-of-type(3) {
+        grid-column: 1;
+    }
+
+    .trajetoria-card:nth-of-type(4) {
+        grid-column: 2;
+    }
+}
+
+
+/* Celulares muito estreitos: continua em 2 colunas,
+   mas reduz um pouco mais para não apertar o conteúdo. */
+@media (max-width: 390px) {
+
+    .trajetoria-showcase {
+        width: calc(100% - 16px);
+        gap: 9px;
+    }
+
+    .trajetoria-card > img {
+        height: 118px;
+    }
+
+    .trajetoria-card-copy {
+        min-height: 138px;
+        padding: 14px 6px 15px;
+    }
+
+    .trajetoria-card-copy h3 {
+        font-size: 8px;
+    }
+
+    .trajetoria-card-copy p {
+        font-size: 7.8px;
+    }
+}
+
+
+/* Batalha Espiritual também mais compacta no celular */
+@media (max-width: 820px) {
+
+    .feature {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .feature-grid {
+        gap: 34px;
+    }
+}
