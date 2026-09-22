@@ -2357,3 +2357,141 @@ select {
         gap: 34px;
     }
 }
+
+
+/* =========================================================
+   AJUSTES V9 — MOBILE
+   Alinhamento da trajetória + subtítulo do cabeçalho
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Ministério Apostólico maior no cabeçalho */
+    .brand-text span {
+        margin-top: 3px;
+        font-size: 7.5px;
+        line-height: 1.1;
+        letter-spacing: 1.35px;
+        white-space: nowrap;
+    }
+
+    /* Grade realmente fixa em duas colunas */
+    .trajetoria-showcase {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-flow: row;
+        grid-auto-rows: auto;
+        align-items: stretch;
+        column-gap: 10px;
+        row-gap: 12px;
+        width: calc(100% - 16px);
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* O texto central ocupa a primeira linha inteira */
+    .trajetoria-centro {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+        width: 100%;
+        padding: 0 8px 26px;
+    }
+
+    /* Neutraliza posições antigas dos cards */
+    .trajetoria-showcase > .trajetoria-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100%;
+        min-width: 0;
+        margin: 0 !important;
+        align-self: stretch;
+    }
+
+    /* Mantém exatamente dois cards em cada linha */
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(1),
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(3) {
+        grid-column: 1 !important;
+    }
+
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(2),
+    .trajetoria-showcase > .trajetoria-card:nth-of-type(4) {
+        grid-column: 2 !important;
+    }
+
+    .trajetoria-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 13px;
+        overflow: hidden;
+    }
+
+    .trajetoria-card > img {
+        display: block;
+        width: 100%;
+        height: 125px;
+        object-fit: cover;
+        object-position: center;
+        flex: 0 0 125px;
+    }
+
+    .trajetoria-card-copy {
+        min-height: 138px;
+        height: 138px;
+        padding: 14px 6px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .trajetoria-card-copy h3 {
+        min-height: 36px;
+        margin: 0;
+        font-size: 8.2px;
+        line-height: 1.3;
+    }
+
+    .trajetoria-card-copy > span {
+        margin: 10px 0;
+    }
+
+    .trajetoria-card-copy p {
+        margin: 0;
+        font-size: 7.7px;
+        line-height: 1.5;
+    }
+
+    /* Banner Instagram: agora só um botão */
+    .social-contact-actions {
+        width: min(100%, 260px);
+    }
+
+    .social-contact-actions .instagram-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    .brand-text span {
+        font-size: 7px;
+        letter-spacing: 1.15px;
+    }
+
+    .trajetoria-showcase {
+        column-gap: 8px;
+        row-gap: 10px;
+        width: calc(100% - 12px);
+    }
+
+    .trajetoria-card > img {
+        height: 116px;
+        flex-basis: 116px;
+    }
+
+    .trajetoria-card-copy {
+        min-height: 132px;
+        height: 132px;
+    }
+}
