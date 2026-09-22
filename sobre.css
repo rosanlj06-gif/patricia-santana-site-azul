@@ -41,7 +41,7 @@
 
 /* 1 — HERO */
 .sobre-hero{
-  position:relative;min-height:610px;display:flex;align-items:center;
+  position:relative;min-height:500px;display:flex;align-items:center;
   background:
     radial-gradient(circle at 80% 20%,rgba(255,255,255,.95),transparent 26%),
     radial-gradient(circle at 66% 48%,rgba(49,169,222,.16),transparent 28%),
@@ -54,7 +54,7 @@
 }
 .sobre-hero-grid{
   position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;
-  gap:85px;align-items:center;padding:62px 0;
+  gap:78px;align-items:center;padding:42px 0;
 }
 .sobre-hero h1{font-size:clamp(72px,7vw,108px);letter-spacing:-3px}
 .sobre-hero h1 em{display:block;margin-left:70px}
@@ -83,7 +83,7 @@
   margin:10px 0 0;color:#5c7b8e;font:400 9px/1.65 "Montserrat",Arial,sans-serif;
 }
 .sobre-photo{
-  position:relative;width:min(100%,460px);justify-self:end;padding:18px;
+  position:relative;width:min(100%,390px);justify-self:end;padding:15px;
 }
 .sobre-photo:before,.sobre-photo:after{
   content:"";position:absolute;width:92px;height:92px;border-color:#0d92cb;
@@ -91,6 +91,6 @@
 .sobre-photo:before{left:0;top:0;border-left:2px solid;border-top:2px solid}
 .sobre-photo:after{right:0;bottom:0;border-right:2px solid;border-bottom:2px solid}
 .sobre-photo-frame{
-  min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:385px;display:flex;flex-direction:column;align-items:center;justify-content:center;
   border:1px solid rgba(7,101,154,.5);
   background:
