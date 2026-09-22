@@ -1,3 +1,27 @@
+
+/* =========================================================
+   ISOLAMENTO DA PÁGINA SOBRE
+   Impede regras genéricas da Home de desmontarem os banners.
+   NÃO atinge cabeçalho nem rodapé.
+========================================================= */
+
+main.pagina-sobre {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+main.pagina-sobre section {
+    width: 100%;
+}
+
+main.pagina-sobre img {
+    max-width: 100%;
+}
+
+
 /* =========================================================
    SOBRE.CSS
    CSS EXCLUSIVO DA PÁGINA SOBRE
@@ -70,27 +94,3 @@
   overflow:hidden;
 
   background:
-    radial-gradient(
-      circle at 76% 45%,
-      rgba(72,183,232,.22),
-      transparent 25%
-    ),
-    radial-gradient(
-      circle at 15% 8%,
-      rgba(255,255,255,.95),
-      transparent 28%
-    ),
-    linear-gradient(
-      115deg,
-      #eef3f6 0%,
-      #dce7ed 48%,
-      #fbfcfd 100%
-    );
-}
-
-.pagina-sobre .sobre-hero::after {
-  content:"";
-  position:absolute;
-  z-index:3;
-  left:0;
-  right:0;
