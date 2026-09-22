@@ -1213,7 +1213,8 @@ select {
     max-width: 260px;
     margin: 0 0 20px;
     color: #49677d;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     line-height: 1.65;
 }
 
