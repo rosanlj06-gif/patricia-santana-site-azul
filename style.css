@@ -477,82 +477,100 @@ select {
 
 
 /* =========================================================
-   TRAJETÓRIA
+   TRAJETÓRIA — CARDS COM IMAGENS
 ========================================================= */
 
 .trajetoria-nova {
     position: relative;
-    padding: 90px 0;
+    padding: 78px 0 72px;
     overflow: hidden;
-    border-top: 1px solid #b8c9d4;
-    border-bottom: 1px solid #b8c9d4;
-
+    border-top: 1px solid #c8d7e1;
+    border-bottom: 1px solid #c8d7e1;
     background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(255,255,255,0.95),
-            transparent 40%
-        ),
-        linear-gradient(
-            120deg,
-            #d8e0e5,
-            #f8fafb 30%,
-            #c4cfd6 52%,
-            #f2f5f7 72%,
-            #d2dce1
-        );
+        radial-gradient(circle at 50% 42%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.82) 24%, transparent 48%),
+        linear-gradient(120deg, #edf4f8 0%, #fff 28%, #e5eff5 52%, #fff 74%, #e8f1f6 100%);
 }
 
-.trajetoria-layout {
+.trajetoria-nova::before,
+.trajetoria-nova::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border: 72px solid rgba(15,133,205,.045);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.trajetoria-nova::before { left: -330px; top: -260px; }
+.trajetoria-nova::after { right: -330px; bottom: -300px; }
+
+.trajetoria-showcase {
+    position: relative;
+    z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 1.15fr 1fr;
-    align-items: stretch;
+    grid-template-columns: .92fr .92fr 1.65fr .92fr .92fr;
+    align-items: center;
+    gap: 18px;
 }
 
-.trajetoria-lado {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.trajetoria-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(8,92,151,.12);
+    border-radius: 18px;
+    background: rgba(255,255,255,.88);
+    box-shadow: 0 18px 38px rgba(10,68,108,.10);
+    transition: .25s ease;
 }
 
-.trajetoria-item {
-    min-height: 285px;
-    padding: 30px 20px;
+.trajetoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 46px rgba(10,68,108,.16);
+}
+
+.trajetoria-card > img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+}
+
+.trajetoria-card-copy {
+    min-height: 176px;
+    padding: 22px 15px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    border-left: 1px solid #aabdc7;
 }
 
-.trajetoria-lado:last-child .trajetoria-item:last-child {
-    border-right: 1px solid #aabdc7;
-}
-
-.trajetoria-item span {
-    margin-bottom: 22px;
-    color: #0786d1;
-    font-size: 26px;
-}
-
-.trajetoria-item h3 {
-    margin: 0;
+.trajetoria-card-copy h3 {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #073f72;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
-    line-height: 1.5;
+    line-height: 1.35;
 }
 
-.trajetoria-item p {
-    max-width: 180px;
-    margin-top: 15px;
-    color: #657e90;
-    font-size: 12px;
-    line-height: 1.6;
+.trajetoria-card-copy > span {
+    width: 42px;
+    height: 2px;
+    margin: 15px 0;
+    background: linear-gradient(90deg, #0a73b8, #35b8f2);
+}
+
+.trajetoria-card-copy p {
+    color: #617b8e;
+    font-size: 11px;
+    line-height: 1.65;
 }
 
 .trajetoria-centro {
-    padding: 25px 42px;
+    min-width: 0;
+    padding: 0 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -561,39 +579,94 @@ select {
 }
 
 .trajetoria-centro small {
-    margin-bottom: 17px;
-    color: #0786d1;
+    color: #087fc6;
     font-size: 10px;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
+}
+
+.trajetoria-mini-line {
+    width: 48px;
+    height: 2px;
+    margin: 15px 0 22px;
+    background: linear-gradient(90deg, transparent, #1596dc, transparent);
 }
 
 .trajetoria-centro h2 {
-    color: #0a3d69;
+    margin: 0;
+    color: #073f72;
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(38px, 3.5vw, 55px);
-    font-weight: 500;
-    line-height: 0.98;
+    font-size: clamp(45px, 4vw, 64px);
+    font-weight: 600;
+    line-height: .84;
+    letter-spacing: -1px;
 }
 
 .trajetoria-centro h2 em {
-    color: #0786d1;
+    color: #078bd3;
     font-weight: 500;
 }
 
-.trajetoria-centro p {
-    max-width: 500px;
-    margin: 24px auto 0;
-    color: #536f82;
-    font-size: 13px;
-    line-height: 1.85;
+.trajetoria-ornamento {
+    width: 100%;
+    margin: 25px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
 }
 
-.trajetoria-centro a {
+.trajetoria-ornamento i {
+    width: 90px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #78a9c8);
+}
+
+.trajetoria-ornamento i:last-child { transform: rotate(180deg); }
+
+.trajetoria-ornamento b {
+    color: #0786d1;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.trajetoria-frase {
+    margin: 0;
+    color: #153f67;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 25px;
+    line-height: 1.15;
+}
+
+.trajetoria-frase em {
+    color: #078bd3;
+    font-weight: 600;
+}
+
+.trajetoria-impacto {
+    margin-top: 15px;
+    color: #073f72;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.trajetoria-link {
     margin-top: 24px;
-    color: #0576bb;
-    font-size: 10px;
+    padding: 12px 25px;
+    border: 1px solid #168dd1;
+    border-radius: 28px;
+    color: #087fc6;
+    background: rgba(255,255,255,.58);
+    font-size: 9px;
     font-weight: 800;
+    transition: .25s ease;
+}
+
+.trajetoria-link:hover {
+    color: #fff;
+    background: #087fc6;
 }
 
 
@@ -1773,4 +1846,48 @@ select {
     .offers h2 {
         font-size: 38px;
     }
+}
+
+/* =========================================================
+   RESPONSIVIDADE — NOVA TRAJETÓRIA
+========================================================= */
+@media (max-width: 1150px) {
+    .trajetoria-showcase {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 820px;
+    }
+    .trajetoria-centro {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        padding: 0 20px 42px;
+    }
+    .trajetoria-card > img { height: 230px; }
+}
+
+@media (max-width: 700px) {
+    .trajetoria-nova { padding: 62px 0; }
+    .trajetoria-showcase {
+        grid-template-columns: 1fr;
+        width: min(100% - 34px, 520px);
+        gap: 18px;
+    }
+    .trajetoria-centro {
+        grid-column: auto;
+        padding: 0 0 30px;
+    }
+    .trajetoria-centro small {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+    .trajetoria-centro h2 {
+        font-size: clamp(43px, 13vw, 58px);
+    }
+    .trajetoria-frase { font-size: 23px; }
+    .trajetoria-impacto {
+        max-width: 330px;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+    .trajetoria-card > img { height: 250px; }
+    .trajetoria-card-copy { min-height: 155px; }
 }
