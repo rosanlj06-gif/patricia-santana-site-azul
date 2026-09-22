@@ -4,614 +4,518 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre | Apóstola Patricia Santana</title>
-  <meta name="description" content="Conheça a trajetória e o propósito ministerial da Apóstola Patricia Santana.">
+
+  <!-- NÃO ALTERA O CABEÇALHO NEM O RODAPÉ -->
+  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="sobre.css?v=3">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Cabeçalho e rodapé continuam usando o CSS atual da Home -->
-  <link rel="stylesheet" href="style.css?v=17">
-
-  <!-- Somente o conteúdo da página Sobre -->
-  <link rel="stylesheet" href="sobre.css?v=1">
 </head>
+
 <body>
 
+<!-- =========================================================
+     CABEÇALHO — MESMA ESTRUTURA DA HOME
+========================================================= -->
 <header class="header">
+  <div class="wrap navbar">
+    <a class="brand" href="index.html">
+      <img src="logo-patricia.png" alt="Logo Apóstola Patricia Santana">
+      <span>
+        <strong>PATRICIA SANTANA</strong>
+        <small>MINISTÉRIO APOSTÓLICO</small>
+      </span>
+    </a>
 
-        <div class="wrap navwrap">
+    <nav class="nav" id="nav">
+      <a href="index.html">INÍCIO</a>
+      <a href="sobre.html" class="active">SOBRE</a>
+      <a href="cursos.html">CURSOS</a>
+      <a href="agenda.html">AGENDA</a>
+      <a href="contato.html">CONTATO</a>
+      <a href="ofertas.html">DÍZIMOS E OFERTAS</a>
+    </nav>
 
-            <a class="brand" href="#inicio">
+    <a class="btn primary desktop-cta" href="cursos.html">VER CURSOS</a>
 
-                <img
-                    src="logo-patricia.png"
-                    alt="Logo Apóstola Patricia Santana"
-                >
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false">
+      ☰
+    </button>
+  </div>
+</header>
 
-                <span>
-                    <strong>PATRICIA SANTANA</strong>
-                    <small>MINISTÉRIO APOSTÓLICO</small>
-                </span>
-
-            </a>
-
-
-            <button
-                class="menu"
-                id="menu"
-                type="button"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-                aria-controls="nav"
-            >
-                ☰
-            </button>
-
-
-            <nav id="nav">
-
-                <a class="active" href="#inicio">
-                    INÍCIO
-                </a>
-
-                <a href="#sobre">
-                    SOBRE
-                </a>
-
-                <a href="#cursos">
-                    CURSOS
-                </a>
-
-                <a href="#agenda">
-                    AGENDA
-                </a>
-
-                <a href="#contato">
-                    CONTATO
-                </a>
-
-                <a href="#ofertas">
-                    DÍZIMOS E OFERTAS
-                </a>
-
-            </nav>
-
-
-            <a class="topbtn" href="#cursos">
-                VER CURSOS
-            </a>
-
-        </div>
-
-    </header>
 
 <main class="pagina-sobre">
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">QUEM É A APÓSTOLA?</p>
-        <h1>Patricia <em>Santana</em></h1>
-        <p class="hero-subtitle">Fé, propósito e uma mensagem que transforma.</p>
-        <div class="gold-line"></div>
-        <p class="hero-text">Uma página dedicada à história, propósito e atuação ministerial.</p>
-        <div class="hero-ministry">
+
+  <!-- =====================================================
+       1. BANNER PRINCIPAL
+  ====================================================== -->
+  <section class="sobre-hero">
+    <div class="sobre-circulo circulo-1"></div>
+    <div class="sobre-circulo circulo-2"></div>
+
+    <div class="sobre-container sobre-hero-grid">
+
+      <div class="sobre-hero-texto">
+        <p class="sobre-etiqueta">QUEM É A APÓSTOLA?</p>
+
+        <h1>
+          Patricia <em>Santana</em>
+        </h1>
+
+        <p class="sobre-subtitulo">
+          Fé, propósito e uma mensagem que transforma.
+        </p>
+
+        <span class="sobre-linha"></span>
+
+        <p class="sobre-descricao">
+          Uma página dedicada à história, propósito e atuação ministerial.
+        </p>
+
+        <div class="sobre-ministerio">
           <small>MINISTÉRIO PATRICIA SANTANA</small>
-          <strong>Batalha Espiritual <em>de Alto Nível.</em></strong>
-          <p>Ensino, seminários e conteúdos para aprofundamento, conhecimento e fortalecimento espiritual.</p>
+
+          <h2>
+            Batalha Espiritual
+            <em>de Alto Nível.</em>
+          </h2>
+
+          <p>
+            Ensino, seminários e conteúdos para aprofundamento,
+            conhecimento e fortalecimento espiritual.
+          </p>
         </div>
-        <a href="#sobre" class="outline-btn">CONHECER A TRAJETÓRIA <span>↓</span></a>
+
+        <a class="sobre-botao-contorno" href="#sobre">
+          CONHECER A TRAJETÓRIA <span>↓</span>
+        </a>
       </div>
 
-      <div class="photo-frame" aria-label="Espaço reservado para a foto oficial da Apóstola Patricia Santana">
-        <div class="frame-inner">
-          <span class="photo-symbol">◇</span>
-          <strong>SUA FOTO AQUI</strong>
-          <small>APÓSTOLA PATRICIA SANTANA</small>
-        </div>
-      </div>
 
-      <div class="lion" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <section class="about" id="sobre">
-    <div class="container about-inner">
-      <p class="eyebrow">SOBRE</p>
-      <h2>Um ministério para esta geração</h2>
-      <p>A Apóstola Patricia Santana atua com conteúdos, cursos e seminários voltados ao aprofundamento espiritual, fortalecimento da fé e desenvolvimento de uma caminhada com propósito.</p>
-      <p>Este espaço está preparado para receber a biografia oficial, trajetória ministerial, projetos e demais informações aprovadas.</p>
-      <blockquote>“Uma caminhada construída com propósito, ensino e fé.”</blockquote>
-    </div>
-  </section>
-
-  <section class="journey">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">UMA TRAJETÓRIA CONSTRUÍDA PELA FÉ</p>
-        <h2>Marcos de uma história com propósito</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="milestone">
-          <div class="icon-circle">
-            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 51V25M32 32c-8 0-14-5-14-12 8 0 14 4 14 12Zm0 0c8 0 14-5 14-12-8 0-14 4-14 12Z"/></svg>
+      <div class="sobre-foto-area">
+        <div class="sobre-foto-moldura">
+          <div class="sobre-foto-placeholder">
+            <span>◇</span>
+            <strong>SUA FOTO AQUI</strong>
+            <small>APÓSTOLA PATRICIA SANTANA</small>
           </div>
-          <h3>INÍCIO DO<br>MINISTÉRIO</h3>
+        </div>
+
+        <div class="sobre-foto-legenda">
+          APÓSTOLA PATRICIA SANTANA
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       2. SOBRE
+  ====================================================== -->
+  <section class="sobre-apresentacao" id="sobre">
+
+    <div class="sobre-container sobre-apresentacao-grid">
+
+      <div class="sobre-apresentacao-titulo">
+        <p class="sobre-etiqueta">SOBRE</p>
+
+        <h2>
+          Um ministério para
+          <em>esta geração</em>
+        </h2>
+
+        <div class="sobre-ornamento">
+          <i></i>
+          <span>◇</span>
+          <i></i>
+        </div>
+      </div>
+
+
+      <div class="sobre-apresentacao-texto">
+        <p>
+          A Apóstola Patricia Santana atua com conteúdos, cursos e seminários
+          voltados ao aprofundamento espiritual, fortalecimento da fé e
+          desenvolvimento de uma caminhada com propósito.
+        </p>
+
+        <p>
+          Este espaço está preparado para receber a biografia oficial,
+          trajetória ministerial, projetos e demais informações aprovadas.
+        </p>
+
+        <blockquote>
+          “Uma caminhada construída com propósito, ensino e fé.”
+        </blockquote>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       3. TRAJETÓRIA
+  ====================================================== -->
+  <section class="sobre-trajetoria">
+
+    <div class="sobre-container">
+
+      <header class="sobre-titulo-central">
+        <p class="sobre-etiqueta">
+          UMA TRAJETÓRIA CONSTRUÍDA PELA FÉ
+        </p>
+
+        <h2>
+          Marcos de uma história
+          <em>com propósito</em>
+        </h2>
+      </header>
+
+
+      <div class="sobre-marcos">
+
+        <article class="sobre-marco">
+          <div class="sobre-icone">
+            <svg viewBox="0 0 64 64">
+              <path d="M32 53V25M32 32c-8 0-14-5-14-12 8 0 14 4 14 12Zm0 0c8 0 14-5 14-12-8 0-14 4-14 12Z"/>
+            </svg>
+          </div>
+          <span>01</span>
+          <h3>INÍCIO DO MINISTÉRIO</h3>
           <p>Um chamado que mudou tudo.</p>
         </article>
 
-        <article class="milestone">
-          <div class="icon-circle">
-            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 17c9-2 16 0 22 5v30c-6-5-13-7-22-5V17Zm44 0c-9-2-16 0-22 5v30c6-5 13-7 22-5V17Z"/></svg>
+
+        <article class="sobre-marco">
+          <div class="sobre-icone">
+            <svg viewBox="0 0 64 64">
+              <path d="M9 16c10-2 17 0 23 6v30c-6-5-13-7-23-5V16Zm46 0c-10-2-17 0-23 6v30c6-5 13-7 23-5V16Z"/>
+            </svg>
           </div>
-          <h3>ENSINO E<br>CAPACITAÇÃO</h3>
+          <span>02</span>
+          <h3>ENSINO E CAPACITAÇÃO</h3>
           <p>Formação, conhecimento e ensinamentos profundos.</p>
         </article>
 
-        <article class="milestone">
-          <div class="icon-circle">
-            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="22" r="7"/><circle cx="15" cy="27" r="5"/><circle cx="49" cy="27" r="5"/><path d="M20 49c1-9 5-14 12-14s11 5 12 14M5 48c1-8 4-12 10-12 3 0 5 1 7 3M59 48c-1-8-4-12-10-12-3 0-5 1-7 3"/></svg>
+
+        <article class="sobre-marco">
+          <div class="sobre-icone">
+            <svg viewBox="0 0 64 64">
+              <circle cx="32" cy="21" r="7"/>
+              <circle cx="15" cy="27" r="5"/>
+              <circle cx="49" cy="27" r="5"/>
+              <path d="M20 50c1-10 5-15 12-15s11 5 12 15M5 48c1-8 4-12 10-12 3 0 5 1 7 3M59 48c-1-8-4-12-10-12-3 0-5 1-7 3"/>
+            </svg>
           </div>
-          <h3>SEMINÁRIOS<br>E CURSOS</h3>
+          <span>03</span>
+          <h3>SEMINÁRIOS E CURSOS</h3>
           <p>Conteúdos que aprofundam e fortalecem a caminhada.</p>
         </article>
 
-        <article class="milestone">
-          <div class="icon-circle">
-            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path d="M10 32h44M32 10c8 8 11 15 11 22s-3 14-11 22c-8-8-11-15-11-22s3-14 11-22Z"/></svg>
+
+        <article class="sobre-marco">
+          <div class="sobre-icone">
+            <svg viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="22"/>
+              <path d="M10 32h44M32 10c8 8 11 15 11 22s-3 14-11 22c-8-8-11-15-11-22s3-14 11-22Z"/>
+            </svg>
           </div>
-          <h3>VIDAS<br>ALCANÇADAS</h3>
+          <span>04</span>
+          <h3>VIDAS ALCANÇADAS</h3>
           <p>Espaço para testemunhos e histórias aprovadas.</p>
         </article>
 
-        <article class="milestone">
-          <div class="icon-circle">
-            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="m10 22 10 9 12-17 12 17 10-9-4 28H14l-4-28Zm6 20h32"/></svg>
+
+        <article class="sobre-marco">
+          <div class="sobre-icone">
+            <svg viewBox="0 0 64 64">
+              <path d="m10 22 10 9 12-17 12 17 10-9-4 28H14l-4-28Zm6 20h32"/>
+            </svg>
           </div>
-          <h3>UMA GERAÇÃO<br>MAIS FORTE</h3>
+          <span>05</span>
+          <h3>UMA GERAÇÃO MAIS FORTE</h3>
           <p>Avançando no propósito e no fortalecimento da fé.</p>
         </article>
+
       </div>
+
+
+      <!-- PILARES -->
+      <div class="sobre-pilares">
+
+        <p class="sobre-etiqueta">PILARES DO MINISTÉRIO</p>
+
+        <div class="sobre-pilares-grid">
+
+          <article class="sobre-pilar">
+            <div class="sobre-pilar-icone">
+              <svg viewBox="0 0 64 64">
+                <circle cx="29" cy="35" r="17"/>
+                <circle cx="29" cy="35" r="9"/>
+                <circle cx="29" cy="35" r="2"/>
+                <path d="M41 23 54 10M44 10h10v10"/>
+              </svg>
+            </div>
+
+            <h3>PROPÓSITO</h3>
+
+            <p>
+              Fortalecer a fé e conduzir vidas a uma caminhada com propósito.
+            </p>
+          </article>
+
+
+          <article class="sobre-pilar">
+            <div class="sobre-pilar-icone">
+              <svg viewBox="0 0 64 64">
+                <path d="M9 15c10-2 17 0 23 5v31c-6-5-13-7-23-5V15Zm46 0c-10-2-17 0-23 5v31c6-5 13-7 23-5V15Z"/>
+              </svg>
+            </div>
+
+            <h3>MISSÃO</h3>
+
+            <p>
+              Ensinar, orientar e desenvolver conteúdos para crescimento espiritual.
+            </p>
+          </article>
+
+
+          <article class="sobre-pilar">
+            <div class="sobre-pilar-icone sobre-pilar-pomba">
+              <img src="pomba-branca.png" alt="">
+            </div>
+
+            <h3>CHAMADO</h3>
+
+            <p>
+              Servir por meio da Palavra e do ensino com responsabilidade e propósito.
+            </p>
+          </article>
+
+        </div>
+
+
+        <blockquote class="sobre-frase-final">
+          <span>“</span>
+
+          <p>
+            Ensinar.<br>
+            Libertar.<br>
+            Curar.<br>
+            Restaurar.
+          </p>
+
+          <span>”</span>
+        </blockquote>
+
+      </div>
+
     </div>
   </section>
 
-  <section class="pillars">
-    <div class="container">
-      <p class="eyebrow pillars-title">PILARES DO MINISTÉRIO</p>
-      <div class="pillars-grid">
-        <article class="pillar">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="29" cy="35" r="17"/><circle cx="29" cy="35" r="9"/><circle cx="29" cy="35" r="2"/><path d="M41 23 54 10M44 10h10v10"/></svg>
-          <h3>PROPÓSITO</h3>
-          <p>Fortalecer a fé e conduzir vidas a uma caminhada com propósito.</p>
-        </article>
-        <article class="pillar">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M9 15c10-2 17 0 23 5v31c-6-5-13-7-23-5V15Zm46 0c-10-2-17 0-23 5v31c6-5 13-7 23-5V15Z"/></svg>
-          <h3>MISSÃO</h3>
-          <p>Ensinar, orientar e desenvolver conteúdos para crescimento espiritual.</p>
-        </article>
-        <article class="pillar">
-          <img class="chamado-pomba" src="pomba.svg" alt="" aria-hidden="true">
-          <h3>CHAMADO</h3>
-          <p>Servir por meio da Palavra e do ensino com responsabilidade e propósito.</p>
-        </article>
-        <blockquote class="pillar-quote">“Ensinar.<br>Libertar.<br>Curar.<br>Restaurar.”</blockquote>
-      </div>
+
+  <!-- =====================================================
+       4. APROFUNDE SEU CONHECIMENTO
+  ====================================================== -->
+  <section class="sobre-cursos">
+
+    <div class="sobre-cursos-circulo"></div>
+
+    <div class="sobre-container sobre-cursos-conteudo">
+
+      <p class="sobre-etiqueta">
+        APROFUNDE SEU CONHECIMENTO
+      </p>
+
+      <h2>
+        Conheça os cursos
+        <em>e seminários</em>
+      </h2>
+
+      <p class="sobre-cursos-texto">
+        Conteúdos que edificam, aprofundam e fortalecem
+        a caminhada espiritual.
+      </p>
+
+      <a class="sobre-botao-cursos" href="cursos.html">
+        VER TODOS OS CURSOS <span>→</span>
+      </a>
+
     </div>
   </section>
 
-  <section class="courses-banner">
-    <div class="container banner-content">
-      <p class="eyebrow">APROFUNDE SEU CONHECIMENTO</p>
-      <h2>Conheça os cursos e<br>seminários</h2>
-      <p>Conteúdos que edificam, aprofundam e fortalecem a caminhada espiritual.</p>
-      <a class="gold-btn" href="cursos.html">VER TODOS OS CURSOS <span>→</span></a>
-    </div>
-  </section>
 </main>
 
-<!-- =====================================================
-         RODAPÉ PREMIUM
-    ====================================================== -->
-
-    
-        <!-- =================================================
-             RODAPÉ MOBILE — ESTRUTURA PRÓPRIA
-        ================================================== -->
-        <footer class="mobile-footer">
-            <div class="mobile-footer-inner">
-
-                <div class="mobile-footer-brand">
-                    <img src="logo-rodape.png" alt="Apóstola Patricia Santana">
-
-                    <p class="mobile-footer-pillars">
-                        ENSINO <span>•</span> LIBERTAÇÃO <span>•</span> CURA <span>•</span> RESTAURAÇÃO
-                    </p>
-
-                    <p class="mobile-footer-purpose">
-                        Equipando vidas para um propósito maior.
-                    </p>
-                </div>
-
-                <div class="mobile-footer-columns">
-
-                    <div class="mobile-footer-column">
-                        <h4>NAVEGAÇÃO</h4>
-                        <span class="mobile-footer-title-line"></span>
-
-                        <ul>
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="sobre.html">Sobre</a></li>
-                            <li><a href="cursos.html">Cursos</a></li>
-                            <li><a href="agenda.html">Agenda</a></li>
-                            <li><a href="contato.html">Contato</a></li>
-                            <li><a href="ofertas.html">Dízimos e Ofertas</a></li>
-                        </ul>
-                    </div>
 
-                    <div class="mobile-footer-column">
-                        <h4>SEMINÁRIOS</h4>
-                        <span class="mobile-footer-title-line"></span>
-
-                        <ul>
-                            <li><a href="cursos.html">Cura Interior</a></li>
-                            <li><a href="cursos.html">Trono de Lilith</a></li>
-                            <li><a href="cursos.html">Trono de Mamon</a></li>
-                            <li><a href="cursos.html">Batalha Espiritual</a></li>
-                            <li><a href="cursos.html">Trono de Belial</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="mobile-footer-social">
-                    <h4>SIGA NAS REDES</h4>
-                    <span class="mobile-footer-title-line"></span>
-
-                    <div class="mobile-social-icons">
-                        <a
-                            href="https://www.instagram.com/seminarios_ap_patriciasantana/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                        >IG</a>
-
-                        <a href="#" aria-label="YouTube">▶</a>
-
-                        <a href="#" aria-label="Facebook">f</a>
-                    </div>
-
-                    <p>
-                        Receba conteúdos, novidades e mensagens de edificação.
-                    </p>
-
-                    <a
-                        class="mobile-footer-whatsapp"
-                        href="https://wa.me/5511987663744"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span class="mobile-wa-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <path d="M16.04 3C8.86 3 3.02 8.75 3.02 15.82c0 2.26.6 4.46 1.74 6.4L3 28.63l6.6-1.7a13.15 13.15 0 0 0 6.43 1.66h.01c7.18 0 13.02-5.75 13.02-12.82C29.06 8.75 23.22 3 16.04 3Zm0 23.42h-.01a10.96 10.96 0 0 1-5.58-1.51l-.4-.23-3.92 1.01 1.05-3.77-.26-.39a10.5 10.5 0 0 1-1.72-5.71c0-5.88 4.86-10.66 10.84-10.66 5.98 0 10.84 4.78 10.84 10.66 0 5.87-4.86 10.6-10.84 10.6Zm5.94-7.94c-.33-.16-1.93-.94-2.23-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.26-.19.21-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6-.97-.85-1.63-1.91-1.82-2.23-.19-.32-.02-.49.14-.65.15-.14.33-.37.49-.55.16-.18.22-.32.33-.53.11-.21.05-.4-.03-.55-.08-.16-.74-1.76-1.01-2.41-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.4-.3.32-1.15 1.1-1.15 2.68 0 1.58 1.17 3.1 1.33 3.31.16.21 2.3 3.46 5.58 4.85.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.93-.78 2.2-1.53.27-.75.27-1.39.19-1.53-.08-.13-.3-.21-.63-.37Z"/>
-                            </svg>
-                        </span>
-
-                        <strong>FALE CONOSCO</strong>
-                        <span class="mobile-footer-arrow">→</span>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="mobile-footer-bottom">
-                <span class="mobile-footer-diamond">◇</span>
-
-                <p>
-                    © 2026 Patricia Santana. Todos os direitos reservados.
-                </p>
-
-                <div>
-                    <a href="#">Política de Privacidade</a>
-                    <span>|</span>
-                    <a href="#">Termos de Uso</a>
-                </div>
-
-                <p class="mobile-footer-credit">
-                    Desenvolvido por <strong>Santiago Digital</strong>
-                </p>
-            </div>
-        </footer>
-
-
-        <footer class="footer-premium">
-
-
-        <div class="footer-metal">
-
-            <div class="wrap footer-premium-grid">
-
-
-                <!-- NAVEGAÇÃO -->
-
-                <div class="footer-col footer-nav">
-
-                    <h4>
-                        NAVEGAÇÃO
-                    </h4>
-
-                    <span class="footer-title-line"></span>
-
-
-                    <a href="#inicio">
-                        Início
-                    </a>
-
-                    <a href="#sobre">
-                        Sobre
-                    </a>
-
-                    <a href="#cursos">
-                        Cursos
-                    </a>
-
-                    <a href="#agenda">
-                        Agenda
-                    </a>
-
-                    <a href="#contato">
-                        Contato
-                    </a>
-
-                    <a href="#ofertas">
-                        Dízimos e Ofertas
-                    </a>
-
-                </div>
-
-
-
-                <!-- LOGO CENTRAL -->
-
-                <div class="footer-logo-area">
-
-                    <img
-                        src="logo-rodape.png"
-                        alt="Apóstola Patricia Santana"
-                    >
-
-                    <p class="footer-ministry-words">
-                        ENSINO <span>•</span> LIBERTAÇÃO <span>•</span> CURA <span>•</span> RESTAURAÇÃO
-                    </p>
-
-                    <p class="footer-ministry-purpose">
-                        Equipando vidas para um propósito maior.
-                    </p>
-
-                </div>
-
-
-
-                <!-- MINISTÉRIO -->
-
-                <div class="footer-col footer-ministerio">
-
-                    <h4>
-                        SEMINÁRIOS
-                    </h4>
-
-                    <span class="footer-title-line"></span>
-
-
-                    <a href="#cursos">
-                        Cura Interior
-                    </a>
-
-                    <a href="#cursos">
-                        Trono de Lilith
-                    </a>
-
-                    <a href="#cursos">
-                        Trono de Mamon
-                    </a>
-
-                    <a href="#cursos">
-                        Batalha Espiritual
-                    </a>
-
-                    <a href="#cursos">
-                        Trono de Belial
-                    </a>
-
-                </div>
-
-
-
-                <!-- REDES SOCIAIS -->
-
-                <div class="footer-col footer-social">
-
-                    <h4>
-                        SIGA NAS REDES
-                    </h4>
-
-                    <span class="footer-title-line"></span>
-
-
-                    <div class="social-buttons">
-
-                        <a
-                            href="https://www.instagram.com/seminarios_ap_patriciasantana/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                        >
-                            IG
-                        </a>
-
-
-                        <a
-                            href="#"
-                            aria-label="YouTube"
-                        >
-                            ▶
-                        </a>
-
-
-                        <a
-                            href="#"
-                            aria-label="Facebook"
-                        >
-                            f
-                        </a>
-
-                    </div>
-
-
-                    <p>
-                        Receba conteúdos, novidades
-                        e mensagens de edificação.
-                    </p>
-
-
-                    <a
-                        class="footer-whatsapp"
-                        href="https://wa.me/5511987663744"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        <span class="wa-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <path d="M16.04 3C8.86 3 3.02 8.75 3.02 15.82c0 2.26.6 4.46 1.74 6.4L3 28.63l6.6-1.7a13.15 13.15 0 0 0 6.43 1.66h.01c7.18 0 13.02-5.75 13.02-12.82C29.06 8.75 23.22 3 16.04 3Zm0 23.42h-.01a10.96 10.96 0 0 1-5.58-1.51l-.4-.23-3.92 1.01 1.05-3.77-.26-.39a10.5 10.5 0 0 1-1.72-5.71c0-5.88 4.86-10.66 10.84-10.66 5.98 0 10.84 4.78 10.84 10.66 0 5.87-4.86 10.6-10.84 10.6Zm5.94-7.94c-.33-.16-1.93-.94-2.23-1.05-.3-.11-.52-.16-.74.16-.22.32-.85 1.05-1.04 1.26-.19.21-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6-.97-.85-1.63-1.91-1.82-2.23-.19-.32-.02-.49.14-.65.15-.14.33-.37.49-.55.16-.18.22-.32.33-.53.11-.21.05-.4-.03-.55-.08-.16-.74-1.76-1.01-2.41-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.4-.3.32-1.15 1.1-1.15 2.68 0 1.58 1.17 3.1 1.33 3.31.16.21 2.3 3.46 5.58 4.85.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.93-.78 2.2-1.53.27-.75.27-1.39.19-1.53-.08-.13-.3-.21-.63-.37Z"/>
-                            </svg>
-                        </span>
-
-                        <strong>
-                            FALE CONOSCO
-                        </strong>
-
-                        <span class="wa-arrow">
-                            →
-                        </span>
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PARTE INFERIOR -->
-
-        <div class="footer-bottom-premium">
-
-            <div class="wrap footer-bottom-content">
-
-
-                <p>
-                    © 2026 Apóstola Patricia Santana.
-                    Todos os direitos reservados.
-                </p>
-
-
-                <span class="footer-diamond">
-                    ◇
-                </span>
-
-
-                <div class="footer-legal">
-
-                    <a href="#">
-                        Política de Privacidade
-                    </a>
-
-                    <i></i>
-
-                    <a href="#">
-                        Termos de Uso
-                    </a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-    </footer>
-
-
-
-    
-
-<!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <script src="script.js?v=2"></script>
-
-
-    <!-- GARANTIA DO MENU MOBILE -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const menuButton = document.getElementById("menu");
-            const navigation = document.getElementById("nav");
-
-            if (!menuButton || !navigation) {
-                return;
-            }
-
-            menuButton.addEventListener("click", function () {
-
-                navigation.classList.toggle("open");
-
-                const aberto = navigation.classList.contains("open");
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    aberto ? "true" : "false"
-                );
-
-                menuButton.textContent = aberto ? "✕" : "☰";
-
-            });
-
-
-            navigation.querySelectorAll("a").forEach(function (link) {
-
-                link.addEventListener("click", function () {
-
-                    if (window.innerWidth <= 820) {
-
-                        navigation.classList.remove("open");
-
-                        menuButton.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        menuButton.textContent = "☰";
-
-                    }
-
-                });
-
-            });
-
-        });
-    </script>
-
-
-
+<!-- =========================================================
+     RODAPÉ
+     Mantém as classes do rodapé já usadas no projeto.
+========================================================= -->
+<footer class="mobile-footer">
+  <div class="mobile-footer-inner">
+
+    <div class="mobile-footer-brand">
+      <img src="logo-rodape.png" alt="Apóstola Patricia Santana">
+
+      <p class="mobile-footer-pillars">
+        ENSINO <span>•</span> LIBERTAÇÃO <span>•</span> CURA <span>•</span> RESTAURAÇÃO
+      </p>
+
+      <p class="mobile-footer-purpose">
+        Equipando vidas para um propósito maior.
+      </p>
+    </div>
+
+    <div class="mobile-footer-columns">
+
+      <div class="mobile-footer-column">
+        <h4>NAVEGAÇÃO</h4>
+        <span class="mobile-footer-title-line"></span>
+
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="ofertas.html">Dízimos e Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-footer-column">
+        <h4>SEMINÁRIOS</h4>
+        <span class="mobile-footer-title-line"></span>
+
+        <ul>
+          <li><a href="cursos.html">Cura Interior</a></li>
+          <li><a href="cursos.html">Trono de Lilith</a></li>
+          <li><a href="cursos.html">Trono de Mamon</a></li>
+          <li><a href="cursos.html">Batalha Espiritual</a></li>
+          <li><a href="cursos.html">Trono de Belial</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mobile-footer-social">
+      <h4>SIGA NAS REDES</h4>
+      <span class="mobile-footer-title-line"></span>
+
+      <div class="mobile-social-icons">
+        <a href="https://www.instagram.com/seminarios_ap_patriciasantana/" target="_blank" rel="noopener noreferrer">IG</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+
+      <p>
+        Receba conteúdos, novidades e mensagens de edificação.
+      </p>
+
+      <a class="mobile-footer-whatsapp"
+         href="https://wa.me/5511987663744"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <strong>FALE CONOSCO</strong>
+        <span class="mobile-footer-arrow">→</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="mobile-footer-bottom">
+    <span class="mobile-footer-diamond">◇</span>
+
+    <p>© 2026 Patricia Santana. Todos os direitos reservados.</p>
+
+    <div>
+      <a href="#">Política de Privacidade</a>
+      <span>|</span>
+      <a href="#">Termos de Uso</a>
+    </div>
+
+    <p class="mobile-footer-credit">
+      Desenvolvido por <strong>Santiago Digital</strong>
+    </p>
+  </div>
+</footer>
+
+
+<footer class="footer-premium">
+  <div class="footer-main">
+    <div class="wrap footer-grid">
+
+      <div class="footer-col">
+        <h4>NAVEGAÇÃO</h4>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="contato.html">Contato</a>
+        <a href="ofertas.html">Dízimos e Ofertas</a>
+      </div>
+
+      <div class="footer-logo-col">
+        <img src="logo-rodape.png" alt="Apóstola Patricia Santana">
+        <p>ENSINO • LIBERTAÇÃO • CURA • RESTAURAÇÃO</p>
+        <small>Equipando vidas para um propósito maior.</small>
+      </div>
+
+      <div class="footer-col">
+        <h4>SEMINÁRIOS</h4>
+        <a href="cursos.html">Cura Interior</a>
+        <a href="cursos.html">Trono de Lilith</a>
+        <a href="cursos.html">Trono de Mamon</a>
+        <a href="cursos.html">Batalha Espiritual</a>
+        <a href="cursos.html">Trono de Belial</a>
+      </div>
+
+      <div class="footer-col footer-social-col">
+        <h4>SIGA NAS REDES</h4>
+
+        <p>
+          Receba conteúdos, novidades e mensagens de edificação.
+        </p>
+
+        <a class="footer-whatsapp"
+           href="https://wa.me/5511987663744"
+           target="_blank"
+           rel="noopener noreferrer">
+          FALE CONOSCO →
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="wrap footer-bottom-inner">
+      <p>© 2026 Patricia Santana. Todos os direitos reservados.</p>
+      <span>◇</span>
+      <p>Desenvolvido por Santiago Digital</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const nav = document.getElementById("nav");
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", function () {
+      nav.classList.toggle("open");
+      menuBtn.setAttribute(
+        "aria-expanded",
+        nav.classList.contains("open") ? "true" : "false"
+      );
+    });
+  }
+</script>
 
 </body>
 </html>
