@@ -2609,3 +2609,127 @@ select {
         height: 132px !important;
     }
 }
+
+
+/* =========================================================
+   V12 — BÍBLIA INTEGRADA AO BANNER + ESPAÇO MOBILE
+========================================================= */
+
+/* A imagem deixa de parecer um retângulo solto e passa a
+   desaparecer suavemente nas bordas do fundo da seção. */
+.feature-media {
+    position: relative;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+}
+
+.feature-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border: 0;
+    box-shadow: none;
+
+    -webkit-mask-image:
+        linear-gradient(to right,
+            transparent 0%,
+            rgba(0,0,0,.35) 5%,
+            #000 14%,
+            #000 86%,
+            rgba(0,0,0,.35) 95%,
+            transparent 100%
+        ),
+        linear-gradient(to bottom,
+            transparent 0%,
+            #000 12%,
+            #000 84%,
+            transparent 100%
+        );
+    -webkit-mask-composite: source-in;
+
+    mask-image:
+        linear-gradient(to right,
+            transparent 0%,
+            rgba(0,0,0,.35) 5%,
+            #000 14%,
+            #000 86%,
+            rgba(0,0,0,.35) 95%,
+            transparent 100%
+        ),
+        linear-gradient(to bottom,
+            transparent 0%,
+            #000 12%,
+            #000 84%,
+            transparent 100%
+        );
+    mask-composite: intersect;
+}
+
+/* Luz suave atrás da Bíblia para integrar ainda mais */
+.feature-media::before {
+    content: "";
+    position: absolute;
+    inset: -12%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(95, 190, 240, .18) 0%,
+            rgba(255,255,255,.28) 42%,
+            transparent 72%
+        );
+    filter: blur(18px);
+}
+
+/* Reduz o espaço vazio depois dos cards no celular */
+@media (max-width: 700px) {
+    .trajetoria-nova {
+        padding-bottom: 30px !important;
+    }
+}
+
+/* No celular a fusão da imagem é um pouco mais suave */
+@media (max-width: 820px) {
+    .feature-media {
+        width: 100%;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-media img {
+        -webkit-mask-image:
+            linear-gradient(to right,
+                transparent 0%,
+                #000 9%,
+                #000 91%,
+                transparent 100%
+            ),
+            linear-gradient(to bottom,
+                transparent 0%,
+                #000 10%,
+                #000 88%,
+                transparent 100%
+            );
+        -webkit-mask-composite: source-in;
+
+        mask-image:
+            linear-gradient(to right,
+                transparent 0%,
+                #000 9%,
+                #000 91%,
+                transparent 100%
+            ),
+            linear-gradient(to bottom,
+                transparent 0%,
+                #000 10%,
+                #000 88%,
+                transparent 100%
+            );
+        mask-composite: intersect;
+    }
+}
