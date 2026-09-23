@@ -3891,3 +3891,35 @@ select {
     }
 }
 
+/* =========================================================
+   CORREÇÃO FINAL — RODAPÉ RESPONSIVO
+   Mantém o mesmo footer do desktop também no celular.
+   O rodapé mobile antigo fica desativado.
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .footer-premium {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .mobile-footer {
+        display: none !important;
+    }
+
+    #site-footer-slot {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
