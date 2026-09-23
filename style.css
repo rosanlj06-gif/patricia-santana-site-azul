@@ -3619,8 +3619,8 @@ select {
 }
 
 .courses{
-    padding-top: 72px;
-    padding-bottom: 78px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 .section-head{
@@ -3628,8 +3628,8 @@ select {
 }
 
 .feature{
-    padding-top: 68px;
-    padding-bottom: 68px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .feature-grid{
