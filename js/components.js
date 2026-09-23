@@ -46,14 +46,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     await Promise.all([
 
         carregarComponente(
-            "#site-header-slot",
-            "components/header.html"
-        ),
+    "#site-header-slot",
+    "components/header.html?v=4"
+),
 
         carregarComponente(
-            "#site-footer-slot",
-            "components/footer.html"
-        )
+    "#site-footer-slot",
+    "components/footer.html?v=4"
+)
 
     ]);
 
