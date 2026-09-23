@@ -1,1417 +1,495 @@
 /* =========================================================
-   SOBRE.CSS — IDENTIDADE AZUL / PRATA
-   SOMENTE O CONTEÚDO DA PÁGINA SOBRE
-   NÃO ESTILIZA HEADER NEM FOOTER
+   CORREÇÃO FINAL
+   RODAPÉ GLOBAL NA PÁGINA SOBRE
+
+   Impede que estilos antigos da página Sobre interfiram
+   no componente global do rodapé.
 ========================================================= */
 
-.pagina-sobre{
-  --navy:#033a68;
-  --navy2:#062b50;
-  --blue:#087fbd;
-  --cyan:#39b6eb;
-  --silver:#d9e4eb;
-  --ice:#f5f9fb;
-  --text:#42677e;
-  margin:0;
-  padding:0;
-  overflow:hidden;
-  background:#fff;
-  color:var(--navy);
-}
-.pagina-sobre *{box-sizing:border-box}
-.pagina-sobre a{text-decoration:none}
-.sobre-wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
-.sobre-kicker{
-  margin:0 0 18px;
-  font:700 11px/1.2 "Montserrat",Arial,sans-serif;
-  letter-spacing:4px;text-transform:uppercase;color:#0786c4;
-}
-.sobre-title{
-  margin:0;font-family:"Cormorant Garamond",Georgia,serif;
-  font-weight:500;color:var(--navy);line-height:.92;
-}
-.sobre-title em{font-weight:500;color:#078fd0}
-.sobre-btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:18px;
-  min-height:50px;padding:0 24px;border-radius:4px;
-  background:linear-gradient(135deg,#075b91,#0797d4);
-  color:#fff;font:700 10px/1 "Montserrat",Arial,sans-serif;
-  box-shadow:0 14px 30px rgba(5,91,145,.16);
-}
-
-/* 1 — HERO */
-.sobre-hero{
-  position:relative;min-height:500px;display:flex;align-items:center;
-  background:
-    radial-gradient(circle at 80% 20%,rgba(255,255,255,.95),transparent 26%),
-    radial-gradient(circle at 66% 48%,rgba(49,169,222,.16),transparent 28%),
-    linear-gradient(115deg,#e5edf2 0%,#f8fbfc 48%,#d7e5ed 100%);
-}
-.sobre-hero:after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
-  background:linear-gradient(90deg,#034878,#31b4eb,#e8f9ff,#31b4eb,#034878);
-  box-shadow:0 0 12px rgba(29,158,219,.35);
-}
-.sobre-hero-grid{
-  position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;
-  gap:78px;align-items:center;padding:42px 0;
-}
-.sobre-hero h1{font-size:clamp(72px,7vw,108px);letter-spacing:-3px}
-.sobre-hero h1 em{display:block;margin-left:70px}
-.sobre-hero-sub{
-  margin:24px 0 0;font:italic 600 27px/1.25 "Cormorant Garamond",Georgia,serif;
-  color:#315f7b;
-}
-.sobre-rule{display:block;width:78px;height:2px;margin:25px 0;background:#0a96d2}
-.sobre-hero-desc{
-  max-width:570px;margin:0 0 22px;color:#4e7084;
-  font:400 13px/1.75 "Montserrat",Arial,sans-serif;
-}
-.sobre-ministerio{
-  max-width:570px;margin:0 0 28px;padding:17px 20px;
-  border-left:3px solid #0797d4;background:rgba(255,255,255,.48);
-}
-.sobre-ministerio span{
-  display:block;margin-bottom:7px;color:#0879b1;
-  font:700 8px/1.2 "Montserrat",Arial,sans-serif;letter-spacing:2px;
-}
-.sobre-ministerio strong{
-  display:block;font:600 29px/.98 "Cormorant Garamond",Georgia,serif;color:#06456f;
-}
-.sobre-ministerio strong em{color:#078fd0;font-weight:600}
-.sobre-ministerio p{
-  margin:10px 0 0;color:#5c7b8e;font:400 9px/1.65 "Montserrat",Arial,sans-serif;
-}
-.sobre-photo{
-  position:relative;width:min(100%,390px);justify-self:end;padding:15px;
-}
-.sobre-photo:before,.sobre-photo:after{
-  content:"";position:absolute;width:92px;height:92px;border-color:#0d92cb;
-}
-.sobre-photo:before{left:0;top:0;border-left:2px solid;border-top:2px solid}
-.sobre-photo:after{right:0;bottom:0;border-right:2px solid;border-bottom:2px solid}
-.sobre-photo-frame{
-  min-height:385px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  border:1px solid rgba(7,101,154,.5);
-  background:
-    radial-gradient(circle at 50% 28%,rgba(255,255,255,.95),transparent 25%),
-    linear-gradient(145deg,#f7fbfd,#c8dae5 52%,#739bb4);
-  box-shadow:0 28px 65px rgba(14,70,105,.16),inset 0 0 0 8px rgba(255,255,255,.35);
-  text-align:center;color:#07517f;
-}
-.sobre-photo-frame .diamond{font-size:36px;color:#0c89c2;margin-bottom:18px}
-.sobre-photo-frame strong{
-  font:700 13px/1.2 "Montserrat",Arial,sans-serif;letter-spacing:3px;
-}
-.sobre-photo-frame small{
-  margin-top:10px;font:600 8px/1.2 "Montserrat",Arial,sans-serif;letter-spacing:2px;
-}
-
-/* 2 — SOBRE
-   Banner inspirado apenas na composição do modelo,
-   adaptado para a identidade azul/prata do site.
-*/
-.sobre-intro{
-  position:relative;
-  padding:78px 0 82px;
-  text-align:center;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 50% -35%,
-      rgba(255,255,255,.98) 0%,
-      rgba(255,255,255,.60) 28%,
-      transparent 55%),
-    linear-gradient(180deg,
-      #f7fafc 0%,
-      #eaf1f5 48%,
-      #dfe9ef 100%);
-}
-
-.sobre-intro::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:0;
-  width:520px;
-  height:180px;
-  transform:translateX(-50%);
-  background:radial-gradient(
-    ellipse at center,
-    rgba(76,184,231,.12) 0%,
-    transparent 70%
-  );
-  pointer-events:none;
-}
-
-.sobre-intro .sobre-wrap{
-  position:relative;
-  z-index:1;
-  max-width:980px;
-}
-
-.sobre-intro .sobre-kicker{
-  margin-bottom:25px;
-  color:#087fbd;
-  font-size:15px;
-  letter-spacing:5px;
-}
-
-.sobre-intro h2{
-  max-width:900px;
-  margin:0 auto;
-  color:#053f6d;
-  font-size:clamp(52px,4.8vw,72px);
-  line-height:.98;
-  letter-spacing:-1px;
-}
-
-.sobre-intro-copy{
-  max-width:850px;
-  margin:27px auto 0;
-  color:#456b82;
-  font:400 13px/1.9 "Montserrat",Arial,sans-serif;
-}
-
-.sobre-intro-copy p{
-  margin:0 0 17px;
-}
-
-.sobre-quote{
-  position:relative;
-  max-width:680px;
-  margin:34px auto 0;
-  padding:18px 34px;
-  border:0;
-  color:#07517f;
-  background:transparent;
-  font:italic 600 23px/1.35 "Cormorant Garamond",Georgia,serif;
-}
-
-.sobre-quote::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:4px;
-  bottom:4px;
-  width:2px;
-  background:linear-gradient(
-    180deg,
-    transparent 0%,
-    #20a9e0 22%,
-    #075b91 78%,
-    transparent 100%
-  );
-}
-
-.sobre-quote::after{
-  content:"";
-  position:absolute;
-  left:16px;
-  top:50%;
-  width:42px;
-  height:1px;
-  transform:translateY(-50%);
-  background:linear-gradient(90deg,rgba(32,169,224,.35),transparent);
-}
-
-/* 3 — TRAJETÓRIA / PILARES */
-.sobre-trajetoria{
-  position:relative;padding:92px 0 94px;color:#fff;
-  background:
-    radial-gradient(circle at 50% 0,rgba(28,126,183,.32),transparent 32%),
-    linear-gradient(180deg,#052d51 0%,#021c36 52%,#01172d 100%);
-}
-.sobre-trajetoria .sobre-kicker{color:#69c9f0;text-align:center}
-.sobre-trajetoria .sobre-title{color:#fff;text-align:center;font-size:clamp(48px,4.8vw,72px)}
-.marcos{
-  position:relative;margin-top:62px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;
-}
-.marcos:before{
-  content:"";position:absolute;left:8%;right:8%;top:40px;height:1px;
-  background:linear-gradient(90deg,transparent,#2d9ed2 8%,#89d8f6 50%,#2d9ed2 92%,transparent);
-}
-.marco{position:relative;z-index:2;text-align:center;padding:0 10px}
-.marco-icon{
-  width:80px;height:80px;margin:0 auto 17px;border-radius:50%;
-  display:grid;place-items:center;border:1px solid #39aee0;
-  background:#052b4d;color:#75d4f6;box-shadow:0 0 0 5px rgba(67,176,223,.06);
-}
-.marco-icon svg,.pilar-icon svg{
-  width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.6;
-  stroke-linecap:round;stroke-linejoin:round;
-}
-.marco h3{
-  min-height:38px;margin:0 0 8px;color:#fff;
-  font:700 10px/1.45 "Montserrat",Arial,sans-serif;
-}
-.marco p{
-  margin:0;color:#b8d3e2;font:400 8.5px/1.55 "Montserrat",Arial,sans-serif;
-}
-.pilares{
-  margin-top:75px;padding-top:58px;border-top:1px solid rgba(78,177,222,.24);
-}
-.pilares>.sobre-kicker{text-align:left}
-.pilares-grid{
-  margin-top:35px;display:grid;grid-template-columns:repeat(3,1fr) .85fr;align-items:stretch;
-}
-.pilar{
-  min-height:185px;padding:25px 30px;text-align:center;
-  border-right:1px solid rgba(61,173,221,.25);
-}
-.pilar-icon{
-  width:56px;height:56px;margin:0 auto 12px;display:grid;place-items:center;color:#6fd2f5;
-}
-.pilar-icon img{width:52px;height:52px;object-fit:contain}
-.pilar h3{
-  margin:0 0 10px;color:#fff;font:700 10px/1.2 "Montserrat",Arial,sans-serif;
-}
-.pilar p{
-  margin:0;color:#b7d0df;font:400 8.5px/1.6 "Montserrat",Arial,sans-serif;
-}
-.pilares-frase{
-  display:flex;align-items:center;padding:24px 0 24px 45px;
-  border-left:2px solid #34b4ea;
-}
-.pilares-frase p{
-  margin:0;color:#fff;font:italic 600 35px/.95 "Cormorant Garamond",Georgia,serif;
-}
-
-/* 4 — CURSOS
-   Imagem ocupa TODO o banner.
-   O texto fica sobre a imagem, à esquerda.
-*/
-.sobre-cursos{
-  position:relative;
-  min-height:500px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-
-  /* A Bíblia azul/prateada ocupa toda a largura */
-  background-image:url("biblia.png");
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size:cover;
-}
-
-/* Degradê para dar leitura ao texto sem esconder a Bíblia */
-.sobre-cursos::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(235,244,248,.99) 0%,
-      rgba(230,241,246,.97) 24%,
-      rgba(224,237,244,.88) 39%,
-      rgba(220,235,243,.54) 53%,
-      rgba(220,235,243,.10) 70%,
-      rgba(220,235,243,0) 100%
-    );
-}
-
-/* Leve acabamento azul/prata nas bordas do banner */
-.sobre-cursos::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.28) 0%,
-      transparent 16%,
-      transparent 84%,
-      rgba(4,65,105,.08) 100%
-    );
-}
-
-.sobre-cursos-grid{
-  position:relative;
-  z-index:2;
-  width:min(1180px,calc(100% - 48px));
-  min-height:500px;
-  margin:0 auto;
-  padding:70px 0;
-
-  display:block;
-}
-
-.sobre-cursos-grid > div:first-child{
-  width:47%;
-  max-width:530px;
-}
-
-.sobre-cursos .sobre-kicker{
-  margin-bottom:24px;
-  color:#096d9e;
-}
-
-.sobre-cursos h2{
-  margin:0;
-  color:#043f6c;
-  font-size:clamp(58px,5vw,78px);
-  line-height:.90;
-}
-
-.sobre-cursos h2 em{
-  display:block;
-  color:#078fd0;
-}
-
-.sobre-cursos p{
-  max-width:480px;
-  margin:25px 0 30px;
-  color:#466d83;
-  font:400 12px/1.75 "Montserrat",Arial,sans-serif;
-}
-
-.sobre-cursos .sobre-btn{
-  min-height:52px;
-  padding:0 25px;
-}
-
-/* A antiga tag <div class="sobre-bible"> continua no HTML,
-   mas não precisamos mais dela porque a imagem agora é o fundo. */
-.sobre-bible{
-  display:none !important;
-}
-
-/* RESPONSIVO */
-@media(max-width:900px){
-  .sobre-hero-grid,.sobre-cursos-grid{grid-template-columns:1fr;text-align:center}
-  .sobre-hero h1 em{margin-left:0}
-  .sobre-rule{margin-left:auto;margin-right:auto}
-  .sobre-hero-desc,.sobre-ministerio{margin-left:auto;margin-right:auto}
-  .sobre-photo{justify-self:center}
-  .marcos{grid-template-columns:repeat(2,1fr)}
-  .marcos:before{display:none}
-  .marco{padding:20px 12px;border:1px solid rgba(71,176,220,.15)}
-  .pilares-grid{grid-template-columns:repeat(3,1fr)}
-  .pilares-frase{grid-column:1/-1;justify-content:center;border-left:0;border-top:1px solid rgba(61,173,221,.25);padding:32px 0 0;text-align:center}
-  .pilares>.sobre-kicker{text-align:center}
-  .sobre-bible{min-height:260px}
-}
-@media(max-width:560px){
-
-  /* =====================================================
-     BASE MOBILE — impede qualquer estouro lateral
-  ===================================================== */
-  .pagina-sobre,
-  .pagina-sobre section,
-  .sobre-hero,
-  .sobre-hero-grid{
-    width:100% !important;
-    max-width:100% !important;
-    overflow-x:hidden !important;
-  }
-
-  .sobre-wrap{
-    width:calc(100% - 32px) !important;
-    max-width:100% !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
-  }
-
-  .sobre-kicker{
-    font-size:8px;
-    letter-spacing:2.4px;
-  }
-
-
-  /* =====================================================
-     BANNER PRINCIPAL
-  ===================================================== */
-  .sobre-hero{
-    min-height:auto !important;
-  }
-
-  .sobre-hero-grid{
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    gap:32px !important;
-    padding:38px 0 42px !important;
-    text-align:left !important;
-  }
-
-  .sobre-hero-grid > div:first-child{
-    width:100% !important;
-    min-width:0 !important;
-  }
-
-  .sobre-hero h1{
-    font-size:58px;
-    line-height:.86;
-    letter-spacing:-1.3px;
-  }
-
-  .sobre-hero h1 em{
-    display:block;
-    margin-left:68px;
-  }
-
-  .sobre-hero-sub{
-    max-width:330px;
-    margin:22px 0 0;
-    font-size:21px;
-    line-height:1.45;
-  }
-
-  .sobre-rule{
-    width:78px;
-    margin:24px 0;
-  }
-
-  .sobre-hero-desc{
-    max-width:340px;
-    margin:0 0 24px;
-    font-size:10.5px;
-    line-height:1.8;
-  }
-
-
-  /* =====================================================
-     CARTÃO "BATALHA ESPIRITUAL" — MAIOR
-  ===================================================== */
-  .sobre-ministerio{
-    width:100% !important;
-    max-width:370px !important;
-    margin:0 0 27px !important;
-    padding:22px 20px 21px !important;
-
-    border:0 !important;
-    border-left:3px solid #0797d4 !important;
-    border-radius:0 3px 3px 0;
-
-    background:
-      linear-gradient(135deg,
-        rgba(255,255,255,.96) 0%,
-        rgba(247,251,253,.94) 62%,
-        rgba(230,242,248,.90) 100%) !important;
-
-    box-shadow:
-      0 14px 34px rgba(5,66,105,.08),
-      inset 0 0 0 1px rgba(255,255,255,.80);
-  }
-
-  .sobre-ministerio span{
-    margin-bottom:10px;
-    font-size:7.2px;
-    letter-spacing:1.8px;
-  }
-
-  .sobre-ministerio strong{
-    font-size:27px;
-    line-height:1.02;
-  }
-
-  .sobre-ministerio p{
-    margin-top:12px;
-    font-size:8px;
-    line-height:1.65;
-  }
-
-  .sobre-btn{
-    min-height:48px;
-    padding:0 22px;
-    font-size:8px;
-  }
-
-
-  /* =====================================================
-     MOLDURA DA FOTO — CENTRALIZADA E MAIS ELEGANTE
-  ===================================================== */
-  .sobre-photo{
-    position:relative !important;
-    width:82% !important;
-    max-width:300px !important;
-    min-width:0 !important;
-
-    margin:2px auto 0 !important;
-    padding:10px !important;
-
-    align-self:center !important;
-    justify-self:auto !important;
-    left:auto !important;
-    right:auto !important;
-    transform:none !important;
-  }
-
-  .sobre-photo::before,
-  .sobre-photo::after{
-    width:64px !important;
-    height:64px !important;
-    border-color:#07548a !important;
-  }
-
-  .sobre-photo::before{
-    top:-3px !important;
-    left:-3px !important;
-    border-top:2px solid !important;
-    border-left:2px solid !important;
-  }
-
-  .sobre-photo::after{
-    right:-3px !important;
-    bottom:-3px !important;
-    border-right:2px solid !important;
-    border-bottom:2px solid !important;
-  }
-
-  .sobre-photo-frame{
-    position:relative;
-    width:100% !important;
-    min-height:320px !important;
-
-    border:1px solid rgba(13,126,181,.60) !important;
-    border-radius:2px;
-
-    background:
-      radial-gradient(circle at 50% 35%,
-        rgba(255,255,255,.96) 0%,
-        rgba(238,248,252,.88) 25%,
-        transparent 48%),
-      linear-gradient(145deg,
-        #f8fcfe 0%,
-        #dcebf2 50%,
-        #b9d3e1 100%) !important;
-
-    box-shadow:
-      0 20px 45px rgba(4,63,104,.15),
-      0 0 0 5px rgba(255,255,255,.48),
-      inset 0 0 0 1px rgba(255,255,255,.92) !important;
-  }
-
-  .sobre-photo-frame::before{
-    content:"";
-    position:absolute;
-    inset:8px;
-    border:1px solid rgba(8,115,171,.18);
-    pointer-events:none;
-  }
-
-  .sobre-photo-frame .diamond{
-    margin-bottom:13px;
-    color:#087fb9;
-    font-size:28px;
-  }
-
-  .sobre-photo-frame strong{
-    color:#06446f;
-    font-size:11px;
-    letter-spacing:2px;
-  }
-
-  .sobre-photo-frame small{
-    margin-top:8px;
-    color:#376a88;
-    font-size:6.8px;
-    letter-spacing:1.5px;
-  }
-
-
-  /* =====================================================
-     BANNER 2 — SOBRE
-  ===================================================== */
-  .sobre-intro{
-    padding:50px 0 54px;
-  }
-
-  .sobre-intro .sobre-wrap{
-    width:calc(100% - 36px) !important;
-  }
-
-  .sobre-intro .sobre-kicker{
-    margin-bottom:17px;
-    font-size:7.5px;
-    letter-spacing:3.4px;
-  }
-
-  .sobre-intro h2{
-    max-width:345px;
-    margin-left:auto;
-    margin-right:auto;
-    font-size:39px;
-    line-height:.96;
-    letter-spacing:-.5px;
-  }
-
-  .sobre-intro-copy{
-    max-width:345px;
-    margin-top:22px;
-    font-size:9.5px;
-    line-height:1.78;
-  }
-
-  .sobre-intro-copy p{
-    margin-bottom:15px;
-  }
-
-  .sobre-quote{
-    max-width:330px;
-    margin-top:26px;
-    padding:15px 16px 15px 25px;
-    font-size:19px;
-    line-height:1.3;
-  }
-
-  .sobre-quote::before{
-    top:2px;
-    bottom:2px;
-  }
-
-  .sobre-quote::after{
-    display:none;
-  }
-
-
-  /* =====================================================
-     BANNER 3 — TRAJETÓRIA
-  ===================================================== */
-  .sobre-trajetoria{
-    padding:60px 0 65px;
-  }
-
-  .sobre-trajetoria .sobre-title{
-    font-size:40px;
-    line-height:.95;
-  }
-
-  .marcos{
-    margin-top:38px;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
-  }
-
-  .marcos::before{
-    display:none;
-  }
-
-  .marco{
-    min-height:185px;
-    padding:18px 8px;
-    border:1px solid rgba(71,176,220,.16);
-    background:rgba(255,255,255,.025);
-  }
-
-  .marco:last-child{
-    grid-column:1/-1;
-    width:calc(50% - 5px);
-    justify-self:center;
-  }
-
-  .marco-icon{
-    width:62px;
-    height:62px;
-    margin-bottom:13px;
-  }
-
-  .marco-icon svg{
-    width:27px;
-    height:27px;
-  }
-
-  .marco h3{
-    min-height:auto;
-    font-size:7.6px;
-  }
-
-  .marco p{
-    font-size:7px;
-    line-height:1.5;
-  }
-
-  .pilares{
-    margin-top:48px;
-    padding-top:42px;
-  }
-
-  .pilares > .sobre-kicker{
-    text-align:center;
-  }
-
-  .pilares-grid{
-    margin-top:26px;
-    grid-template-columns:1fr;
-  }
-
-  .pilar{
-    min-height:auto;
-    padding:23px 18px;
-    border-right:0;
-    border-bottom:1px solid rgba(61,173,221,.22);
-  }
-
-  .pilar-icon{
-    width:52px;
-    height:52px;
-  }
-
-  .pilar h3{
-    font-size:8.5px;
-  }
-
-  .pilar p{
-    max-width:290px;
-    margin:0 auto;
-    font-size:7.5px;
-  }
-
-  .pilares-frase{
-    grid-column:auto;
-    justify-content:center;
-    padding:29px 0 0;
-    border-left:0;
-    border-top:1px solid rgba(61,173,221,.25);
-    text-align:center;
-  }
-
-  .pilares-frase p{
-    font-size:30px;
-  }
-
-
-  /* =====================================================
-     BANNER 4 — CURSOS
-     imagem em tela cheia também no celular
-  ===================================================== */
-  .sobre-cursos{
-    min-height:470px !important;
-    align-items:flex-end !important;
-    background-size:cover !important;
-    background-position:64% center !important;
-  }
-
-  .sobre-cursos::before{
-    background:
-      linear-gradient(
-        180deg,
-        rgba(229,240,246,.92) 0%,
-        rgba(229,240,246,.78) 34%,
-        rgba(225,238,245,.58) 58%,
-        rgba(222,236,244,.90) 100%
-      ),
-      linear-gradient(
-        90deg,
-        rgba(229,240,246,.96) 0%,
-        rgba(229,240,246,.70) 68%,
-        rgba(229,240,246,.18) 100%
-      ) !important;
-  }
-
-  .sobre-cursos-grid{
-    width:calc(100% - 32px) !important;
-    min-height:470px !important;
-    padding:48px 0 42px !important;
-    display:flex !important;
-    align-items:flex-end !important;
-    text-align:left !important;
-  }
-
-  .sobre-cursos-grid > div:first-child{
-    width:100% !important;
-    max-width:330px !important;
-  }
-
-  .sobre-cursos .sobre-kicker{
-    margin-bottom:15px;
-  }
-
-  .sobre-cursos h2{
-    font-size:45px;
-    line-height:.92;
-  }
-
-  .sobre-cursos p{
-    max-width:290px;
-    margin:18px 0 23px;
-    font-size:8.8px;
-    line-height:1.65;
-  }
-
-  .sobre-cursos .sobre-btn{
-    min-height:46px;
-    padding:0 18px;
-    font-size:7.5px;
-  }
-
-  .sobre-bible{
-    display:none !important;
-  }
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    body .site-footer .site-footer__container {
+        width: calc(100% - 28px) !important;
+        max-width: 760px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
+
+        align-items: start !important;
+
+        column-gap: 0 !important;
+        row-gap: 0 !important;
+    }
+
+
+    /* LOGO */
+
+    body .site-footer .site-footer__brand {
+        grid-column: 1 / -1 !important;
+        grid-row: 1 !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 10px 20px 30px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(8, 63, 107, 0.28) !important;
+    }
+
+
+    body .site-footer .site-footer__brand img {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 390px !important;
+        height: auto !important;
+
+        margin: 0 auto !important;
+    }
+
+
+    body .site-footer .site-footer__pillars {
+        margin: 13px 0 0 !important;
+
+        text-align: center !important;
+    }
+
+
+    body .site-footer .site-footer__purpose {
+        margin: 10px 0 0 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* NAVEGAÇÃO */
+
+    body .site-footer .site-footer__navigation {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+
+        width: 100% !important;
+
+        margin: 24px 0 0 !important;
+
+        padding:
+            0
+            28px
+            26px
+            2px !important;
+
+        border: 0 !important;
+        border-right: 1px solid rgba(8, 63, 107, 0.28) !important;
+    }
+
+
+    /* SEMINÁRIOS */
+
+    body .site-footer .site-footer__seminars {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+
+        width: 100% !important;
+
+        margin: 24px 0 0 !important;
+
+        padding:
+            0
+            2px
+            26px
+            28px !important;
+
+        border: 0 !important;
+    }
+
+
+    /* TÍTULOS */
+
+    body .site-footer .site-footer__column h4 {
+        margin: 0 !important;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif !important;
+
+        font-size: 19px !important;
+        font-weight: 600 !important;
+
+        line-height: 1.2 !important;
+
+        letter-spacing: 2.5px !important;
+
+        color: #073f78 !important;
+    }
+
+
+    body .site-footer .site-footer__title-line {
+        display: block !important;
+
+        width: 50px !important;
+        height: 3px !important;
+
+        margin: 14px 0 16px !important;
+
+        background:
+            linear-gradient(
+                90deg,
+                #078bd3,
+                #064c83
+            ) !important;
+    }
+
+
+    /* LINKS */
+
+    body .site-footer .site-footer__column nav {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    body .site-footer .site-footer__column nav a {
+        display: block !important;
+
+        width: fit-content !important;
+
+        margin: 0 0 10px !important;
+        padding: 0 !important;
+
+        color: #163f61 !important;
+
+        font-size: 11px !important;
+        font-weight: 400 !important;
+
+        line-height: 1.35 !important;
+
+        text-decoration: none !important;
+    }
+
+
+    /* REDES SOCIAIS */
+
+    body .site-footer .site-footer__social {
+        grid-column: 1 / -1 !important;
+        grid-row: 3 !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 25px 0 5px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        border: 0 !important;
+        border-top: 1px solid rgba(8, 63, 107, 0.28) !important;
+
+        text-align: center !important;
+    }
+
+
+    body .site-footer .site-footer__social h4 {
+        text-align: center !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    body .site-footer .site-footer__social .site-footer__title-line {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    body .site-footer .site-footer__social-icons {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 13px !important;
+
+        margin: 0 auto 18px !important;
+    }
+
+
+    body .site-footer .site-footer__social-text {
+        width: 100% !important;
+        max-width: 370px !important;
+
+        margin: 0 auto 20px !important;
+
+        text-align: center !important;
+
+        line-height: 1.55 !important;
+    }
+
+
+    body .site-footer .site-footer__whatsapp {
+        width: min(100%, 330px) !important;
+
+        margin: 0 auto !important;
+    }
+
 }
 
 
 /* =========================================================
-   AJUSTE FINAL — PILARES DO MINISTÉRIO
-   Desktop + celular
-   Não altera cabeçalho, rodapé ou demais banners.
+   CELULAR
 ========================================================= */
 
-/* linha azul atravessando 100% da tela */
-.pagina-sobre .pilares{
-  position:relative;
-  border-top:0 !important;
-}
+@media (max-width: 600px) {
 
-.pagina-sobre .pilares::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:50%;
-  width:100vw;
-  height:1px;
-  transform:translateX(-50%);
-  background:linear-gradient(
-    90deg,
-    rgba(36,174,226,.12) 0%,
-    #24aee2 12%,
-    #43c4f1 50%,
-    #24aee2 88%,
-    rgba(36,174,226,.12) 100%
-  );
-}
+    body .site-footer .site-footer__main {
+        padding:
+            20px
+            0
+            25px !important;
+    }
 
-/* título maior */
-.pagina-sobre .pilares > .sobre-kicker{
-  margin-bottom:32px;
-  color:#42c4f1;
-  font-size:14px;
-  font-weight:700;
-  line-height:1.2;
-  letter-spacing:4.5px;
-}
 
-/* mantém as quatro áreas bem distribuídas */
-.pagina-sobre .pilares-grid{
-  align-items:stretch;
-}
+    body .site-footer .site-footer__container {
+        width: calc(100% - 20px) !important;
+        max-width: 500px !important;
 
-/* ícones maiores */
-.pagina-sobre .pilar-icon{
-  width:76px;
-  height:76px;
-  margin:0 auto 15px;
-}
+        margin: 0 auto !important;
 
-.pagina-sobre .pilar-icon svg{
-  width:42px;
-  height:42px;
-  stroke:#42c4f1;
-}
+        display: grid !important;
 
-/* pomba do CHAMADO desenhada em SVG pelo próprio CSS/HTML:
-   qualquer SVG dentro do ícone recebe o mesmo azul */
-.pagina-sobre .pilar:nth-child(3) .pilar-icon{
-  background:transparent !important;
-}
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
 
-.pagina-sobre .pilar:nth-child(3) .pilar-icon svg{
-  width:50px;
-  height:50px;
-  color:#42c4f1;
-  fill:none;
-  stroke:#42c4f1;
-}
+        column-gap: 0 !important;
+    }
 
-/* textos dos pilares */
-.pagina-sobre .pilar h3{
-  font-size:11px;
-}
 
-.pagina-sobre .pilar p{
-  font-size:8.5px;
-  line-height:1.65;
-}
+    /* LOGO */
 
-/* frase da direita */
-.pagina-sobre .pilares-frase{
-  border-left:2px solid #27b6e9;
-}
+    body .site-footer .site-footer__brand {
+        grid-column: 1 / -1 !important;
 
-@media(max-width:560px){
+        min-height: 0 !important;
 
-  .pagina-sobre .pilares{
-    margin-top:46px;
-    padding-top:42px;
-  }
+        padding:
+            0
+            4px
+            27px !important;
+    }
 
-  .pagina-sobre .pilares > .sobre-kicker{
-    margin-bottom:27px;
-    text-align:center;
-    font-size:10px;
-    letter-spacing:3px;
-  }
 
-  .pagina-sobre .pilar-icon{
-    width:68px;
-    height:68px;
-    margin-bottom:12px;
-  }
+    body .site-footer .site-footer__brand img {
+        width: min(100%, 390px) !important;
+        max-width: 390px !important;
 
-  .pagina-sobre .pilar-icon svg{
-    width:38px;
-    height:38px;
-  }
+        height: auto !important;
+    }
 
-  .pagina-sobre .pilar:nth-child(3) .pilar-icon svg{
-    width:45px;
-    height:45px;
-  }
 
-  .pagina-sobre .pilar h3{
-    font-size:9.5px;
-  }
+    body .site-footer .site-footer__pillars {
+        margin-top: 12px !important;
 
-  .pagina-sobre .pilar p{
-    font-size:8px;
-  }
+        font-size: 10px !important;
 
-  .pagina-sobre .pilares-frase{
-    border-left:0;
-    border-top:1px solid rgba(66,196,241,.35);
-  }
+        line-height: 1.5 !important;
+
+        letter-spacing: 0.6px !important;
+    }
+
+
+    body .site-footer .site-footer__purpose {
+        margin-top: 10px !important;
+
+        font-size: 13px !important;
+
+        line-height: 1.45 !important;
+    }
+
+
+    /* NAVEGAÇÃO */
+
+    body .site-footer .site-footer__navigation {
+        margin-top: 24px !important;
+
+        padding:
+            0
+            20px
+            25px
+            0 !important;
+    }
+
+
+    /* SEMINÁRIOS */
+
+    body .site-footer .site-footer__seminars {
+        margin-top: 24px !important;
+
+        padding:
+            0
+            0
+            25px
+            20px !important;
+    }
+
+
+    body .site-footer .site-footer__column h4 {
+        font-size: 17px !important;
+
+        letter-spacing: 1.7px !important;
+    }
+
+
+    body .site-footer .site-footer__title-line {
+        width: 39px !important;
+        height: 3px !important;
+
+        margin:
+            13px
+            0
+            15px !important;
+    }
+
+
+    body .site-footer .site-footer__column nav a {
+        margin-bottom: 9px !important;
+
+        font-size: 10.5px !important;
+
+        line-height: 1.35 !important;
+    }
+
+
+    /* REDES */
+
+    body .site-footer .site-footer__social {
+        padding:
+            25px
+            0
+            0 !important;
+    }
+
+
+    body .site-footer .site-footer__social h4 {
+        font-size: 19px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+
+    body .site-footer .site-footer__social .site-footer__title-line {
+        width: 40px !important;
+
+        margin:
+            14px
+            auto
+            18px !important;
+    }
+
+
+    body .site-footer .site-footer__social-icons {
+        gap: 12px !important;
+
+        margin-bottom: 18px !important;
+    }
+
+
+    body .site-footer .site-footer__social-icons a {
+        width: 46px !important;
+        height: 46px !important;
+    }
+
+
+    body .site-footer .site-footer__social-text {
+        max-width: 340px !important;
+
+        margin-bottom: 19px !important;
+
+        padding:
+            0
+            10px !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.55 !important;
+    }
+
+
+    body .site-footer .site-footer__whatsapp {
+        width: min(100%, 330px) !important;
+
+        min-height: 48px !important;
+    }
+
 }
 
 
 /* =========================================================
-   CELULAR — TRAJETÓRIA 2 + 2 + 1 / PILARES 3 LADO A LADO
-   Somente celular. Desktop não é alterado.
-========================================================= */
-@media (max-width: 560px){
-
-  /* ---------- MARCOS: 2 + 2 + 1 ---------- */
-  .pagina-sobre .marcos{
-    display:grid !important;
-    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
-    gap:30px 14px !important;
-    align-items:start !important;
-  }
-
-  .pagina-sobre .marco{
-    width:100% !important;
-    min-width:0 !important;
-    padding:0 4px !important;
-    text-align:center !important;
-  }
-
-  .pagina-sobre .marco:nth-child(5){
-    grid-column:1 / -1 !important;
-    width:50% !important;
-    justify-self:center !important;
-  }
-
-  .pagina-sobre .marco-icon{
-    width:62px !important;
-    height:62px !important;
-    margin:0 auto 12px !important;
-  }
-
-  .pagina-sobre .marco-icon svg{
-    width:34px !important;
-    height:34px !important;
-  }
-
-  .pagina-sobre .marco h3{
-    min-height:0 !important;
-    margin:0 0 8px !important;
-    font-size:10px !important;
-    line-height:1.25 !important;
-  }
-
-  .pagina-sobre .marco p{
-    margin:0 auto !important;
-    max-width:145px !important;
-    font-size:7.5px !important;
-    line-height:1.5 !important;
-  }
-
-
-  /* ---------- PILARES: 3 NA MESMA LINHA ---------- */
-  .pagina-sobre .pilares{
-    margin-top:42px !important;
-    padding-top:36px !important;
-  }
-
-  .pagina-sobre .pilares > .sobre-kicker{
-    margin-bottom:26px !important;
-    text-align:center !important;
-    font-size:10px !important;
-    letter-spacing:3px !important;
-  }
-
-  .pagina-sobre .pilares-grid{
-    display:grid !important;
-    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
-    gap:0 !important;
-    align-items:start !important;
-  }
-
-  .pagina-sobre .pilar{
-    width:100% !important;
-    min-width:0 !important;
-    min-height:0 !important;
-    padding:8px 7px 22px !important;
-    border-bottom:0 !important;
-    border-right:1px solid rgba(66,196,241,.25) !important;
-    text-align:center !important;
-  }
-
-  .pagina-sobre .pilar:nth-child(3){
-    border-right:0 !important;
-  }
-
-  .pagina-sobre .pilar-icon{
-    width:52px !important;
-    height:52px !important;
-    margin:0 auto 10px !important;
-  }
-
-  .pagina-sobre .pilar-icon svg{
-    width:31px !important;
-    height:31px !important;
-  }
-
-  .pagina-sobre .pilar:nth-child(3) .pilar-icon img{
-    display:block !important;
-    width:40px !important;
-    height:40px !important;
-    margin:auto !important;
-    object-fit:contain !important;
-  }
-
-  .pagina-sobre .pilar h3{
-    margin:0 0 8px !important;
-    font-size:8.5px !important;
-    line-height:1.2 !important;
-  }
-
-  .pagina-sobre .pilar p{
-    margin:0 auto !important;
-    max-width:115px !important;
-    font-size:6.5px !important;
-    line-height:1.5 !important;
-  }
-
-  /* ---------- FRASE ABAIXO DOS 3 PILARES ---------- */
-  .pagina-sobre .pilares-frase{
-    grid-column:1 / -1 !important;
-    width:100% !important;
-    min-height:0 !important;
-    margin-top:4px !important;
-    padding:24px 0 2px !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    border-left:0 !important;
-    border-top:1px solid rgba(66,196,241,.45) !important;
-    text-align:center !important;
-  }
-
-  .pagina-sobre .pilares-frase p{
-    margin:0 !important;
-    font-size:29px !important;
-    line-height:.98 !important;
-    text-align:center !important;
-  }
-}
-
-
-/* =========================================================
-   SOBRE — ESPAÇAMENTOS COMPACTOS
-   PC + CELULAR
-   Reduz somente alturas, paddings, margins e gaps.
-   Cabeçalho e rodapé permanecem intactos.
+   CELULAR PEQUENO
 ========================================================= */
 
-/* ---------- PC / DESKTOP ---------- */
+@media (max-width: 390px) {
 
-.pagina-sobre .sobre-hero{
-  min-height:0 !important;
-}
-
-.pagina-sobre .sobre-hero-grid{
-  padding-top:26px !important;
-  padding-bottom:26px !important;
-  gap:48px !important;
-}
-
-.pagina-sobre .sobre-hero-sub{
-  margin-top:10px !important;
-}
-
-.pagina-sobre .sobre-rule{
-  margin-top:14px !important;
-  margin-bottom:14px !important;
-}
-
-.pagina-sobre .sobre-hero-desc{
-  margin-bottom:18px !important;
-}
-
-.pagina-sobre .sobre-ministerio{
-  margin-top:16px !important;
-  margin-bottom:18px !important;
-  padding-top:16px !important;
-  padding-bottom:16px !important;
-}
-
-.pagina-sobre .sobre-btn{
-  margin-top:14px !important;
-}
-
-.pagina-sobre .sobre-intro{
-  padding-top:48px !important;
-  padding-bottom:48px !important;
-}
-
-.pagina-sobre .sobre-intro .sobre-kicker{
-  margin-bottom:14px !important;
-}
-
-.pagina-sobre .sobre-intro-copy{
-  margin-top:20px !important;
-}
-
-.pagina-sobre .sobre-intro-copy p + p{
-  margin-top:12px !important;
-}
-
-.pagina-sobre .sobre-quote{
-  margin-top:24px !important;
-  padding-top:8px !important;
-  padding-bottom:8px !important;
-}
-
-.pagina-sobre .sobre-trajetoria{
-  padding-top:48px !important;
-  padding-bottom:48px !important;
-}
-
-.pagina-sobre .sobre-trajetoria > .sobre-wrap > .sobre-kicker{
-  margin-bottom:13px !important;
-}
-
-.pagina-sobre .marcos{
-  margin-top:32px !important;
-}
-
-.pagina-sobre .marco{
-  padding-top:14px !important;
-  padding-bottom:14px !important;
-}
-
-.pagina-sobre .pilares{
-  margin-top:42px !important;
-  padding-top:38px !important;
-}
-
-.pagina-sobre .pilares > .sobre-kicker{
-  margin-bottom:24px !important;
-}
-
-.pagina-sobre .pilar{
-  padding-top:18px !important;
-  padding-bottom:18px !important;
-}
-
-.pagina-sobre .pilares-frase{
-  padding-top:18px !important;
-  padding-bottom:18px !important;
-}
-
-.pagina-sobre .sobre-cursos{
-  min-height:410px !important;
-}
-
-.pagina-sobre .sobre-cursos-grid{
-  min-height:410px !important;
-  padding-top:48px !important;
-  padding-bottom:48px !important;
-}
-
-.pagina-sobre .sobre-cursos .sobre-kicker{
-  margin-bottom:14px !important;
-}
-
-.pagina-sobre .sobre-cursos p:not(.sobre-kicker){
-  margin-top:18px !important;
-  margin-bottom:20px !important;
-}
+    body .site-footer .site-footer__container {
+        width: calc(100% - 16px) !important;
+    }
 
 
-/* ---------- CELULAR ---------- */
-
-@media (max-width:560px){
-
-  .pagina-sobre .sobre-wrap{
-    width:calc(100% - 28px) !important;
-  }
-
-  .pagina-sobre .sobre-hero{
-    min-height:0 !important;
-  }
-
-  .pagina-sobre .sobre-hero-grid{
-    padding-top:28px !important;
-    padding-bottom:32px !important;
-    gap:24px !important;
-  }
-
-  .pagina-sobre .sobre-hero-sub{
-    margin-top:8px !important;
-  }
-
-  .pagina-sobre .sobre-rule{
-    margin-top:12px !important;
-    margin-bottom:12px !important;
-  }
-
-  .pagina-sobre .sobre-hero-desc{
-    margin-bottom:14px !important;
-  }
-
-  .pagina-sobre .sobre-ministerio{
-    margin-top:14px !important;
-    margin-bottom:14px !important;
-    padding:14px !important;
-  }
-
-  .pagina-sobre .sobre-btn{
-    margin-top:10px !important;
-  }
-
-  .pagina-sobre .sobre-photo{
-    margin-top:2px !important;
-  }
-
-  .pagina-sobre .sobre-intro{
-    padding-top:36px !important;
-    padding-bottom:36px !important;
-  }
-
-  .pagina-sobre .sobre-intro .sobre-kicker{
-    margin-bottom:10px !important;
-  }
-
-  .pagina-sobre .sobre-intro-copy{
-    margin-top:16px !important;
-  }
-
-  .pagina-sobre .sobre-intro-copy p + p{
-    margin-top:10px !important;
-  }
-
-  .pagina-sobre .sobre-quote{
-    margin-top:18px !important;
-    padding-top:6px !important;
-    padding-bottom:6px !important;
-  }
-
-  .pagina-sobre .sobre-trajetoria{
-    padding-top:36px !important;
-    padding-bottom:36px !important;
-  }
-
-  .pagina-sobre .sobre-trajetoria > .sobre-wrap > .sobre-kicker{
-    margin-bottom:10px !important;
-  }
-
-  .pagina-sobre .marcos{
-    margin-top:26px !important;
-    gap:24px 12px !important;
-  }
-
-  .pagina-sobre .marco{
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-  }
-
-  .pagina-sobre .pilares{
-    margin-top:32px !important;
-    padding-top:30px !important;
-  }
-
-  .pagina-sobre .pilares > .sobre-kicker{
-    margin-bottom:20px !important;
-  }
-
-  .pagina-sobre .pilar{
-    padding-top:5px !important;
-    padding-bottom:16px !important;
-  }
-
-  .pagina-sobre .pilares-frase{
-    margin-top:0 !important;
-    padding-top:20px !important;
-    padding-bottom:0 !important;
-  }
-
-  .pagina-sobre .sobre-cursos{
-    min-height:390px !important;
-  }
-
-  .pagina-sobre .sobre-cursos-grid{
-    min-height:390px !important;
-    padding-top:38px !important;
-    padding-bottom:38px !important;
-  }
-
-  .pagina-sobre .sobre-cursos .sobre-kicker{
-    margin-bottom:11px !important;
-  }
-
-  .pagina-sobre .sobre-cursos p:not(.sobre-kicker){
-    margin-top:14px !important;
-    margin-bottom:17px !important;
-  }
-}
+    body .site-footer .site-footer__brand img {
+        width: min(100%, 350px) !important;
+    }
 
 
-/* =========================================================
-   V14 — ÚLTIMO BANNER MAIS COMPACTO NO CELULAR
-   Somente celular. Desktop não é alterado.
-========================================================= */
-@media (max-width:560px){
+    body .site-footer .site-footer__navigation {
+        padding-right: 15px !important;
+    }
 
-  .pagina-sobre .sobre-cursos{
-    min-height:0 !important;
-    height:auto !important;
-    align-items:stretch !important;
-  }
 
-  .pagina-sobre .sobre-cursos-grid{
-    min-height:0 !important;
-    height:auto !important;
-    padding-top:30px !important;
-    padding-bottom:30px !important;
-  }
+    body .site-footer .site-footer__seminars {
+        padding-left: 15px !important;
+    }
 
-  .pagina-sobre .sobre-cursos-grid > div:first-child{
-    width:100% !important;
-    max-width:330px !important;
-  }
 
-  .pagina-sobre .sobre-cursos .sobre-kicker{
-    margin-top:0 !important;
-    margin-bottom:10px !important;
-  }
+    body .site-footer .site-footer__column h4 {
+        font-size: 15px !important;
 
-  .pagina-sobre .sobre-cursos .sobre-title{
-    margin-top:0 !important;
-    margin-bottom:0 !important;
-  }
+        letter-spacing: 1.2px !important;
+    }
 
-  .pagina-sobre .sobre-cursos p:not(.sobre-kicker){
-    margin-top:12px !important;
-    margin-bottom:15px !important;
-  }
 
-  .pagina-sobre .sobre-cursos .sobre-btn{
-    margin-top:0 !important;
-  }
+    body .site-footer .site-footer__column nav a {
+        font-size: 9.8px !important;
+    }
+
+
+    body .site-footer .site-footer__social h4 {
+        font-size: 18px !important;
+
+        letter-spacing: 1.6px !important;
+    }
+
 }
