@@ -1,6 +1,6 @@
 /* =========================================================
    CABEÇALHO — APÓSTOLA PATRICIA SANTANA
-   DESKTOP / NOTEBOOK / TABLET / CELULAR
+   PADRÃO ÚNICO PARA TODAS AS PÁGINAS
 ========================================================= */
 
 .site-header-v2,
@@ -35,10 +35,9 @@
    CONTAINER DESKTOP
 ========================================================= */
 
-.site-header-v2__inner {
+.site-header-v2 .site-header-v2__inner {
     width: calc(100% - 48px);
     max-width: 1180px;
-
     min-height: 105px;
 
     margin: 0 auto;
@@ -60,13 +59,16 @@
    MARCA
 ========================================================= */
 
-.site-header-v2__brand {
+.site-header-v2 .site-header-v2__brand {
     display: flex;
     align-items: center;
 
     gap: 13px;
 
     min-width: 0;
+
+    margin: 0;
+    padding: 0;
 
     text-decoration: none;
 }
@@ -76,11 +78,16 @@
    POMBA + BÍBLIA
 ========================================================= */
 
-.site-header-v2__symbol {
+.site-header-v2 .site-header-v2__symbol {
     display: block;
 
     width: 96px;
     height: 88px;
+
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
 
     flex: 0 0 auto;
 
@@ -92,12 +99,15 @@
    BLOCO DO NOME
 ========================================================= */
 
-.site-header-v2__wordmark {
+.site-header-v2 .site-header-v2__wordmark {
     width: 245px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -105,10 +115,11 @@
    APÓSTOLA
 ========================================================= */
 
-.site-header-v2__apostola {
+.site-header-v2 .site-header-v2__apostola {
     display: block;
 
     margin: 0 0 5px 1px;
+    padding: 0;
 
     color: #0788d2;
 
@@ -129,10 +140,11 @@
    PATRICIA SANTANA
 ========================================================= */
 
-.site-header-v2__wordmark strong {
+.site-header-v2 .site-header-v2__wordmark strong {
     display: block;
 
     margin: 0;
+    padding: 0;
 
     color: #073f78;
 
@@ -147,6 +159,8 @@
 
     line-height: 1;
 
+    letter-spacing: normal;
+
     white-space: nowrap;
 }
 
@@ -155,10 +169,11 @@
    MINISTÉRIO + LOSANGOS
 ========================================================= */
 
-.site-header-v2__ministry-row {
+.site-header-v2 .site-header-v2__ministry-row {
     width: 100%;
 
-    margin-top: 8px;
+    margin: 8px 0 0;
+    padding: 0;
 
     display: flex;
 
@@ -169,13 +184,16 @@
 }
 
 
-.site-header-v2__ministry-row i {
+.site-header-v2 .site-header-v2__ministry-row i {
     display: none;
 }
 
 
-.site-header-v2__ministry-row small {
+.site-header-v2 .site-header-v2__ministry-row small {
     display: block;
+
+    margin: 0;
+    padding: 0;
 
     color: #0788d2;
 
@@ -192,11 +210,14 @@
 }
 
 
-.site-header-v2__diamond {
+.site-header-v2 .site-header-v2__diamond {
     display: inline-flex;
 
     align-items: center;
     justify-content: center;
+
+    margin: 0;
+    padding: 0;
 
     color: #078bd3;
 
@@ -217,10 +238,11 @@
    MENU DESKTOP
 ========================================================= */
 
-.site-header-v2__nav {
+.site-header-v2 .site-header-v2__nav {
     width: 100%;
 
     margin: 0;
+    padding: 0;
 
     display: flex;
 
@@ -233,33 +255,56 @@
 }
 
 
-.site-header-v2__nav a {
+/* =========================================================
+   LINKS DO MENU
+   BLINDADOS CONTRA CSS DAS OUTRAS PÁGINAS
+========================================================= */
+
+.site-header-v2 .site-header-v2__nav > a {
     position: relative;
+
+    display: block;
+
+    margin: 0;
 
     padding: 43px 0 39px;
 
     color: #07335f;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    background: transparent;
 
-    font-size: 10px;
-    font-weight: 800;
+    border: 0;
+    border-radius: 0;
 
-    line-height: 1;
+    box-shadow: none;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 10px !important;
+    font-weight: 800 !important;
+
+    font-style: normal;
+
+    line-height: 1 !important;
+
+    letter-spacing: 0 !important;
+
+    text-align: center;
+
+    text-decoration: none !important;
+    text-transform: none;
 
     white-space: nowrap;
-
-    text-decoration: none;
 
     transition: color 0.2s ease;
 }
 
 
 /* =========================================================
-   INDICADOR DO MENU
+   INDICADOR AZUL
 ========================================================= */
 
-.site-header-v2__nav a::after {
+.site-header-v2 .site-header-v2__nav > a::after {
     content: "";
 
     position: absolute;
@@ -280,14 +325,14 @@
 }
 
 
-.site-header-v2__nav a:hover,
-.site-header-v2__nav a.active {
+.site-header-v2 .site-header-v2__nav > a:hover,
+.site-header-v2 .site-header-v2__nav > a.active {
     color: #078bd3;
 }
 
 
-.site-header-v2__nav a:hover::after,
-.site-header-v2__nav a.active::after {
+.site-header-v2 .site-header-v2__nav > a:hover::after,
+.site-header-v2 .site-header-v2__nav > a.active::after {
     width: 100%;
 }
 
@@ -296,7 +341,7 @@
    BOTÃO VER CURSOS
 ========================================================= */
 
-.site-header-v2__courses {
+.site-header-v2 .site-header-v2__courses {
     width: 112px;
     min-width: 112px;
 
@@ -306,6 +351,7 @@
 
     justify-self: end;
 
+    border: 0;
     border-radius: 5px;
 
     background:
@@ -318,16 +364,18 @@
 
     color: #ffffff;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif !important;
 
-    font-size: 9px;
-    font-weight: 800;
+    font-size: 9px !important;
+    font-weight: 800 !important;
 
-    line-height: 1;
+    line-height: 1 !important;
+
+    letter-spacing: 0 !important;
 
     text-align: center;
 
-    text-decoration: none;
+    text-decoration: none !important;
 
     box-shadow:
         0 8px 20px rgba(5, 105, 170, 0.20);
@@ -338,7 +386,9 @@
 }
 
 
-.site-header-v2__courses:hover {
+.site-header-v2 .site-header-v2__courses:hover {
+    color: #ffffff;
+
     transform: translateY(-2px);
 
     box-shadow:
@@ -350,7 +400,7 @@
    BOTÃO HAMBÚRGUER
 ========================================================= */
 
-.site-header-v2__toggle {
+.site-header-v2 .site-header-v2__toggle {
     display: none;
 
     width: 44px;
@@ -368,7 +418,7 @@
 }
 
 
-.site-header-v2__toggle span {
+.site-header-v2 .site-header-v2__toggle span {
     display: block;
 
     width: 27px;
@@ -392,7 +442,7 @@
 
 @media (max-width: 1200px) {
 
-    .site-header-v2__inner {
+    .site-header-v2 .site-header-v2__inner {
         width: calc(100% - 40px);
 
         min-height: 94px;
@@ -406,79 +456,79 @@
     }
 
 
-    .site-header-v2__symbol {
+    .site-header-v2 .site-header-v2__symbol {
         width: 84px;
         height: 78px;
     }
 
 
-    .site-header-v2__brand {
+    .site-header-v2 .site-header-v2__brand {
         gap: 11px;
     }
 
 
-    .site-header-v2__wordmark {
+    .site-header-v2 .site-header-v2__wordmark {
         width: 215px;
     }
 
 
-    .site-header-v2__apostola {
+    .site-header-v2 .site-header-v2__apostola {
         font-size: 7px;
-
         letter-spacing: 3.5px;
     }
 
 
-    .site-header-v2__wordmark strong {
+    .site-header-v2 .site-header-v2__wordmark strong {
         font-size: 21px;
     }
 
 
-    .site-header-v2__ministry-row {
+    .site-header-v2 .site-header-v2__ministry-row {
         margin-top: 7px;
-
         gap: 6px;
     }
 
 
-    .site-header-v2__ministry-row small {
+    .site-header-v2 .site-header-v2__ministry-row small {
         font-size: 6px;
-
         letter-spacing: 1.7px;
     }
 
 
-    .site-header-v2__diamond {
+    .site-header-v2 .site-header-v2__diamond {
         font-size: 13px;
     }
 
 
-    .site-header-v2__nav {
+    .site-header-v2 .site-header-v2__nav {
         gap: 14px;
-
         transform: translateX(10px);
     }
 
 
-    .site-header-v2__nav a {
+    .site-header-v2 .site-header-v2__nav > a {
         padding: 38px 0 35px;
 
-        font-size: 9px;
+        font-size: 9px !important;
+        font-weight: 800 !important;
+
+        line-height: 1 !important;
+        letter-spacing: 0 !important;
     }
 
 
-    .site-header-v2__nav a::after {
+    .site-header-v2 .site-header-v2__nav > a::after {
         bottom: 24px;
     }
 
 
-    .site-header-v2__courses {
+    .site-header-v2 .site-header-v2__courses {
         width: 100px;
         min-width: 100px;
 
         padding: 11px 9px;
 
-        font-size: 8px;
+        font-size: 8px !important;
     }
 }
 
@@ -489,7 +539,7 @@
 
 @media (max-width: 1050px) {
 
-    .site-header-v2__inner {
+    .site-header-v2 .site-header-v2__inner {
         min-height: 86px;
 
         grid-template-columns:
@@ -500,59 +550,60 @@
     }
 
 
-    .site-header-v2__symbol {
+    .site-header-v2 .site-header-v2__symbol {
         width: 76px;
         height: 70px;
     }
 
 
-    .site-header-v2__wordmark {
+    .site-header-v2 .site-header-v2__wordmark {
         width: 195px;
     }
 
 
-    .site-header-v2__apostola {
+    .site-header-v2 .site-header-v2__apostola {
         font-size: 6.5px;
-
         letter-spacing: 3px;
     }
 
 
-    .site-header-v2__wordmark strong {
+    .site-header-v2 .site-header-v2__wordmark strong {
         font-size: 19px;
     }
 
 
-    .site-header-v2__ministry-row {
+    .site-header-v2 .site-header-v2__ministry-row {
         gap: 5px;
     }
 
 
-    .site-header-v2__ministry-row small {
+    .site-header-v2 .site-header-v2__ministry-row small {
         font-size: 5.5px;
-
         letter-spacing: 1.4px;
     }
 
 
-    .site-header-v2__diamond {
+    .site-header-v2 .site-header-v2__diamond {
         font-size: 12px;
     }
 
 
-    .site-header-v2__nav {
+    .site-header-v2 .site-header-v2__nav {
         gap: 12px;
-
         transform: none;
     }
 
 
-    .site-header-v2__nav a {
-        font-size: 8.5px;
+    .site-header-v2 .site-header-v2__nav > a {
+        font-size: 8.5px !important;
+        font-weight: 800 !important;
+
+        line-height: 1 !important;
+        letter-spacing: 0 !important;
     }
 
 
-    .site-header-v2__courses {
+    .site-header-v2 .site-header-v2__courses {
         display: none;
     }
 }
@@ -564,7 +615,7 @@
 
 @media (max-width: 850px) {
 
-    .site-header-v2__inner {
+    .site-header-v2 .site-header-v2__inner {
         position: relative;
 
         width: calc(100% - 24px);
@@ -584,7 +635,7 @@
 
     /* MARCA */
 
-    .site-header-v2__brand {
+    .site-header-v2 .site-header-v2__brand {
         width: auto;
         max-width: calc(100% - 54px);
 
@@ -597,7 +648,7 @@
 
     /* POMBA */
 
-    .site-header-v2__symbol {
+    .site-header-v2 .site-header-v2__symbol {
         width: 74px;
         height: 72px;
 
@@ -607,7 +658,7 @@
 
     /* BLOCO DO NOME */
 
-    .site-header-v2__wordmark {
+    .site-header-v2 .site-header-v2__wordmark {
         width: auto;
         max-width: none;
 
@@ -621,12 +672,13 @@
 
     /* APÓSTOLA */
 
-    .site-header-v2__apostola {
+    .site-header-v2 .site-header-v2__apostola {
         display: block !important;
 
-        margin: 0 0 5px 0;
+        margin: 0 0 5px;
 
         font-size: 9px;
+
         font-weight: 800;
 
         line-height: 1;
@@ -639,12 +691,13 @@
 
     /* PATRICIA SANTANA */
 
-    .site-header-v2__wordmark strong {
+    .site-header-v2 .site-header-v2__wordmark strong {
         display: block;
 
         margin: 0;
 
         font-size: 21px;
+
         font-weight: 600;
 
         line-height: 1;
@@ -655,7 +708,7 @@
 
     /* MINISTÉRIO */
 
-    .site-header-v2__ministry-row {
+    .site-header-v2 .site-header-v2__ministry-row {
         width: 100%;
 
         margin-top: 8px;
@@ -669,10 +722,11 @@
     }
 
 
-    .site-header-v2__ministry-row small {
+    .site-header-v2 .site-header-v2__ministry-row small {
         display: block !important;
 
         font-size: 6.5px;
+
         font-weight: 800;
 
         line-height: 1;
@@ -683,7 +737,7 @@
     }
 
 
-    .site-header-v2__diamond {
+    .site-header-v2 .site-header-v2__diamond {
         display: inline-flex !important;
 
         font-size: 12px;
@@ -692,7 +746,7 @@
 
     /* HAMBÚRGUER */
 
-    .site-header-v2__toggle {
+    .site-header-v2 .site-header-v2__toggle {
         display: block;
 
         width: 44px;
@@ -708,7 +762,7 @@
 
     /* MENU MOBILE */
 
-    .site-header-v2__nav {
+    .site-header-v2 .site-header-v2__nav {
         position: absolute;
 
         top: 100%;
@@ -745,54 +799,81 @@
     }
 
 
-    .site-header-v2__nav.open {
+    .site-header-v2 .site-header-v2__nav.open {
         display: flex;
     }
 
 
-    .site-header-v2__nav a {
+    .site-header-v2 .site-header-v2__nav > a {
+        display: block;
+
+        width: 100%;
+
+        margin: 0;
+
         padding: 16px 4px;
 
+        border: 0;
         border-bottom: 1px solid #e8eff4;
+
+        border-radius: 0;
+
+        background: transparent;
 
         color: #07335f;
 
-        font-size: 12px;
+        box-shadow: none;
+
+        font-family: "Montserrat", Arial, sans-serif !important;
+
+        font-size: 12px !important;
+        font-weight: 800 !important;
+
+        line-height: 1.2 !important;
+
+        letter-spacing: 0 !important;
 
         text-align: left;
+
+        text-decoration: none !important;
     }
 
 
-    .site-header-v2__nav a:last-child {
+    .site-header-v2 .site-header-v2__nav > a.active {
+        color: #078bd3;
+    }
+
+
+    .site-header-v2 .site-header-v2__nav > a:last-child {
         border-bottom: 0;
     }
 
 
-    .site-header-v2__nav a::after {
+    .site-header-v2 .site-header-v2__nav > a::after {
         display: none;
     }
 
 
-    .site-header-v2__courses {
+    .site-header-v2 .site-header-v2__courses {
         display: none;
     }
 
 
     /* X */
 
-    .site-header-v2__toggle.is-open span:nth-child(1) {
+    .site-header-v2 .site-header-v2__toggle.is-open span:nth-child(1) {
         transform:
             translateY(8px)
             rotate(45deg);
     }
 
 
-    .site-header-v2__toggle.is-open span:nth-child(2) {
+    .site-header-v2 .site-header-v2__toggle.is-open span:nth-child(2) {
         opacity: 0;
     }
 
 
-    .site-header-v2__toggle.is-open span:nth-child(3) {
+    .site-header-v2 .site-header-v2__toggle.is-open span:nth-child(3) {
         transform:
             translateY(-8px)
             rotate(-45deg);
@@ -806,25 +887,21 @@
 
 @media (max-width: 520px) {
 
-    .site-header-v2__inner {
+    .site-header-v2 .site-header-v2__inner {
         width: calc(100% - 20px);
 
         min-height: 92px;
     }
 
 
-    /* MARCA */
-
-    .site-header-v2__brand {
+    .site-header-v2 .site-header-v2__brand {
         max-width: calc(100% - 48px);
 
         gap: 9px;
     }
 
 
-    /* POMBA UM POUCO MENOR */
-
-    .site-header-v2__symbol {
+    .site-header-v2 .site-header-v2__symbol {
         width: 68px;
         height: 66px;
 
@@ -832,17 +909,13 @@
     }
 
 
-    /* TEXTO OCUPA MAIS ESPAÇO */
-
-    .site-header-v2__wordmark {
+    .site-header-v2 .site-header-v2__wordmark {
         width: auto;
         max-width: none;
     }
 
 
-    /* APÓSTOLA — MAIOR E LEGÍVEL */
-
-    .site-header-v2__apostola {
+    .site-header-v2 .site-header-v2__apostola {
         margin-bottom: 5px;
 
         font-size: 9px;
@@ -851,16 +924,12 @@
     }
 
 
-    /* PATRICIA SANTANA */
-
-    .site-header-v2__wordmark strong {
+    .site-header-v2 .site-header-v2__wordmark strong {
         font-size: 20px;
     }
 
 
-    /* MINISTÉRIO */
-
-    .site-header-v2__ministry-row {
+    .site-header-v2 .site-header-v2__ministry-row {
         margin-top: 7px;
 
         gap: 5px;
@@ -869,21 +938,19 @@
     }
 
 
-    .site-header-v2__ministry-row small {
+    .site-header-v2 .site-header-v2__ministry-row small {
         font-size: 6.5px;
 
         letter-spacing: 1.1px;
     }
 
 
-    .site-header-v2__diamond {
+    .site-header-v2 .site-header-v2__diamond {
         font-size: 11px;
     }
 
 
-    /* HAMBÚRGUER */
-
-    .site-header-v2__toggle {
+    .site-header-v2 .site-header-v2__toggle {
         width: 42px;
         height: 42px;
 
@@ -893,12 +960,12 @@
     }
 
 
-    .site-header-v2__toggle span {
+    .site-header-v2 .site-header-v2__toggle span {
         width: 25px;
     }
 
 
-    .site-header-v2__nav {
+    .site-header-v2 .site-header-v2__nav {
         left: -10px;
         right: -10px;
     }
@@ -907,27 +974,25 @@
 
 /* =========================================================
    CELULARES MENORES — ATÉ 400PX
-
-   NÃO DIMINUI MAIS DRASTICAMENTE OS TEXTOS
 ========================================================= */
 
 @media (max-width: 400px) {
 
-    .site-header-v2__inner {
+    .site-header-v2 .site-header-v2__inner {
         width: calc(100% - 16px);
 
         min-height: 88px;
     }
 
 
-    .site-header-v2__brand {
+    .site-header-v2 .site-header-v2__brand {
         max-width: calc(100% - 44px);
 
         gap: 7px;
     }
 
 
-    .site-header-v2__symbol {
+    .site-header-v2 .site-header-v2__symbol {
         width: 61px;
         height: 60px;
 
@@ -935,38 +1000,38 @@
     }
 
 
-    .site-header-v2__apostola {
+    .site-header-v2 .site-header-v2__apostola {
         font-size: 8px;
 
         letter-spacing: 2.7px;
     }
 
 
-    .site-header-v2__wordmark strong {
+    .site-header-v2 .site-header-v2__wordmark strong {
         font-size: 18px;
     }
 
 
-    .site-header-v2__ministry-row {
+    .site-header-v2 .site-header-v2__ministry-row {
         margin-top: 6px;
 
         gap: 4px;
     }
 
 
-    .site-header-v2__ministry-row small {
+    .site-header-v2 .site-header-v2__ministry-row small {
         font-size: 5.8px;
 
         letter-spacing: 0.8px;
     }
 
 
-    .site-header-v2__diamond {
+    .site-header-v2 .site-header-v2__diamond {
         font-size: 10px;
     }
 
 
-    .site-header-v2__toggle {
+    .site-header-v2 .site-header-v2__toggle {
         width: 40px;
         height: 40px;
 
@@ -981,21 +1046,21 @@
 
 @media (max-width: 350px) {
 
-    .site-header-v2__inner {
+    .site-header-v2 .site-header-v2__inner {
         width: calc(100% - 12px);
 
         min-height: 84px;
     }
 
 
-    .site-header-v2__brand {
+    .site-header-v2 .site-header-v2__brand {
         max-width: calc(100% - 40px);
 
         gap: 6px;
     }
 
 
-    .site-header-v2__symbol {
+    .site-header-v2 .site-header-v2__symbol {
         width: 55px;
         height: 55px;
 
@@ -1003,38 +1068,38 @@
     }
 
 
-    .site-header-v2__apostola {
+    .site-header-v2 .site-header-v2__apostola {
         font-size: 7px;
 
         letter-spacing: 2.2px;
     }
 
 
-    .site-header-v2__wordmark strong {
+    .site-header-v2 .site-header-v2__wordmark strong {
         font-size: 16px;
     }
 
 
-    .site-header-v2__ministry-row {
+    .site-header-v2 .site-header-v2__ministry-row {
         margin-top: 5px;
 
         gap: 3px;
     }
 
 
-    .site-header-v2__ministry-row small {
+    .site-header-v2 .site-header-v2__ministry-row small {
         font-size: 5px;
 
         letter-spacing: 0.6px;
     }
 
 
-    .site-header-v2__diamond {
+    .site-header-v2 .site-header-v2__diamond {
         font-size: 9px;
     }
 
 
-    .site-header-v2__toggle {
+    .site-header-v2 .site-header-v2__toggle {
         width: 38px;
         height: 38px;
 
@@ -1042,7 +1107,7 @@
     }
 
 
-    .site-header-v2__toggle span {
+    .site-header-v2 .site-header-v2__toggle span {
         width: 23px;
     }
 }
