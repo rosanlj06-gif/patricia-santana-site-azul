@@ -10,14 +10,14 @@
 ========================================================= */
 
 .pagina-ofertas {
-    --of-navy: #032e58;
-    --of-dark: #011b34;
-    --of-blue: #087fc6;
-    --of-blue-2: #0696d8;
-    --of-cyan: #42bfee;
-    --of-silver: #d7e3e9;
-    --of-ice: #f2f7f9;
-    --of-text: #587789;
+    --navy: #032e58;
+    --dark: #011b34;
+    --dark-2: #022641;
+    --blue: #087fc6;
+    --cyan: #39b9ef;
+    --silver: #d7e3e9;
+    --ice: #f3f8fa;
+    --text: #587789;
 
     width: 100%;
     margin: 0;
@@ -26,19 +26,16 @@
     overflow: hidden;
 
     background: #ffffff;
-    color: var(--of-navy);
+    color: var(--navy);
 }
-
 
 .pagina-ofertas * {
     box-sizing: border-box;
 }
 
-
 .pagina-ofertas a {
     text-decoration: none;
 }
-
 
 .ofertas-wrap {
     width: calc(100% - 48px);
@@ -48,11 +45,10 @@
     margin-right: auto;
 }
 
-
 .ofertas-kicker {
     margin: 0;
 
-    color: #078acb;
+    color: #078bcf;
 
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 9px;
@@ -71,7 +67,8 @@
     position: relative;
 
     width: 100%;
-    min-height: 560px;
+    height: 470px;
+    min-height: 470px;
 
     display: flex;
     align-items: center;
@@ -82,30 +79,38 @@
 }
 
 
-/* IMAGEM DAS MÃOS */
+/* =========================================================
+   IMAGEM DAS MÃOS
+========================================================= */
 
 .ofertas-hero-imagem {
     position: absolute;
+
     inset: 0;
 
     z-index: 0;
 
-    background-image: url("maos-abertas.png");
+    background-image: url("maos-ofertas.png");
+
     background-repeat: no-repeat;
 
-    /*
-       A imagem ocupa todo o banner.
-       As mãos ficam principalmente do centro para a direita.
-    */
     background-size: cover;
-    background-position: center right;
+
+    /*
+       A imagem fica deslocada um pouco para a direita
+       para valorizar as mãos.
+    */
+    background-position: center 58%;
 }
 
 
-/* ESCURECIMENTO PARA O TEXTO */
+/* =========================================================
+   SOMBRA SOBRE A IMAGEM
+========================================================= */
 
 .ofertas-hero-overlay {
     position: absolute;
+
     inset: 0;
 
     z-index: 1;
@@ -113,21 +118,27 @@
     background:
         linear-gradient(
             90deg,
-            rgba(0, 18, 34, .98) 0%,
-            rgba(0, 23, 42, .94) 26%,
-            rgba(0, 25, 45, .73) 48%,
-            rgba(0, 22, 40, .28) 72%,
-            rgba(0, 18, 34, .20) 100%
+
+            rgba(0, 18, 34, .99) 0%,
+
+            rgba(0, 20, 38, .96) 27%,
+
+            rgba(0, 24, 43, .79) 47%,
+
+            rgba(0, 22, 40, .35) 67%,
+
+            rgba(0, 17, 31, .18) 100%
         );
 }
 
 
-/* LEVE TOM AZUL SOBRE A IMAGEM */
+/* SOMBRA SUPERIOR/INFERIOR */
 
 .ofertas-hero::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     z-index: 1;
@@ -137,101 +148,88 @@
     background:
         linear-gradient(
             180deg,
-            rgba(20, 139, 194, .06),
-            transparent 45%,
-            rgba(0, 15, 29, .25)
+
+            rgba(0, 16, 30, .16),
+
+            transparent 38%,
+
+            rgba(0, 13, 25, .30)
         );
 }
 
 
-/* ELEMENTO DECORATIVO */
+/* DESATIVA O CÍRCULO ANTIGO */
 
 .ofertas-hero-luz {
-    position: absolute;
-
-    z-index: 2;
-
-    right: -180px;
-    top: -280px;
-
-    width: 620px;
-    height: 620px;
-
-    border: 68px solid rgba(58, 184, 233, .055);
-    border-radius: 50%;
-
-    pointer-events: none;
+    display: none;
 }
 
 
-/* CONTAINER DO HERO */
+/* =========================================================
+   CONTEÚDO HERO
+========================================================= */
 
 .ofertas-hero-conteudo {
     position: relative;
 
     z-index: 3;
 
-    /*
-       IMPORTANTE:
-       NÃO colocar width:100% aqui.
-       A classe ofertas-wrap controla a largura.
-    */
-
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 45px;
+    padding-bottom: 45px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    gap: 70px;
+    gap: 60px;
 }
 
 
 /* =========================================================
-   TEXTO DO HERO
+   TEXTO HERO
 ========================================================= */
 
 .ofertas-hero-texto {
-    width: 560px;
-    max-width: 58%;
+    width: 500px;
+    max-width: 56%;
 }
-
 
 .ofertas-hero .ofertas-kicker {
     color: #55c9f2;
 }
 
-
 .ofertas-hero h1 {
-    margin: 17px 0 0;
+    margin: 13px 0 0;
 
     color: #ffffff;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: clamp(68px, 6vw, 94px);
+    font-size: 73px;
     font-weight: 500;
 
-    line-height: .78;
+    line-height: .79;
 
     letter-spacing: -2px;
 }
 
-
 .ofertas-hero h1 span {
-    margin-left: 10px;
+    margin-left: 8px;
 
     color: #45c3ef;
 
     font-style: italic;
 }
 
-
 .ofertas-hero h1 em {
     display: block;
 
-    margin-top: 11px;
+    margin-top: 9px;
 
     color: #ffffff;
 
@@ -239,60 +237,66 @@
     font-weight: 500;
 }
 
-
 .ofertas-subtitulo {
-    margin: 34px 0 0;
+    margin: 27px 0 0;
 
     color: #ffffff;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 600;
 }
-
 
 .ofertas-linha {
-    width: 70px;
+    width: 60px;
     height: 2px;
 
-    margin: 21px 0;
+    margin: 17px 0;
 
-    background: linear-gradient(
-        90deg,
-        #087fc6,
-        #4bc8f2
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #0785c8,
+            #4cc9f2
+        );
 }
 
-
 .ofertas-hero blockquote {
-    max-width: 450px;
+    max-width: 430px;
 
     margin: 0;
 
-    color: #d8e8ef;
+    color: #e1edf2;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
     font-weight: 500;
 
-    line-height: 1.55;
+    line-height: 1.5;
 }
-
 
 .ofertas-hero blockquote cite {
     display: block;
 
-    margin-top: 14px;
+    margin-top: 10px;
 
-    color: #4cc7f1;
+    color: #50c9f1;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
-    font-size: 7px;
+    font-size: 6.5px;
     font-style: normal;
     font-weight: 800;
 
@@ -301,72 +305,74 @@
 
 
 /* =========================================================
-   FRASE DO LADO DIREITO
+   TEXTO LATERAL HERO
 ========================================================= */
 
 .ofertas-hero-lateral {
-    width: 190px;
+    width: 180px;
 
-    flex: 0 0 190px;
+    flex: 0 0 180px;
 
-    margin-top: 75px;
+    margin-top: 70px;
 
     text-align: right;
 }
 
-
 .ofertas-hero-lateral > span {
     display: block;
 
-    width: 48px;
+    width: 45px;
     height: 1px;
 
-    margin: 0 0 17px auto;
+    margin: 0 0 14px auto;
 
-    background: #43bfe9;
+    background: #42c0ed;
 }
-
 
 .ofertas-hero-lateral p {
     margin: 0;
 
-    color: #6cd3f6;
+    color: #6ed4f5;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
-    font-size: 8px;
+    font-size: 7px;
 
     letter-spacing: 3px;
 }
 
-
 .ofertas-hero-lateral strong {
     display: block;
 
-    margin-top: 7px;
+    margin-top: 6px;
 
     color: #ffffff;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 
-    line-height: 1.6;
+    line-height: 1.55;
 
     letter-spacing: 2px;
 }
 
-
 .ofertas-hero-lateral i {
     display: block;
 
-    width: 38px;
+    width: 35px;
     height: 1px;
 
-    margin: 16px 0 0 auto;
+    margin: 13px 0 0 auto;
 
-    background: #43bfe9;
+    background: #42c0ed;
 }
 
 
@@ -380,97 +386,113 @@
     background:
         linear-gradient(
             90deg,
-            #032c4e,
+            #032d4e,
             #011b34
         );
 
-    border-top: 1px solid rgba(89, 199, 239, .18);
-    border-bottom: 1px solid rgba(89, 199, 239, .18);
-}
+    border-top:
+        1px solid
+        rgba(83, 191, 231, .18);
 
+    border-bottom:
+        1px solid
+        rgba(83, 191, 231, .18);
+}
 
 .ofertas-propositos-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 }
-
 
 .ofertas-proposito {
     min-width: 0;
-    min-height: 135px;
+    min-height: 120px;
 
-    padding: 28px 30px;
+    padding: 24px 30px;
 
     display: flex;
+
     align-items: center;
 
-    gap: 20px;
+    gap: 18px;
 
-    border-right: 1px solid rgba(105, 194, 229, .18);
+    border-right:
+        1px solid
+        rgba(105, 194, 229, .18);
 }
-
 
 .ofertas-proposito:last-child {
     border-right: 0;
 }
 
-
 .ofertas-proposito-icone {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
 
-    flex: 0 0 50px;
+    flex: 0 0 46px;
 
     display: grid;
+
     place-items: center;
 
-    border: 1px solid #36b9eb;
+    border:
+        1px solid
+        #36b9eb;
+
     border-radius: 50%;
 
     color: #51c9f3;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 22px;
+    font-size: 20px;
 }
-
 
 .ofertas-proposito h2 {
     margin: 0;
 
     color: #ffffff;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 9px;
     font-weight: 800;
 
-    letter-spacing: .5px;
+    letter-spacing: .4px;
 }
 
-
 .ofertas-proposito p {
-    margin: 7px 0 0;
+    margin: 6px 0 0;
 
     color: #9db9c8;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
-    font-size: 8px;
+    font-size: 7.5px;
 
     line-height: 1.6;
 }
 
 
 /* =========================================================
-   ÁREA DE CONTRIBUIÇÃO
+   FORMAS DE CONTRIBUIÇÃO
 ========================================================= */
 
 .ofertas-contribuicao {
     width: 100%;
 
-    padding: 72px 0 82px;
+    padding: 65px 0 75px;
 
     background:
         radial-gradient(
@@ -485,29 +507,30 @@
         );
 }
 
-
 .ofertas-contribuicao-cabecalho {
     max-width: 700px;
 
-    margin: 0 auto 42px;
+    margin:
+        0 auto 38px;
 
     text-align: center;
 }
 
-
 .ofertas-contribuicao-cabecalho h2 {
-    margin: 13px 0 0;
+    margin: 12px 0 0;
 
     color: #04365f;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 54px;
+    font-size: 52px;
     font-weight: 500;
 
     line-height: .96;
 }
-
 
 .ofertas-contribuicao-cabecalho h2 em {
     color: #078dce;
@@ -515,15 +538,17 @@
     font-weight: 500;
 }
 
-
 .ofertas-contribuicao-cabecalho > p:last-child {
     max-width: 500px;
 
-    margin: 16px auto 0;
+    margin: 15px auto 0;
 
     color: #617e8f;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 10px;
 
@@ -532,34 +557,39 @@
 
 
 /* =========================================================
-   CARDS DE PAGAMENTO
+   CARDS
 ========================================================= */
 
 .ofertas-pagamentos-grid {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
 
     gap: 24px;
 
     align-items: stretch;
 }
 
-
 .ofertas-card {
     position: relative;
 
     min-width: 0;
-    min-height: 420px;
+    min-height: 410px;
 
-    padding: 36px;
+    padding: 34px;
 
     overflow: hidden;
 
-    border: 1px solid #b9d2df;
+    border:
+        1px solid
+        #b9d2df;
+
     border-radius: 8px;
 }
-
 
 .ofertas-card::before {
     content: "";
@@ -581,7 +611,6 @@
         );
 }
 
-
 .ofertas-card-pix {
     background: #ffffff;
 
@@ -589,7 +618,6 @@
         0 20px 45px
         rgba(3, 57, 91, .08);
 }
-
 
 .ofertas-card-banco {
     color: #ffffff;
@@ -611,13 +639,15 @@
         rgba(3, 38, 64, .13);
 }
 
-
 .ofertas-card-kicker {
     margin: 0;
 
     color: #078acb;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 8px;
     font-weight: 800;
@@ -625,47 +655,50 @@
     letter-spacing: 3px;
 }
 
-
-.ofertas-card-banco .ofertas-card-kicker {
+.ofertas-card-banco
+.ofertas-card-kicker {
     color: #53c9f3;
 }
 
-
 .ofertas-card h3 {
-    margin: 9px 0 0;
+    margin: 8px 0 0;
 
     color: #063c67;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 47px;
+    font-size: 45px;
     font-weight: 500;
 
     line-height: 1;
 }
 
-
 .ofertas-card-banco h3 {
     color: #ffffff;
 }
 
-
 .ofertas-card-topo > p:last-child {
     max-width: 390px;
 
-    margin: 13px 0 0;
+    margin: 12px 0 0;
 
     color: #738b99;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 9px;
 
     line-height: 1.7;
 }
 
-
-.ofertas-card-banco .ofertas-card-topo > p:last-child {
+.ofertas-card-banco
+.ofertas-card-topo > p:last-child {
     color: #aac3d0;
 }
 
@@ -675,17 +708,18 @@
 ========================================================= */
 
 .ofertas-pix-conteudo {
-    margin-top: 29px;
+    margin-top: 27px;
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 145px;
+    grid-template-columns:
+        minmax(0, 1fr)
+        140px;
 
-    gap: 25px;
+    gap: 24px;
 
     align-items: end;
 }
-
 
 .ofertas-label {
     display: block;
@@ -694,7 +728,10 @@
 
     color: #6d8797;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 7px;
     font-weight: 800;
@@ -702,35 +739,39 @@
     letter-spacing: 1.6px;
 }
 
-
 .ofertas-campo {
     width: 100%;
-    min-height: 49px;
+    min-height: 47px;
 
-    padding: 0 15px;
+    padding: 0 14px;
 
     display: flex;
+
     align-items: center;
 
-    border: 1px solid #bfd1db;
+    border:
+        1px solid
+        #bfd1db;
 
     background: #f8fafb;
 
     color: #4f7185;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 9px;
 }
 
-
 .ofertas-botao-copiar,
 .ofertas-botao-banco {
     width: 100%;
-    min-height: 47px;
+    min-height: 45px;
 
-    margin-top: 12px;
-    padding: 0 16px;
+    margin-top: 11px;
+    padding: 0 15px;
 
     border: 0;
 
@@ -745,14 +786,16 @@
             #0797d6
         );
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 8px;
     font-weight: 800;
 
     letter-spacing: .8px;
 }
-
 
 .ofertas-botao-copiar span,
 .ofertas-botao-banco span {
@@ -761,31 +804,33 @@
 
 
 /* =========================================================
-   QR CODE PROVISÓRIO
+   QR
 ========================================================= */
 
 .ofertas-qr {
     text-align: center;
 }
 
-
 .ofertas-qr-placeholder {
     position: relative;
 
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
 
     margin: 0 auto;
+
     padding: 10px;
 
     display: grid;
+
     place-items: center;
 
-    border: 1px solid #bfd1db;
+    border:
+        1px solid
+        #bfd1db;
 
     background: #ffffff;
 }
-
 
 .ofertas-qr-desenho {
     position: absolute;
@@ -794,17 +839,18 @@
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    grid-template-rows:
+        repeat(4, 1fr);
 
     gap: 3px;
 }
 
-
 .ofertas-qr-desenho span {
     background: #073e68;
 }
-
 
 .ofertas-qr-desenho span:nth-child(2),
 .ofertas-qr-desenho span:nth-child(5),
@@ -815,36 +861,41 @@
     background: #ffffff;
 }
 
-
 .ofertas-qr-placeholder strong {
     position: relative;
 
     z-index: 2;
 
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
 
     display: grid;
+
     place-items: center;
 
     background: #ffffff;
 
     color: #05365f;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 12px;
 }
 
-
 .ofertas-qr small {
     display: block;
 
-    margin-top: 9px;
+    margin-top: 8px;
 
     color: #718896;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 6px;
     font-weight: 700;
@@ -854,22 +905,23 @@
 
 
 /* =========================================================
-   DADOS BANCÁRIOS
+   BANCO
 ========================================================= */
 
 .ofertas-banco-dados {
-    margin-top: 27px;
+    margin-top: 25px;
 }
 
-
 .ofertas-banco-dados div {
-    min-height: 41px;
+    min-height: 39px;
 
     padding: 0 3px;
 
     display: grid;
 
-    grid-template-columns: 135px minmax(0, 1fr);
+    grid-template-columns:
+        130px
+        minmax(0, 1fr);
 
     align-items: center;
 
@@ -878,11 +930,13 @@
         rgba(106, 193, 229, .19);
 }
 
-
 .ofertas-banco-dados span {
     color: #4fc4ef;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 7px;
     font-weight: 800;
@@ -890,30 +944,32 @@
     letter-spacing: 1.2px;
 }
 
-
 .ofertas-banco-dados strong {
     color: #d9e8ef;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 8px;
     font-weight: 500;
 }
 
-
 .ofertas-botao-banco {
-    margin-top: 19px;
+    margin-top: 18px;
 
-    border: 1px solid #32b8e9;
+    border:
+        1px solid
+        #32b8e9;
 
-    background: rgba(3, 60, 96, .28);
+    background:
+        rgba(3, 60, 96, .28);
 }
-
 
 .ofertas-botao-banco:hover {
     background: #087fc6;
 }
-
 
 .ofertas-copiado {
     max-height: 0;
@@ -926,7 +982,10 @@
 
     color: #078dce;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 7px;
     font-weight: 700;
@@ -934,11 +993,10 @@
     transition: .25s ease;
 }
 
-
-.ofertas-card-banco .ofertas-copiado {
+.ofertas-card-banco
+.ofertas-copiado {
     color: #62cef3;
 }
-
 
 .ofertas-copiado.ativo {
     max-height: 30px;
@@ -950,23 +1008,23 @@
 
 
 /* =========================================================
-   FAIXA FINAL - CAMINHO DOURADO
+   FAIXA CAMINHO DOURADO
 ========================================================= */
 
 .ofertas-faixa {
     position: relative;
 
     width: 100%;
-    min-height: 270px;
+    min-height: 250px;
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
 
     background: #021d35;
 }
-
 
 .ofertas-faixa-imagem {
     position: absolute;
@@ -975,14 +1033,18 @@
 
     z-index: 0;
 
-    background-image: url("caminho-dourado.png");
+    background-image:
+        url("caminho-dourado.png");
 
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat:
+        no-repeat;
 
-    background-position: center 52%;
+    background-size:
+        cover;
+
+    background-position:
+        center 52%;
 }
-
 
 .ofertas-faixa-overlay {
     position: absolute;
@@ -994,42 +1056,46 @@
     background:
         linear-gradient(
             90deg,
-            rgba(0, 21, 39, .94) 0%,
-            rgba(0, 29, 51, .74) 40%,
-            rgba(1, 33, 56, .32) 72%,
-            rgba(0, 22, 40, .48) 100%
+
+            rgba(0, 21, 39, .92) 0%,
+
+            rgba(0, 29, 51, .70) 40%,
+
+            rgba(1, 33, 56, .28) 72%,
+
+            rgba(0, 22, 40, .44) 100%
         );
 }
-
 
 .ofertas-faixa-conteudo {
     position: relative;
 
     z-index: 2;
 
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding-top: 38px;
+    padding-bottom: 38px;
 
     display: flex;
+
     align-items: center;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
 
     gap: 60px;
 }
-
 
 .ofertas-faixa-versiculo {
     max-width: 570px;
 
     display: flex;
 
-    gap: 24px;
+    gap: 23px;
 }
-
 
 .ofertas-faixa-detalhe {
     width: 2px;
-    min-height: 110px;
+    min-height: 105px;
 
     flex: 0 0 2px;
 
@@ -1037,34 +1103,38 @@
         linear-gradient(
             180deg,
             #45c2ef,
-            rgba(69, 194, 239, 0)
+            rgba(69,194,239,0)
         );
 }
-
 
 .ofertas-faixa blockquote {
     margin: 0;
 
     color: #ffffff;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 20px;
+    font-size: 19px;
     font-style: italic;
     font-weight: 600;
 
     line-height: 1.45;
 }
 
-
 .ofertas-faixa blockquote cite {
     display: block;
 
-    margin-top: 15px;
+    margin-top: 14px;
 
     color: #61cff4;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 7px;
     font-style: normal;
@@ -1073,22 +1143,22 @@
     letter-spacing: 2px;
 }
 
-
 .ofertas-faixa-frase {
     min-width: 190px;
 
     text-align: right;
 }
 
-
 .ofertas-faixa-frase span,
 .ofertas-faixa-frase p,
 .ofertas-faixa-frase strong {
     display: block;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 }
-
 
 .ofertas-faixa-frase span {
     color: #77d6f6;
@@ -1097,7 +1167,6 @@
 
     letter-spacing: 4px;
 }
-
 
 .ofertas-faixa-frase p {
     margin: 6px 0;
@@ -1109,7 +1178,6 @@
     letter-spacing: 3px;
 }
 
-
 .ofertas-faixa-frase strong {
     color: #ffffff;
 
@@ -1117,7 +1185,6 @@
 
     letter-spacing: 3px;
 }
-
 
 .ofertas-faixa-frase i {
     display: block;
@@ -1138,11 +1205,10 @@
 .ofertas-agradecimento {
     width: 100%;
 
-    padding: 65px 0;
+    padding: 58px 0;
 
     background: #ffffff;
 }
-
 
 .ofertas-agradecimento-conteudo {
     max-width: 720px;
@@ -1150,38 +1216,43 @@
     text-align: center;
 }
 
-
 .ofertas-simbolo {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
 
-    margin: 0 auto 17px;
+    margin:
+        0 auto 16px;
 
     display: grid;
+
     place-items: center;
 
-    border: 1px solid #9dd3e9;
+    border:
+        1px solid
+        #9dd3e9;
+
     border-radius: 50%;
 
     color: #078dce;
 
-    font-size: 23px;
+    font-size: 22px;
 }
 
-
 .ofertas-agradecimento h2 {
-    margin: 13px 0 0;
+    margin: 12px 0 0;
 
     color: #053861;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 500;
 
     line-height: .96;
 }
-
 
 .ofertas-agradecimento h2 em {
     color: #078dce;
@@ -1189,15 +1260,18 @@
     font-weight: 500;
 }
 
-
 .ofertas-agradecimento-texto {
     max-width: 530px;
 
-    margin: 19px auto 0;
+    margin:
+        18px auto 0;
 
     color: #607d8e;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
 
     font-size: 10px;
 
@@ -1212,31 +1286,31 @@
 @media (max-width: 900px) {
 
     .ofertas-hero {
-        min-height: 530px;
+        height: 450px;
+        min-height: 450px;
     }
-
 
     .ofertas-hero-texto {
         width: auto;
-        max-width: 67%;
+        max-width: 65%;
     }
 
+    .ofertas-hero h1 {
+        font-size: 65px;
+    }
 
     .ofertas-hero-lateral {
-        width: 150px;
-        flex-basis: 150px;
+        width: 145px;
+        flex-basis: 145px;
     }
-
 
     .ofertas-proposito {
-        padding: 25px 18px;
+        padding: 22px 18px;
     }
-
 
     .ofertas-pagamentos-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -1247,7 +1321,9 @@
 @media (max-width: 650px) {
 
     .ofertas-wrap {
-        width: calc(100% - 28px);
+        width:
+            calc(100% - 28px);
+
         max-width: none;
     }
 
@@ -1255,139 +1331,139 @@
     /* HERO */
 
     .ofertas-hero {
-        min-height: 620px;
+        height: auto;
+
+        min-height: 590px;
 
         align-items: flex-end;
     }
 
-
     .ofertas-hero-imagem {
         background-size: cover;
 
-        background-position: 62% center;
+        /*
+           Mostra as mãos no celular.
+        */
+        background-position:
+            64% top;
     }
-
 
     .ofertas-hero-overlay {
         background:
             linear-gradient(
                 180deg,
-                rgba(1, 23, 42, .20) 0%,
-                rgba(1, 25, 46, .45) 34%,
-                rgba(1, 22, 42, .94) 67%,
+
+                rgba(1, 20, 37, .10) 0%,
+
+                rgba(1, 22, 40, .25) 30%,
+
+                rgba(1, 22, 41, .78) 53%,
+
+                rgba(1, 22, 41, .98) 72%,
+
                 #01172c 100%
             );
     }
 
-
     .ofertas-hero-conteudo {
-        width: calc(100% - 28px);
-
-        padding-top: 270px;
-        padding-bottom: 40px;
+        padding-top: 260px;
+        padding-bottom: 35px;
 
         display: block;
     }
-
 
     .ofertas-hero-texto {
         width: 100%;
         max-width: none;
     }
 
-
     .ofertas-hero h1 {
-        font-size: 62px;
+        font-size: 57px;
 
         line-height: .8;
 
-        letter-spacing: -1.5px;
+        letter-spacing: -1px;
     }
-
 
     .ofertas-subtitulo {
-        margin-top: 25px;
+        margin-top: 22px;
 
-        font-size: 12px;
+        font-size: 11px;
     }
 
+    .ofertas-linha {
+        margin:
+            15px 0;
+    }
 
     .ofertas-hero blockquote {
-        max-width: 340px;
+        max-width: 330px;
 
-        font-size: 16px;
+        font-size: 15px;
     }
-
 
     .ofertas-hero-lateral {
         display: none;
     }
 
 
-    /* PROPÓSITOS */
+    /* 3 PROPÓSITOS */
 
     .ofertas-propositos-grid {
         grid-template-columns: 1fr;
     }
 
-
     .ofertas-proposito {
-        min-height: 105px;
+        min-height: 95px;
 
-        padding: 20px 8px;
+        padding: 18px 8px;
 
         border-right: 0;
 
         border-bottom:
             1px solid
-            rgba(105, 194, 229, .16);
+            rgba(105,194,229,.16);
     }
-
 
     .ofertas-proposito:last-child {
         border-bottom: 0;
     }
 
-
     .ofertas-proposito-icone {
-        width: 44px;
-        height: 44px;
+        width: 42px;
+        height: 42px;
 
-        flex-basis: 44px;
+        flex-basis: 42px;
     }
 
 
     /* CONTRIBUIÇÃO */
 
     .ofertas-contribuicao {
-        padding: 50px 0 55px;
+        padding:
+            48px 0 52px;
     }
-
 
     .ofertas-contribuicao-cabecalho {
-        margin-bottom: 28px;
+        margin-bottom: 27px;
     }
-
 
     .ofertas-contribuicao-cabecalho h2 {
-        font-size: 41px;
+        font-size: 39px;
     }
-
 
     .ofertas-pagamentos-grid {
-        gap: 16px;
+        gap: 15px;
     }
-
 
     .ofertas-card {
         min-height: 0;
 
-        padding: 27px 20px;
+        padding: 25px 19px;
     }
 
-
     .ofertas-card h3 {
-        font-size: 41px;
+        font-size: 40px;
     }
 
 
@@ -1396,71 +1472,68 @@
     .ofertas-pix-conteudo {
         grid-template-columns: 1fr;
 
-        gap: 24px;
+        gap: 22px;
     }
-
 
     .ofertas-qr {
         order: -1;
     }
 
-
     .ofertas-qr-placeholder {
-        width: 118px;
-        height: 118px;
+        width: 115px;
+        height: 115px;
     }
 
 
     /* BANCO */
 
     .ofertas-banco-dados div {
-        grid-template-columns: 105px minmax(0, 1fr);
+        grid-template-columns:
+            105px
+            minmax(0, 1fr);
     }
 
 
-    /* CAMINHO */
+    /* FAIXA */
 
     .ofertas-faixa {
-        min-height: 340px;
+        min-height: 320px;
     }
-
 
     .ofertas-faixa-imagem {
-        background-position: center;
+        background-position:
+            center;
     }
-
 
     .ofertas-faixa-overlay {
         background:
             linear-gradient(
                 180deg,
-                rgba(1, 23, 42, .35),
-                rgba(1, 22, 41, .90)
+
+                rgba(1,23,42,.32),
+
+                rgba(1,22,41,.91)
             );
     }
 
-
     .ofertas-faixa-conteudo {
-        padding-top: 38px;
-        padding-bottom: 38px;
+        padding-top: 35px;
+        padding-bottom: 35px;
 
         display: block;
     }
 
-
     .ofertas-faixa blockquote {
-        font-size: 18px;
+        font-size: 17px;
     }
-
 
     .ofertas-faixa-frase {
         min-width: 0;
 
-        margin-top: 28px;
+        margin-top: 25px;
 
         text-align: left;
     }
-
 
     .ofertas-faixa-frase i {
         margin-left: 0;
@@ -1470,14 +1543,13 @@
     /* AGRADECIMENTO */
 
     .ofertas-agradecimento {
-        padding: 50px 0;
+        padding:
+            47px 0;
     }
-
 
     .ofertas-agradecimento h2 {
-        font-size: 40px;
+        font-size: 38px;
     }
-
 }
 
 
@@ -1488,17 +1560,17 @@
 @media (max-width: 390px) {
 
     .ofertas-hero h1 {
-        font-size: 55px;
+        font-size: 52px;
     }
-
 
     .ofertas-card {
-        padding: 24px 17px;
+        padding:
+            23px 16px;
     }
-
 
     .ofertas-banco-dados div {
-        grid-template-columns: 92px minmax(0, 1fr);
+        grid-template-columns:
+            92px
+            minmax(0, 1fr);
     }
-
 }
