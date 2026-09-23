@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
+    /* =====================================================
+       FUNÇÃO PARA CARREGAR COMPONENTES
+    ====================================================== */
+
     async function carregarComponente(seletor, arquivo) {
 
         const alvo = document.querySelector(seletor);
@@ -18,13 +22,20 @@ document.addEventListener("DOMContentLoaded", async function () {
                 );
             }
 
-            alvo.innerHTML = await resposta.text();
+            const html = await resposta.text();
+
+            alvo.innerHTML = html;
 
         } catch (erro) {
 
-            console.error(erro);
+            console.error(
+                "Erro ao carregar componente:",
+                arquivo,
+                erro
+            );
 
         }
+
     }
 
 
@@ -88,6 +99,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         );
 
 
+        /* FECHA MENU DEPOIS DO CLIQUE */
+
         navigation
             .querySelectorAll("a")
             .forEach(function (link) {
@@ -117,6 +130,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             });
 
+
+        /* VOLTA AO DESKTOP */
 
         window.addEventListener(
             "resize",
@@ -152,17 +167,21 @@ document.addEventListener("DOMContentLoaded", async function () {
        IDENTIFICA A PÁGINA ATUAL
     ====================================================== */
 
-    const pagina =
+    let pagina =
         window.location.pathname
             .split("/")
-            .pop() || "index.html";
+            .pop();
 
-    const hash =
-        window.location.hash;
+
+    /* QUANDO ESTIVER NA RAIZ */
+
+    if (!pagina) {
+        pagina = "index.html";
+    }
 
 
     /* =====================================================
-       REMOVE O ATIVO ANTERIOR
+       REMOVE TODOS OS ATIVOS
     ====================================================== */
 
     document
@@ -177,92 +196,66 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
     /* =====================================================
-       DEFINE O ITEM ATIVO
+       DEFINE QUAL MENU DEVE FICAR ATIVO
     ====================================================== */
 
-    let ativo = null;
+    let nomeMenu = "inicio";
 
 
-    if (pagina === "sobre.html") {
+    switch (pagina) {
 
-        ativo =
-            document.querySelector(
-                '[data-nav="sobre"]'
-            );
+        case "sobre.html":
 
-    }
+            nomeMenu = "sobre";
 
-    else if (pagina === "cursos.html") {
+            break;
 
-        ativo =
-            document.querySelector(
-                '[data-nav="cursos"]'
-            );
 
-    }
+        case "cursos.html":
 
-    else if (pagina === "agenda.html") {
+            nomeMenu = "cursos";
 
-        ativo =
-            document.querySelector(
-                '[data-nav="agenda"]'
-            );
+            break;
 
-    }
 
-    else if (pagina === "contato.html") {
+        case "contato.html":
 
-        ativo =
-            document.querySelector(
-                '[data-nav="contato"]'
-            );
+            nomeMenu = "contato";
 
-    }
+            break;
 
-    else if (pagina === "ofertas.html") {
 
-        ativo =
-            document.querySelector(
-                '[data-nav="ofertas"]'
-            );
+        case "ofertas.html":
 
-    }
+            nomeMenu = "ofertas";
 
-    else if (hash === "#cursos") {
+            break;
 
-        ativo =
-            document.querySelector(
-                '[data-nav="cursos"]'
-            );
 
-    }
+        case "index.html":
 
-    else if (hash === "#contato") {
+        default:
 
-        ativo =
-            document.querySelector(
-                '[data-nav="contato"]'
-            );
+            nomeMenu = "inicio";
 
-    }
-
-    else {
-
-        ativo =
-            document.querySelector(
-                '[data-nav="inicio"]'
-            );
+            break;
 
     }
 
 
     /* =====================================================
-       ATIVA O MENU CORRETO
+       MARCA O MENU ATIVO
     ====================================================== */
 
-    if (ativo) {
+    const linkAtivo =
+        document.querySelector(
+            '[data-nav="' + nomeMenu + '"]'
+        );
 
-        ativo.classList.add("active");
+
+    if (linkAtivo) {
+
+        linkAtivo.classList.add("active");
 
     }
 
