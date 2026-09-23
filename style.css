@@ -3581,8 +3581,8 @@ select {
 
 /* DESKTOP */
 .hero{
-    padding-top: 72px;
-    padding-bottom: 62px;
+    padding-top:40px;
+    padding-bottom: 30px;
 }
 
 .hero-tags{
@@ -3619,8 +3619,8 @@ select {
 }
 
 .courses{
-    padding-top: 72px;
-    padding-bottom: 78px;
+    padding-top:40px;
+    padding-bottom: 35px;
 }
 
 .section-head{
@@ -3628,8 +3628,8 @@ select {
 }
 
 .feature{
-    padding-top: 68px;
-    padding-bottom: 68px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .feature-grid{
