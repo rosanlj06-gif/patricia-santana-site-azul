@@ -45,9 +45,6 @@
 
     display: grid;
 
-    /*
-       MARCA | MENU | BOTÃO
-    */
     grid-template-columns:
         350px
         minmax(0, 1fr)
@@ -55,10 +52,6 @@
 
     align-items: center;
 
-    /*
-       AUMENTADO PARA DAR MAIS ESPAÇO
-       ENTRE MENU E BOTÃO
-    */
     column-gap: 42px;
 }
 
@@ -176,14 +169,10 @@
 }
 
 
-/* REMOVE LINHAS ANTIGAS */
-
 .site-header-v2__ministry-row i {
     display: none;
 }
 
-
-/* TEXTO */
 
 .site-header-v2__ministry-row small {
     display: block;
@@ -202,8 +191,6 @@
     white-space: nowrap;
 }
 
-
-/* LOSANGOS */
 
 .site-header-v2__diamond {
     display: inline-flex;
@@ -240,22 +227,11 @@
     align-items: center;
     justify-content: flex-end;
 
-    /*
-       UM POUCO MAIS JUNTO ENTRE OS ITENS
-       PARA NÃO ENCOSTAR NO BOTÃO
-    */
     gap: 20px;
 
-    /*
-       MENU PARA A DIREITA
-    */
     transform: translateX(25px);
 }
 
-
-/* =========================================================
-   LINKS
-========================================================= */
 
 .site-header-v2__nav a {
     position: relative;
@@ -576,8 +552,6 @@
     }
 
 
-    /* ESCONDE O BOTÃO */
-
     .site-header-v2__courses {
         display: none;
     }
@@ -585,8 +559,7 @@
 
 
 /* =========================================================
-   TABLET — ATÉ 850PX
-   MENU HAMBÚRGUER
+   TABLET / CELULAR — ATÉ 850PX
 ========================================================= */
 
 @media (max-width: 850px) {
@@ -594,10 +567,10 @@
     .site-header-v2__inner {
         position: relative;
 
-        width: calc(100% - 28px);
+        width: calc(100% - 24px);
         max-width: none;
 
-        min-height: 92px;
+        min-height: 96px;
 
         margin: 0 auto;
 
@@ -612,7 +585,11 @@
     /* MARCA */
 
     .site-header-v2__brand {
-        max-width: calc(100% - 52px);
+        width: auto;
+        max-width: calc(100% - 54px);
+
+        display: flex;
+        align-items: center;
 
         gap: 10px;
     }
@@ -621,17 +598,24 @@
     /* POMBA */
 
     .site-header-v2__symbol {
-        width: 78px;
+        width: 74px;
         height: 72px;
+
+        flex: 0 0 74px;
     }
 
 
-    /* BLOCO DE TEXTO */
+    /* BLOCO DO NOME */
 
     .site-header-v2__wordmark {
-        width: 245px;
+        width: auto;
+        max-width: none;
 
-        max-width: calc(100vw - 145px);
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
     }
 
 
@@ -640,21 +624,25 @@
     .site-header-v2__apostola {
         display: block !important;
 
-        margin-bottom: 5px;
+        margin: 0 0 5px 0;
 
-        font-size: 8px;
+        font-size: 9px;
         font-weight: 800;
+
+        line-height: 1;
 
         letter-spacing: 3.5px;
 
-        line-height: 1;
+        white-space: nowrap;
     }
 
 
-    /* PATRICIA */
+    /* PATRICIA SANTANA */
 
     .site-header-v2__wordmark strong {
         display: block;
+
+        margin: 0;
 
         font-size: 21px;
         font-weight: 600;
@@ -668,9 +656,14 @@
     /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
+        width: 100%;
+
+        margin-top: 8px;
+
         display: flex !important;
 
-        margin-top: 7px;
+        align-items: center;
+        justify-content: center;
 
         gap: 6px;
     }
@@ -679,10 +672,12 @@
     .site-header-v2__ministry-row small {
         display: block !important;
 
-        font-size: 6.2px;
+        font-size: 6.5px;
         font-weight: 800;
 
-        letter-spacing: 1.4px;
+        line-height: 1;
+
+        letter-spacing: 1.3px;
 
         white-space: nowrap;
     }
@@ -718,8 +713,8 @@
 
         top: 100%;
 
-        left: -14px;
-        right: -14px;
+        left: -12px;
+        right: -12px;
 
         z-index: 9999;
 
@@ -814,110 +809,75 @@
     .site-header-v2__inner {
         width: calc(100% - 20px);
 
-        min-height: 90px;
+        min-height: 92px;
     }
 
 
     /* MARCA */
 
     .site-header-v2__brand {
-        max-width: calc(100% - 46px);
+        max-width: calc(100% - 48px);
 
-        gap: 8px;
+        gap: 9px;
     }
 
 
-    /* POMBA */
+    /* POMBA UM POUCO MENOR */
 
     .site-header-v2__symbol {
-        width: 72px;
-        height: 68px;
+        width: 68px;
+        height: 66px;
+
+        flex-basis: 68px;
     }
 
 
-    /* BLOCO DO TEXTO */
+    /* TEXTO OCUPA MAIS ESPAÇO */
 
     .site-header-v2__wordmark {
-        width: 235px;
-
-        max-width: calc(100vw - 128px);
+        width: auto;
+        max-width: none;
     }
 
 
-    /* =====================================================
-       APÓSTOLA MAIOR NO CELULAR
-    ===================================================== */
+    /* APÓSTOLA — MAIOR E LEGÍVEL */
 
     .site-header-v2__apostola {
-        display: block !important;
-
         margin-bottom: 5px;
 
-        font-size: 8px;
-        font-weight: 800;
+        font-size: 9px;
 
-        letter-spacing: 3px;
-
-        line-height: 1;
-
-        white-space: nowrap;
+        letter-spacing: 3.2px;
     }
 
 
-    /* =====================================================
-       PATRICIA SANTANA MAIOR
-    ===================================================== */
+    /* PATRICIA SANTANA */
 
     .site-header-v2__wordmark strong {
-        display: block;
-
-        font-size: 19px;
-        font-weight: 600;
-
-        line-height: 1;
-
-        white-space: nowrap;
+        font-size: 20px;
     }
 
 
-    /* =====================================================
-       MINISTÉRIO MAIOR
-    ===================================================== */
+    /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
-        display: flex !important;
-
-        width: 100%;
-
         margin-top: 7px;
 
-        align-items: center;
-        justify-content: center;
-
         gap: 5px;
+
+        justify-content: center;
     }
 
 
     .site-header-v2__ministry-row small {
-        display: block !important;
-
-        font-size: 6px;
-        font-weight: 800;
+        font-size: 6.5px;
 
         letter-spacing: 1.1px;
-
-        line-height: 1;
-
-        white-space: nowrap;
     }
 
 
     .site-header-v2__diamond {
-        display: inline-flex !important;
-
         font-size: 11px;
-
-        line-height: 1;
     }
 
 
@@ -928,8 +888,6 @@
         height: 42px;
 
         flex: 0 0 42px;
-
-        margin-left: auto;
 
         padding: 7px;
     }
@@ -943,14 +901,14 @@
     .site-header-v2__nav {
         left: -10px;
         right: -10px;
-
-        transform: none;
     }
 }
 
 
 /* =========================================================
-   CELULAR PEQUENO — ATÉ 400PX
+   CELULARES MENORES — ATÉ 400PX
+
+   NÃO DIMINUI MAIS DRASTICAMENTE OS TEXTOS
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -958,7 +916,7 @@
     .site-header-v2__inner {
         width: calc(100% - 16px);
 
-        min-height: 86px;
+        min-height: 88px;
     }
 
 
@@ -970,35 +928,24 @@
 
 
     .site-header-v2__symbol {
-        width: 65px;
-        height: 63px;
+        width: 61px;
+        height: 60px;
+
+        flex-basis: 61px;
     }
 
-
-    .site-header-v2__wordmark {
-        width: 210px;
-
-        max-width: calc(100vw - 116px);
-    }
-
-
-    /* APÓSTOLA */
 
     .site-header-v2__apostola {
-        font-size: 7px;
+        font-size: 8px;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2.7px;
     }
 
-
-    /* PATRICIA */
 
     .site-header-v2__wordmark strong {
-        font-size: 17px;
+        font-size: 18px;
     }
 
-
-    /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
         margin-top: 6px;
@@ -1008,7 +955,7 @@
 
 
     .site-header-v2__ministry-row small {
-        font-size: 5.3px;
+        font-size: 5.8px;
 
         letter-spacing: 0.8px;
     }
@@ -1029,51 +976,44 @@
 
 
 /* =========================================================
-   CELULAR MUITO PEQUENO — ATÉ 350PX
+   CELULAR MUITO ESTREITO — ATÉ 350PX
 ========================================================= */
 
 @media (max-width: 350px) {
 
     .site-header-v2__inner {
-        min-height: 82px;
-    }
+        width: calc(100% - 12px);
 
-
-    .site-header-v2__symbol {
-        width: 59px;
-        height: 58px;
+        min-height: 84px;
     }
 
 
     .site-header-v2__brand {
+        max-width: calc(100% - 40px);
+
         gap: 6px;
     }
 
 
-    .site-header-v2__wordmark {
-        width: 185px;
+    .site-header-v2__symbol {
+        width: 55px;
+        height: 55px;
 
-        max-width: calc(100vw - 108px);
+        flex-basis: 55px;
     }
 
-
-    /* APÓSTOLA */
 
     .site-header-v2__apostola {
-        font-size: 6px;
+        font-size: 7px;
 
-        letter-spacing: 2px;
+        letter-spacing: 2.2px;
     }
 
-
-    /* PATRICIA */
 
     .site-header-v2__wordmark strong {
-        font-size: 15px;
+        font-size: 16px;
     }
 
-
-    /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
         margin-top: 5px;
@@ -1083,7 +1023,7 @@
 
 
     .site-header-v2__ministry-row small {
-        font-size: 4.5px;
+        font-size: 5px;
 
         letter-spacing: 0.6px;
     }
