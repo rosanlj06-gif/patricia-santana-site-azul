@@ -1612,7 +1612,7 @@ select {
     }
 
     .brand small {
-        font-size: 9px;
+        font-size: 10px;
         letter-spacing: 1.5px;
         white-space: nowrap;
     }
@@ -3581,8 +3581,8 @@ select {
 
 /* DESKTOP */
 .hero{
-    padding-top: 40px;
-    padding-bottom: 30px;
+    padding-top: 72px;
+    padding-bottom: 62px;
 }
 
 .hero-tags{
@@ -3619,8 +3619,8 @@ select {
 }
 
 .courses{
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 72px;
+    padding-bottom: 78px;
 }
 
 .section-head{
@@ -3628,8 +3628,8 @@ select {
 }
 
 .feature{
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 68px;
+    padding-bottom: 68px;
 }
 
 .feature-grid{
@@ -3778,5 +3778,41 @@ select {
 
     .social-contact-copy > p:last-child{
         margin-top: 16px;
+    }
+}
+
+
+/* =========================================================
+   HOME — CURSOS MAIS COMPACTOS NO CELULAR
+   Somente celular. Desktop não é alterado.
+========================================================= */
+@media (max-width: 650px){
+
+    .courses .cards article > img{
+        width: 100% !important;
+        height: 250px !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+    .courses .cards article > div{
+        padding: 18px 18px 20px !important;
+    }
+
+    .courses .cards h3{
+        font-size: 25px !important;
+    }
+
+    .courses .cards p{
+        margin-top: 8px !important;
+        line-height: 1.55 !important;
+    }
+
+    .courses .cards a{
+        margin-top: 13px !important;
+    }
+
+    .courses .cards{
+        gap: 15px !important;
     }
 }
