@@ -3831,3 +3831,63 @@ select {
         font-weight: 600;
     }
 }
+
+/* =========================================================
+   AJUSTES FINAIS — SOMENTE CELULAR
+   1) Nome/Ministério menores e centralizados no cabeçalho
+   2) Artes dos cursos inteiras, sem cortes
+========================================================= */
+@media (max-width: 650px) {
+
+    /* Cabeçalho */
+    .brand {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+    }
+
+    .brand span {
+        flex: 1 1 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand strong {
+        width: 100%;
+        font-size: 13px !important;
+        line-height: 1.05;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
+    .brand small {
+        width: 100%;
+        margin-top: 4px;
+        font-size: 7px !important;
+        line-height: 1.1;
+        letter-spacing: 1.25px !important;
+        text-align: center;
+    }
+
+    /* Cursos da HOME: mantém 100% da arte visível */
+    .courses .cards article > img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+        object-position: center top !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .brand strong {
+        font-size: 12px !important;
+    }
+
+    .brand small {
+        font-size: 6px !important;
+        letter-spacing: 1px !important;
+    }
+}
+
