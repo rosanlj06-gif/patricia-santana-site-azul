@@ -1,66 +1,56 @@
 document.addEventListener("DOMContentLoaded", async function () {
 
-    /* =====================================================
-       FUNÇÃO PARA CARREGAR COMPONENTES
-    ====================================================== */
+    /* =========================================================
+       CARREGAR COMPONENTES
+    ========================================================= */
 
     async function carregarComponente(seletor, arquivo) {
 
         const alvo = document.querySelector(seletor);
 
-        if (!alvo) {
-            return;
-        }
+        if (!alvo) return;
 
         try {
 
             const resposta = await fetch(arquivo);
 
             if (!resposta.ok) {
-                throw new Error(
-                    "Não foi possível carregar " + arquivo
-                );
+                throw new Error("Não foi possível carregar " + arquivo);
             }
 
-            const html = await resposta.text();
-
-            alvo.innerHTML = html;
+            alvo.innerHTML = await resposta.text();
 
         } catch (erro) {
 
-            console.error(
-                "Erro ao carregar componente:",
-                arquivo,
-                erro
-            );
+            console.error(erro);
 
         }
 
     }
 
 
-    /* =====================================================
-       CARREGA CABEÇALHO E RODAPÉ
-    ====================================================== */
+    /* =========================================================
+       CARREGAR CABEÇALHO E RODAPÉ
+    ========================================================= */
 
     await Promise.all([
 
         carregarComponente(
-    "#site-header-slot",
-    "components/header.html?v=4"
-),
+            "#site-header-slot",
+            "components/header.html?v=6"
+        ),
 
         carregarComponente(
-    "#site-footer-slot",
-    "components/footer.html?v=4"
-)
+            "#site-footer-slot",
+            "components/footer.html?v=6"
+        )
 
     ]);
 
 
-    /* =====================================================
+    /* =========================================================
        MENU MOBILE
-    ====================================================== */
+    ========================================================= */
 
     const menuButton =
         document.getElementById("siteMenuToggle");
@@ -99,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         );
 
 
-        /* FECHA MENU DEPOIS DO CLIQUE */
+        /* FECHAR MENU AO CLICAR */
 
         navigation
             .querySelectorAll("a")
@@ -111,9 +101,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                         navigation.classList.remove("open");
 
-                        menuButton.classList.remove(
-                            "is-open"
-                        );
+                        menuButton.classList.remove("is-open");
 
                         menuButton.setAttribute(
                             "aria-expanded",
@@ -131,7 +119,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             });
 
 
-        /* VOLTA AO DESKTOP */
+        /* FECHAR MENU AO VOLTAR PARA DESKTOP */
 
         window.addEventListener(
             "resize",
@@ -141,9 +129,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                     navigation.classList.remove("open");
 
-                    menuButton.classList.remove(
-                        "is-open"
-                    );
+                    menuButton.classList.remove("is-open");
 
                     menuButton.setAttribute(
                         "aria-expanded",
@@ -163,31 +149,27 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
 
-    /* =====================================================
-       IDENTIFICA A PÁGINA ATUAL
-    ====================================================== */
+    /* =========================================================
+       IDENTIFICAR PÁGINA ATUAL
+    ========================================================= */
 
-    let pagina =
+    const pagina =
         window.location.pathname
             .split("/")
-            .pop();
+            .pop()
+            .toLowerCase()
+        || "index.html";
+
+    const hash =
+        window.location.hash.toLowerCase();
 
 
-    /* QUANDO ESTIVER NA RAIZ */
-
-    if (!pagina) {
-        pagina = "index.html";
-    }
-
-
-    /* =====================================================
-       REMOVE TODOS OS ATIVOS
-    ====================================================== */
+    /* =========================================================
+       LIMPAR MENU ATIVO
+    ========================================================= */
 
     document
-        .querySelectorAll(
-            ".site-header-v2__nav a"
-        )
+        .querySelectorAll(".site-header-v2__nav a")
         .forEach(function (link) {
 
             link.classList.remove("active");
@@ -195,67 +177,128 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
 
 
-    /* =====================================================
-       DEFINE QUAL MENU DEVE FICAR ATIVO
-    ====================================================== */
+    /* =========================================================
+       DEFINIR ITEM ATIVO
+    ========================================================= */
 
-    let nomeMenu = "inicio";
-
-
-    switch (pagina) {
-
-        case "sobre.html":
-
-            nomeMenu = "sobre";
-
-            break;
+    let ativo = null;
 
 
-        case "cursos.html":
+    /* ---------------------------------------------------------
+       SOBRE
+    --------------------------------------------------------- */
 
-            nomeMenu = "cursos";
+    if (pagina === "sobre.html") {
 
-            break;
-
-
-        case "contato.html":
-
-            nomeMenu = "contato";
-
-            break;
-
-
-        case "ofertas.html":
-
-            nomeMenu = "ofertas";
-
-            break;
-
-
-        case "index.html":
-
-        default:
-
-            nomeMenu = "inicio";
-
-            break;
+        ativo =
+            document.querySelector(
+                '[data-nav="sobre"]'
+            );
 
     }
 
 
-    /* =====================================================
-       MARCA O MENU ATIVO
-    ====================================================== */
+    /* ---------------------------------------------------------
+       CURSOS
+       Inclui a página principal e todas as páginas individuais
+    --------------------------------------------------------- */
 
-    const linkAtivo =
-        document.querySelector(
-            '[data-nav="' + nomeMenu + '"]'
-        );
+    else if (
+
+        pagina === "cursos.html" ||
+
+        pagina === "cura-interior.html" ||
+
+        pagina === "trono-lilith.html" ||
+
+        pagina === "trono-mamon.html" ||
+
+        pagina === "batalha-espiritual.html" ||
+
+        pagina === "trono-belial.html"
+
+    ) {
+
+        ativo =
+            document.querySelector(
+                '[data-nav="cursos"]'
+            );
+
+    }
 
 
-    if (linkAtivo) {
+    /* ---------------------------------------------------------
+       CONTATO
+    --------------------------------------------------------- */
 
-        linkAtivo.classList.add("active");
+    else if (pagina === "contato.html") {
+
+        ativo =
+            document.querySelector(
+                '[data-nav="contato"]'
+            );
+
+    }
+
+
+    /* ---------------------------------------------------------
+       DÍZIMOS E OFERTAS
+    --------------------------------------------------------- */
+
+    else if (pagina === "ofertas.html") {
+
+        ativo =
+            document.querySelector(
+                '[data-nav="ofertas"]'
+            );
+
+    }
+
+
+    /* ---------------------------------------------------------
+       LINKS DA HOME COM HASH
+    --------------------------------------------------------- */
+
+    else if (hash === "#cursos") {
+
+        ativo =
+            document.querySelector(
+                '[data-nav="cursos"]'
+            );
+
+    }
+
+    else if (hash === "#contato") {
+
+        ativo =
+            document.querySelector(
+                '[data-nav="contato"]'
+            );
+
+    }
+
+
+    /* ---------------------------------------------------------
+       INÍCIO
+    --------------------------------------------------------- */
+
+    else {
+
+        ativo =
+            document.querySelector(
+                '[data-nav="inicio"]'
+            );
+
+    }
+
+
+    /* =========================================================
+       ATIVAR ITEM CORRETO
+    ========================================================= */
+
+    if (ativo) {
+
+        ativo.classList.add("active");
 
     }
 
