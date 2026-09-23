@@ -12,49 +12,80 @@
     width: 100%;
     margin: 0;
     font-family: "Montserrat", Arial, sans-serif;
-    color: #043e70;
+    color: #063b68;
     overflow: hidden;
 }
 
 
 /* =========================================================
-   PARTE PRINCIPAL — PRATA
+   ÁREA PRINCIPAL
 ========================================================= */
 
 .site-footer__main {
     position: relative;
     width: 100%;
-    padding: 42px 0 38px;
-    border-top: 2px solid #078ed3;
+
+    padding: 42px 0 40px;
+
+    /*
+       BARRA SUPERIOR IGUAL AO MODELO:
+       azul-marinho + linha azul clara
+    */
+    border-top: 7px solid #00365f;
 
     background:
         radial-gradient(
-            circle at 50% 10%,
+            circle at 50% 20%,
             rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0.55) 28%,
-            transparent 52%
+            rgba(255, 255, 255, 0.75) 35%,
+            transparent 62%
         ),
         linear-gradient(
             100deg,
-            #edf4f7 0%,
-            #dfe9ee 30%,
-            #f8fafb 52%,
-            #d6e2e8 100%
+            #eef4f7 0%,
+            #dce7ec 36%,
+            #f8fafb 55%,
+            #d8e4e9 100%
         );
 }
 
+
+/* linha azul clara abaixo da barra */
+
+.site-footer__main::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #00a4e6;
+
+    z-index: 3;
+}
+
+
+/* textura metálica */
+
 .site-footer__main::after {
     content: "";
+
     position: absolute;
     inset: 0;
+
     pointer-events: none;
-    opacity: 0.14;
+
+    opacity: 0.12;
 
     background-image:
         repeating-linear-gradient(
             0deg,
-            rgba(3, 67, 111, 0.08) 0,
-            rgba(3, 67, 111, 0.08) 1px,
+            rgba(5, 68, 109, 0.07) 0,
+            rgba(5, 68, 109, 0.07) 1px,
             transparent 1px,
             transparent 3px
         );
@@ -62,32 +93,34 @@
 
 
 /* =========================================================
-   CONTAINER PRINCIPAL
+   CONTAINER
 ========================================================= */
 
 .site-footer__container {
     position: relative;
     z-index: 2;
 
-    width: calc(100% - 70px);
-    max-width: 1380px;
+    width: calc(100% - 80px);
+    max-width: 1285px;
+
     margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
         205px
-        minmax(400px, 1fr)
+        minmax(480px, 1fr)
         205px
-        275px;
+        265px;
 
     align-items: stretch;
+
     gap: 0;
 }
 
 
 /* =========================================================
-   COLUNAS
+   TÍTULOS
 ========================================================= */
 
 .site-footer__column {
@@ -97,7 +130,7 @@
 .site-footer__column h4 {
     margin: 0;
 
-    color: #003e70;
+    color: #003c6c;
 
     font-family:
         "Cormorant Garamond",
@@ -106,7 +139,8 @@
         serif;
 
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
+
     line-height: 1;
 
     letter-spacing: 3px;
@@ -114,18 +148,15 @@
     white-space: nowrap;
 }
 
-
-/* linha azul abaixo dos títulos */
-
 .site-footer__title-line {
     display: block;
 
     width: 50px;
     height: 3px;
 
-    margin: 15px 0 16px;
+    margin: 15px 0 17px;
 
-    background: #007fc4;
+    background: #008bd0;
 }
 
 
@@ -135,9 +166,10 @@
 
 .site-footer__column nav {
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
-    gap: 0;
 }
 
 .site-footer__column nav a {
@@ -145,10 +177,11 @@
 
     padding: 6px 0;
 
-    color: #164f75;
+    color: #064d7a;
 
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
+
     line-height: 1.25;
 
     text-decoration: none;
@@ -159,7 +192,8 @@
 }
 
 .site-footer__column nav a:hover {
-    color: #008ed6;
+    color: #008fd3;
+
     transform: translateX(3px);
 }
 
@@ -169,20 +203,21 @@
 ========================================================= */
 
 .site-footer__navigation {
-    padding: 10px 38px 10px 0;
+    padding: 10px 35px 10px 0;
 }
 
 
 /* =========================================================
-   IDENTIDADE CENTRAL
+   LOGO CENTRAL
 ========================================================= */
 
 .site-footer__brand {
     min-height: 245px;
 
-    padding: 18px 38px;
+    padding: 18px 45px;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
@@ -190,15 +225,19 @@
 
     text-align: center;
 
-    border-left: 1px solid rgba(4, 74, 120, 0.55);
-    border-right: 1px solid rgba(4, 74, 120, 0.55);
+    border-left:
+        1px solid rgba(4, 78, 125, 0.48);
+
+    border-right:
+        1px solid rgba(4, 78, 125, 0.48);
 }
 
 .site-footer__brand img {
     display: block;
 
     width: 100%;
-    max-width: 385px;
+    max-width: 395px;
+
     height: auto;
 
     margin: 0 auto 15px;
@@ -208,27 +247,28 @@
 
 
 /* =========================================================
-   ENSINO • LIBERTAÇÃO • CURA • RESTAURAÇÃO
+   PILARES
 ========================================================= */
 
 .site-footer__pillars {
     margin: 0;
 
-    color: #003f73;
+    color: #00477b;
 
     font-size: 12px;
     font-weight: 800;
 
     line-height: 1.4;
 
-    letter-spacing: 1.7px;
+    letter-spacing: 1.6px;
 
     white-space: nowrap;
 }
 
 .site-footer__pillars span {
     margin: 0 6px;
-    color: #008bd1;
+
+    color: #008fd3;
 }
 
 
@@ -237,9 +277,9 @@
 ========================================================= */
 
 .site-footer__purpose {
-    margin: 12px 0 0;
+    margin: 13px 0 0;
 
-    color: #456c86;
+    color: #526f82;
 
     font-family:
         "Cormorant Garamond",
@@ -271,12 +311,13 @@
 .site-footer__social {
     padding: 10px 0 10px 35px;
 
-    border-left: 1px solid rgba(4, 74, 120, 0.55);
+    border-left:
+        1px solid rgba(4, 78, 125, 0.48);
 }
 
 
 /* =========================================================
-   ÍCONES SOCIAIS
+   ÍCONES
 ========================================================= */
 
 .site-footer__social-icons {
@@ -293,21 +334,24 @@
     width: 47px;
     height: 47px;
 
+    flex: 0 0 47px;
+
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 47px;
+    border:
+        2px solid rgba(42, 158, 214, 0.65);
 
-    border: 2px solid rgba(58, 168, 224, 0.65);
     border-radius: 50%;
 
     background:
         linear-gradient(
             145deg,
-            #0798dc,
-            #034f87
+            #087db7 0%,
+            #0069a4 48%,
+            #034f80 100%
         );
 
     color: #ffffff;
@@ -320,7 +364,7 @@
     text-decoration: none;
 
     box-shadow:
-        0 4px 11px rgba(0, 61, 103, 0.28),
+        0 3px 8px rgba(0, 52, 88, 0.28),
         inset 0 1px 2px rgba(255, 255, 255, 0.30);
 
     transition:
@@ -329,15 +373,15 @@
 }
 
 .site-footer__social-icons a:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
     box-shadow:
-        0 8px 18px rgba(0, 61, 103, 0.34);
+        0 6px 14px rgba(0, 52, 88, 0.32);
 }
 
 
 /* =========================================================
-   TEXTO DAS REDES
+   TEXTO REDES
 ========================================================= */
 
 .site-footer__social-text {
@@ -345,7 +389,7 @@
 
     margin: 0 0 20px;
 
-    color: #3d6782;
+    color: #3f6882;
 
     font-size: 12px;
     font-weight: 600;
@@ -355,7 +399,7 @@
 
 
 /* =========================================================
-   BOTÃO WHATSAPP
+   BOTÃO FALE CONOSCO
 ========================================================= */
 
 .site-footer__whatsapp {
@@ -372,11 +416,16 @@
 
     border-radius: 28px;
 
+    /*
+       AZUL IGUAL AO MODELO:
+       não tão claro/ciano
+    */
     background:
         linear-gradient(
-            135deg,
-            #00649e,
-            #0094d7
+            90deg,
+            #00689f 0%,
+            #007cb9 52%,
+            #0089c9 100%
         );
 
     color: #ffffff;
@@ -384,7 +433,7 @@
     text-decoration: none;
 
     box-shadow:
-        0 8px 20px rgba(0, 80, 132, 0.24);
+        0 5px 12px rgba(0, 77, 125, 0.22);
 
     transition:
         transform 0.2s ease,
@@ -395,19 +444,19 @@
     transform: translateY(-2px);
 
     box-shadow:
-        0 11px 24px rgba(0, 80, 132, 0.32);
+        0 8px 18px rgba(0, 77, 125, 0.28);
 }
 
 .site-footer__whatsapp-icon {
     width: 21px;
     height: 21px;
 
+    flex: 0 0 21px;
+
     display: flex;
 
     align-items: center;
     justify-content: center;
-
-    flex: 0 0 21px;
 }
 
 .site-footer__whatsapp-icon svg {
@@ -432,6 +481,7 @@
 
 .site-footer__arrow {
     font-size: 19px;
+
     line-height: 1;
 }
 
@@ -443,32 +493,32 @@
 .site-footer__bottom {
     width: 100%;
 
-    border-top: 2px solid #00a0e5;
+    border-top: 2px solid #008fd3;
 
     background:
         radial-gradient(
             circle at 50% 0%,
-            rgba(12, 131, 201, 0.82),
-            transparent 40%
+            rgba(13, 108, 170, 0.70),
+            transparent 38%
         ),
         linear-gradient(
             110deg,
-            #033b68 0%,
-            #05649e 48%,
-            #032e56 100%
+            #03365f 0%,
+            #07588e 48%,
+            #032e55 100%
         );
 }
 
 
 /* =========================================================
-   CONTAINER DA FAIXA INFERIOR
+   CONTAINER INFERIOR
 ========================================================= */
 
 .site-footer__bottom-container {
-    width: calc(100% - 70px);
-    max-width: 1380px;
+    width: calc(100% - 80px);
+    max-width: 1285px;
 
-    min-height: 90px;
+    min-height: 88px;
 
     margin: 0 auto;
 
@@ -486,7 +536,7 @@
 
 
 /* =========================================================
-   COPYRIGHT + SANTIAGODIGITAL
+   COPYRIGHT / SANTIAGODIGITAL
 ========================================================= */
 
 .site-footer__copyright {
@@ -504,14 +554,14 @@
 
     color: #ffffff;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 400;
 
     line-height: 1.4;
 }
 
 .site-footer__developer {
-    color: #9edfff !important;
+    color: #bce8fb !important;
 }
 
 .site-footer__developer strong {
@@ -522,7 +572,7 @@
 
 
 /* =========================================================
-   ORNAMENTO CENTRAL
+   LOSANGO
 ========================================================= */
 
 .site-footer__ornament {
@@ -544,7 +594,7 @@
         linear-gradient(
             90deg,
             transparent,
-            rgba(177, 229, 252, 0.90)
+            rgba(174, 225, 249, 0.8)
         );
 }
 
@@ -552,13 +602,13 @@
     background:
         linear-gradient(
             90deg,
-            rgba(177, 229, 252, 0.90),
+            rgba(174, 225, 249, 0.8),
             transparent
         );
 }
 
 .site-footer__ornament b {
-    color: #8cddff;
+    color: #8bdcff;
 
     font-size: 28px;
     font-weight: 400;
@@ -568,7 +618,7 @@
 
 
 /* =========================================================
-   POLÍTICA / TERMOS
+   LINKS LEGAIS
 ========================================================= */
 
 .site-footer__legal {
@@ -583,25 +633,24 @@
 .site-footer__legal a {
     color: #ffffff;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 400;
 
     white-space: nowrap;
 
     text-decoration: none;
-
-    transition: color 0.2s ease;
 }
 
 .site-footer__legal a:hover {
-    color: #8cddff;
+    color: #8bdcff;
 }
 
 .site-footer__legal i {
     width: 1px;
     height: 15px;
 
-    background: rgba(255, 255, 255, 0.55);
+    background:
+        rgba(255, 255, 255, 0.55);
 }
 
 
@@ -677,9 +726,6 @@
         gap: 36px 0;
     }
 
-
-    /* LOGO PRIMEIRO */
-
     .site-footer__brand {
         grid-column: 1 / -1;
         grid-row: 1;
@@ -699,18 +745,12 @@
         max-width: 380px;
     }
 
-
-    /* NAVEGAÇÃO */
-
     .site-footer__navigation {
         grid-column: 1;
         grid-row: 2;
 
         padding: 0 35px 0 0;
     }
-
-
-    /* SEMINÁRIOS */
 
     .site-footer__seminars {
         grid-column: 2;
@@ -721,9 +761,6 @@
         border-left:
             1px solid rgba(4, 74, 120, 0.40);
     }
-
-
-    /* REDES */
 
     .site-footer__social {
         grid-column: 1 / -1;
@@ -748,9 +785,6 @@
     .site-footer__social-text {
         max-width: 360px;
     }
-
-
-    /* FAIXA INFERIOR */
 
     .site-footer__bottom-container {
         min-height: auto;
@@ -785,7 +819,7 @@
 @media (max-width: 600px) {
 
     .site-footer__main {
-        padding: 34px 0 30px;
+        padding: 32px 0 30px;
     }
 
     .site-footer__container {
@@ -797,9 +831,6 @@
 
         gap: 0;
     }
-
-
-    /* LOGO */
 
     .site-footer__brand {
         order: 1;
@@ -840,9 +871,6 @@
         font-size: 18px;
     }
 
-
-    /* NAVEGAÇÃO */
-
     .site-footer__navigation {
         order: 2;
 
@@ -853,9 +881,6 @@
         border-bottom:
             1px solid rgba(4, 74, 120, 0.30);
     }
-
-
-    /* SEMINÁRIOS */
 
     .site-footer__seminars {
         order: 3;
@@ -869,9 +894,6 @@
         border-bottom:
             1px solid rgba(4, 74, 120, 0.30);
     }
-
-
-    /* REDES */
 
     .site-footer__social {
         order: 4;
@@ -890,7 +912,7 @@
     .site-footer__column h4 {
         font-size: 22px;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 2.4px;
 
         white-space: normal;
     }
@@ -929,9 +951,6 @@
 
         max-width: 310px;
     }
-
-
-    /* FAIXA INFERIOR */
 
     .site-footer__bottom-container {
         width: calc(100% - 36px);
