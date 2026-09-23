@@ -844,3 +844,135 @@
     display:none !important;
   }
 }
+
+
+/* =========================================================
+   AJUSTE FINAL — PILARES DO MINISTÉRIO
+   Desktop + celular
+   Não altera cabeçalho, rodapé ou demais banners.
+========================================================= */
+
+/* linha azul atravessando 100% da tela */
+.pagina-sobre .pilares{
+  position:relative;
+  border-top:0 !important;
+}
+
+.pagina-sobre .pilares::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:100vw;
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(
+    90deg,
+    rgba(36,174,226,.12) 0%,
+    #24aee2 12%,
+    #43c4f1 50%,
+    #24aee2 88%,
+    rgba(36,174,226,.12) 100%
+  );
+}
+
+/* título maior */
+.pagina-sobre .pilares > .sobre-kicker{
+  margin-bottom:32px;
+  color:#42c4f1;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.2;
+  letter-spacing:4.5px;
+}
+
+/* mantém as quatro áreas bem distribuídas */
+.pagina-sobre .pilares-grid{
+  align-items:stretch;
+}
+
+/* ícones maiores */
+.pagina-sobre .pilar-icon{
+  width:76px;
+  height:76px;
+  margin:0 auto 15px;
+}
+
+.pagina-sobre .pilar-icon svg{
+  width:42px;
+  height:42px;
+  stroke:#42c4f1;
+}
+
+/* pomba do CHAMADO desenhada em SVG pelo próprio CSS/HTML:
+   qualquer SVG dentro do ícone recebe o mesmo azul */
+.pagina-sobre .pilar:nth-child(3) .pilar-icon{
+  background:transparent !important;
+}
+
+.pagina-sobre .pilar:nth-child(3) .pilar-icon svg{
+  width:50px;
+  height:50px;
+  color:#42c4f1;
+  fill:none;
+  stroke:#42c4f1;
+}
+
+/* textos dos pilares */
+.pagina-sobre .pilar h3{
+  font-size:11px;
+}
+
+.pagina-sobre .pilar p{
+  font-size:8.5px;
+  line-height:1.65;
+}
+
+/* frase da direita */
+.pagina-sobre .pilares-frase{
+  border-left:2px solid #27b6e9;
+}
+
+@media(max-width:560px){
+
+  .pagina-sobre .pilares{
+    margin-top:46px;
+    padding-top:42px;
+  }
+
+  .pagina-sobre .pilares > .sobre-kicker{
+    margin-bottom:27px;
+    text-align:center;
+    font-size:10px;
+    letter-spacing:3px;
+  }
+
+  .pagina-sobre .pilar-icon{
+    width:68px;
+    height:68px;
+    margin-bottom:12px;
+  }
+
+  .pagina-sobre .pilar-icon svg{
+    width:38px;
+    height:38px;
+  }
+
+  .pagina-sobre .pilar:nth-child(3) .pilar-icon svg{
+    width:45px;
+    height:45px;
+  }
+
+  .pagina-sobre .pilar h3{
+    font-size:9.5px;
+  }
+
+  .pagina-sobre .pilar p{
+    font-size:8px;
+  }
+
+  .pagina-sobre .pilares-frase{
+    border-left:0;
+    border-top:1px solid rgba(66,196,241,.35);
+  }
+}
