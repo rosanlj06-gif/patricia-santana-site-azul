@@ -3571,3 +3571,212 @@ select {
             );
     }
 }
+
+
+/* =========================================================
+   HOME — ESPAÇAMENTOS MAIS COMPACTOS
+   Desktop + tablet + celular
+   Mantém cabeçalho, rodapé, cores, fontes e layout.
+========================================================= */
+
+/* DESKTOP */
+.hero{
+    padding-top: 72px;
+    padding-bottom: 62px;
+}
+
+.hero-tags{
+    margin-top: 32px;
+    padding-top: 20px;
+}
+
+.trajetoria-nova{
+    padding-top: 54px;
+    padding-bottom: 54px;
+}
+
+.trajetoria-centro{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.trajetoria-mini-line{
+    margin-top: 12px;
+    margin-bottom: 17px;
+}
+
+.trajetoria-ornamento{
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+
+.trajetoria-impacto{
+    margin-top: 11px;
+}
+
+.trajetoria-link{
+    margin-top: 18px;
+}
+
+.courses{
+    padding-top: 72px;
+    padding-bottom: 78px;
+}
+
+.section-head{
+    margin-bottom: 32px;
+}
+
+.feature{
+    padding-top: 68px;
+    padding-bottom: 68px;
+}
+
+.feature-grid{
+    gap: 55px;
+}
+
+.feature p:not(.eyebrow){
+    margin-top: 19px;
+    margin-bottom: 24px;
+}
+
+.social-contact{
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+.social-contact-grid{
+    gap: 50px;
+}
+
+
+/* TABLET */
+@media (max-width: 900px){
+
+    .hero{
+        padding-top: 54px;
+        padding-bottom: 54px;
+    }
+
+    .hero-grid{
+        gap: 38px;
+    }
+
+    .trajetoria-nova{
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .courses{
+        padding-top: 58px;
+        padding-bottom: 62px;
+    }
+
+    .feature{
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .social-contact{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+
+/* CELULAR */
+@media (max-width: 650px){
+
+    .hero{
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .lead{
+        margin-top: 18px;
+    }
+
+    .actions{
+        margin-top: 26px;
+        gap: 11px;
+    }
+
+    .hero-tags{
+        margin-top: 26px;
+        padding-top: 20px;
+        gap: 10px;
+    }
+
+    .trajetoria-nova{
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .trajetoria-centro{
+        padding: 0 0 20px;
+    }
+
+    .trajetoria-mini-line{
+        margin-top: 11px;
+        margin-bottom: 15px;
+    }
+
+    .trajetoria-ornamento{
+        margin-top: 16px;
+        margin-bottom: 14px;
+    }
+
+    .trajetoria-impacto{
+        margin-top: 10px;
+    }
+
+    .trajetoria-link{
+        margin-top: 17px;
+    }
+
+    .trajetoria-showcase{
+        gap: 14px;
+    }
+
+    .courses{
+        padding-top: 50px;
+        padding-bottom: 52px;
+    }
+
+    .section-head{
+        margin-bottom: 28px;
+        gap: 18px;
+    }
+
+    .feature{
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .feature-grid{
+        gap: 32px;
+    }
+
+    .feature p:not(.eyebrow){
+        margin-top: 17px;
+        margin-bottom: 22px;
+    }
+
+    .bible{
+        margin-top: 10px;
+    }
+
+    .social-contact{
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+
+    .social-contact-grid{
+        gap: 30px;
+    }
+
+    .social-contact-copy > p:last-child{
+        margin-top: 16px;
+    }
+}
