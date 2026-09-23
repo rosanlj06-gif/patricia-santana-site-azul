@@ -369,14 +369,14 @@ select {
 .hero-tags span {
     color: #0786d1;
     font-family: Georgia, serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .hero-tags b {
     margin-left: 7px;
     color: #19364f;
     font-family: "Montserrat", sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.5px;
 }
 
