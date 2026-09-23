@@ -1370,3 +1370,48 @@
     margin-bottom:17px !important;
   }
 }
+
+
+/* =========================================================
+   V14 — ÚLTIMO BANNER MAIS COMPACTO NO CELULAR
+   Somente celular. Desktop não é alterado.
+========================================================= */
+@media (max-width:560px){
+
+  .pagina-sobre .sobre-cursos{
+    min-height:0 !important;
+    height:auto !important;
+    align-items:stretch !important;
+  }
+
+  .pagina-sobre .sobre-cursos-grid{
+    min-height:0 !important;
+    height:auto !important;
+    padding-top:30px !important;
+    padding-bottom:30px !important;
+  }
+
+  .pagina-sobre .sobre-cursos-grid > div:first-child{
+    width:100% !important;
+    max-width:330px !important;
+  }
+
+  .pagina-sobre .sobre-cursos .sobre-kicker{
+    margin-top:0 !important;
+    margin-bottom:10px !important;
+  }
+
+  .pagina-sobre .sobre-cursos .sobre-title{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .pagina-sobre .sobre-cursos p:not(.sobre-kicker){
+    margin-top:12px !important;
+    margin-bottom:15px !important;
+  }
+
+  .pagina-sobre .sobre-cursos .sobre-btn{
+    margin-top:0 !important;
+  }
+}
