@@ -1,94 +1,105 @@
 /* =========================================================
    RODAPÉ — APÓSTOLA PATRICIA SANTANA
-   DESKTOP / NOTEBOOK / TABLET / CELULAR
+   PRATA METÁLICO + AZUL
 ========================================================= */
 
-.site-footer,
-.site-footer * {
+.footer-premium,
+.footer-premium * {
     box-sizing: border-box;
 }
 
-.site-footer {
+.footer-premium {
+    position: relative;
     width: 100%;
     margin: 0;
+    color: #0b3158;
     font-family: "Montserrat", Arial, sans-serif;
-    color: #063b68;
     overflow: hidden;
 }
 
 
 /* =========================================================
-   ÁREA PRINCIPAL
+   ÁREA PRINCIPAL — PRATA METÁLICO
 ========================================================= */
 
-.site-footer__main {
+.footer-metal {
     position: relative;
     width: 100%;
+    padding: 48px 0 40px;
 
-    padding: 42px 0 40px;
-
-    /*
-       BARRA SUPERIOR IGUAL AO MODELO:
-       azul-marinho + linha azul clara
-    */
-    border-top: 7px solid #00365f;
+    border-top: 3px solid #0b6fae;
+    border-bottom: 2px solid #0b6fae;
 
     background:
         radial-gradient(
-            circle at 50% 20%,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0.75) 35%,
-            transparent 62%
+            circle at 48% 38%,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(255, 255, 255, 0.46) 25%,
+            transparent 50%
         ),
         linear-gradient(
-            100deg,
-            #eef4f7 0%,
-            #dce7ec 36%,
-            #f8fafb 55%,
-            #d8e4e9 100%
+            105deg,
+            #c8d2d8 0%,
+            #f9fafb 15%,
+            #b9c5cc 32%,
+            #f4f6f7 51%,
+            #aebbc4 69%,
+            #eef2f4 86%,
+            #b9c6cd 100%
         );
 }
 
 
-/* linha azul clara abaixo da barra */
+/* TEXTURA METÁLICA */
 
-.site-footer__main::before {
+.footer-metal::before {
     content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 2px;
-
-    background: #00a4e6;
-
-    z-index: 3;
-}
-
-
-/* textura metálica */
-
-.site-footer__main::after {
-    content: "";
-
     position: absolute;
     inset: 0;
 
     pointer-events: none;
+    opacity: 0.35;
 
-    opacity: 0.12;
-
-    background-image:
+    background:
         repeating-linear-gradient(
             0deg,
-            rgba(5, 68, 109, 0.07) 0,
-            rgba(5, 68, 109, 0.07) 1px,
-            transparent 1px,
+            rgba(255, 255, 255, 0.12) 0,
+            rgba(255, 255, 255, 0.12) 1px,
+            rgba(20, 54, 76, 0.035) 2px,
             transparent 3px
         );
+}
+
+
+/* BARRA METÁLICA SUPERIOR */
+
+.footer-metal::after {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #073d72 0%,
+            #0b86cc 12%,
+            #d9f1ff 25%,
+            #ffffff 36%,
+            #0b86cc 50%,
+            #ffffff 64%,
+            #9fdcff 76%,
+            #0b86cc 88%,
+            #073d72 100%
+        );
+
+    box-shadow:
+        0 0 8px rgba(20, 153, 222, 0.65),
+        0 2px 8px rgba(4, 65, 108, 0.30);
 }
 
 
@@ -96,26 +107,51 @@
    CONTAINER
 ========================================================= */
 
-.site-footer__container {
+.footer-premium .wrap {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   GRID PRINCIPAL
+========================================================= */
+
+.footer-premium-grid {
     position: relative;
     z-index: 2;
-
-    width: calc(100% - 80px);
-    max-width: 1285px;
-
-    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        205px
-        minmax(480px, 1fr)
-        205px
-        265px;
+        0.85fr
+        1.65fr
+        0.85fr
+        1fr;
 
     align-items: stretch;
+}
 
-    gap: 0;
+
+/* =========================================================
+   COLUNAS
+========================================================= */
+
+.footer-col {
+    min-width: 0;
+
+    padding: 12px 36px;
+
+    border-right: 1px solid rgba(8, 63, 107, 0.55);
+}
+
+.footer-nav {
+    padding-left: 0;
+}
+
+.footer-social {
+    padding-right: 0;
+    border-right: 0;
 }
 
 
@@ -123,40 +159,36 @@
    TÍTULOS
 ========================================================= */
 
-.site-footer__column {
-    min-width: 0;
-}
-
-.site-footer__column h4 {
+.footer-col h4 {
     margin: 0;
 
-    color: #003c6c;
+    color: #073d72;
 
     font-family:
-        "Cormorant Garamond",
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 
-    line-height: 1;
-
     letter-spacing: 3px;
-
-    white-space: nowrap;
 }
 
-.site-footer__title-line {
+.footer-title-line {
     display: block;
 
     width: 50px;
     height: 3px;
 
-    margin: 15px 0 17px;
+    margin: 15px 0 18px;
 
-    background: #008bd0;
+    background:
+        linear-gradient(
+            90deg,
+            #087fc6,
+            #073d72
+        );
 }
 
 
@@ -164,25 +196,18 @@
    LINKS
 ========================================================= */
 
-.site-footer__column nav {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-}
-
-.site-footer__column nav a {
+.footer-col > a {
     display: block;
 
-    padding: 6px 0;
+    width: fit-content;
 
-    color: #064d7a;
+    margin: 0 0 11px;
+
+    color: #102f4b;
 
     font-size: 12px;
-    font-weight: 400;
 
-    line-height: 1.25;
+    line-height: 1.3;
 
     text-decoration: none;
 
@@ -191,19 +216,9 @@
         transform 0.2s ease;
 }
 
-.site-footer__column nav a:hover {
-    color: #008fd3;
-
+.footer-col > a:hover {
+    color: #0786d1;
     transform: translateX(3px);
-}
-
-
-/* =========================================================
-   NAVEGAÇÃO
-========================================================= */
-
-.site-footer__navigation {
-    padding: 10px 35px 10px 0;
 }
 
 
@@ -211,10 +226,10 @@
    LOGO CENTRAL
 ========================================================= */
 
-.site-footer__brand {
-    min-height: 245px;
+.footer-logo-area {
+    min-width: 0;
 
-    padding: 18px 45px;
+    padding: 0 38px;
 
     display: flex;
 
@@ -225,22 +240,18 @@
 
     text-align: center;
 
-    border-left:
-        1px solid rgba(4, 78, 125, 0.48);
-
     border-right:
-        1px solid rgba(4, 78, 125, 0.48);
+        1px solid rgba(8, 63, 107, 0.55);
 }
 
-.site-footer__brand img {
+.footer-logo-area img {
     display: block;
 
     width: 100%;
-    max-width: 395px;
+    max-width: 430px;
 
     height: auto;
-
-    margin: 0 auto 15px;
+    max-height: 190px;
 
     object-fit: contain;
 }
@@ -250,57 +261,44 @@
    PILARES
 ========================================================= */
 
-.site-footer__pillars {
-    margin: 0;
+.footer-pillars {
+    margin: 11px 0 0;
 
-    color: #00477b;
+    color: #073d72;
 
     font-size: 12px;
     font-weight: 800;
 
-    line-height: 1.4;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
 
-    letter-spacing: 1.6px;
-
-    white-space: nowrap;
+    text-align: center;
 }
 
-.site-footer__pillars span {
-    margin: 0 6px;
-
-    color: #008fd3;
+.footer-pillars span {
+    color: #087fc6;
+    margin: 0 4px;
 }
 
 
 /* =========================================================
-   PROPÓSITO
+   FRASE
 ========================================================= */
 
-.site-footer__purpose {
-    margin: 13px 0 0;
+.footer-purpose {
+    margin: 8px 0 0;
 
-    color: #526f82;
+    color: #34566e;
 
     font-family:
         "Cormorant Garamond",
         Georgia,
-        "Times New Roman",
         serif;
 
-    font-size: 19px;
+    font-size: 17px;
     font-style: italic;
-    font-weight: 500;
 
-    line-height: 1.2;
-}
-
-
-/* =========================================================
-   SEMINÁRIOS
-========================================================= */
-
-.site-footer__seminars {
-    padding: 10px 35px;
+    line-height: 1.4;
 }
 
 
@@ -308,124 +306,109 @@
    REDES SOCIAIS
 ========================================================= */
 
-.site-footer__social {
-    padding: 10px 0 10px 35px;
-
-    border-left:
-        1px solid rgba(4, 78, 125, 0.48);
-}
-
-
-/* =========================================================
-   ÍCONES
-========================================================= */
-
-.site-footer__social-icons {
+.social-buttons {
     display: flex;
 
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 
-    margin: 2px 0 20px;
+    margin: 0 0 19px;
 }
 
-.site-footer__social-icons a {
-    width: 47px;
-    height: 47px;
-
-    flex: 0 0 47px;
+.social-buttons a {
+    width: 48px;
+    height: 48px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    border:
-        2px solid rgba(42, 158, 214, 0.65);
+    border: 1px solid #91a8b7;
 
     border-radius: 50%;
 
     background:
-        linear-gradient(
-            145deg,
-            #087db7 0%,
-            #0069a4 48%,
-            #034f80 100%
+        radial-gradient(
+            circle at 35% 25%,
+            #168cd1,
+            #06477e 55%,
+            #032c52
         );
 
     color: #ffffff;
 
     font-size: 14px;
-    font-weight: 700;
-
-    line-height: 1;
+    font-weight: 800;
 
     text-decoration: none;
 
     box-shadow:
-        0 3px 8px rgba(0, 52, 88, 0.28),
-        inset 0 1px 2px rgba(255, 255, 255, 0.30);
+        inset 0 0 0 2px rgba(255, 255, 255, 0.28),
+        0 6px 12px rgba(4, 53, 89, 0.18);
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.site-footer__social-icons a:hover {
-    transform: translateY(-2px);
+.social-buttons a:hover {
+    transform: translateY(-3px);
 
     box-shadow:
-        0 6px 14px rgba(0, 52, 88, 0.32);
+        inset 0 0 0 2px rgba(255, 255, 255, 0.35),
+        0 9px 17px rgba(4, 53, 89, 0.26);
 }
 
 
 /* =========================================================
-   TEXTO REDES
+   TEXTO DAS REDES
 ========================================================= */
 
-.site-footer__social-text {
-    max-width: 250px;
+.footer-social > p {
+    max-width: 260px;
 
     margin: 0 0 20px;
 
-    color: #3f6882;
+    color: #49677d;
 
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
 
-    line-height: 1.55;
+    line-height: 1.65;
 }
 
 
 /* =========================================================
-   BOTÃO FALE CONOSCO
+   BOTÃO WHATSAPP
 ========================================================= */
 
-.site-footer__whatsapp {
-    width: 230px;
+.footer-social .footer-whatsapp {
+    width: 100%;
+    max-width: 245px;
+
     min-height: 48px;
 
-    padding: 0 17px;
+    margin: 0;
+
+    padding: 0 18px;
 
     display: flex;
 
     align-items: center;
+    justify-content: space-between;
 
-    gap: 14px;
+    border: 1px solid #6bb8e5;
 
-    border-radius: 28px;
+    border-radius: 30px;
 
-    /*
-       AZUL IGUAL AO MODELO:
-       não tão claro/ciano
-    */
     background:
         linear-gradient(
-            90deg,
-            #00689f 0%,
-            #007cb9 52%,
-            #0089c9 100%
+            105deg,
+            #073d72,
+            #087fc6,
+            #064a80
         );
 
     color: #ffffff;
@@ -433,33 +416,40 @@
     text-decoration: none;
 
     box-shadow:
-        0 5px 12px rgba(0, 77, 125, 0.22);
+        0 10px 22px rgba(4, 65, 108, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.site-footer__whatsapp:hover {
+.footer-social .footer-whatsapp:hover {
+    color: #ffffff;
+
     transform: translateY(-2px);
 
     box-shadow:
-        0 8px 18px rgba(0, 77, 125, 0.28);
+        0 13px 25px rgba(4, 65, 108, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
-.site-footer__whatsapp-icon {
+
+/* ÍCONE VERDADEIRO DO WHATSAPP */
+
+.wa-icon {
     width: 21px;
     height: 21px;
-
-    flex: 0 0 21px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
+
+    flex: 0 0 21px;
 }
 
-.site-footer__whatsapp-icon svg {
+.wa-icon svg {
     display: block;
 
     width: 21px;
@@ -468,66 +458,81 @@
     fill: #ffffff;
 }
 
-.site-footer__whatsapp strong {
-    flex: 1;
-
-    font-size: 10px;
+.footer-whatsapp strong {
+    font-size: 11px;
     font-weight: 800;
 
-    text-align: center;
-
-    white-space: nowrap;
+    letter-spacing: 0.3px;
 }
 
-.site-footer__arrow {
+.wa-arrow {
     font-size: 19px;
-
     line-height: 1;
 }
 
 
 /* =========================================================
-   FAIXA INFERIOR
+   FAIXA AZUL INFERIOR
 ========================================================= */
 
-.site-footer__bottom {
-    width: 100%;
+.footer-bottom-premium {
+    position: relative;
 
-    border-top: 2px solid #008fd3;
+    width: 100%;
+    min-height: 94px;
 
     background:
         radial-gradient(
-            circle at 50% 0%,
-            rgba(13, 108, 170, 0.70),
-            transparent 38%
+            ellipse at 50% 0%,
+            rgba(30, 131, 200, 0.32),
+            transparent 45%
         ),
         linear-gradient(
-            110deg,
-            #03365f 0%,
-            #07588e 48%,
-            #032e55 100%
+            105deg,
+            #031b35 0%,
+            #0a3f72 46%,
+            #031b35 100%
+        );
+
+    border-bottom: 1px solid #1c83c0;
+}
+
+.footer-bottom-premium::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.16;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            115deg,
+            transparent 0,
+            transparent 5px,
+            rgba(255, 255, 255, 0.1) 6px
         );
 }
 
 
 /* =========================================================
-   CONTAINER INFERIOR
+   CONTEÚDO INFERIOR
 ========================================================= */
 
-.site-footer__bottom-container {
-    width: calc(100% - 80px);
-    max-width: 1285px;
+.footer-bottom-content {
+    position: relative;
+    z-index: 2;
 
-    min-height: 88px;
-
-    margin: 0 auto;
+    min-height: 94px;
 
     display: grid;
 
     grid-template-columns:
-        minmax(320px, 1fr)
-        280px
-        minmax(280px, 1fr);
+        1fr
+        auto
+        1fr;
 
     align-items: center;
 
@@ -536,35 +541,35 @@
 
 
 /* =========================================================
-   COPYRIGHT / SANTIAGODIGITAL
+   COPYRIGHT
 ========================================================= */
 
-.site-footer__copyright {
+.footer-copyright {
     display: flex;
 
     flex-direction: column;
 
     align-items: flex-start;
+    justify-content: center;
 
-    gap: 5px;
+    gap: 6px;
 }
 
-.site-footer__copyright p {
+.footer-copyright p {
     margin: 0;
 
-    color: #ffffff;
+    color: #d6e1e8;
 
-    font-size: 9px;
-    font-weight: 400;
+    font-size: 10px;
 
     line-height: 1.4;
 }
 
-.site-footer__developer {
-    color: #bce8fb !important;
+.footer-developer {
+    color: #a9c9dc !important;
 }
 
-.site-footer__developer strong {
+.footer-developer strong {
     color: #ffffff;
 
     font-weight: 700;
@@ -572,48 +577,46 @@
 
 
 /* =========================================================
-   LOSANGO
+   LOSANGO CENTRAL
 ========================================================= */
 
-.site-footer__ornament {
-    width: 100%;
+.footer-diamond {
+    position: relative;
 
-    display: flex;
+    color: #a9dcf6;
 
-    align-items: center;
-    justify-content: center;
+    font-size: 27px;
 
-    gap: 14px;
+    line-height: 1;
 }
 
-.site-footer__ornament span {
-    width: 100px;
+.footer-diamond::before,
+.footer-diamond::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 145px;
     height: 1px;
 
     background:
         linear-gradient(
             90deg,
             transparent,
-            rgba(174, 225, 249, 0.8)
+            rgba(214, 236, 248, 0.75)
         );
 }
 
-.site-footer__ornament span:last-child {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(174, 225, 249, 0.8),
-            transparent
-        );
+.footer-diamond::before {
+    right: 32px;
 }
 
-.site-footer__ornament b {
-    color: #8bdcff;
+.footer-diamond::after {
+    left: 32px;
 
-    font-size: 28px;
-    font-weight: 400;
-
-    line-height: 1;
+    transform: rotate(180deg);
 }
 
 
@@ -621,432 +624,266 @@
    LINKS LEGAIS
 ========================================================= */
 
-.site-footer__legal {
+.footer-legal {
     display: flex;
 
     align-items: center;
     justify-content: flex-end;
 
-    gap: 16px;
+    gap: 17px;
 }
 
-.site-footer__legal a {
-    color: #ffffff;
+.footer-legal a {
+    color: #c6d6e0;
 
-    font-size: 9px;
-    font-weight: 400;
-
-    white-space: nowrap;
+    font-size: 10px;
 
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
-.site-footer__legal a:hover {
-    color: #8bdcff;
+.footer-legal a:hover {
+    color: #ffffff;
 }
 
-.site-footer__legal i {
+.footer-legal i {
     width: 1px;
-    height: 15px;
+    height: 13px;
 
     background:
-        rgba(255, 255, 255, 0.55);
+        rgba(198, 214, 224, 0.55);
 }
 
 
 /* =========================================================
-   NOTEBOOK — ATÉ 1250PX
+   TABLET
 ========================================================= */
 
-@media (max-width: 1250px) {
+@media (max-width: 1150px) {
 
-    .site-footer__container {
-        width: calc(100% - 50px);
-
+    .footer-premium-grid {
         grid-template-columns:
-            180px
-            minmax(330px, 1fr)
-            180px
-            245px;
+            1fr
+            1.4fr;
     }
 
-    .site-footer__brand {
-        padding-left: 25px;
-        padding-right: 25px;
+    .footer-col,
+    .footer-logo-area {
+        border-bottom:
+            1px solid rgba(8, 63, 107, 0.35);
     }
 
-    .site-footer__brand img {
-        max-width: 340px;
+    .footer-logo-area {
+        border-right: 0;
     }
 
-    .site-footer__pillars {
-        font-size: 10px;
-        letter-spacing: 1px;
+    .footer-ministerio {
+        padding-left: 0;
+
+        border-bottom: 0;
     }
 
-    .site-footer__seminars {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .site-footer__social {
-        padding-left: 25px;
-    }
-
-    .site-footer__column h4 {
-        font-size: 22px;
-        letter-spacing: 2.4px;
-    }
-
-    .site-footer__whatsapp {
-        width: 215px;
-    }
-
-    .site-footer__bottom-container {
-        width: calc(100% - 50px);
+    .footer-social {
+        border-bottom: 0;
     }
 }
 
 
 /* =========================================================
-   TABLET — ATÉ 950PX
+   TABLET MENOR
 ========================================================= */
 
-@media (max-width: 950px) {
+@media (max-width: 820px) {
 
-    .site-footer__main {
-        padding: 40px 0;
+    .footer-premium .wrap {
+        width: calc(100% - 34px);
     }
 
-    .site-footer__container {
-        width: calc(100% - 40px);
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 36px 0;
+    .footer-premium-grid {
+        grid-template-columns:
+            1fr
+            1fr;
     }
 
-    .site-footer__brand {
-        grid-column: 1 / -1;
-        grid-row: 1;
-
-        min-height: auto;
-
-        padding: 0 20px 32px;
-
-        border-left: 0;
-        border-right: 0;
-
-        border-bottom:
-            1px solid rgba(4, 74, 120, 0.35);
+    .footer-col,
+    .footer-logo-area {
+        padding: 28px 24px;
     }
 
-    .site-footer__brand img {
-        max-width: 380px;
+    .footer-nav {
+        padding-left: 0;
     }
 
-    .site-footer__navigation {
-        grid-column: 1;
-        grid-row: 2;
-
-        padding: 0 35px 0 0;
+    .footer-logo-area {
+        padding-right: 0;
     }
 
-    .site-footer__seminars {
-        grid-column: 2;
-        grid-row: 2;
-
-        padding: 0 0 0 35px;
-
-        border-left:
-            1px solid rgba(4, 74, 120, 0.40);
-    }
-
-    .site-footer__social {
-        grid-column: 1 / -1;
-        grid-row: 3;
-
-        padding: 34px 0 0;
-
-        border-left: 0;
-
-        border-top:
-            1px solid rgba(4, 74, 120, 0.35);
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-    }
-
-    .site-footer__social-text {
+    .footer-logo-area img {
         max-width: 360px;
     }
 
-    .site-footer__bottom-container {
-        min-height: auto;
-
-        padding: 24px 0;
-
-        grid-template-columns: 1fr;
-
-        gap: 17px;
-
-        text-align: center;
+    .footer-bottom-content {
+        grid-template-columns:
+            1fr
+            auto
+            1fr;
     }
 
-    .site-footer__copyright {
-        align-items: center;
-    }
-
-    .site-footer__ornament {
-        order: -1;
-    }
-
-    .site-footer__legal {
-        justify-content: center;
+    .footer-diamond::before,
+    .footer-diamond::after {
+        width: 70px;
     }
 }
 
 
 /* =========================================================
-   CELULAR — ATÉ 600PX
+   CELULAR
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
-    .site-footer__main {
-        padding: 32px 0 30px;
+    .footer-metal {
+        padding: 38px 0 26px;
     }
 
-    .site-footer__container {
-        width: calc(100% - 36px);
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 0;
+    .footer-premium .wrap {
+        width: calc(100% - 30px);
     }
 
-    .site-footer__brand {
-        order: 1;
+    .footer-premium-grid {
+        grid-template-columns: 1fr;
+    }
 
-        width: 100%;
 
-        padding: 0 0 28px;
+    /* LOGO PRIMEIRO */
 
-        border: 0;
+    .footer-logo-area {
+        order: -1;
+
+        padding: 0 4px 30px;
+
+        border-right: 0;
 
         border-bottom:
-            1px solid rgba(4, 74, 120, 0.32);
+            1px solid rgba(8, 63, 107, 0.28);
     }
 
-    .site-footer__brand img {
+    .footer-logo-area img {
         width: 100%;
 
-        max-width: 340px;
-
-        margin-bottom: 14px;
+        max-width: 330px;
     }
 
-    .site-footer__pillars {
-        font-size: 9px;
+    .footer-pillars {
+        font-size: 10px;
 
-        letter-spacing: 0.7px;
-
-        white-space: normal;
+        letter-spacing: 0.8px;
     }
 
-    .site-footer__pillars span {
-        margin: 0 4px;
+    .footer-purpose {
+        font-size: 16px;
     }
 
-    .site-footer__purpose {
-        margin-top: 10px;
 
+    /* COLUNAS */
+
+    .footer-col,
+    .footer-nav,
+    .footer-ministerio,
+    .footer-social {
+        padding: 28px 4px;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid rgba(8, 63, 107, 0.28);
+    }
+
+    .footer-nav {
+        padding-top: 28px;
+    }
+
+    .footer-social {
+        border-bottom: 0;
+    }
+
+    .footer-col h4 {
         font-size: 18px;
     }
 
-    .site-footer__navigation {
-        order: 2;
-
-        width: 100%;
-
-        padding: 27px 0;
-
-        border-bottom:
-            1px solid rgba(4, 74, 120, 0.30);
+    .footer-social .footer-whatsapp {
+        max-width: 100%;
     }
 
-    .site-footer__seminars {
-        order: 3;
 
-        width: 100%;
+    /* FAIXA INFERIOR */
 
-        padding: 27px 0;
+    .footer-bottom-content {
+        min-height: 150px;
 
-        border: 0;
+        padding: 25px 0;
 
-        border-bottom:
-            1px solid rgba(4, 74, 120, 0.30);
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        text-align: center;
+
+        gap: 16px;
     }
 
-    .site-footer__social {
-        order: 4;
-
-        width: 100%;
-
-        padding: 27px 0 0;
-
-        border: 0;
-
-        align-items: flex-start;
-
-        text-align: left;
-    }
-
-    .site-footer__column h4 {
-        font-size: 22px;
-
-        letter-spacing: 2.4px;
-
-        white-space: normal;
-    }
-
-    .site-footer__title-line {
-        margin-top: 13px;
-        margin-bottom: 14px;
-    }
-
-    .site-footer__column nav a {
-        padding: 6px 0;
-
-        font-size: 12px;
-    }
-
-    .site-footer__social-icons {
-        margin-top: 2px;
-        margin-bottom: 18px;
-    }
-
-    .site-footer__social-icons a {
-        width: 46px;
-        height: 46px;
-
-        flex-basis: 46px;
-    }
-
-    .site-footer__social-text {
-        max-width: 310px;
-
-        font-size: 11px;
-    }
-
-    .site-footer__whatsapp {
-        width: 100%;
-
-        max-width: 310px;
-    }
-
-    .site-footer__bottom-container {
-        width: calc(100% - 36px);
-
-        padding: 23px 0 26px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 13px;
-    }
-
-    .site-footer__ornament {
-        order: 1;
-    }
-
-    .site-footer__copyright {
-        order: 2;
-
+    .footer-copyright {
         align-items: center;
 
         text-align: center;
     }
 
-    .site-footer__legal {
-        order: 3;
+    .footer-diamond {
+        display: none;
+    }
 
+    .footer-legal {
         justify-content: center;
 
         flex-wrap: wrap;
     }
-
-    .site-footer__copyright p {
-        font-size: 9px;
-    }
-
-    .site-footer__developer {
-        margin-top: 3px !important;
-    }
-
-    .site-footer__legal a {
-        font-size: 9px;
-    }
-
-    .site-footer__ornament span {
-        max-width: 90px;
-    }
-
-    .site-footer__ornament b {
-        font-size: 25px;
-    }
 }
 
 
 /* =========================================================
-   CELULAR PEQUENO — ATÉ 400PX
+   CELULAR PEQUENO
 ========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 390px) {
 
-    .site-footer__container {
-        width: calc(100% - 28px);
+    .footer-premium .wrap {
+        width: calc(100% - 24px);
     }
 
-    .site-footer__brand img {
-        max-width: 300px;
+    .footer-logo-area img {
+        max-width: 290px;
     }
 
-    .site-footer__pillars {
-        font-size: 8px;
+    .footer-pillars {
+        font-size: 9px;
 
-        line-height: 1.6;
+        letter-spacing: 0.5px;
     }
 
-    .site-footer__purpose {
+    .footer-col h4 {
         font-size: 17px;
+
+        letter-spacing: 2px;
     }
 
-    .site-footer__column h4 {
-        font-size: 21px;
-
-        letter-spacing: 2.3px;
+    .social-buttons a {
+        width: 44px;
+        height: 44px;
     }
 
-    .site-footer__bottom-container {
-        width: calc(100% - 28px);
-    }
-
-    .site-footer__legal {
-        gap: 11px;
-    }
-
-    .site-footer__ornament span {
-        max-width: 70px;
+    .footer-copyright p,
+    .footer-legal a {
+        font-size: 9px;
     }
 }
