@@ -1,10 +1,12 @@
 /* =========================================================
    CABEÇALHO — APÓSTOLA PATRICIA SANTANA
-   PADRÃO ÚNICO PARA TODAS AS PÁGINAS
+   PADRÃO ÚNICO EM TODAS AS PÁGINAS
 ========================================================= */
 
 .site-header-v2,
-.site-header-v2 * {
+.site-header-v2 *,
+.site-header-v2 *::before,
+.site-header-v2 *::after {
     box-sizing: border-box;
 }
 
@@ -15,10 +17,12 @@
 
 .site-header-v2 {
     width: 100%;
-
     position: sticky;
     top: 0;
     z-index: 5000;
+
+    margin: 0;
+    padding: 0;
 
     background: #ffffff;
 
@@ -32,7 +36,7 @@
 
 
 /* =========================================================
-   CONTAINER DESKTOP
+   CONTAINER
 ========================================================= */
 
 .site-header-v2 .site-header-v2__inner {
@@ -41,6 +45,7 @@
     min-height: 105px;
 
     margin: 0 auto;
+    padding: 0;
 
     display: grid;
 
@@ -56,7 +61,7 @@
 
 
 /* =========================================================
-   MARCA
+   LOGO / MARCA
 ========================================================= */
 
 .site-header-v2 .site-header-v2__brand {
@@ -70,7 +75,13 @@
     margin: 0;
     padding: 0;
 
-    text-decoration: none;
+    color: inherit;
+
+    background: transparent;
+
+    border: 0;
+
+    text-decoration: none !important;
 }
 
 
@@ -96,7 +107,7 @@
 
 
 /* =========================================================
-   BLOCO DO NOME
+   NOME
 ========================================================= */
 
 .site-header-v2 .site-header-v2__wordmark {
@@ -123,14 +134,14 @@
 
     color: #0788d2;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif !important;
 
-    font-size: 9px;
-    font-weight: 800;
+    font-size: 9px !important;
+    font-weight: 800 !important;
 
-    line-height: 1;
+    line-height: 1 !important;
 
-    letter-spacing: 4.5px;
+    letter-spacing: 4.5px !important;
 
     white-space: nowrap;
 }
@@ -152,21 +163,21 @@
         "Cormorant Garamond",
         Georgia,
         "Times New Roman",
-        serif;
+        serif !important;
 
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 25px !important;
+    font-weight: 600 !important;
 
-    line-height: 1;
+    line-height: 1 !important;
 
-    letter-spacing: normal;
+    letter-spacing: 0 !important;
 
     white-space: nowrap;
 }
 
 
 /* =========================================================
-   MINISTÉRIO + LOSANGOS
+   MINISTÉRIO
 ========================================================= */
 
 .site-header-v2 .site-header-v2__ministry-row {
@@ -197,14 +208,14 @@
 
     color: #0788d2;
 
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif !important;
 
-    font-size: 7px;
-    font-weight: 800;
+    font-size: 7px !important;
+    font-weight: 800 !important;
 
-    line-height: 1;
+    line-height: 1 !important;
 
-    letter-spacing: 2.4px;
+    letter-spacing: 2.4px !important;
 
     white-space: nowrap;
 }
@@ -221,12 +232,12 @@
 
     color: #078bd3;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
 
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 15px !important;
+    font-weight: 400 !important;
 
-    line-height: 1;
+    line-height: 1 !important;
 
     transform: translateY(-1px);
 
@@ -252,59 +263,68 @@
     gap: 20px;
 
     transform: translateX(25px);
+
+    font-family: "Montserrat", Arial, sans-serif !important;
 }
 
 
 /* =========================================================
    LINKS DO MENU
-   BLINDADOS CONTRA CSS DAS OUTRAS PÁGINAS
+   PADRÃO FIXO PARA TODAS AS PÁGINAS
 ========================================================= */
 
-.site-header-v2 .site-header-v2__nav > a {
+html body .site-header-v2 .site-header-v2__nav > a {
     position: relative;
 
     display: block;
 
-    margin: 0;
+    width: auto;
+    height: auto;
 
-    padding: 43px 0 39px;
+    margin: 0 !important;
 
-    color: #07335f;
+    padding: 43px 0 39px !important;
 
-    background: transparent;
+    color: #07335f !important;
 
-    border: 0;
-    border-radius: 0;
+    background: transparent !important;
 
-    box-shadow: none;
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
 
     font-family: "Montserrat", Arial, sans-serif !important;
 
     font-size: 10px !important;
-    font-weight: 800 !important;
-
-    font-style: normal;
+    font-weight: 700 !important;
+    font-style: normal !important;
 
     line-height: 1 !important;
 
     letter-spacing: 0 !important;
 
-    text-align: center;
+    text-align: center !important;
 
     text-decoration: none !important;
-    text-transform: none;
 
-    white-space: nowrap;
+    text-transform: uppercase !important;
+
+    white-space: nowrap !important;
+
+    opacity: 1 !important;
+
+    transform: none;
 
     transition: color 0.2s ease;
 }
 
 
 /* =========================================================
-   INDICADOR AZUL
+   LINHA AZUL
 ========================================================= */
 
-.site-header-v2 .site-header-v2__nav > a::after {
+html body .site-header-v2 .site-header-v2__nav > a::after {
     content: "";
 
     position: absolute;
@@ -315,6 +335,10 @@
     width: 0;
     height: 3px;
 
+    margin: 0;
+    padding: 0;
+
+    border: 0;
     border-radius: 10px;
 
     background: #078bd3;
@@ -325,14 +349,29 @@
 }
 
 
-.site-header-v2 .site-header-v2__nav > a:hover,
-.site-header-v2 .site-header-v2__nav > a.active {
-    color: #078bd3;
+/* =========================================================
+   HOVER / ATIVO
+========================================================= */
+
+html body .site-header-v2 .site-header-v2__nav > a:hover,
+html body .site-header-v2 .site-header-v2__nav > a.active {
+    color: #078bd3 !important;
+
+    font-family: "Montserrat", Arial, sans-serif !important;
+
+    font-size: 10px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 0 !important;
+
+    text-decoration: none !important;
+
+    transform: none !important;
 }
 
 
-.site-header-v2 .site-header-v2__nav > a:hover::after,
-.site-header-v2 .site-header-v2__nav > a.active::after {
+html body .site-header-v2 .site-header-v2__nav > a:hover::after,
+html body .site-header-v2 .site-header-v2__nav > a.active::after {
     width: 100%;
 }
 
@@ -341,18 +380,18 @@
    BOTÃO VER CURSOS
 ========================================================= */
 
-.site-header-v2 .site-header-v2__courses {
+html body .site-header-v2 .site-header-v2__courses {
     width: 112px;
     min-width: 112px;
 
-    margin: 0;
+    margin: 0 !important;
 
-    padding: 12px 13px;
+    padding: 12px 13px !important;
 
     justify-self: end;
 
-    border: 0;
-    border-radius: 5px;
+    border: 0 !important;
+    border-radius: 5px !important;
 
     background:
         linear-gradient(
@@ -360,9 +399,9 @@
             #0574bb 0%,
             #078ed8 50%,
             #0569aa 100%
-        );
+        ) !important;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
     font-family: "Montserrat", Arial, sans-serif !important;
 
@@ -373,9 +412,11 @@
 
     letter-spacing: 0 !important;
 
-    text-align: center;
+    text-align: center !important;
 
     text-decoration: none !important;
+
+    white-space: nowrap;
 
     box-shadow:
         0 8px 20px rgba(5, 105, 170, 0.20);
@@ -386,8 +427,8 @@
 }
 
 
-.site-header-v2 .site-header-v2__courses:hover {
-    color: #ffffff;
+html body .site-header-v2 .site-header-v2__courses:hover {
+    color: #ffffff !important;
 
     transform: translateY(-2px);
 
@@ -437,7 +478,7 @@
 
 
 /* =========================================================
-   NOTEBOOK — ATÉ 1200PX
+   NOTEBOOK
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -445,14 +486,12 @@
     .site-header-v2 .site-header-v2__inner {
         width: calc(100% - 40px);
 
-        min-height: 94px;
-
         grid-template-columns:
             300px
             minmax(0, 1fr)
             100px;
 
-        column-gap: 28px;
+        column-gap: 25px;
     }
 
 
@@ -472,53 +511,43 @@
     }
 
 
-    .site-header-v2 .site-header-v2__apostola {
-        font-size: 7px;
-        letter-spacing: 3.5px;
-    }
-
-
     .site-header-v2 .site-header-v2__wordmark strong {
-        font-size: 21px;
+        font-size: 21px !important;
     }
 
 
-    .site-header-v2 .site-header-v2__ministry-row {
-        margin-top: 7px;
-        gap: 6px;
+    .site-header-v2 .site-header-v2__apostola {
+        font-size: 7px !important;
+        letter-spacing: 3.5px !important;
     }
 
 
     .site-header-v2 .site-header-v2__ministry-row small {
-        font-size: 6px;
-        letter-spacing: 1.7px;
+        font-size: 6px !important;
+        letter-spacing: 1.7px !important;
     }
 
 
     .site-header-v2 .site-header-v2__diamond {
-        font-size: 13px;
+        font-size: 13px !important;
     }
 
 
     .site-header-v2 .site-header-v2__nav {
         gap: 14px;
+
         transform: translateX(10px);
     }
 
 
-    .site-header-v2 .site-header-v2__nav > a {
-        padding: 38px 0 35px;
+    /* IMPORTANTE:
+       MENU CONTINUA COM O MESMO TAMANHO */
 
-        font-size: 9px !important;
-        font-weight: 800 !important;
-
-        line-height: 1 !important;
-        letter-spacing: 0 !important;
-    }
-
-
-    .site-header-v2 .site-header-v2__nav > a::after {
-        bottom: 24px;
+    html body .site-header-v2 .site-header-v2__nav > a,
+    html body .site-header-v2 .site-header-v2__nav > a:hover,
+    html body .site-header-v2 .site-header-v2__nav > a.active {
+        font-size: 10px !important;
+        font-weight: 700 !important;
     }
 
 
@@ -526,22 +555,18 @@
         width: 100px;
         min-width: 100px;
 
-        padding: 11px 9px;
-
         font-size: 8px !important;
     }
 }
 
 
 /* =========================================================
-   NOTEBOOK MENOR — ATÉ 1050PX
+   NOTEBOOK MENOR
 ========================================================= */
 
 @media (max-width: 1050px) {
 
     .site-header-v2 .site-header-v2__inner {
-        min-height: 86px;
-
         grid-template-columns:
             270px
             minmax(0, 1fr);
@@ -561,45 +586,40 @@
     }
 
 
-    .site-header-v2 .site-header-v2__apostola {
-        font-size: 6.5px;
-        letter-spacing: 3px;
-    }
-
-
     .site-header-v2 .site-header-v2__wordmark strong {
-        font-size: 19px;
+        font-size: 19px !important;
     }
 
 
-    .site-header-v2 .site-header-v2__ministry-row {
-        gap: 5px;
+    .site-header-v2 .site-header-v2__apostola {
+        font-size: 6.5px !important;
+        letter-spacing: 3px !important;
     }
 
 
     .site-header-v2 .site-header-v2__ministry-row small {
-        font-size: 5.5px;
-        letter-spacing: 1.4px;
+        font-size: 5.5px !important;
+        letter-spacing: 1.4px !important;
     }
 
 
     .site-header-v2 .site-header-v2__diamond {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
 
     .site-header-v2 .site-header-v2__nav {
         gap: 12px;
+
         transform: none;
     }
 
 
-    .site-header-v2 .site-header-v2__nav > a {
-        font-size: 8.5px !important;
-        font-weight: 800 !important;
-
-        line-height: 1 !important;
-        letter-spacing: 0 !important;
+    html body .site-header-v2 .site-header-v2__nav > a,
+    html body .site-header-v2 .site-header-v2__nav > a:hover,
+    html body .site-header-v2 .site-header-v2__nav > a.active {
+        font-size: 10px !important;
+        font-weight: 700 !important;
     }
 
 
@@ -610,7 +630,7 @@
 
 
 /* =========================================================
-   TABLET / CELULAR — ATÉ 850PX
+   TABLET / CELULAR
 ========================================================= */
 
 @media (max-width: 850px) {
@@ -633,20 +653,13 @@
     }
 
 
-    /* MARCA */
-
     .site-header-v2 .site-header-v2__brand {
         width: auto;
         max-width: calc(100% - 54px);
 
-        display: flex;
-        align-items: center;
-
         gap: 10px;
     }
 
-
-    /* POMBA */
 
     .site-header-v2 .site-header-v2__symbol {
         width: 74px;
@@ -656,91 +669,44 @@
     }
 
 
-    /* BLOCO DO NOME */
-
     .site-header-v2 .site-header-v2__wordmark {
         width: auto;
         max-width: none;
 
-        display: flex;
-        flex-direction: column;
-
         align-items: flex-start;
-        justify-content: center;
     }
 
-
-    /* APÓSTOLA */
 
     .site-header-v2 .site-header-v2__apostola {
-        display: block !important;
-
         margin: 0 0 5px;
 
-        font-size: 9px;
+        font-size: 9px !important;
 
-        font-weight: 800;
-
-        line-height: 1;
-
-        letter-spacing: 3.5px;
-
-        white-space: nowrap;
+        letter-spacing: 3.5px !important;
     }
 
-
-    /* PATRICIA SANTANA */
 
     .site-header-v2 .site-header-v2__wordmark strong {
-        display: block;
-
-        margin: 0;
-
-        font-size: 21px;
-
-        font-weight: 600;
-
-        line-height: 1;
-
-        white-space: nowrap;
+        font-size: 21px !important;
     }
 
 
-    /* MINISTÉRIO */
-
     .site-header-v2 .site-header-v2__ministry-row {
-        width: 100%;
-
         margin-top: 8px;
-
-        display: flex !important;
-
-        align-items: center;
-        justify-content: center;
 
         gap: 6px;
     }
 
 
     .site-header-v2 .site-header-v2__ministry-row small {
-        display: block !important;
+        font-size: 6.5px !important;
 
-        font-size: 6.5px;
-
-        font-weight: 800;
-
-        line-height: 1;
-
-        letter-spacing: 1.3px;
-
-        white-space: nowrap;
+        letter-spacing: 1.3px !important;
     }
 
 
     .site-header-v2 .site-header-v2__diamond {
-        display: inline-flex !important;
-
-        font-size: 12px;
+        font-size: 12px !important;
     }
 
 
@@ -760,7 +726,7 @@
     }
 
 
-    /* MENU MOBILE */
+    /* MENU */
 
     .site-header-v2 .site-header-v2__nav {
         position: absolute;
@@ -775,7 +741,6 @@
         width: auto;
 
         margin: 0;
-
         padding: 10px 20px 18px;
 
         display: none;
@@ -804,48 +769,53 @@
     }
 
 
-    .site-header-v2 .site-header-v2__nav > a {
+    html body .site-header-v2 .site-header-v2__nav > a,
+    html body .site-header-v2 .site-header-v2__nav > a:hover,
+    html body .site-header-v2 .site-header-v2__nav > a.active {
         display: block;
 
         width: 100%;
 
-        margin: 0;
+        margin: 0 !important;
 
-        padding: 16px 4px;
+        padding: 16px 4px !important;
 
-        border: 0;
-        border-bottom: 1px solid #e8eff4;
+        border: 0 !important;
+        border-bottom: 1px solid #e8eff4 !important;
 
-        border-radius: 0;
+        border-radius: 0 !important;
 
-        background: transparent;
-
-        color: #07335f;
-
-        box-shadow: none;
+        background: transparent !important;
 
         font-family: "Montserrat", Arial, sans-serif !important;
 
         font-size: 12px !important;
-        font-weight: 800 !important;
+        font-weight: 700 !important;
 
         line-height: 1.2 !important;
 
         letter-spacing: 0 !important;
 
-        text-align: left;
+        text-align: left !important;
 
         text-decoration: none !important;
+
+        transform: none !important;
     }
 
 
-    .site-header-v2 .site-header-v2__nav > a.active {
-        color: #078bd3;
+    html body .site-header-v2 .site-header-v2__nav > a {
+        color: #07335f !important;
+    }
+
+
+    html body .site-header-v2 .site-header-v2__nav > a.active {
+        color: #078bd3 !important;
     }
 
 
     .site-header-v2 .site-header-v2__nav > a:last-child {
-        border-bottom: 0;
+        border-bottom: 0 !important;
     }
 
 
@@ -882,7 +852,7 @@
 
 
 /* =========================================================
-   CELULAR — ATÉ 520PX
+   CELULAR
 ========================================================= */
 
 @media (max-width: 520px) {
@@ -909,44 +879,27 @@
     }
 
 
-    .site-header-v2 .site-header-v2__wordmark {
-        width: auto;
-        max-width: none;
-    }
-
-
     .site-header-v2 .site-header-v2__apostola {
-        margin-bottom: 5px;
+        font-size: 9px !important;
 
-        font-size: 9px;
-
-        letter-spacing: 3.2px;
+        letter-spacing: 3.2px !important;
     }
 
 
     .site-header-v2 .site-header-v2__wordmark strong {
-        font-size: 20px;
-    }
-
-
-    .site-header-v2 .site-header-v2__ministry-row {
-        margin-top: 7px;
-
-        gap: 5px;
-
-        justify-content: center;
+        font-size: 20px !important;
     }
 
 
     .site-header-v2 .site-header-v2__ministry-row small {
-        font-size: 6.5px;
+        font-size: 6.5px !important;
 
-        letter-spacing: 1.1px;
+        letter-spacing: 1.1px !important;
     }
 
 
     .site-header-v2 .site-header-v2__diamond {
-        font-size: 11px;
+        font-size: 11px !important;
     }
 
 
@@ -973,7 +926,7 @@
 
 
 /* =========================================================
-   CELULARES MENORES — ATÉ 400PX
+   CELULARES MENORES
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -1001,33 +954,26 @@
 
 
     .site-header-v2 .site-header-v2__apostola {
-        font-size: 8px;
+        font-size: 8px !important;
 
-        letter-spacing: 2.7px;
+        letter-spacing: 2.7px !important;
     }
 
 
     .site-header-v2 .site-header-v2__wordmark strong {
-        font-size: 18px;
-    }
-
-
-    .site-header-v2 .site-header-v2__ministry-row {
-        margin-top: 6px;
-
-        gap: 4px;
+        font-size: 18px !important;
     }
 
 
     .site-header-v2 .site-header-v2__ministry-row small {
-        font-size: 5.8px;
+        font-size: 5.8px !important;
 
-        letter-spacing: 0.8px;
+        letter-spacing: 0.8px !important;
     }
 
 
     .site-header-v2 .site-header-v2__diamond {
-        font-size: 10px;
+        font-size: 10px !important;
     }
 
 
@@ -1041,7 +987,7 @@
 
 
 /* =========================================================
-   CELULAR MUITO ESTREITO — ATÉ 350PX
+   CELULAR MUITO ESTREITO
 ========================================================= */
 
 @media (max-width: 350px) {
@@ -1069,33 +1015,26 @@
 
 
     .site-header-v2 .site-header-v2__apostola {
-        font-size: 7px;
+        font-size: 7px !important;
 
-        letter-spacing: 2.2px;
+        letter-spacing: 2.2px !important;
     }
 
 
     .site-header-v2 .site-header-v2__wordmark strong {
-        font-size: 16px;
-    }
-
-
-    .site-header-v2 .site-header-v2__ministry-row {
-        margin-top: 5px;
-
-        gap: 3px;
+        font-size: 16px !important;
     }
 
 
     .site-header-v2 .site-header-v2__ministry-row small {
-        font-size: 5px;
+        font-size: 5px !important;
 
-        letter-spacing: 0.6px;
+        letter-spacing: 0.6px !important;
     }
 
 
     .site-header-v2 .site-header-v2__diamond {
-        font-size: 9px;
+        font-size: 9px !important;
     }
 
 
