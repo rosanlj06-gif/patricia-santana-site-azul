@@ -242,10 +242,10 @@
 }
 .marco h3{
   min-height:38px;margin:0 0 8px;color:#fff;
-  font:700 12px/1.45 "Montserrat",Arial,sans-serif;
+  font:700 10px/1.45 "Montserrat",Arial,sans-serif;
 }
 .marco p{
-  margin:0;color:#b8d3e2;font:400 10px/1.55 "Montserrat",Arial,sans-serif;
+  margin:0;color:#b8d3e2;font:400 8.5px/1.55 "Montserrat",Arial,sans-serif;
 }
 .pilares{
   margin-top:75px;padding-top:58px;border-top:1px solid rgba(78,177,222,.24);
@@ -367,7 +367,7 @@
   max-width:480px;
   margin:25px 0 30px;
   color:#466d83;
-  font:700 14px/1.75 "Montserrat",Arial,sans-serif;
+  font:400 12px/1.75 "Montserrat",Arial,sans-serif;
 }
 
 .sobre-cursos .sobre-btn{
@@ -920,11 +920,11 @@
 
 /* textos dos pilares */
 .pagina-sobre .pilar h3{
-  font-size:12px;
+  font-size:11px;
 }
 
 .pagina-sobre .pilar p{
-  font-size:9px;
+  font-size:8.5px;
   line-height:1.65;
 }
 
@@ -974,5 +974,148 @@
   .pagina-sobre .pilares-frase{
     border-left:0;
     border-top:1px solid rgba(66,196,241,.35);
+  }
+}
+
+
+/* =========================================================
+   CELULAR — TRAJETÓRIA 2 + 2 + 1 / PILARES 3 LADO A LADO
+   Somente celular. Desktop não é alterado.
+========================================================= */
+@media (max-width: 560px){
+
+  /* ---------- MARCOS: 2 + 2 + 1 ---------- */
+  .pagina-sobre .marcos{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+    gap:30px 14px !important;
+    align-items:start !important;
+  }
+
+  .pagina-sobre .marco{
+    width:100% !important;
+    min-width:0 !important;
+    padding:0 4px !important;
+    text-align:center !important;
+  }
+
+  .pagina-sobre .marco:nth-child(5){
+    grid-column:1 / -1 !important;
+    width:50% !important;
+    justify-self:center !important;
+  }
+
+  .pagina-sobre .marco-icon{
+    width:62px !important;
+    height:62px !important;
+    margin:0 auto 12px !important;
+  }
+
+  .pagina-sobre .marco-icon svg{
+    width:34px !important;
+    height:34px !important;
+  }
+
+  .pagina-sobre .marco h3{
+    min-height:0 !important;
+    margin:0 0 8px !important;
+    font-size:10px !important;
+    line-height:1.25 !important;
+  }
+
+  .pagina-sobre .marco p{
+    margin:0 auto !important;
+    max-width:145px !important;
+    font-size:7.5px !important;
+    line-height:1.5 !important;
+  }
+
+
+  /* ---------- PILARES: 3 NA MESMA LINHA ---------- */
+  .pagina-sobre .pilares{
+    margin-top:42px !important;
+    padding-top:36px !important;
+  }
+
+  .pagina-sobre .pilares > .sobre-kicker{
+    margin-bottom:26px !important;
+    text-align:center !important;
+    font-size:10px !important;
+    letter-spacing:3px !important;
+  }
+
+  .pagina-sobre .pilares-grid{
+    display:grid !important;
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+    gap:0 !important;
+    align-items:start !important;
+  }
+
+  .pagina-sobre .pilar{
+    width:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    padding:8px 7px 22px !important;
+    border-bottom:0 !important;
+    border-right:1px solid rgba(66,196,241,.25) !important;
+    text-align:center !important;
+  }
+
+  .pagina-sobre .pilar:nth-child(3){
+    border-right:0 !important;
+  }
+
+  .pagina-sobre .pilar-icon{
+    width:52px !important;
+    height:52px !important;
+    margin:0 auto 10px !important;
+  }
+
+  .pagina-sobre .pilar-icon svg{
+    width:31px !important;
+    height:31px !important;
+  }
+
+  .pagina-sobre .pilar:nth-child(3) .pilar-icon img{
+    display:block !important;
+    width:40px !important;
+    height:40px !important;
+    margin:auto !important;
+    object-fit:contain !important;
+  }
+
+  .pagina-sobre .pilar h3{
+    margin:0 0 8px !important;
+    font-size:8.5px !important;
+    line-height:1.2 !important;
+  }
+
+  .pagina-sobre .pilar p{
+    margin:0 auto !important;
+    max-width:115px !important;
+    font-size:6.5px !important;
+    line-height:1.5 !important;
+  }
+
+  /* ---------- FRASE ABAIXO DOS 3 PILARES ---------- */
+  .pagina-sobre .pilares-frase{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    min-height:0 !important;
+    margin-top:4px !important;
+    padding:24px 0 2px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    border-left:0 !important;
+    border-top:1px solid rgba(66,196,241,.45) !important;
+    text-align:center !important;
+  }
+
+  .pagina-sobre .pilares-frase p{
+    margin:0 !important;
+    font-size:29px !important;
+    line-height:.98 !important;
+    text-align:center !important;
   }
 }
