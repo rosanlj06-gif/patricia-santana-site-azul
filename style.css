@@ -3581,8 +3581,8 @@ select {
 
 /* DESKTOP */
 .hero{
-    padding-top: 72px;
-    padding-bottom: 62px;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 .hero-tags{
