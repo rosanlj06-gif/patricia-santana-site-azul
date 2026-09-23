@@ -1,6 +1,6 @@
 /* =========================================================
    RODAPÉ — APÓSTOLA PATRICIA SANTANA
-   PRATA METÁLICO + AZUL
+   DESKTOP + TABLET + MOBILE
 ========================================================= */
 
 .footer-premium,
@@ -19,7 +19,7 @@
 
 
 /* =========================================================
-   ÁREA PRINCIPAL
+   ÁREA PRINCIPAL — PRATA METÁLICO
 ========================================================= */
 
 .footer-metal {
@@ -51,7 +51,7 @@
 }
 
 
-/* TEXTURA */
+/* TEXTURA METÁLICA */
 
 .footer-metal::before {
     content: "";
@@ -74,7 +74,7 @@
 }
 
 
-/* BARRA METÁLICA SUPERIOR */
+/* BARRA SUPERIOR */
 
 .footer-metal::after {
     content: "";
@@ -113,13 +113,12 @@
 
 .footer-premium .wrap {
     width: min(1180px, calc(100% - 48px));
-
     margin: 0 auto;
 }
 
 
 /* =========================================================
-   GRID
+   GRID DESKTOP
 ========================================================= */
 
 .footer-premium-grid {
@@ -158,7 +157,6 @@
 
 .footer-social {
     padding-right: 0;
-
     border-right: 0;
 }
 
@@ -178,8 +176,9 @@
         serif;
 
     font-size: 20px;
-
     font-weight: 600;
+
+    line-height: 1.2;
 
     letter-spacing: 3px;
 }
@@ -246,7 +245,6 @@
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -259,11 +257,9 @@
     display: block;
 
     width: 100%;
-
     max-width: 430px;
 
     height: auto;
-
     max-height: 190px;
 
     object-fit: contain;
@@ -280,7 +276,6 @@
     color: #073d72;
 
     font-size: 12px;
-
     font-weight: 800;
 
     letter-spacing: 1.5px;
@@ -312,7 +307,6 @@
         serif;
 
     font-size: 17px;
-
     font-style: italic;
 
     line-height: 1.4;
@@ -337,6 +331,8 @@
     width: 48px;
     height: 48px;
 
+    flex: 0 0 48px;
+
     display: flex;
 
     align-items: center;
@@ -357,7 +353,6 @@
     color: #ffffff;
 
     font-size: 14px;
-
     font-weight: 800;
 
     text-decoration: none;
@@ -365,11 +360,23 @@
     box-shadow:
         inset 0 0 0 2px rgba(255, 255, 255, 0.28),
         0 6px 12px rgba(4, 53, 89, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.social-buttons a:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.35),
+        0 9px 17px rgba(4, 53, 89, 0.26);
 }
 
 
 /* =========================================================
-   TEXTO DAS REDES
+   TEXTO REDES
 ========================================================= */
 
 .footer-social > p {
@@ -380,7 +387,6 @@
     color: #49677d;
 
     font-size: 12px;
-
     font-weight: 700;
 
     line-height: 1.65;
@@ -393,7 +399,6 @@
 
 .footer-social .footer-whatsapp {
     width: 100%;
-
     max-width: 245px;
 
     min-height: 48px;
@@ -405,7 +410,6 @@
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     border: 1px solid #6bb8e5;
@@ -415,9 +419,9 @@
     background:
         linear-gradient(
             105deg,
-            #073d72,
-            #087fc6,
-            #064a80
+            #073d72 0%,
+            #087fc6 52%,
+            #064a80 100%
         );
 
     color: #ffffff;
@@ -437,11 +441,15 @@
     color: #ffffff;
 
     transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 25px rgba(4, 65, 108, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 
 /* =========================================================
-   ÍCONE DO WHATSAPP
+   ÍCONE WHATSAPP
 ========================================================= */
 
 .footer-social .footer-whatsapp .wa-icon {
@@ -454,8 +462,6 @@
 
     align-items: center;
     justify-content: center;
-
-    color: #ffffff;
 }
 
 .footer-social .footer-whatsapp .wa-icon svg {
@@ -465,29 +471,20 @@
     height: 22px !important;
 
     fill: #ffffff !important;
-
-    overflow: visible;
 }
 
 .footer-social .footer-whatsapp .wa-icon svg path {
     fill: #ffffff !important;
 }
 
-
-/* TEXTO BOTÃO */
-
 .footer-whatsapp strong {
     color: #ffffff !important;
 
     font-size: 11px;
-
     font-weight: 800;
 
     letter-spacing: 0.3px;
 }
-
-
-/* SETA */
 
 .wa-arrow {
     color: #ffffff;
@@ -499,14 +496,13 @@
 
 
 /* =========================================================
-   FAIXA AZUL INFERIOR
+   FAIXA INFERIOR
 ========================================================= */
 
 .footer-bottom-premium {
     position: relative;
 
     width: 100%;
-
     min-height: 94px;
 
     background:
@@ -530,7 +526,6 @@
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     opacity: 0.16;
@@ -587,14 +582,8 @@
     gap: 5px;
 }
 
-
-/*
-   IMPORTANTE:
-   força a cor clara para impedir que outro CSS do site
-   deixe o texto escuro.
-*/
-
-.footer-premium .footer-bottom-premium
+.footer-premium
+.footer-bottom-premium
 .footer-copyright p {
     margin: 0 !important;
 
@@ -607,15 +596,17 @@
     line-height: 1.4;
 }
 
-
-.footer-premium .footer-bottom-premium
-.footer-copyright .footer-developer {
+.footer-premium
+.footer-bottom-premium
+.footer-copyright
+.footer-developer {
     color: #a9dcf6 !important;
 }
 
-
-.footer-premium .footer-bottom-premium
-.footer-copyright .footer-developer strong {
+.footer-premium
+.footer-bottom-premium
+.footer-copyright
+.footer-developer strong {
     color: #ffffff !important;
 
     font-weight: 700;
@@ -645,7 +636,6 @@
     top: 50%;
 
     width: 145px;
-
     height: 1px;
 
     background:
@@ -695,7 +685,6 @@
 
 .footer-premium .footer-legal i {
     width: 1px;
-
     height: 13px;
 
     background:
@@ -704,10 +693,10 @@
 
 
 /* =========================================================
-   TABLET
+   NOTEBOOK / TABLET GRANDE
 ========================================================= */
 
-@media (max-width: 1150px) {
+@media (max-width: 1150px) and (min-width: 651px) {
 
     .footer-premium-grid {
         grid-template-columns:
@@ -738,10 +727,10 @@
 
 
 /* =========================================================
-   TABLET MENOR
+   TABLET
 ========================================================= */
 
-@media (max-width: 820px) {
+@media (max-width: 820px) and (min-width: 651px) {
 
     .footer-premium .wrap {
         width: calc(100% - 34px);
@@ -786,120 +775,427 @@
 
 /* =========================================================
    CELULAR
+   NOVO LAYOUT COMPACTO
 ========================================================= */
 
 @media (max-width: 650px) {
 
+    .footer-premium {
+        display: block !important;
+
+        visibility: visible !important;
+
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       FUNDO
+    ====================================================== */
+
     .footer-metal {
-        padding: 38px 0 26px;
+        padding: 28px 0 24px;
     }
 
     .footer-premium .wrap {
-        width: calc(100% - 30px);
+        width: calc(100% - 32px);
+
+        max-width: 520px;
     }
+
+
+    /* =====================================================
+       GRID MOBILE
+    ====================================================== */
 
     .footer-premium-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        column-gap: 0;
+
+        row-gap: 0;
+
+        align-items: start;
     }
 
 
-    /* LOGO PRIMEIRO */
+    /* =====================================================
+       LOGO — PRIMEIRA LINHA
+    ====================================================== */
 
     .footer-logo-area {
-        order: -1;
+        grid-column: 1 / -1;
+        grid-row: 1;
 
-        padding: 0 4px 30px;
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 0 10px 25px;
+
+        margin: 0 0 24px;
 
         border-right: 0;
 
         border-bottom:
-            1px solid rgba(8, 63, 107, 0.28);
+            1px solid rgba(7, 61, 114, 0.25);
     }
 
     .footer-logo-area img {
         width: 100%;
 
-        max-width: 330px;
+        max-width: 315px;
+
+        max-height: none;
+
+        margin: 0 auto;
+
+        object-fit: contain;
     }
+
+
+    /* PILARES */
 
     .footer-pillars {
-        font-size: 10px;
+        margin-top: 10px;
+
+        font-size: 9px;
+
+        font-weight: 800;
 
         letter-spacing: 0.8px;
+
+        line-height: 1.7;
+
+        white-space: normal;
     }
+
+    .footer-pillars span {
+        margin: 0 3px;
+    }
+
+
+    /* FRASE */
 
     .footer-purpose {
+        margin-top: 8px;
+
         font-size: 16px;
+
+        line-height: 1.4;
     }
 
 
-    /* COLUNAS */
-
-    .footer-col,
-    .footer-nav,
-    .footer-ministerio,
-    .footer-social {
-        padding: 28px 4px;
-
-        border-right: 0;
-
-        border-bottom:
-            1px solid rgba(8, 63, 107, 0.28);
-    }
+    /* =====================================================
+       NAVEGAÇÃO E SEMINÁRIOS LADO A LADO
+    ====================================================== */
 
     .footer-nav {
-        padding-top: 28px;
-    }
+        grid-column: 1;
+        grid-row: 2;
 
-    .footer-social {
+        width: 100%;
+
+        padding: 0 16px 22px 2px;
+
+        border-right:
+            1px solid rgba(7, 61, 114, 0.24);
+
         border-bottom: 0;
     }
 
+    .footer-ministerio {
+        grid-column: 2;
+        grid-row: 2;
+
+        width: 100%;
+
+        padding: 0 2px 22px 20px;
+
+        border-right: 0;
+        border-bottom: 0;
+    }
+
+
+    /* =====================================================
+       TÍTULOS MOBILE
+    ====================================================== */
+
     .footer-col h4 {
-        font-size: 18px;
+        margin: 0;
+
+        color: #073d72;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        line-height: 1.25;
+
+        letter-spacing: 1.5px;
+
+        white-space: nowrap;
     }
 
-    .footer-social .footer-whatsapp {
-        max-width: 100%;
+    .footer-title-line {
+        width: 38px;
+
+        height: 3px;
+
+        margin: 10px 0 13px;
     }
 
 
-    /* FAIXA INFERIOR */
+    /* =====================================================
+       LINKS MOBILE
+    ====================================================== */
 
-    .footer-bottom-content {
-        min-height: 150px;
+    .footer-col > a {
+        margin: 0 0 9px;
 
-        padding: 25px 0;
+        color: #143c5c;
 
-        grid-template-columns: 1fr;
+        font-size: 11px;
 
-        justify-items: center;
-
-        text-align: center;
-
-        gap: 16px;
+        line-height: 1.35;
     }
 
-    .footer-premium .footer-copyright {
+
+    /* =====================================================
+       REDES SOCIAIS — LINHA INTEIRA
+    ====================================================== */
+
+    .footer-social {
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        width: 100%;
+
+        margin-top: 2px;
+
+        padding: 23px 0 0;
+
+        display: flex;
+
+        flex-direction: column;
+
         align-items: center;
 
+        border-top:
+            1px solid rgba(7, 61, 114, 0.25);
+
+        border-right: 0;
+        border-bottom: 0;
+
         text-align: center;
     }
+
+    .footer-social h4 {
+        font-size: 17px;
+
+        letter-spacing: 2px;
+
+        text-align: center;
+    }
+
+    .footer-social .footer-title-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* =====================================================
+       ÍCONES MOBILE
+    ====================================================== */
+
+    .social-buttons {
+        justify-content: center;
+
+        gap: 14px;
+
+        margin: 2px auto 16px;
+    }
+
+    .social-buttons a {
+        width: 44px;
+        height: 44px;
+
+        flex: 0 0 44px;
+
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       TEXTO REDES
+    ====================================================== */
+
+    .footer-social > p {
+        width: 100%;
+
+        max-width: 310px;
+
+        margin: 0 auto 17px;
+
+        color: #3e617a;
+
+        font-size: 11px;
+
+        font-weight: 600;
+
+        line-height: 1.55;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       WHATSAPP MOBILE
+    ====================================================== */
+
+    .footer-social .footer-whatsapp {
+        width: 100%;
+
+        max-width: 330px;
+
+        min-height: 48px;
+
+        margin: 0 auto;
+
+        padding: 0 18px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        border-radius: 26px;
+    }
+
+    .footer-social
+    .footer-whatsapp
+    .wa-icon {
+        width: 21px;
+        height: 21px;
+
+        flex-basis: 21px;
+    }
+
+    .footer-social
+    .footer-whatsapp
+    .wa-icon svg {
+        width: 21px !important;
+        height: 21px !important;
+    }
+
+    .footer-whatsapp strong {
+        font-size: 10px;
+
+        letter-spacing: 0.4px;
+    }
+
+
+    /* =====================================================
+       FAIXA INFERIOR MOBILE
+    ====================================================== */
+
+    .footer-bottom-premium {
+        min-height: auto;
+    }
+
+    .footer-bottom-content {
+        width: calc(100% - 32px);
+
+        min-height: auto;
+
+        padding: 20px 0 18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 11px;
+
+        text-align: center;
+    }
+
+
+    /* COPYRIGHT */
+
+    .footer-premium
+    .footer-copyright {
+        width: 100%;
+
+        align-items: center;
+
+        gap: 4px;
+
+        text-align: center;
+    }
+
+    .footer-premium
+    .footer-bottom-premium
+    .footer-copyright p {
+        font-size: 9px;
+
+        line-height: 1.45;
+
+        text-align: center;
+    }
+
+    .footer-premium
+    .footer-bottom-premium
+    .footer-copyright
+    .footer-developer {
+        color: #9ed8f5 !important;
+    }
+
+    .footer-premium
+    .footer-bottom-premium
+    .footer-copyright
+    .footer-developer strong {
+        color: #ffffff !important;
+    }
+
+
+    /* ESCONDE LOSANGO NO CELULAR */
 
     .footer-diamond {
         display: none;
     }
 
+
+    /* LINKS INFERIORES */
+
     .footer-premium .footer-legal {
+        width: 100%;
+
         justify-content: center;
 
+        gap: 12px;
+
         flex-wrap: wrap;
+    }
+
+    .footer-premium .footer-legal a {
+        font-size: 9px;
     }
 }
 
 
 /* =========================================================
-   CELULAR PEQUENO
+   CELULARES PEQUENOS
 ========================================================= */
 
 @media (max-width: 390px) {
@@ -909,30 +1205,72 @@
     }
 
     .footer-logo-area img {
-        max-width: 290px;
+        max-width: 285px;
     }
 
     .footer-pillars {
-        font-size: 9px;
+        font-size: 8px;
 
         letter-spacing: 0.5px;
     }
 
-    .footer-col h4 {
-        font-size: 17px;
+    .footer-purpose {
+        font-size: 15px;
+    }
 
-        letter-spacing: 2px;
+
+    /* DUAS COLUNAS CONTINUAM */
+
+    .footer-nav {
+        padding-right: 10px;
+    }
+
+    .footer-ministerio {
+        padding-left: 14px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+
+        letter-spacing: 1px;
+    }
+
+    .footer-col > a {
+        font-size: 10px;
+    }
+
+
+    /* REDES */
+
+    .footer-social h4 {
+        font-size: 16px;
+
+        letter-spacing: 1.5px;
     }
 
     .social-buttons a {
-        width: 44px;
+        width: 42px;
+        height: 42px;
 
-        height: 44px;
+        flex-basis: 42px;
     }
 
-    .footer-premium .footer-bottom-premium
+    .footer-social .footer-whatsapp {
+        max-width: 100%;
+    }
+
+
+    /* PARTE INFERIOR */
+
+    .footer-bottom-content {
+        width: calc(100% - 24px);
+    }
+
+    .footer-premium
+    .footer-bottom-premium
     .footer-copyright p,
-    .footer-premium .footer-legal a {
-        font-size: 9px;
+    .footer-premium
+    .footer-legal a {
+        font-size: 8px;
     }
 }
