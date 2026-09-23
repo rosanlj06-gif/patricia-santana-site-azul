@@ -1,388 +1,1096 @@
 /* =========================================================
-   RODAPÉ ISOLADO — APÓSTOLA PATRICIA SANTANA
-   Desktop + notebook + tablet + celular.
+   RODAPÉ — APÓSTOLA PATRICIA SANTANA
+   DESKTOP / NOTEBOOK / TABLET / CELULAR
 ========================================================= */
 
-.site-footer-v2,
-.site-footer-v2 * {
+.site-footer,
+.site-footer * {
     box-sizing: border-box;
 }
 
-.site-footer-v2 {
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.site-footer {
     width: 100%;
-    overflow: hidden;
-    color: #0b3158;
+
+    margin: 0;
+
     font-family: "Montserrat", Arial, sans-serif;
+
+    color: #063b68;
+
+    overflow: hidden;
 }
 
-.site-footer-v2__metal {
+
+/* =========================================================
+   PARTE PRINCIPAL — PRATA
+========================================================= */
+
+.site-footer__main {
     position: relative;
+
+    width: 100%;
+
     padding: 48px 0 40px;
-    border-top: 3px solid #0b6fae;
-    border-bottom: 2px solid #0b6fae;
+
+    border-top: 2px solid #0a8dce;
+
     background:
-        radial-gradient(circle at 48% 38%, rgba(255,255,255,.96) 0%, rgba(255,255,255,.46) 25%, transparent 50%),
-        linear-gradient(105deg, #c8d2d8 0%, #f9fafb 15%, #b9c5cc 32%, #f4f6f7 51%, #aebbc4 69%, #eef2f4 86%, #b9c6cd 100%);
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.95),
+            transparent 34%
+        ),
+        linear-gradient(
+            100deg,
+            #f4f7f9 0%,
+            #e8eff3 38%,
+            #f7f9fa 55%,
+            #d9e4ea 100%
+        );
 }
 
-.site-footer-v2__metal::before {
+
+/* textura muito leve */
+
+.site-footer__main::after {
     content: "";
+
     position: absolute;
     inset: 0;
+
     pointer-events: none;
-    opacity: .35;
-    background:
+
+    opacity: 0.16;
+
+    background-image:
         repeating-linear-gradient(
             0deg,
-            rgba(255,255,255,.12) 0,
-            rgba(255,255,255,.12) 1px,
-            rgba(20,54,76,.035) 2px,
+            rgba(5, 68, 109, 0.07) 0,
+            rgba(5, 68, 109, 0.07) 1px,
+            transparent 1px,
             transparent 3px
         );
 }
 
-.site-footer-v2__grid {
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.site-footer__container {
     position: relative;
     z-index: 2;
-    width: min(1180px, calc(100% - 48px));
+
+    width: calc(100% - 48px);
+    max-width: 1200px;
+
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: .85fr 1.65fr .85fr 1fr;
+
+    grid-template-columns:
+        190px
+        minmax(360px, 1fr)
+        190px
+        260px;
+
     align-items: stretch;
+
+    gap: 0;
 }
 
-.site-footer-v2__column {
-    padding: 12px 34px;
-    border-right: 1px solid rgba(8, 63, 107, .42);
+
+/* =========================================================
+   COLUNAS
+========================================================= */
+
+.site-footer__column {
+    min-width: 0;
 }
 
-.site-footer-v2__nav {
-    padding-left: 0;
-}
 
-.site-footer-v2__social {
-    padding-right: 0;
-    border-right: 0;
-}
-
-.site-footer-v2__column h4 {
+.site-footer__column h4 {
     margin: 0;
-    color: #073d72;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
+
+    color: #063b68;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
     font-weight: 600;
-    letter-spacing: 2.5px;
+
+    line-height: 1;
+
+    letter-spacing: 3px;
 }
 
-.site-footer-v2__title-line {
+
+/* linha abaixo dos títulos */
+
+.site-footer__title-line {
     display: block;
-    width: 48px;
+
+    width: 50px;
     height: 3px;
-    margin: 14px 0 18px;
-    background: linear-gradient(90deg, #087fc6, #073d72);
+
+    margin: 15px 0 17px;
+
+    background: #087dbb;
 }
 
-.site-footer-v2__column > a:not(.site-footer-v2__whatsapp) {
+
+/* =========================================================
+   LINKS DAS COLUNAS
+========================================================= */
+
+.site-footer__column nav {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+}
+
+
+.site-footer__column nav a {
     display: block;
-    width: fit-content;
-    margin: 9px 0;
-    color: #244f70;
-    font-size: 11px;
-    font-weight: 600;
+
+    padding: 6px 0;
+
+    color: #174d70;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.25;
+
     text-decoration: none;
-    transition: color .2s ease, transform .2s ease;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.site-footer-v2__column > a:not(.site-footer-v2__whatsapp):hover {
-    color: #0786d1;
+
+.site-footer__column nav a:hover {
+    color: #078bd3;
+
     transform: translateX(3px);
 }
 
-.site-footer-v2__brand {
-    padding: 0 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-right: 1px solid rgba(8, 63, 107, .42);
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+.site-footer__navigation {
+    padding: 14px 35px 10px 0;
 }
 
-.site-footer-v2__brand img {
-    width: min(320px, 100%);
-    max-height: 120px;
+
+/* =========================================================
+   LOGO CENTRAL
+========================================================= */
+
+.site-footer__brand {
+    min-height: 255px;
+
+    padding: 24px 38px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-left: 1px solid rgba(7, 80, 126, 0.48);
+    border-right: 1px solid rgba(7, 80, 126, 0.48);
+}
+
+
+.site-footer__brand img {
+    display: block;
+
+    width: 100%;
+    max-width: 365px;
+
+    height: auto;
+
+    margin: 0 auto 17px;
+
     object-fit: contain;
 }
 
-.site-footer-v2__pillars {
-    margin: 18px 0 0;
-    color: #073d72;
-    font-size: 8px;
-    font-weight: 800;
-    line-height: 1.7;
-    letter-spacing: 1.7px;
-}
 
-.site-footer-v2__pillars span {
-    color: #078bd3;
-}
+/* ENSINO • LIBERTAÇÃO... */
 
-.site-footer-v2__purpose {
-    margin: 8px 0 0;
-    color: #587185;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 17px;
-    font-style: italic;
-}
-
-.site-footer-v2__social-icons {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.site-footer-v2__social-icons a {
-    width: 34px;
-    height: 34px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(7, 63, 120, .35);
-    border-radius: 50%;
-    color: #073f78;
-    background: rgba(255,255,255,.48);
-    font-size: 10px;
-    font-weight: 800;
-    text-decoration: none;
-}
-
-.site-footer-v2__social p {
-    margin: 0 0 16px;
-    color: #587185;
-    font-size: 10px;
-    line-height: 1.6;
-}
-
-.site-footer-v2__whatsapp {
-    min-height: 42px;
-    padding: 8px 12px;
-    display: flex !important;
-    align-items: center;
-    gap: 9px;
-    border-radius: 6px;
-    color: #ffffff !important;
-    background: linear-gradient(135deg, #056cae, #0b8bd3);
-    text-decoration: none;
-    box-shadow: 0 8px 18px rgba(5, 105, 170, .18);
-}
-
-.site-footer-v2__whatsapp strong {
-    flex: 1;
-    font-size: 9px;
-    letter-spacing: .6px;
-}
-
-.site-footer-v2__wa-icon {
-    width: 21px;
-    height: 21px;
-    display: inline-flex;
-}
-
-.site-footer-v2__wa-icon svg {
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
-}
-
-.site-footer-v2__bottom {
-    background: #052f5f;
-    color: #dceaf3;
-}
-
-.site-footer-v2__bottom-inner {
-    width: min(1180px, calc(100% - 48px));
-    min-height: 72px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.site-footer-v2__bottom p {
+.site-footer__pillars {
     margin: 0;
-    font-size: 9px;
-    line-height: 1.5;
-}
 
-.site-footer-v2__diamond {
-    color: #49baf4;
-    font-size: 17px;
-}
+    color: #003f73;
 
-.site-footer-v2__legal {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+    font-size: 12px;
+    font-weight: 800;
 
-.site-footer-v2__legal a {
-    color: #dceaf3;
-    font-size: 9px;
-    text-decoration: none;
-}
+    line-height: 1.4;
 
-.site-footer-v2__legal i {
-    width: 1px;
-    height: 12px;
-    background: rgba(255,255,255,.35);
-}
+    letter-spacing: 1.6px;
 
-.site-footer-v2__credit {
-    padding-left: 18px;
-    border-left: 1px solid rgba(255,255,255,.25);
     white-space: nowrap;
 }
 
-.site-footer-v2__credit strong {
-    color: #ffffff;
+
+.site-footer__pillars span {
+    margin: 0 6px;
+
+    color: #078bd3;
 }
 
-/* TABLET */
-@media (max-width: 980px) {
-    .site-footer-v2__grid {
-        grid-template-columns: 1fr 1.45fr 1fr;
+
+/* propósito */
+
+.site-footer__purpose {
+    margin: 14px 0 0;
+
+    color: #55748a;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   SEMINÁRIOS
+========================================================= */
+
+.site-footer__seminars {
+    padding: 14px 35px;
+}
+
+
+/* =========================================================
+   REDES SOCIAIS
+========================================================= */
+
+.site-footer__social {
+    padding: 14px 0 10px 35px;
+
+    border-left: 1px solid rgba(7, 80, 126, 0.48);
+}
+
+
+/* =========================================================
+   ÍCONES SOCIAIS
+========================================================= */
+
+.site-footer__social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 2px 0 21px;
+}
+
+
+.site-footer__social-icons a {
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid rgba(72, 166, 216, 0.5);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #087fbd,
+            #04568d
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 10px rgba(2, 57, 95, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.site-footer__social-icons a:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(2, 57, 95, 0.30);
+}
+
+
+/* =========================================================
+   TEXTO REDES
+========================================================= */
+
+.site-footer__social-text {
+    max-width: 245px;
+
+    margin: 0 0 22px;
+
+    color: #456a82;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   BOTÃO WHATSAPP
+========================================================= */
+
+.site-footer__whatsapp {
+    width: 230px;
+    min-height: 48px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #045d94,
+            #078bcf
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 20px rgba(3, 84, 135, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.site-footer__whatsapp:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 24px rgba(3, 84, 135, 0.28);
+}
+
+
+.site-footer__whatsapp-icon {
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 21px;
+}
+
+
+.site-footer__whatsapp-icon svg {
+    display: block;
+
+    width: 21px;
+    height: 21px;
+
+    fill: #ffffff;
+}
+
+
+.site-footer__whatsapp strong {
+    flex: 1;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.site-footer__arrow {
+    font-size: 19px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FAIXA INFERIOR
+========================================================= */
+
+.site-footer__bottom {
+    width: 100%;
+
+    border-top: 2px solid #078bd3;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(15, 117, 183, 0.72),
+            transparent 38%
+        ),
+        linear-gradient(
+            110deg,
+            #063c69 0%,
+            #07598f 45%,
+            #04335c 100%
+        );
+}
+
+
+/* =========================================================
+   CONTAINER DA FAIXA INFERIOR
+========================================================= */
+
+.site-footer__bottom-container {
+    width: calc(100% - 48px);
+    max-width: 1200px;
+
+    min-height: 88px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(310px, 1fr)
+        260px
+        minmax(260px, 1fr);
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   COPYRIGHT + SANTIAGODIGITAL
+========================================================= */
+
+.site-footer__copyright {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+}
+
+
+.site-footer__copyright p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+.site-footer__developer {
+    color: #bdeaff !important;
+}
+
+
+.site-footer__developer strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ORNAMENTO CENTRAL
+========================================================= */
+
+.site-footer__ornament {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+.site-footer__ornament span {
+    width: 100px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(174, 225, 249, 0.8)
+        );
+}
+
+
+.site-footer__ornament span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(174, 225, 249, 0.8),
+            transparent
+        );
+}
+
+
+.site-footer__ornament b {
+    color: #8bdcff;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   POLÍTICA / TERMOS
+========================================================= */
+
+.site-footer__legal {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 16px;
+}
+
+
+.site-footer__legal a {
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.site-footer__legal a:hover {
+    color: #8bdcff;
+}
+
+
+.site-footer__legal i {
+    width: 1px;
+    height: 15px;
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   NOTEBOOK — ATÉ 1200PX
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .site-footer__container {
+        width: calc(100% - 40px);
+
+        grid-template-columns:
+            170px
+            minmax(310px, 1fr)
+            170px
+            230px;
     }
 
-    .site-footer-v2__brand {
+
+    .site-footer__brand {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .site-footer__brand img {
+        max-width: 315px;
+    }
+
+
+    .site-footer__pillars {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .site-footer__seminars {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .site-footer__social {
+        padding-left: 25px;
+    }
+
+
+    .site-footer__whatsapp {
+        width: 210px;
+    }
+
+
+    .site-footer__bottom-container {
+        width: calc(100% - 40px);
+    }
+}
+
+
+/* =========================================================
+   TABLET — ATÉ 950PX
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .site-footer__main {
+        padding: 42px 0;
+    }
+
+
+    .site-footer__container {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 38px 0;
+    }
+
+
+    /* logo primeiro */
+
+    .site-footer__brand {
         grid-column: 1 / -1;
         grid-row: 1;
-        padding: 0 0 34px;
-        margin-bottom: 30px;
+
+        min-height: auto;
+
+        padding: 0 20px 35px;
+
+        border-left: 0;
         border-right: 0;
-        border-bottom: 1px solid rgba(8, 63, 107, .28);
+        border-bottom: 1px solid rgba(7, 80, 126, 0.30);
     }
 
-    .site-footer-v2__nav {
-        padding-left: 0;
+
+    .site-footer__brand img {
+        max-width: 360px;
     }
 
-    .site-footer-v2__social {
-        padding-right: 0;
-    }
-}
 
-/* CELULAR */
-@media (max-width: 680px) {
-    .site-footer-v2__metal {
-        padding: 38px 0 30px;
+    .site-footer__navigation {
+        grid-column: 1;
+        grid-row: 2;
+
+        padding: 0 35px 0 0;
     }
 
-    .site-footer-v2__grid {
-        width: calc(100% - 36px);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
+
+    .site-footer__seminars {
+        grid-column: 2;
+        grid-row: 2;
+
+        padding: 0 0 0 35px;
+
+        border-left: 1px solid rgba(7, 80, 126, 0.35);
     }
 
-    .site-footer-v2__brand {
+
+    .site-footer__social {
         grid-column: 1 / -1;
-        padding-bottom: 28px;
-        margin-bottom: 27px;
-    }
+        grid-row: 3;
 
-    .site-footer-v2__brand img {
-        width: min(290px, 92%);
-        max-height: 110px;
-    }
+        padding: 35px 0 0;
 
-    .site-footer-v2__pillars {
-        max-width: 330px;
-        font-size: 7px;
-        letter-spacing: 1.2px;
-    }
+        border-left: 0;
+        border-top: 1px solid rgba(7, 80, 126, 0.30);
 
-    .site-footer-v2__purpose {
-        font-size: 16px;
-    }
+        display: flex;
 
-    .site-footer-v2__column {
-        padding: 0 16px 26px;
-        border-right: 0;
-    }
-
-    .site-footer-v2__nav {
-        padding-left: 0;
-        border-right: 1px solid rgba(8, 63, 107, .28);
-    }
-
-    .site-footer-v2__column:nth-of-type(3) {
-        padding-right: 0;
-    }
-
-    .site-footer-v2__social {
-        grid-column: 1 / -1;
-        padding: 28px 0 0;
-        border-top: 1px solid rgba(8, 63, 107, .28);
-    }
-
-    .site-footer-v2__column h4 {
-        font-size: 15px;
-        letter-spacing: 1.8px;
-    }
-
-    .site-footer-v2__column > a:not(.site-footer-v2__whatsapp) {
-        font-size: 10px;
-    }
-
-    .site-footer-v2__social-icons {
-        margin-top: 4px;
-    }
-
-    .site-footer-v2__whatsapp {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    .site-footer-v2__bottom-inner {
-        width: calc(100% - 36px);
-        min-height: 0;
-        padding: 24px 0;
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
+
+        align-items: center;
+
         text-align: center;
     }
 
-    .site-footer-v2__legal {
-        margin-left: 0;
+
+    .site-footer__social-text {
+        max-width: 360px;
     }
 
-    .site-footer-v2__credit {
-        padding-left: 0;
-        border-left: 0;
+
+    .site-footer__bottom-container {
+        min-height: auto;
+
+        padding: 25px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        text-align: center;
+    }
+
+
+    .site-footer__copyright {
+        align-items: center;
+    }
+
+
+    .site-footer__ornament {
+        order: -1;
+    }
+
+
+    .site-footer__legal {
+        justify-content: center;
     }
 }
 
+
+/* =========================================================
+   CELULAR — ATÉ 600PX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-footer__main {
+        padding: 38px 0 34px;
+    }
+
+
+    .site-footer__container {
+        width: calc(100% - 32px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    /* =====================================================
+       LOGO
+    ====================================================== */
+
+    .site-footer__brand {
+        order: 1;
+
+        width: 100%;
+
+        padding: 0 0 30px;
+
+        border: 0;
+        border-bottom: 1px solid rgba(7, 80, 126, 0.28);
+    }
+
+
+    .site-footer__brand img {
+        width: 100%;
+        max-width: 330px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .site-footer__pillars {
+        font-size: 9px;
+
+        letter-spacing: 0.7px;
+
+        white-space: normal;
+    }
+
+
+    .site-footer__pillars span {
+        margin: 0 4px;
+    }
+
+
+    .site-footer__purpose {
+        margin-top: 11px;
+
+        font-size: 18px;
+    }
+
+
+    /* =====================================================
+       NAVEGAÇÃO
+    ====================================================== */
+
+    .site-footer__navigation {
+        order: 2;
+
+        width: 100%;
+
+        padding: 28px 0;
+
+        border-bottom: 1px solid rgba(7, 80, 126, 0.25);
+    }
+
+
+    /* =====================================================
+       SEMINÁRIOS
+    ====================================================== */
+
+    .site-footer__seminars {
+        order: 3;
+
+        width: 100%;
+
+        padding: 28px 0;
+
+        border: 0;
+        border-bottom: 1px solid rgba(7, 80, 126, 0.25);
+    }
+
+
+    /* =====================================================
+       REDES
+    ====================================================== */
+
+    .site-footer__social {
+        order: 4;
+
+        width: 100%;
+
+        padding: 28px 0 0;
+
+        border: 0;
+
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .site-footer__column h4 {
+        font-size: 22px;
+    }
+
+
+    .site-footer__title-line {
+        margin-top: 13px;
+        margin-bottom: 14px;
+    }
+
+
+    .site-footer__column nav a {
+        padding: 6px 0;
+
+        font-size: 12px;
+    }
+
+
+    .site-footer__social-icons {
+        margin-top: 2px;
+        margin-bottom: 19px;
+    }
+
+
+    .site-footer__social-icons a {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .site-footer__social-text {
+        max-width: 300px;
+
+        font-size: 11px;
+    }
+
+
+    .site-footer__whatsapp {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+    /* =====================================================
+       PARTE INFERIOR
+    ====================================================== */
+
+    .site-footer__bottom-container {
+        width: calc(100% - 32px);
+
+        padding: 24px 0 27px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 14px;
+    }
+
+
+    .site-footer__ornament {
+        order: 1;
+    }
+
+
+    .site-footer__copyright {
+        order: 2;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .site-footer__legal {
+        order: 3;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .site-footer__copyright p {
+        font-size: 8.5px;
+    }
+
+
+    .site-footer__developer {
+        margin-top: 3px !important;
+    }
+
+
+    .site-footer__legal a {
+        font-size: 8.5px;
+    }
+
+
+    .site-footer__ornament span {
+        max-width: 90px;
+    }
+
+
+    .site-footer__ornament b {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO — ATÉ 400PX
+========================================================= */
+
 @media (max-width: 400px) {
-    .site-footer-v2__grid {
+
+    .site-footer__container {
         width: calc(100% - 28px);
-        grid-template-columns: 1fr;
     }
 
-    .site-footer-v2__column,
-    .site-footer-v2__nav,
-    .site-footer-v2__column:nth-of-type(3) {
-        padding: 0 0 25px;
-        border-right: 0;
+
+    .site-footer__brand img {
+        max-width: 300px;
     }
 
-    .site-footer-v2__column:nth-of-type(3) {
-        padding-top: 25px;
-        border-top: 1px solid rgba(8, 63, 107, .25);
+
+    .site-footer__pillars {
+        font-size: 8px;
+
+        line-height: 1.6;
     }
 
-    .site-footer-v2__social {
-        padding-top: 25px;
+
+    .site-footer__purpose {
+        font-size: 17px;
+    }
+
+
+    .site-footer__column h4 {
+        font-size: 21px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .site-footer__bottom-container {
+        width: calc(100% - 28px);
+    }
+
+
+    .site-footer__legal {
+        gap: 11px;
+    }
+
+
+    .site-footer__ornament span {
+        max-width: 70px;
     }
 }
