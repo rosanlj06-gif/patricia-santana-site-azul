@@ -36,7 +36,10 @@
 
 
 /* =========================================================
-   CONTAINER
+   CONTAINER DESKTOP
+
+   3 ÁREAS:
+   LOGO | MENU | BOTÃO
 ========================================================= */
 
 .site-header-v2__inner {
@@ -47,10 +50,16 @@
 
     margin: 0 auto;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns:
+        350px
+        1fr
+        112px;
+
     align-items: center;
 
-    gap: 20px;
+    column-gap: 30px;
 }
 
 
@@ -64,7 +73,7 @@
 
     gap: 13px;
 
-    flex: 0 0 auto;
+    min-width: 0;
 
     text-decoration: none;
 }
@@ -162,6 +171,7 @@
     margin-top: 8px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -169,13 +179,14 @@
 }
 
 
-/* remove qualquer linha antiga */
+/* LINHAS ANTIGAS */
+
 .site-header-v2__ministry-row i {
     display: none;
 }
 
 
-/* TEXTO MINISTÉRIO */
+/* TEXTO */
 
 .site-header-v2__ministry-row small {
     display: block;
@@ -187,9 +198,7 @@
         Arial,
         sans-serif;
 
-    /* AUMENTADO */
     font-size: 7px;
-
     font-weight: 800;
 
     line-height: 1;
@@ -228,21 +237,20 @@
 ========================================================= */
 
 .site-header-v2__nav {
-    /*
-       NÃO usamos margin-left:auto.
-       Era isso que jogava o menu muito para a direita.
-    */
+    width: 100%;
 
-    margin-left: 100px;
+    margin: 0;
 
     display: flex;
+
     align-items: center;
+    justify-content: center;
 
-    gap: 24px;
-
-    flex: 0 0 auto;
+    gap: 25px;
 }
 
+
+/* LINKS */
 
 .site-header-v2__nav a {
     position: relative;
@@ -256,9 +264,7 @@
         Arial,
         sans-serif;
 
-    /* AUMENTADO */
     font-size: 10px;
-
     font-weight: 800;
 
     line-height: 1;
@@ -273,7 +279,7 @@
 
 
 /* =========================================================
-   INDICADOR DO MENU
+   INDICADOR AZUL DO MENU
 ========================================================= */
 
 .site-header-v2__nav a::after {
@@ -293,7 +299,8 @@
 
     transform: translateX(-50%);
 
-    transition: width 0.2s ease;
+    transition:
+        width 0.2s ease;
 }
 
 
@@ -314,13 +321,14 @@
 ========================================================= */
 
 .site-header-v2__courses {
+    width: 112px;
     min-width: 112px;
 
-    margin-left: auto;
+    margin: 0;
 
     padding: 12px 13px;
 
-    flex: 0 0 auto;
+    justify-self: end;
 
     border-radius: 5px;
 
@@ -349,7 +357,8 @@
     text-decoration: none;
 
     box-shadow:
-        0 8px 20px rgba(5, 105, 170, 0.20);
+        0 8px 20px
+        rgba(5, 105, 170, 0.20);
 
     transition:
         transform 0.2s ease,
@@ -361,7 +370,8 @@
     transform: translateY(-2px);
 
     box-shadow:
-        0 12px 25px rgba(5, 105, 170, 0.28);
+        0 12px 25px
+        rgba(5, 105, 170, 0.28);
 }
 
 
@@ -378,8 +388,6 @@
     margin-left: auto;
 
     padding: 8px;
-
-    flex: 0 0 44px;
 
     border: 0;
 
@@ -418,7 +426,12 @@
 
         min-height: 94px;
 
-        gap: 14px;
+        grid-template-columns:
+            300px
+            1fr
+            100px;
+
+        column-gap: 18px;
     }
 
 
@@ -470,8 +483,6 @@
 
 
     .site-header-v2__nav {
-        margin-left: 18px;
-
         gap: 16px;
     }
 
@@ -489,6 +500,7 @@
 
 
     .site-header-v2__courses {
+        width: 100px;
         min-width: 100px;
 
         padding: 11px 9px;
@@ -506,6 +518,12 @@
 
     .site-header-v2__inner {
         min-height: 86px;
+
+        grid-template-columns:
+            270px
+            1fr;
+
+        column-gap: 16px;
     }
 
 
@@ -550,8 +568,6 @@
 
 
     .site-header-v2__nav {
-        margin-left: 12px;
-
         gap: 12px;
     }
 
@@ -569,6 +585,7 @@
 
 /* =========================================================
    TABLET / CELULAR
+   VOLTA PARA FLEX E ATIVA O MENU HAMBÚRGUER
 ========================================================= */
 
 @media (max-width: 850px) {
@@ -583,9 +600,15 @@
 
         margin: 0 auto;
 
+        display: flex;
+
+        align-items: center;
+
         gap: 0;
     }
 
+
+    /* MARCA */
 
     .site-header-v2__brand {
         max-width: calc(100% - 50px);
@@ -594,18 +617,25 @@
     }
 
 
+    /* LOGO */
+
     .site-header-v2__symbol {
         width: 72px;
         height: 68px;
     }
 
 
+    /* BLOCO DO NOME */
+
     .site-header-v2__wordmark {
         width: 220px;
 
-        max-width: calc(100vw - 135px);
+        max-width:
+            calc(100vw - 135px);
     }
 
+
+    /* APÓSTOLA */
 
     .site-header-v2__apostola {
         display: block !important;
@@ -618,6 +648,8 @@
     }
 
 
+    /* PATRICIA */
+
     .site-header-v2__wordmark strong {
         display: block;
 
@@ -626,6 +658,8 @@
         line-height: 1;
     }
 
+
+    /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
         display: flex !important;
@@ -652,16 +686,22 @@
     }
 
 
-    /* HAMBÚRGUER */
+    /* =====================================================
+       BOTÃO HAMBÚRGUER
+    ===================================================== */
 
     .site-header-v2__toggle {
         display: block;
+
+        flex: 0 0 44px;
 
         margin-left: auto;
     }
 
 
-    /* MENU MOBILE */
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
 
     .site-header-v2__nav {
         position: absolute;
@@ -673,25 +713,35 @@
 
         z-index: 9999;
 
+        width: auto;
+
         margin: 0;
 
-        padding: 10px 20px 18px;
+        padding:
+            10px
+            20px
+            18px;
 
         display: none;
 
         flex-direction: column;
 
         align-items: stretch;
+        justify-content: flex-start;
 
         gap: 0;
 
         background: #ffffff;
 
-        border-top: 1px solid #e2edf4;
-        border-bottom: 1px solid #cfe4f0;
+        border-top:
+            1px solid #e2edf4;
+
+        border-bottom:
+            1px solid #cfe4f0;
 
         box-shadow:
-            0 15px 30px rgba(4, 46, 87, 0.14);
+            0 15px 30px
+            rgba(4, 46, 87, 0.14);
     }
 
 
@@ -703,11 +753,11 @@
     .site-header-v2__nav a {
         padding: 16px 4px;
 
-        border-bottom: 1px solid #e8eff4;
+        border-bottom:
+            1px solid #e8eff4;
 
         color: #07335f;
 
-        /* MAIOR TAMBÉM NO MENU MOBILE */
         font-size: 12px;
 
         text-align: left;
@@ -724,12 +774,16 @@
     }
 
 
+    /* BOTÃO CURSOS SOME */
+
     .site-header-v2__courses {
         display: none;
     }
 
 
-    /* X DO MENU */
+    /* =====================================================
+       X QUANDO O MENU ABRIR
+    ===================================================== */
 
     .site-header-v2__toggle.is-open span:nth-child(1) {
         transform:
@@ -780,7 +834,8 @@
     .site-header-v2__wordmark {
         width: 195px;
 
-        max-width: calc(100vw - 120px);
+        max-width:
+            calc(100vw - 120px);
     }
 
 
@@ -809,8 +864,6 @@
     }
 
 
-    /* MINISTÉRIO UM POUCO MAIOR */
-
     .site-header-v2__ministry-row small {
         font-size: 4.8px;
 
@@ -829,7 +882,7 @@
         width: 40px;
         height: 40px;
 
-        flex-basis: 40px;
+        flex: 0 0 40px;
 
         padding: 7px;
     }
@@ -874,7 +927,8 @@
     .site-header-v2__wordmark {
         width: 175px;
 
-        max-width: calc(100vw - 108px);
+        max-width:
+            calc(100vw - 108px);
     }
 
 
@@ -923,7 +977,8 @@
     .site-header-v2__wordmark {
         width: 158px;
 
-        max-width: calc(100vw - 102px);
+        max-width:
+            calc(100vw - 102px);
     }
 
 
