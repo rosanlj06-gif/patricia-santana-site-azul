@@ -1,207 +1,1052 @@
-<!-- =========================================================
-     RODAPÉ — APÓSTOLA PATRICIA SANTANA
-========================================================= -->
+/* =========================================================
+   RODAPÉ — APÓSTOLA PATRICIA SANTANA
+   DESKTOP / NOTEBOOK / TABLET / CELULAR
+========================================================= */
 
-<footer class="footer-premium">
+.site-footer,
+.site-footer * {
+    box-sizing: border-box;
+}
 
-    <!-- =====================================================
-         PARTE PRINCIPAL — PRATA METÁLICO
-    ====================================================== -->
+.site-footer {
+    width: 100%;
+    margin: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #063b68;
+    overflow: hidden;
+}
 
-    <div class="footer-metal">
 
-        <div class="wrap footer-premium-grid">
+/* =========================================================
+   ÁREA PRINCIPAL
+========================================================= */
 
-            <!-- =================================================
-                 NAVEGAÇÃO
-            ================================================== -->
+.site-footer__main {
+    position: relative;
+    width: 100%;
 
-            <div class="footer-col footer-nav">
+    padding: 42px 0 40px;
 
-                <h4>NAVEGAÇÃO</h4>
+    /*
+       BARRA SUPERIOR IGUAL AO MODELO:
+       azul-marinho + linha azul clara
+    */
+    border-top: 7px solid #00365f;
 
-                <span class="footer-title-line"></span>
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.75) 35%,
+            transparent 62%
+        ),
+        linear-gradient(
+            100deg,
+            #eef4f7 0%,
+            #dce7ec 36%,
+            #f8fafb 55%,
+            #d8e4e9 100%
+        );
+}
 
-                <a href="index.html#inicio">Início</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="index.html#cursos">Cursos</a>
-                <a href="agenda.html">Agenda</a>
-                <a href="index.html#contato">Contato</a>
-                <a href="ofertas.html">Dízimos e Ofertas</a>
 
-            </div>
+/* linha azul clara abaixo da barra */
 
+.site-footer__main::before {
+    content: "";
 
-            <!-- =================================================
-                 LOGO / IDENTIDADE
-            ================================================== -->
+    position: absolute;
 
-            <div class="footer-logo-area">
+    top: 0;
+    left: 0;
 
-                <img
-                    src="logo-rodape.png"
-                    alt="Apóstola Patricia Santana"
-                >
+    width: 100%;
+    height: 2px;
 
-                <p class="footer-pillars">
-                    ENSINO
-                    <span>•</span>
-                    LIBERTAÇÃO
-                    <span>•</span>
-                    CURA
-                    <span>•</span>
-                    RESTAURAÇÃO
-                </p>
+    background: #00a4e6;
 
-                <p class="footer-purpose">
-                    Equipando vidas para um propósito maior.
-                </p>
+    z-index: 3;
+}
 
-            </div>
 
+/* textura metálica */
 
-            <!-- =================================================
-                 SEMINÁRIOS
-            ================================================== -->
+.site-footer__main::after {
+    content: "";
 
-            <div class="footer-col footer-ministerio">
+    position: absolute;
+    inset: 0;
 
-                <h4>SEMINÁRIOS</h4>
+    pointer-events: none;
 
-                <span class="footer-title-line"></span>
+    opacity: 0.12;
 
-                <a href="index.html#cursos">Cura Interior</a>
-                <a href="index.html#cursos">Trono de Lilith</a>
-                <a href="index.html#cursos">Trono de Mamon</a>
-                <a href="index.html#cursos">Batalha Espiritual</a>
-                <a href="index.html#cursos">Trono de Belial</a>
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(5, 68, 109, 0.07) 0,
+            rgba(5, 68, 109, 0.07) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+}
 
-            </div>
 
+/* =========================================================
+   CONTAINER
+========================================================= */
 
-            <!-- =================================================
-                 REDES SOCIAIS
-            ================================================== -->
+.site-footer__container {
+    position: relative;
+    z-index: 2;
 
-            <div class="footer-col footer-social">
+    width: calc(100% - 80px);
+    max-width: 1285px;
 
-                <h4>SIGA NAS REDES</h4>
+    margin: 0 auto;
 
-                <span class="footer-title-line"></span>
+    display: grid;
 
-                <div class="social-buttons">
+    grid-template-columns:
+        205px
+        minmax(480px, 1fr)
+        205px
+        265px;
 
-                    <a
-                        href="https://www.instagram.com/seminarios_ap_patriciasantana/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram"
-                    >
-                        IG
-                    </a>
+    align-items: stretch;
 
-                    <a
-                        href="#"
-                        aria-label="YouTube"
-                    >
-                        ▶
-                    </a>
+    gap: 0;
+}
 
-                    <a
-                        href="#"
-                        aria-label="Facebook"
-                    >
-                        f
-                    </a>
 
-                </div>
+/* =========================================================
+   TÍTULOS
+========================================================= */
 
-                <p>
-                    Receba conteúdos, novidades e
-                    mensagens de edificação.
-                </p>
+.site-footer__column {
+    min-width: 0;
+}
 
-                <a
-                    class="footer-whatsapp"
-                    href="https://wa.me/5511987663744"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+.site-footer__column h4 {
+    margin: 0;
 
-                    <span class="wa-icon" aria-hidden="true">
-                        ◉
-                    </span>
+    color: #003c6c;
 
-                    <strong>
-                        FALE CONOSCO
-                    </strong>
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
 
-                    <span class="wa-arrow">
-                        →
-                    </span>
+    font-size: 24px;
+    font-weight: 600;
 
-                </a>
+    line-height: 1;
 
-            </div>
+    letter-spacing: 3px;
 
-        </div>
+    white-space: nowrap;
+}
 
-    </div>
+.site-footer__title-line {
+    display: block;
 
+    width: 50px;
+    height: 3px;
 
-    <!-- =====================================================
-         FAIXA AZUL INFERIOR
-    ====================================================== -->
+    margin: 15px 0 17px;
 
-    <div class="footer-bottom-premium">
+    background: #008bd0;
+}
 
-        <div class="wrap footer-bottom-content">
 
-            <!-- COPYRIGHT -->
+/* =========================================================
+   LINKS
+========================================================= */
 
-            <div class="footer-copyright">
+.site-footer__column nav {
+    display: flex;
 
-                <p>
-                    © 2026 Apóstola Patricia Santana.
-                    Todos os direitos reservados.
-                </p>
+    flex-direction: column;
 
-                <p class="footer-developer">
-                    Desenvolvido por
-                    <strong>SantiagoDigital</strong>
-                </p>
+    align-items: flex-start;
+}
 
-            </div>
+.site-footer__column nav a {
+    display: block;
 
+    padding: 6px 0;
 
-            <!-- ORNAMENTO CENTRAL -->
+    color: #064d7a;
 
-            <div
-                class="footer-diamond"
-                aria-hidden="true"
-            >
-                ◇
-            </div>
+    font-size: 12px;
+    font-weight: 400;
 
+    line-height: 1.25;
 
-            <!-- LINKS -->
+    text-decoration: none;
 
-            <div class="footer-legal">
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
 
-                <a href="#">
-                    Política de Privacidade
-                </a>
+.site-footer__column nav a:hover {
+    color: #008fd3;
 
-                <i></i>
+    transform: translateX(3px);
+}
 
-                <a href="#">
-                    Termos de Uso
-                </a>
 
-            </div>
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
 
-        </div>
+.site-footer__navigation {
+    padding: 10px 35px 10px 0;
+}
 
-    </div>
 
-</footer>
+/* =========================================================
+   LOGO CENTRAL
+========================================================= */
+
+.site-footer__brand {
+    min-height: 245px;
+
+    padding: 18px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-left:
+        1px solid rgba(4, 78, 125, 0.48);
+
+    border-right:
+        1px solid rgba(4, 78, 125, 0.48);
+}
+
+.site-footer__brand img {
+    display: block;
+
+    width: 100%;
+    max-width: 395px;
+
+    height: auto;
+
+    margin: 0 auto 15px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   PILARES
+========================================================= */
+
+.site-footer__pillars {
+    margin: 0;
+
+    color: #00477b;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    letter-spacing: 1.6px;
+
+    white-space: nowrap;
+}
+
+.site-footer__pillars span {
+    margin: 0 6px;
+
+    color: #008fd3;
+}
+
+
+/* =========================================================
+   PROPÓSITO
+========================================================= */
+
+.site-footer__purpose {
+    margin: 13px 0 0;
+
+    color: #526f82;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   SEMINÁRIOS
+========================================================= */
+
+.site-footer__seminars {
+    padding: 10px 35px;
+}
+
+
+/* =========================================================
+   REDES SOCIAIS
+========================================================= */
+
+.site-footer__social {
+    padding: 10px 0 10px 35px;
+
+    border-left:
+        1px solid rgba(4, 78, 125, 0.48);
+}
+
+
+/* =========================================================
+   ÍCONES
+========================================================= */
+
+.site-footer__social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 2px 0 20px;
+}
+
+.site-footer__social-icons a {
+    width: 47px;
+    height: 47px;
+
+    flex: 0 0 47px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        2px solid rgba(42, 158, 214, 0.65);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #087db7 0%,
+            #0069a4 48%,
+            #034f80 100%
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 3px 8px rgba(0, 52, 88, 0.28),
+        inset 0 1px 2px rgba(255, 255, 255, 0.30);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.site-footer__social-icons a:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(0, 52, 88, 0.32);
+}
+
+
+/* =========================================================
+   TEXTO REDES
+========================================================= */
+
+.site-footer__social-text {
+    max-width: 250px;
+
+    margin: 0 0 20px;
+
+    color: #3f6882;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   BOTÃO FALE CONOSCO
+========================================================= */
+
+.site-footer__whatsapp {
+    width: 230px;
+    min-height: 48px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 28px;
+
+    /*
+       AZUL IGUAL AO MODELO:
+       não tão claro/ciano
+    */
+    background:
+        linear-gradient(
+            90deg,
+            #00689f 0%,
+            #007cb9 52%,
+            #0089c9 100%
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 12px rgba(0, 77, 125, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.site-footer__whatsapp:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 77, 125, 0.28);
+}
+
+.site-footer__whatsapp-icon {
+    width: 21px;
+    height: 21px;
+
+    flex: 0 0 21px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer__whatsapp-icon svg {
+    display: block;
+
+    width: 21px;
+    height: 21px;
+
+    fill: #ffffff;
+}
+
+.site-footer__whatsapp strong {
+    flex: 1;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.site-footer__arrow {
+    font-size: 19px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FAIXA INFERIOR
+========================================================= */
+
+.site-footer__bottom {
+    width: 100%;
+
+    border-top: 2px solid #008fd3;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(13, 108, 170, 0.70),
+            transparent 38%
+        ),
+        linear-gradient(
+            110deg,
+            #03365f 0%,
+            #07588e 48%,
+            #032e55 100%
+        );
+}
+
+
+/* =========================================================
+   CONTAINER INFERIOR
+========================================================= */
+
+.site-footer__bottom-container {
+    width: calc(100% - 80px);
+    max-width: 1285px;
+
+    min-height: 88px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, 1fr)
+        280px
+        minmax(280px, 1fr);
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   COPYRIGHT / SANTIAGODIGITAL
+========================================================= */
+
+.site-footer__copyright {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+}
+
+.site-footer__copyright p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+.site-footer__developer {
+    color: #bce8fb !important;
+}
+
+.site-footer__developer strong {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LOSANGO
+========================================================= */
+
+.site-footer__ornament {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+}
+
+.site-footer__ornament span {
+    width: 100px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(174, 225, 249, 0.8)
+        );
+}
+
+.site-footer__ornament span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(174, 225, 249, 0.8),
+            transparent
+        );
+}
+
+.site-footer__ornament b {
+    color: #8bdcff;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LINKS LEGAIS
+========================================================= */
+
+.site-footer__legal {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 16px;
+}
+
+.site-footer__legal a {
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+}
+
+.site-footer__legal a:hover {
+    color: #8bdcff;
+}
+
+.site-footer__legal i {
+    width: 1px;
+    height: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   NOTEBOOK — ATÉ 1250PX
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .site-footer__container {
+        width: calc(100% - 50px);
+
+        grid-template-columns:
+            180px
+            minmax(330px, 1fr)
+            180px
+            245px;
+    }
+
+    .site-footer__brand {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .site-footer__brand img {
+        max-width: 340px;
+    }
+
+    .site-footer__pillars {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .site-footer__seminars {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .site-footer__social {
+        padding-left: 25px;
+    }
+
+    .site-footer__column h4 {
+        font-size: 22px;
+        letter-spacing: 2.4px;
+    }
+
+    .site-footer__whatsapp {
+        width: 215px;
+    }
+
+    .site-footer__bottom-container {
+        width: calc(100% - 50px);
+    }
+}
+
+
+/* =========================================================
+   TABLET — ATÉ 950PX
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .site-footer__main {
+        padding: 40px 0;
+    }
+
+    .site-footer__container {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 36px 0;
+    }
+
+    .site-footer__brand {
+        grid-column: 1 / -1;
+        grid-row: 1;
+
+        min-height: auto;
+
+        padding: 0 20px 32px;
+
+        border-left: 0;
+        border-right: 0;
+
+        border-bottom:
+            1px solid rgba(4, 74, 120, 0.35);
+    }
+
+    .site-footer__brand img {
+        max-width: 380px;
+    }
+
+    .site-footer__navigation {
+        grid-column: 1;
+        grid-row: 2;
+
+        padding: 0 35px 0 0;
+    }
+
+    .site-footer__seminars {
+        grid-column: 2;
+        grid-row: 2;
+
+        padding: 0 0 0 35px;
+
+        border-left:
+            1px solid rgba(4, 74, 120, 0.40);
+    }
+
+    .site-footer__social {
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+        padding: 34px 0 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(4, 74, 120, 0.35);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .site-footer__social-text {
+        max-width: 360px;
+    }
+
+    .site-footer__bottom-container {
+        min-height: auto;
+
+        padding: 24px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+        text-align: center;
+    }
+
+    .site-footer__copyright {
+        align-items: center;
+    }
+
+    .site-footer__ornament {
+        order: -1;
+    }
+
+    .site-footer__legal {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   CELULAR — ATÉ 600PX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-footer__main {
+        padding: 32px 0 30px;
+    }
+
+    .site-footer__container {
+        width: calc(100% - 36px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .site-footer__brand {
+        order: 1;
+
+        width: 100%;
+
+        padding: 0 0 28px;
+
+        border: 0;
+
+        border-bottom:
+            1px solid rgba(4, 74, 120, 0.32);
+    }
+
+    .site-footer__brand img {
+        width: 100%;
+
+        max-width: 340px;
+
+        margin-bottom: 14px;
+    }
+
+    .site-footer__pillars {
+        font-size: 9px;
+
+        letter-spacing: 0.7px;
+
+        white-space: normal;
+    }
+
+    .site-footer__pillars span {
+        margin: 0 4px;
+    }
+
+    .site-footer__purpose {
+        margin-top: 10px;
+
+        font-size: 18px;
+    }
+
+    .site-footer__navigation {
+        order: 2;
+
+        width: 100%;
+
+        padding: 27px 0;
+
+        border-bottom:
+            1px solid rgba(4, 74, 120, 0.30);
+    }
+
+    .site-footer__seminars {
+        order: 3;
+
+        width: 100%;
+
+        padding: 27px 0;
+
+        border: 0;
+
+        border-bottom:
+            1px solid rgba(4, 74, 120, 0.30);
+    }
+
+    .site-footer__social {
+        order: 4;
+
+        width: 100%;
+
+        padding: 27px 0 0;
+
+        border: 0;
+
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+    .site-footer__column h4 {
+        font-size: 22px;
+
+        letter-spacing: 2.4px;
+
+        white-space: normal;
+    }
+
+    .site-footer__title-line {
+        margin-top: 13px;
+        margin-bottom: 14px;
+    }
+
+    .site-footer__column nav a {
+        padding: 6px 0;
+
+        font-size: 12px;
+    }
+
+    .site-footer__social-icons {
+        margin-top: 2px;
+        margin-bottom: 18px;
+    }
+
+    .site-footer__social-icons a {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+    }
+
+    .site-footer__social-text {
+        max-width: 310px;
+
+        font-size: 11px;
+    }
+
+    .site-footer__whatsapp {
+        width: 100%;
+
+        max-width: 310px;
+    }
+
+    .site-footer__bottom-container {
+        width: calc(100% - 36px);
+
+        padding: 23px 0 26px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 13px;
+    }
+
+    .site-footer__ornament {
+        order: 1;
+    }
+
+    .site-footer__copyright {
+        order: 2;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .site-footer__legal {
+        order: 3;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .site-footer__copyright p {
+        font-size: 9px;
+    }
+
+    .site-footer__developer {
+        margin-top: 3px !important;
+    }
+
+    .site-footer__legal a {
+        font-size: 9px;
+    }
+
+    .site-footer__ornament span {
+        max-width: 90px;
+    }
+
+    .site-footer__ornament b {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO — ATÉ 400PX
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .site-footer__container {
+        width: calc(100% - 28px);
+    }
+
+    .site-footer__brand img {
+        max-width: 300px;
+    }
+
+    .site-footer__pillars {
+        font-size: 8px;
+
+        line-height: 1.6;
+    }
+
+    .site-footer__purpose {
+        font-size: 17px;
+    }
+
+    .site-footer__column h4 {
+        font-size: 21px;
+
+        letter-spacing: 2.3px;
+    }
+
+    .site-footer__bottom-container {
+        width: calc(100% - 28px);
+    }
+
+    .site-footer__legal {
+        gap: 11px;
+    }
+
+    .site-footer__ornament span {
+        max-width: 70px;
+    }
+}
