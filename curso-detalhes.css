@@ -1,0 +1,1368 @@
+/* =========================================================
+   DETALHES DOS CURSOS
+   APÓSTOLA PATRICIA SANTANA
+   AZUL + BRANCO + PRATA
+========================================================= */
+
+.pagina-curso{
+  --curso-navy:#032e58;
+  --curso-navy-2:#021d39;
+  --curso-blue:#087fc6;
+  --curso-cyan:#38b9ee;
+  --curso-light:#eef5f8;
+  --curso-silver:#d6e2e9;
+  --curso-text:#557486;
+
+  margin:0;
+  padding:0;
+
+  overflow:hidden;
+
+  background:#fff;
+
+  color:var(--curso-navy);
+}
+
+.pagina-curso *{
+  box-sizing:border-box;
+}
+
+.pagina-curso a{
+  text-decoration:none;
+}
+
+.curso-detalhes-wrap{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+}
+
+.curso-detalhes-kicker{
+  margin:0;
+
+  color:#0a8acb;
+
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:9px;
+  font-weight:800;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.curso-hero-detalhes{
+  position:relative;
+
+  min-height:650px;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 30%,
+      rgba(62,190,239,.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(29,133,192,.17),
+      transparent 27%
+    ),
+    linear-gradient(
+      125deg,
+      #f8fbfc 0%,
+      #e5eef3 45%,
+      #d3e1e9 100%
+    );
+
+  border-bottom:1px solid #bad2df;
+}
+
+.curso-hero-detalhes::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  opacity:.35;
+
+  background:
+    repeating-linear-gradient(
+      110deg,
+      transparent 0,
+      transparent 5px,
+      rgba(255,255,255,.6) 6px,
+      transparent 7px
+    );
+}
+
+.curso-hero-detalhes::after{
+  content:"";
+
+  position:absolute;
+
+  right:-210px;
+  top:-300px;
+
+  width:670px;
+  height:670px;
+
+  border:80px solid rgba(4,101,160,.055);
+
+  border-radius:50%;
+}
+
+.curso-hero-brilho{
+  position:absolute;
+
+  border-radius:50%;
+
+  pointer-events:none;
+}
+
+.curso-hero-brilho-1{
+  width:380px;
+  height:380px;
+
+  left:30%;
+  top:-220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.95),
+      rgba(255,255,255,0) 68%
+    );
+}
+
+.curso-hero-brilho-2{
+  width:440px;
+  height:440px;
+
+  right:10%;
+  bottom:-300px;
+
+  border:55px solid rgba(42,172,226,.06);
+}
+
+.curso-hero-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(300px,.78fr)
+    minmax(420px,1.22fr);
+
+  align-items:center;
+
+  gap:80px;
+
+  padding:62px 0;
+}
+
+
+/* =========================================================
+   IMAGEM HERO
+========================================================= */
+
+.curso-hero-imagem{
+  position:relative;
+
+  max-width:420px;
+
+  justify-self:center;
+}
+
+.curso-hero-imagem::before{
+  content:"";
+
+  position:absolute;
+
+  left:-18px;
+  top:-18px;
+
+  width:105px;
+  height:105px;
+
+  border-left:2px solid #149bd7;
+  border-top:2px solid #149bd7;
+}
+
+.curso-hero-imagem::after{
+  content:"";
+
+  position:absolute;
+
+  right:-18px;
+  bottom:20px;
+
+  width:105px;
+  height:105px;
+
+  border-right:2px solid #149bd7;
+  border-bottom:2px solid #149bd7;
+}
+
+.curso-hero-imagem-moldura{
+  position:relative;
+  z-index:2;
+
+  padding:8px;
+
+  border:1px solid rgba(9,111,171,.36);
+
+  background:
+    rgba(255,255,255,.72);
+
+  box-shadow:
+    0 32px 65px rgba(2,48,84,.17);
+}
+
+.curso-hero-imagem img{
+  display:block;
+
+  width:100%;
+  height:auto;
+
+  object-fit:contain;
+}
+
+.curso-hero-imagem-legenda{
+  position:relative;
+  z-index:3;
+
+  width:max-content;
+
+  margin:-1px auto 0;
+
+  padding:10px 18px;
+
+  display:block;
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      90deg,
+      #064b7e,
+      #098fd1
+    );
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7px;
+  font-weight:800;
+
+  letter-spacing:2.5px;
+}
+
+
+/* =========================================================
+   HERO CONTEÚDO
+========================================================= */
+
+.curso-voltar-topo{
+  display:inline-block;
+
+  margin-bottom:35px;
+
+  color:#5e7b8e;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:8px;
+  font-weight:700;
+
+  letter-spacing:1.2px;
+}
+
+.curso-voltar-topo:hover{
+  color:#0788cd;
+}
+
+.curso-hero-conteudo h1{
+  margin:14px 0 0;
+
+  color:#05365f;
+
+  font-family:"Cormorant Garamond",Georgia,serif;
+
+  font-size:clamp(72px,7vw,105px);
+  font-weight:500;
+
+  line-height:.82;
+
+  letter-spacing:-3px;
+}
+
+.curso-hero-conteudo h1 em{
+  display:block;
+
+  margin-left:72px;
+
+  color:#078dce;
+
+  font-weight:500;
+}
+
+.curso-hero-frase{
+  max-width:580px;
+
+  margin:28px 0 0;
+
+  color:#315f7a;
+
+  font-family:"Cormorant Garamond",Georgia,serif;
+
+  font-size:26px;
+  font-style:italic;
+  font-weight:600;
+
+  line-height:1.25;
+}
+
+.curso-hero-linha{
+  width:85px;
+  height:2px;
+
+  margin:21px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0575b4,
+      #43c1ee
+    );
+}
+
+.curso-hero-descricao{
+  max-width:600px;
+
+  margin:0;
+
+  color:#577689;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:11px;
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES RÁPIDAS
+========================================================= */
+
+.curso-info-rapida{
+  max-width:630px;
+
+  margin-top:27px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  border-top:1px solid #aac8d7;
+  border-bottom:1px solid #aac8d7;
+}
+
+.curso-info-rapida div{
+  min-height:76px;
+
+  padding:16px 20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  border-right:1px solid #c1d5df;
+}
+
+.curso-info-rapida div:first-child{
+  padding-left:0;
+}
+
+.curso-info-rapida div:last-child{
+  border-right:0;
+}
+
+.curso-info-rapida span{
+  margin-bottom:6px;
+
+  color:#7791a1;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7px;
+  font-weight:700;
+
+  letter-spacing:1.8px;
+}
+
+.curso-info-rapida strong{
+  color:#073e68;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:10px;
+  font-weight:700;
+}
+
+
+/* =========================================================
+   CTA HERO
+========================================================= */
+
+.curso-hero-cta{
+  width:250px;
+
+  min-height:50px;
+
+  margin-top:28px;
+
+  padding:0 18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  color:#fff;
+
+  border-radius:4px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #04558f,
+      #0796d6
+    );
+
+  box-shadow:
+    0 14px 28px rgba(5,105,169,.18);
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:8px;
+  font-weight:800;
+
+  letter-spacing:.8px;
+}
+
+.curso-hero-cta b{
+  font-size:19px;
+  font-weight:400;
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.curso-sobre{
+  position:relative;
+
+  padding:90px 0;
+
+  background:#fff;
+}
+
+.curso-sobre-grid{
+  display:grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:100px;
+
+  align-items:start;
+}
+
+.curso-sobre-titulo h2,
+.curso-secao-cabecalho h2,
+.curso-publico h2,
+.curso-inscricao h2{
+  margin:15px 0 0;
+
+  color:#053861;
+
+  font-family:"Cormorant Garamond",Georgia,serif;
+
+  font-size:clamp(50px,4.5vw,70px);
+  font-weight:500;
+
+  line-height:.94;
+}
+
+.curso-sobre-titulo h2 em,
+.curso-secao-cabecalho h2 em,
+.curso-publico h2 em,
+.curso-inscricao h2 em{
+  display:block;
+
+  color:#078dce;
+
+  font-weight:500;
+}
+
+.curso-sobre-texto{
+  padding-top:5px;
+}
+
+.curso-sobre-texto > p{
+  margin:0 0 20px;
+
+  color:#5a7788;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:12px;
+
+  line-height:1.9;
+}
+
+.curso-frase-destaque{
+  margin-top:32px;
+
+  padding:22px 25px;
+
+  display:flex;
+  align-items:center;
+
+  gap:20px;
+
+  border-left:3px solid #159bd8;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f0f7fa,
+      #fbfdfe
+    );
+}
+
+.curso-frase-destaque span{
+  color:#078dce;
+
+  font-size:29px;
+}
+
+.curso-frase-destaque p{
+  margin:0;
+
+  color:#174e70;
+
+  font-family:"Cormorant Garamond",Georgia,serif;
+
+  font-size:21px;
+  font-style:italic;
+  font-weight:600;
+
+  line-height:1.35;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.curso-conteudo-secao{
+  padding:85px 0 95px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(48,176,229,.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #f6fafc,
+      #eaf2f6
+    );
+
+  border-top:1px solid #d3e2ea;
+  border-bottom:1px solid #c9dce6;
+}
+
+.curso-secao-cabecalho{
+  max-width:720px;
+
+  margin:0 auto 55px;
+
+  text-align:center;
+}
+
+.curso-secao-cabecalho h2 em{
+  display:inline;
+}
+
+.curso-secao-cabecalho > p:last-child{
+  max-width:570px;
+
+  margin:20px auto 0;
+
+  color:#658091;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:11px;
+
+  line-height:1.8;
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+========================================================= */
+
+.curso-beneficios-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:15px;
+}
+
+.curso-beneficio{
+  position:relative;
+
+  min-height:260px;
+
+  padding:28px 25px;
+
+  overflow:hidden;
+
+  border:1px solid #bfd4df;
+  border-radius:7px;
+
+  background:
+    rgba(255,255,255,.86);
+
+  box-shadow:
+    0 14px 30px rgba(4,59,95,.06);
+}
+
+.curso-beneficio::after{
+  content:"";
+
+  position:absolute;
+
+  right:-55px;
+  bottom:-55px;
+
+  width:115px;
+  height:115px;
+
+  border:20px solid rgba(8,143,207,.045);
+
+  border-radius:50%;
+}
+
+.curso-beneficio-numero{
+  color:#a2b6c2;
+
+  font-family:"Cormorant Garamond",Georgia,serif;
+
+  font-size:12px;
+}
+
+.curso-beneficio-icone{
+  width:48px;
+  height:48px;
+
+  margin:25px 0 21px;
+
+  display:grid;
+  place-items:center;
+
+  border:1px solid #86cbe9;
+
+  border-radius:50%;
+
+  color:#078dce;
+
+  font-size:23px;
+}
+
+.curso-beneficio h3{
+  margin:0;
+
+  color:#06446f;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:.8px;
+}
+
+.curso-beneficio p{
+  margin:13px 0 0;
+
+  color:#688392;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:9px;
+
+  line-height:1.75;
+}
+
+
+/* =========================================================
+   PARA QUEM É
+========================================================= */
+
+.curso-publico{
+  padding:95px 0;
+
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(32,155,214,.24),
+      transparent 28%
+    ),
+    linear-gradient(
+      125deg,
+      #052f55,
+      #011a33
+    );
+}
+
+.curso-publico-grid{
+  display:grid;
+
+  grid-template-columns:
+    1.25fr .75fr;
+
+  gap:100px;
+
+  align-items:center;
+}
+
+.curso-publico .curso-detalhes-kicker{
+  color:#54c7f2;
+}
+
+.curso-publico h2{
+  color:#fff;
+}
+
+.curso-publico h2 em{
+  color:#62cef4;
+}
+
+.curso-publico-intro{
+  max-width:650px;
+
+  margin:23px 0 0;
+
+  color:#bdd3e0;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:11px;
+
+  line-height:1.8;
+}
+
+.curso-publico-lista{
+  max-width:680px;
+
+  margin:30px 0 0;
+  padding:0;
+
+  list-style:none;
+}
+
+.curso-publico-lista li{
+  padding:14px 0;
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:14px;
+
+  border-bottom:
+    1px solid rgba(115,194,229,.17);
+
+  color:#d0e0e9;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:10px;
+
+  line-height:1.6;
+}
+
+.curso-publico-lista li span{
+  color:#51c9f4;
+
+  font-weight:800;
+}
+
+
+/* =========================================================
+   DESTAQUE LATERAL
+========================================================= */
+
+.curso-publico-destaque{
+  min-height:380px;
+
+  padding:42px 35px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  border:
+    1px solid rgba(96,200,240,.42);
+
+  background:
+    rgba(255,255,255,.035);
+
+  text-align:center;
+}
+
+.curso-publico-simbolo{
+  margin-bottom:24px;
+
+  color:#55caf3;
+
+  font-size:38px;
+}
+
+.curso-publico-destaque p{
+  margin:0;
+
+  color:#fff;
+
+  font-family:"Cormorant Garamond",Georgia,serif;
+
+  font-size:25px;
+  font-weight:600;
+
+  letter-spacing:1px;
+}
+
+.curso-publico-destaque i{
+  width:35px;
+  height:1px;
+
+  margin:13px 0;
+
+  display:block;
+
+  background:#209ed7;
+}
+
+
+/* =========================================================
+   INSCRIÇÃO
+========================================================= */
+
+.curso-inscricao{
+  padding:90px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7fafc,
+      #e9f1f5
+    );
+}
+
+.curso-inscricao-card{
+  position:relative;
+
+  max-width:1000px;
+
+  margin:0 auto;
+
+  padding:50px;
+
+  display:grid;
+
+  grid-template-columns:
+    1.15fr .85fr;
+
+  gap:60px;
+
+  align-items:center;
+
+  border:1px solid #b8d1de;
+
+  background:#fff;
+
+  box-shadow:
+    0 25px 55px rgba(5,57,91,.08);
+}
+
+.curso-inscricao-card::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  top:0;
+
+  height:3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #044d80,
+      #2bb8ec,
+      #044d80
+    );
+}
+
+.curso-inscricao h2{
+  font-size:55px;
+}
+
+.curso-inscricao h2 em{
+  display:inline;
+}
+
+.curso-inscricao-texto > p:not(.curso-detalhes-kicker){
+  max-width:520px;
+
+  margin:18px 0 0;
+
+  color:#617e8f;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:10px;
+
+  line-height:1.8;
+}
+
+.curso-inscricao-tags{
+  margin-top:22px;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:7px;
+}
+
+.curso-inscricao-tags span{
+  padding:8px 10px;
+
+  border:1px solid #bed5e1;
+
+  color:#51758b;
+
+  background:#f9fbfc;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7px;
+
+  letter-spacing:.7px;
+}
+
+.curso-inscricao-acao{
+  padding-left:45px;
+
+  border-left:1px solid #c6d9e3;
+}
+
+.curso-inscricao-acao > p{
+  margin:0 0 14px;
+
+  color:#78909e;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7px;
+  font-weight:800;
+
+  letter-spacing:2px;
+}
+
+.curso-inscricao-acao a{
+  width:100%;
+
+  min-height:52px;
+
+  padding:0 18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  color:#fff;
+
+  border-radius:4px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #04558e,
+      #0796d6
+    );
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:8px;
+  font-weight:800;
+
+  letter-spacing:.6px;
+
+  box-shadow:
+    0 12px 25px rgba(5,104,167,.17);
+}
+
+.curso-inscricao-acao a span{
+  font-size:18px;
+  font-weight:400;
+}
+
+.curso-inscricao-acao small{
+  margin-top:10px;
+
+  display:block;
+
+  color:#8a9da8;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7px;
+}
+
+.curso-voltar-final{
+  width:max-content;
+
+  margin:30px auto 0;
+
+  display:block;
+
+  color:#54778d;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:8px;
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px){
+
+  .curso-hero-grid{
+    grid-template-columns:
+      .8fr 1.2fr;
+
+    gap:45px;
+  }
+
+  .curso-hero-conteudo h1{
+    font-size:70px;
+  }
+
+  .curso-hero-conteudo h1 em{
+    margin-left:40px;
+  }
+
+  .curso-beneficios-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .curso-sobre-grid,
+  .curso-publico-grid{
+    gap:50px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media(max-width:700px){
+
+  .curso-detalhes-wrap{
+    width:calc(100% - 28px);
+  }
+
+
+  /* HERO */
+
+  .curso-hero-detalhes{
+    min-height:0;
+  }
+
+  .curso-hero-grid{
+    display:flex;
+    flex-direction:column;
+
+    gap:38px;
+
+    padding:35px 0 45px;
+  }
+
+
+  /* IMAGEM PRIMEIRO */
+
+  .curso-hero-imagem{
+    width:78%;
+    max-width:310px;
+
+    order:1;
+
+    margin:0 auto;
+  }
+
+  .curso-hero-imagem::before,
+  .curso-hero-imagem::after{
+    width:70px;
+    height:70px;
+  }
+
+
+  /* TEXTO */
+
+  .curso-hero-conteudo{
+    width:100%;
+
+    order:2;
+  }
+
+  .curso-voltar-topo{
+    margin-bottom:25px;
+  }
+
+  .curso-hero-conteudo h1{
+    margin-top:12px;
+
+    font-size:61px;
+
+    line-height:.86;
+
+    letter-spacing:-1.5px;
+  }
+
+  .curso-hero-conteudo h1 em{
+    margin-left:55px;
+  }
+
+  .curso-hero-frase{
+    margin-top:20px;
+
+    font-size:22px;
+  }
+
+  .curso-hero-descricao{
+    font-size:10px;
+  }
+
+
+  /* INFORMAÇÕES */
+
+  .curso-info-rapida{
+    grid-template-columns:1fr;
+
+    margin-top:22px;
+  }
+
+  .curso-info-rapida div{
+    min-height:57px;
+
+    padding:11px 0;
+
+    border-right:0;
+
+    border-bottom:1px solid #c1d5df;
+  }
+
+  .curso-info-rapida div:last-child{
+    border-bottom:0;
+  }
+
+  .curso-hero-cta{
+    width:100%;
+  }
+
+
+  /* SOBRE */
+
+  .curso-sobre{
+    padding:55px 0;
+  }
+
+  .curso-sobre-grid{
+    grid-template-columns:1fr;
+
+    gap:30px;
+  }
+
+  .curso-sobre-titulo h2,
+  .curso-secao-cabecalho h2,
+  .curso-publico h2,
+  .curso-inscricao h2{
+    font-size:45px;
+  }
+
+  .curso-sobre-texto > p{
+    font-size:10px;
+  }
+
+  .curso-frase-destaque{
+    padding:18px;
+  }
+
+  .curso-frase-destaque p{
+    font-size:19px;
+  }
+
+
+  /* CONTEÚDO */
+
+  .curso-conteudo-secao{
+    padding:55px 0;
+  }
+
+  .curso-secao-cabecalho{
+    margin-bottom:32px;
+  }
+
+  .curso-beneficios-grid{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    gap:10px;
+  }
+
+  .curso-beneficio{
+    min-height:220px;
+
+    padding:20px 16px;
+  }
+
+  .curso-beneficio-icone{
+    width:42px;
+    height:42px;
+
+    margin:18px 0;
+  }
+
+  .curso-beneficio h3{
+    font-size:8px;
+  }
+
+  .curso-beneficio p{
+    font-size:7.5px;
+  }
+
+
+  /* PARA QUEM É */
+
+  .curso-publico{
+    padding:58px 0;
+  }
+
+  .curso-publico-grid{
+    grid-template-columns:1fr;
+
+    gap:38px;
+  }
+
+  .curso-publico-intro{
+    font-size:10px;
+  }
+
+  .curso-publico-lista li{
+    font-size:9px;
+  }
+
+  .curso-publico-destaque{
+    min-height:300px;
+
+    padding:30px 20px;
+  }
+
+
+  /* INSCRIÇÃO */
+
+  .curso-inscricao{
+    padding:55px 0;
+  }
+
+  .curso-inscricao-card{
+    padding:28px 22px;
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+  }
+
+  .curso-inscricao-acao{
+    padding:25px 0 0;
+
+    border-left:0;
+
+    border-top:1px solid #c6d9e3;
+  }
+
+  .curso-inscricao-acao a{
+    min-height:50px;
+  }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
+
+@media(max-width:420px){
+
+  .curso-hero-imagem{
+    width:84%;
+  }
+
+  .curso-hero-conteudo h1{
+    font-size:55px;
+  }
+
+  .curso-hero-conteudo h1 em{
+    margin-left:45px;
+  }
+
+  .curso-beneficios-grid{
+    grid-template-columns:1fr;
+  }
+
+  .curso-beneficio{
+    min-height:0;
+  }
+
+}
