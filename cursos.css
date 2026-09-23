@@ -1,7 +1,6 @@
 /* =========================================================
    PÁGINA CURSOS — APÓSTOLA PATRICIA SANTANA
-   Azul + prata | Responsivo
-   Este arquivo estiliza somente a página de cursos.
+   AZUL + PRATA
 ========================================================= */
 
 .pagina-cursos{
@@ -12,6 +11,7 @@
   --curso-silver:#dce6ec;
   --curso-ice:#f6f9fb;
   --curso-text:#496a7f;
+
   overflow:hidden;
   background:#fff;
 }
@@ -27,10 +27,13 @@
 
 .cursos-kicker{
   margin:0;
+
   color:#0786cf;
+
   font-family:"Montserrat",Arial,sans-serif;
   font-size:10px;
   font-weight:700;
+
   letter-spacing:4px;
   text-transform:uppercase;
 }
@@ -42,10 +45,14 @@
 
 .cursos-hero{
   position:relative;
+
   min-height:455px;
+
   display:flex;
   align-items:center;
+
   overflow:hidden;
+
   border-bottom:1px solid #bcd0dc;
 
   background:
@@ -67,8 +74,10 @@
 
 .cursos-hero::before{
   content:"";
+
   position:absolute;
   inset:0;
+
   opacity:.26;
 
   background:
@@ -83,21 +92,28 @@
 
 .cursos-hero::after{
   content:"";
+
   position:absolute;
+
   right:-180px;
   top:-270px;
+
   width:590px;
   height:590px;
+
   border:68px solid rgba(8,127,198,.07);
   border-radius:50%;
 }
 
 .cursos-hero-luz{
   position:absolute;
+
   left:-160px;
   bottom:-260px;
+
   width:520px;
   height:520px;
+
   border:58px solid rgba(8,127,198,.045);
   border-radius:50%;
 }
@@ -105,16 +121,21 @@
 .cursos-hero-conteudo{
   position:relative;
   z-index:2;
+
   padding:65px 0;
 }
 
 .cursos-hero h1{
   max-width:800px;
+
   margin:18px 0 0;
+
   color:#073b68;
+
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:clamp(54px,5vw,76px);
   font-weight:600;
+
   line-height:.94;
   letter-spacing:-1.5px;
 }
@@ -126,22 +147,28 @@
 
 .cursos-hero-texto{
   max-width:650px;
+
   margin:24px 0 0;
+
   color:#4e6e82;
+
   font-size:14px;
   line-height:1.8;
 }
 
 .cursos-hero-link{
   width:max-content;
+
   margin-top:28px;
   padding-bottom:7px;
 
   display:flex;
   align-items:center;
+
   gap:10px;
 
   color:#075e9e;
+
   border-bottom:1px solid #168fd2;
 
   font-size:10px;
@@ -156,6 +183,7 @@
 
 .catalogo{
   position:relative;
+
   padding:68px 0 78px;
 
   background:
@@ -178,18 +206,22 @@
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
+
   gap:30px;
 }
 
 .catalogo-cabecalho h2,
 .cursos-ajuda h2{
   max-width:680px;
+
   margin:12px 0 0;
+
   color:#073b68;
 
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:46px;
   font-weight:600;
+
   line-height:.98;
 }
 
@@ -201,28 +233,41 @@
 
 .catalogo-total{
   padding-bottom:5px;
+
   color:#6b8291;
+
   border-bottom:1px solid #a9c5d5;
 
   font-size:9px;
   font-weight:700;
+
   letter-spacing:2px;
 }
 
 
 /* =========================================================
-   CARDS
+   GRID
 ========================================================= */
 
 .cursos-grid{
   display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
+
+  grid-template-columns:
+    repeat(5,minmax(0,1fr));
+
   gap:15px;
+
   align-items:stretch;
 }
 
+
+/* =========================================================
+   CARD
+========================================================= */
+
 .curso-card{
   min-width:0;
+
   overflow:hidden;
 
   display:flex;
@@ -231,7 +276,7 @@
   border:1px solid #c7d7e0;
   border-radius:10px;
 
-  background:rgba(255,255,255,.94);
+  background:rgba(255,255,255,.96);
 
   box-shadow:
     0 16px 34px rgba(6,60,96,.08);
@@ -244,6 +289,7 @@
 
 .curso-card:hover{
   transform:translateY(-5px);
+
   border-color:#8fc9e9;
 
   box-shadow:
@@ -251,15 +297,19 @@
 }
 
 
-/* TOPO DO CARD */
+/* =========================================================
+   TOPO DO CARD
+========================================================= */
 
 .curso-topo{
   min-height:45px;
+
   padding:0 14px;
 
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   gap:8px;
 }
 
@@ -275,20 +325,25 @@
 
   font-size:7px;
   font-weight:800;
+
   letter-spacing:2px;
+
   text-align:right;
 }
 
 
 /* =========================================================
-   IMAGEM DO CURSO
-   MOSTRA A ARTE COMPLETA
+   IMAGEM
+   NÃO CORTA A ARTE
 ========================================================= */
 
 .curso-imagem{
   margin:0 14px;
+
   overflow:hidden;
+
   border-radius:8px;
+
   background:#062846;
 }
 
@@ -298,6 +353,8 @@
   width:100%;
   height:auto;
 
+  max-width:100%;
+
   object-fit:contain;
   object-position:center;
 
@@ -305,12 +362,12 @@
 }
 
 .curso-card:hover .curso-imagem img{
-  transform:scale(1.015);
+  transform:scale(1.01);
 }
 
 
 /* =========================================================
-   CONTEÚDO DO CARD
+   CONTEÚDO
 ========================================================= */
 
 .curso-conteudo{
@@ -324,16 +381,19 @@
 
 .curso-conteudo h2{
   margin:0;
+
   color:#073b68;
 
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:25px;
   font-weight:600;
+
   line-height:1;
 }
 
 .curso-conteudo > p{
   min-height:72px;
+
   margin:12px 0 0;
 
   color:#627d8e;
@@ -343,13 +403,16 @@
 }
 
 
-/* TAGS */
+/* =========================================================
+   TAGS
+========================================================= */
 
 .curso-tags{
   margin-top:15px;
 
   display:flex;
   flex-wrap:wrap;
+
   gap:6px;
 }
 
@@ -359,25 +422,99 @@
   color:#52768e;
 
   border:1px solid #c5d6e0;
+
   background:#f9fbfc;
 
   font-size:7px;
+
   letter-spacing:.45px;
 }
 
 
-/* BOTÃO COMPRAR */
+/* =========================================================
+   ÁREA DOS BOTÕES
+========================================================= */
 
-.curso-comprar{
+.curso-acoes{
   width:100%;
+
+  margin-top:auto;
+  padding-top:15px;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,.85fr)
+    minmax(0,1.15fr);
+
+  gap:7px;
+}
+
+
+/* =========================================================
+   DETALHES
+========================================================= */
+
+.curso-detalhes{
+  min-width:0;
   min-height:43px;
 
-  margin-top:15px;
-  padding:0 14px;
+  padding:0 8px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid #168fd2;
+  border-radius:5px;
+
+  background:#fff;
+
+  color:#087fc6;
+
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7.5px;
+  font-weight:800;
+
+  letter-spacing:.5px;
+
+  text-align:center;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease;
+}
+
+.curso-detalhes:hover{
+  color:#fff;
+
+  background:#087fc6;
+
+  border-color:#087fc6;
+}
+
+
+/* =========================================================
+   COMPRAR
+========================================================= */
+
+.curso-comprar{
+  min-width:0;
+  width:100%;
+
+  min-height:43px;
+
+  margin:0;
+
+  padding:0 10px;
 
   display:flex;
   align-items:center;
   justify-content:space-between;
+
+  gap:5px;
 
   border-radius:5px;
 
@@ -394,13 +531,22 @@
   box-shadow:
     0 9px 20px rgba(4,102,166,.17);
 
-  font-size:9px;
+  font-family:"Montserrat",Arial,sans-serif;
+
+  font-size:7.5px;
   font-weight:800;
-  letter-spacing:.7px;
+
+  letter-spacing:.5px;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
 
 .curso-comprar span{
-  font-size:17px;
+  flex:0 0 auto;
+
+  font-size:15px;
   font-weight:400;
 }
 
@@ -423,11 +569,13 @@
 
 .cursos-ajuda{
   margin-top:48px;
+
   padding:34px 38px;
 
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   gap:45px;
 
   border:1px solid #b8d0de;
@@ -453,6 +601,7 @@
 
 .cursos-ajuda > div > p:last-child{
   max-width:620px;
+
   margin-top:12px;
 
   color:#607b8d;
@@ -465,11 +614,13 @@
   flex:0 0 auto;
 
   min-height:50px;
+
   padding:0 24px;
 
   display:flex;
   align-items:center;
   justify-content:center;
+
   gap:14px;
 
   border-radius:5px;
@@ -486,6 +637,7 @@
 
   font-size:9px;
   font-weight:800;
+
   letter-spacing:.5px;
 
   box-shadow:
@@ -500,19 +652,22 @@
 @media(max-width:1100px){
 
   .cursos-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
   }
 
   .curso-conteudo > p{
     min-height:62px;
   }
+
 }
 
 
 @media(max-width:800px){
 
   .cursos-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
   }
 
   .catalogo-cabecalho{
@@ -524,6 +679,7 @@
     align-items:flex-start;
     flex-direction:column;
   }
+
 }
 
 
@@ -555,22 +711,27 @@
 
   .cursos-hero h1{
     max-width:350px;
+
     margin-top:13px;
 
     font-size:45px;
+
     line-height:.93;
   }
 
   .cursos-hero-texto{
     max-width:340px;
+
     margin-top:18px;
 
     font-size:11px;
+
     line-height:1.65;
   }
 
   .cursos-hero-link{
     margin-top:21px;
+
     font-size:8px;
   }
 
@@ -583,11 +744,13 @@
 
   .catalogo-cabecalho{
     margin-bottom:24px;
+
     gap:15px;
   }
 
   .catalogo-cabecalho h2{
     margin-top:9px;
+
     font-size:35px;
   }
 
@@ -596,29 +759,32 @@
   }
 
 
-  /* CARDS */
+  /* GRID */
 
   .cursos-grid{
     grid-template-columns:1fr;
+
     gap:16px;
   }
+
+
+  /* CARD */
 
   .curso-card{
     width:100%;
     max-width:390px;
+
     margin:0 auto;
   }
 
   .curso-topo{
     min-height:39px;
+
     padding:0 12px;
   }
 
 
-  /* =============================================
-     IMAGEM NO CELULAR
-     SEM CORTAR
-  ============================================= */
+  /* IMAGEM INTEIRA */
 
   .curso-imagem{
     width:auto;
@@ -629,8 +795,6 @@
     overflow:hidden;
 
     border-radius:8px;
-
-    background:#062846;
   }
 
   .curso-imagem img{
@@ -660,21 +824,49 @@
 
   .curso-conteudo > p{
     min-height:0;
+
     margin-top:8px;
 
     font-size:9.5px;
   }
+
+
+  /* TAGS */
 
   .curso-tags{
     margin-top:12px;
   }
 
 
-  /* BOTÃO */
+  /* BOTÕES */
+
+  .curso-acoes{
+    padding-top:15px;
+
+    grid-template-columns:
+      minmax(0,.92fr)
+      minmax(0,1.08fr);
+
+    gap:8px;
+  }
+
+  .curso-detalhes,
+  .curso-comprar{
+    min-height:43px;
+
+    font-size:8px;
+  }
+
+  .curso-detalhes{
+    padding:0 10px;
+  }
 
   .curso-comprar{
-    min-height:42px;
-    margin-top:12px;
+    padding:0 12px;
+  }
+
+  .curso-comprar span{
+    font-size:16px;
   }
 
 
@@ -682,7 +874,9 @@
 
   .cursos-ajuda{
     margin-top:30px;
+
     padding:25px 20px;
+
     gap:20px;
   }
 
@@ -693,4 +887,5 @@
   .cursos-ajuda > a{
     width:100%;
   }
+
 }
