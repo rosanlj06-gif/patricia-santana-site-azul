@@ -1,6 +1,7 @@
 /* =========================================================
    CABEÇALHO — APÓSTOLA PATRICIA SANTANA
-   PC / NOTEBOOK / TABLET / CELULAR
+   RESPONSIVO:
+   DESKTOP / NOTEBOOK / TABLET / CELULAR
 ========================================================= */
 
 .site-header-v2,
@@ -36,10 +37,7 @@
 
 
 /* =========================================================
-   CONTAINER DESKTOP
-
-   3 ÁREAS:
-   LOGO | MENU | BOTÃO
+   CONTAINER PRINCIPAL — DESKTOP
 ========================================================= */
 
 .site-header-v2__inner {
@@ -54,7 +52,7 @@
 
     grid-template-columns:
         350px
-        1fr
+        minmax(0, 1fr)
         112px;
 
     align-items: center;
@@ -89,9 +87,9 @@
     width: 96px;
     height: 88px;
 
-    object-fit: contain;
-
     flex: 0 0 auto;
+
+    object-fit: contain;
 }
 
 
@@ -162,7 +160,7 @@
 
 
 /* =========================================================
-   MINISTÉRIO APOSTÓLICO + LOSANGOS
+   MINISTÉRIO APOSTÓLICO
 ========================================================= */
 
 .site-header-v2__ministry-row {
@@ -171,7 +169,6 @@
     margin-top: 8px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -179,7 +176,7 @@
 }
 
 
-/* LINHAS ANTIGAS */
+/* REMOVE LINHAS ANTIGAS */
 
 .site-header-v2__ministry-row i {
     display: none;
@@ -219,7 +216,9 @@
 
     color: #078bd3;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
 
     font-size: 15px;
     font-weight: 400;
@@ -234,6 +233,7 @@
 
 /* =========================================================
    MENU DESKTOP
+   DESLOCADO PARA A DIREITA
 ========================================================= */
 
 .site-header-v2__nav {
@@ -244,13 +244,22 @@
     display: flex;
 
     align-items: center;
-    justify-content: center;
+
+    justify-content: flex-end;
 
     gap: 25px;
+
+    /*
+       MOVE SOMENTE O MENU PARA A DIREITA
+       LOGO E BOTÃO NÃO SE MOVEM
+    */
+    transform: translateX(55px);
 }
 
 
-/* LINKS */
+/* =========================================================
+   LINKS DO MENU
+========================================================= */
 
 .site-header-v2__nav a {
     position: relative;
@@ -279,7 +288,7 @@
 
 
 /* =========================================================
-   INDICADOR AZUL DO MENU
+   LINHA DO ITEM ATIVO
 ========================================================= */
 
 .site-header-v2__nav a::after {
@@ -416,7 +425,27 @@
 
 
 /* =========================================================
+   TELAS GRANDES
+   1400PX OU MENOS
+========================================================= */
+
+@media (max-width: 1400px) {
+
+    .site-header-v2__nav {
+        /*
+           Ainda para a direita,
+           mas um pouco menos para evitar encostar no botão
+        */
+        transform: translateX(40px);
+
+        gap: 22px;
+    }
+}
+
+
+/* =========================================================
    NOTEBOOK
+   1200PX OU MENOS
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -428,12 +457,14 @@
 
         grid-template-columns:
             300px
-            1fr
+            minmax(0, 1fr)
             100px;
 
         column-gap: 18px;
     }
 
+
+    /* LOGO */
 
     .site-header-v2__symbol {
         width: 84px;
@@ -445,6 +476,8 @@
         gap: 11px;
     }
 
+
+    /* NOME */
 
     .site-header-v2__wordmark {
         width: 215px;
@@ -462,6 +495,8 @@
         font-size: 21px;
     }
 
+
+    /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
         margin-top: 7px;
@@ -482,8 +517,12 @@
     }
 
 
+    /* MENU */
+
     .site-header-v2__nav {
-        gap: 16px;
+        gap: 15px;
+
+        transform: translateX(25px);
     }
 
 
@@ -499,6 +538,8 @@
     }
 
 
+    /* BOTÃO */
+
     .site-header-v2__courses {
         width: 100px;
         min-width: 100px;
@@ -512,26 +553,31 @@
 
 /* =========================================================
    NOTEBOOK MENOR
+   1050PX OU MENOS
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
     .site-header-v2__inner {
         min-height: 86px;
 
         grid-template-columns:
             270px
-            1fr;
+            minmax(0, 1fr);
 
-        column-gap: 16px;
+        column-gap: 15px;
     }
 
+
+    /* LOGO */
 
     .site-header-v2__symbol {
         width: 76px;
         height: 70px;
     }
 
+
+    /* NOME */
 
     .site-header-v2__wordmark {
         width: 195px;
@@ -550,6 +596,8 @@
     }
 
 
+    /* MINISTÉRIO */
+
     .site-header-v2__ministry-row {
         gap: 5px;
     }
@@ -567,8 +615,16 @@
     }
 
 
+    /* MENU */
+
     .site-header-v2__nav {
         gap: 12px;
+
+        /*
+           Aqui reduzimos bastante porque
+           a tela já está menor.
+        */
+        transform: translateX(10px);
     }
 
 
@@ -577,6 +633,8 @@
     }
 
 
+    /* BOTÃO SOME */
+
     .site-header-v2__courses {
         display: none;
     }
@@ -584,8 +642,8 @@
 
 
 /* =========================================================
-   TABLET / CELULAR
-   VOLTA PARA FLEX E ATIVA O MENU HAMBÚRGUER
+   TABLET
+   MENU HAMBÚRGUER
 ========================================================= */
 
 @media (max-width: 850px) {
@@ -608,16 +666,21 @@
     }
 
 
-    /* MARCA */
+    /* =====================================================
+       MARCA
+    ===================================================== */
 
     .site-header-v2__brand {
-        max-width: calc(100% - 50px);
+        max-width:
+            calc(100% - 50px);
 
         gap: 9px;
     }
 
 
-    /* LOGO */
+    /* =====================================================
+       LOGO
+    ===================================================== */
 
     .site-header-v2__symbol {
         width: 72px;
@@ -625,7 +688,9 @@
     }
 
 
-    /* BLOCO DO NOME */
+    /* =====================================================
+       BLOCO DO NOME
+    ===================================================== */
 
     .site-header-v2__wordmark {
         width: 220px;
@@ -635,7 +700,9 @@
     }
 
 
-    /* APÓSTOLA */
+    /* =====================================================
+       APÓSTOLA
+    ===================================================== */
 
     .site-header-v2__apostola {
         display: block !important;
@@ -648,7 +715,9 @@
     }
 
 
-    /* PATRICIA */
+    /* =====================================================
+       PATRICIA SANTANA
+    ===================================================== */
 
     .site-header-v2__wordmark strong {
         display: block;
@@ -656,10 +725,14 @@
         font-size: 19px;
 
         line-height: 1;
+
+        white-space: nowrap;
     }
 
 
-    /* MINISTÉRIO */
+    /* =====================================================
+       MINISTÉRIO
+    ===================================================== */
 
     .site-header-v2__ministry-row {
         display: flex !important;
@@ -676,6 +749,8 @@
         font-size: 5.5px;
 
         letter-spacing: 1.3px;
+
+        white-space: nowrap;
     }
 
 
@@ -687,7 +762,7 @@
 
 
     /* =====================================================
-       BOTÃO HAMBÚRGUER
+       HAMBÚRGUER
     ===================================================== */
 
     .site-header-v2__toggle {
@@ -701,6 +776,9 @@
 
     /* =====================================================
        MENU MOBILE
+
+       IMPORTANTE:
+       REMOVE TOTALMENTE O DESLOCAMENTO DO DESKTOP
     ===================================================== */
 
     .site-header-v2__nav {
@@ -742,6 +820,9 @@
         box-shadow:
             0 15px 30px
             rgba(4, 46, 87, 0.14);
+
+        /* ZERA O DESLOCAMENTO */
+        transform: none;
     }
 
 
@@ -774,7 +855,7 @@
     }
 
 
-    /* BOTÃO CURSOS SOME */
+    /* BOTÃO VER CURSOS SOME */
 
     .site-header-v2__courses {
         display: none;
@@ -782,7 +863,7 @@
 
 
     /* =====================================================
-       X QUANDO O MENU ABRIR
+       X DO MENU
     ===================================================== */
 
     .site-header-v2__toggle.is-open span:nth-child(1) {
@@ -807,6 +888,7 @@
 
 /* =========================================================
    CELULAR
+   520PX OU MENOS
 ========================================================= */
 
 @media (max-width: 520px) {
@@ -818,18 +900,25 @@
     }
 
 
+    /* MARCA */
+
     .site-header-v2__brand {
-        max-width: calc(100% - 44px);
+        max-width:
+            calc(100% - 44px);
 
         gap: 7px;
     }
 
+
+    /* LOGO */
 
     .site-header-v2__symbol {
         width: 65px;
         height: 62px;
     }
 
+
+    /* BLOCO TEXTO */
 
     .site-header-v2__wordmark {
         width: 195px;
@@ -838,6 +927,8 @@
             calc(100vw - 120px);
     }
 
+
+    /* APÓSTOLA */
 
     .site-header-v2__apostola {
         display: block !important;
@@ -850,12 +941,16 @@
     }
 
 
+    /* PATRICIA */
+
     .site-header-v2__wordmark strong {
         font-size: 16px;
 
         white-space: nowrap;
     }
 
+
+    /* MINISTÉRIO */
 
     .site-header-v2__ministry-row {
         margin-top: 5px;
@@ -878,6 +973,8 @@
     }
 
 
+    /* HAMBÚRGUER */
+
     .site-header-v2__toggle {
         width: 40px;
         height: 40px;
@@ -893,15 +990,20 @@
     }
 
 
+    /* MENU */
+
     .site-header-v2__nav {
         left: -11px;
         right: -11px;
+
+        transform: none;
     }
 }
 
 
 /* =========================================================
    CELULAR PEQUENO
+   400PX OU MENOS
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -959,11 +1061,17 @@
     .site-header-v2__diamond {
         font-size: 9px;
     }
+
+
+    .site-header-v2__nav {
+        transform: none;
+    }
 }
 
 
 /* =========================================================
    CELULAR MUITO PEQUENO
+   350PX OU MENOS
 ========================================================= */
 
 @media (max-width: 350px) {
@@ -1003,5 +1111,10 @@
 
     .site-header-v2__diamond {
         font-size: 8px;
+    }
+
+
+    .site-header-v2__nav {
+        transform: none;
     }
 }
