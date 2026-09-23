@@ -1,0 +1,472 @@
+/* =========================================================
+   PÁGINA CURSOS — APÓSTOLA PATRICIA SANTANA
+   Azul + prata | Responsivo
+   Este arquivo estiliza somente a página de cursos.
+========================================================= */
+
+.pagina-cursos{
+  --curso-navy:#052f5f;
+  --curso-dark:#021b34;
+  --curso-blue:#087fc6;
+  --curso-cyan:#39b9ef;
+  --curso-silver:#dce6ec;
+  --curso-ice:#f6f9fb;
+  --curso-text:#496a7f;
+  overflow:hidden;
+  background:#fff;
+}
+
+.pagina-cursos *{box-sizing:border-box}
+
+.cursos-wrap{
+  width:min(1240px,calc(100% - 48px));
+  margin:0 auto;
+}
+
+.cursos-kicker{
+  margin:0;
+  color:#0786cf;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+/* HERO */
+.cursos-hero{
+  position:relative;
+  min-height:455px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom:1px solid #bcd0dc;
+  background:
+    radial-gradient(circle at 79% 35%,rgba(255,255,255,.96) 0,rgba(255,255,255,.28) 23%,transparent 43%),
+    linear-gradient(118deg,#edf3f6 0%,#cbd7de 30%,#fafbfc 55%,#c4d1d9 78%,#eef4f7 100%);
+}
+
+.cursos-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.26;
+  background:repeating-linear-gradient(105deg,transparent 0,transparent 4px,rgba(255,255,255,.48) 5px,transparent 6px);
+}
+
+.cursos-hero::after{
+  content:"";
+  position:absolute;
+  right:-180px;
+  top:-270px;
+  width:590px;
+  height:590px;
+  border:68px solid rgba(8,127,198,.07);
+  border-radius:50%;
+}
+
+.cursos-hero-luz{
+  position:absolute;
+  left:-160px;
+  bottom:-260px;
+  width:520px;
+  height:520px;
+  border:58px solid rgba(8,127,198,.045);
+  border-radius:50%;
+}
+
+.cursos-hero-conteudo{
+  position:relative;
+  z-index:2;
+  padding:65px 0;
+}
+
+.cursos-hero h1{
+  max-width:800px;
+  margin:18px 0 0;
+  color:#073b68;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(54px,5vw,76px);
+  font-weight:600;
+  line-height:.94;
+  letter-spacing:-1.5px;
+}
+
+.cursos-hero h1 em{
+  color:#0789d4;
+  font-weight:500;
+}
+
+.cursos-hero-texto{
+  max-width:650px;
+  margin:24px 0 0;
+  color:#4e6e82;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.cursos-hero-link{
+  width:max-content;
+  margin-top:28px;
+  padding-bottom:7px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#075e9e;
+  border-bottom:1px solid #168fd2;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.6px;
+}
+
+/* CATÁLOGO */
+.catalogo{
+  position:relative;
+  padding:68px 0 78px;
+  background:
+    radial-gradient(circle at 50% 0,rgba(13,135,205,.08),transparent 30%),
+    linear-gradient(180deg,#fbfcfd 0%,#edf3f6 48%,#f8fafb 100%);
+}
+
+.catalogo-cabecalho{
+  margin-bottom:34px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+}
+
+.catalogo-cabecalho h2,
+.cursos-ajuda h2{
+  max-width:680px;
+  margin:12px 0 0;
+  color:#073b68;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:46px;
+  font-weight:600;
+  line-height:.98;
+}
+
+.catalogo-cabecalho h2 em,
+.cursos-ajuda h2 em{
+  color:#0789d4;
+  font-weight:500;
+}
+
+.catalogo-total{
+  padding-bottom:5px;
+  color:#6b8291;
+  border-bottom:1px solid #a9c5d5;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+/* CARDS */
+.cursos-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:15px;
+  align-items:stretch;
+}
+
+.curso-card{
+  min-width:0;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border:1px solid #c7d7e0;
+  border-radius:10px;
+  background:rgba(255,255,255,.94);
+  box-shadow:0 16px 34px rgba(6,60,96,.08);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+
+.curso-card:hover{
+  transform:translateY(-5px);
+  border-color:#8fc9e9;
+  box-shadow:0 22px 42px rgba(6,60,96,.14);
+}
+
+.curso-topo{
+  min-height:45px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.curso-numero{
+  color:#a2b4bf;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:11px;
+}
+
+.curso-tipo{
+  color:#087fc6;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-align:right;
+}
+
+.curso-imagem{
+  margin:0 14px;
+  overflow:hidden;
+  border-radius:8px;
+  background:#062846;
+}
+
+.curso-imagem img{
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .45s ease;
+}
+
+.curso-card:hover .curso-imagem img{
+  transform:scale(1.025);
+}
+
+.curso-conteudo{
+  flex:1;
+  padding:21px 17px 18px;
+  display:flex;
+  flex-direction:column;
+}
+
+.curso-conteudo h2{
+  margin:0;
+  color:#073b68;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:25px;
+  font-weight:600;
+  line-height:1;
+}
+
+.curso-conteudo > p{
+  min-height:72px;
+  margin:12px 0 0;
+  color:#627d8e;
+  font-size:9.5px;
+  line-height:1.65;
+}
+
+.curso-tags{
+  margin-top:15px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.curso-tags span{
+  padding:7px 8px;
+  color:#52768e;
+  border:1px solid #c5d6e0;
+  background:#f9fbfc;
+  font-size:7px;
+  letter-spacing:.45px;
+}
+
+.curso-comprar{
+  width:100%;
+  min-height:43px;
+  margin-top:15px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-radius:5px;
+  color:#fff;
+  background:linear-gradient(110deg,#055f9f,#0a91d7 58%,#0666a6);
+  box-shadow:0 9px 20px rgba(4,102,166,.17);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.7px;
+}
+
+.curso-comprar span{
+  font-size:17px;
+  font-weight:400;
+}
+
+.curso-comprar:hover{
+  color:#fff;
+  background:linear-gradient(110deg,#044e86,#087fc6 58%,#05568f);
+}
+
+/* AJUDA */
+.cursos-ajuda{
+  margin-top:48px;
+  padding:34px 38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:45px;
+  border:1px solid #b8d0de;
+  border-radius:12px;
+  background:
+    radial-gradient(circle at 82% 30%,rgba(54,180,237,.17),transparent 29%),
+    linear-gradient(120deg,#fff,#e7f0f5 60%,#f8fafb);
+}
+
+.cursos-ajuda h2{
+  font-size:38px;
+}
+
+.cursos-ajuda > div > p:last-child{
+  max-width:620px;
+  margin-top:12px;
+  color:#607b8d;
+  font-size:11px;
+  line-height:1.7;
+}
+
+.cursos-ajuda > a{
+  flex:0 0 auto;
+  min-height:50px;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  border-radius:5px;
+  color:#fff;
+  background:linear-gradient(110deg,#054e88,#088bd1,#055b97);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.5px;
+  box-shadow:0 10px 24px rgba(5,93,150,.2);
+}
+
+/* TABLET */
+@media(max-width:1100px){
+  .cursos-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .curso-conteudo > p{min-height:62px}
+}
+
+@media(max-width:800px){
+  .cursos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .catalogo-cabecalho{align-items:flex-start;flex-direction:column}
+  .cursos-ajuda{align-items:flex-start;flex-direction:column}
+}
+
+/* CELULAR */
+@media(max-width:560px){
+  .cursos-wrap{width:calc(100% - 28px)}
+
+  .cursos-hero{
+    min-height:0;
+  }
+
+  .cursos-hero-conteudo{
+    padding:48px 0 44px;
+  }
+
+  .cursos-kicker{
+    font-size:8px;
+    letter-spacing:2.7px;
+  }
+
+  .cursos-hero h1{
+    max-width:350px;
+    margin-top:13px;
+    font-size:45px;
+    line-height:.93;
+  }
+
+  .cursos-hero-texto{
+    max-width:340px;
+    margin-top:18px;
+    font-size:11px;
+    line-height:1.65;
+  }
+
+  .cursos-hero-link{
+    margin-top:21px;
+    font-size:8px;
+  }
+
+  .catalogo{
+    padding:42px 0 48px;
+  }
+
+  .catalogo-cabecalho{
+    margin-bottom:24px;
+    gap:15px;
+  }
+
+  .catalogo-cabecalho h2{
+    margin-top:9px;
+    font-size:35px;
+  }
+
+  .catalogo-total{
+    font-size:7.5px;
+  }
+
+  .cursos-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .curso-card{
+    width:100%;
+    max-width:390px;
+    margin:0 auto;
+  }
+
+  .curso-topo{
+    min-height:39px;
+    padding:0 12px;
+  }
+
+  .curso-imagem{
+    margin:0 12px;
+  }
+
+  .curso-imagem img{
+    height:235px;
+    aspect-ratio:auto;
+    object-fit:cover;
+  }
+
+  .curso-conteudo{
+    padding:17px 15px 16px;
+  }
+
+  .curso-conteudo h2{
+    font-size:27px;
+  }
+
+  .curso-conteudo > p{
+    min-height:0;
+    margin-top:8px;
+    font-size:9.5px;
+  }
+
+  .curso-tags{
+    margin-top:12px;
+  }
+
+  .curso-comprar{
+    min-height:42px;
+    margin-top:12px;
+  }
+
+  .cursos-ajuda{
+    margin-top:30px;
+    padding:25px 20px;
+    gap:20px;
+  }
+
+  .cursos-ajuda h2{
+    font-size:32px;
+  }
+
+  .cursos-ajuda > a{
+    width:100%;
+  }
+}
