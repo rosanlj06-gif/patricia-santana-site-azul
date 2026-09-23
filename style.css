@@ -168,7 +168,7 @@ select {
 .topbtn {
     flex-shrink: 0;
     min-width: 140px;
-    padding: 13px 20px;
+    padding: 13px 15px;
     border-radius: 6px;
     background:
         linear-gradient(
