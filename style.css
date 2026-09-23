@@ -3816,3 +3816,18 @@ select {
         gap: 15px !important;
     }
 }
+
+
+/* =========================================================
+   MENU — AJUSTE SOMENTE NO PC
+   Mantém todas as demais alterações existentes.
+========================================================= */
+@media (min-width: 901px) {
+    .header nav {
+        gap: 23px;
+    }
+
+    .header nav a {
+        font-weight: 600;
+    }
+}
