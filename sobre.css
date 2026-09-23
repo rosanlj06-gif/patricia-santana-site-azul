@@ -1119,3 +1119,254 @@
     text-align:center !important;
   }
 }
+
+
+/* =========================================================
+   SOBRE — ESPAÇAMENTOS COMPACTOS
+   PC + CELULAR
+   Reduz somente alturas, paddings, margins e gaps.
+   Cabeçalho e rodapé permanecem intactos.
+========================================================= */
+
+/* ---------- PC / DESKTOP ---------- */
+
+.pagina-sobre .sobre-hero{
+  min-height:0 !important;
+}
+
+.pagina-sobre .sobre-hero-grid{
+  padding-top:26px !important;
+  padding-bottom:26px !important;
+  gap:48px !important;
+}
+
+.pagina-sobre .sobre-hero-sub{
+  margin-top:10px !important;
+}
+
+.pagina-sobre .sobre-rule{
+  margin-top:14px !important;
+  margin-bottom:14px !important;
+}
+
+.pagina-sobre .sobre-hero-desc{
+  margin-bottom:18px !important;
+}
+
+.pagina-sobre .sobre-ministerio{
+  margin-top:16px !important;
+  margin-bottom:18px !important;
+  padding-top:16px !important;
+  padding-bottom:16px !important;
+}
+
+.pagina-sobre .sobre-btn{
+  margin-top:14px !important;
+}
+
+.pagina-sobre .sobre-intro{
+  padding-top:48px !important;
+  padding-bottom:48px !important;
+}
+
+.pagina-sobre .sobre-intro .sobre-kicker{
+  margin-bottom:14px !important;
+}
+
+.pagina-sobre .sobre-intro-copy{
+  margin-top:20px !important;
+}
+
+.pagina-sobre .sobre-intro-copy p + p{
+  margin-top:12px !important;
+}
+
+.pagina-sobre .sobre-quote{
+  margin-top:24px !important;
+  padding-top:8px !important;
+  padding-bottom:8px !important;
+}
+
+.pagina-sobre .sobre-trajetoria{
+  padding-top:48px !important;
+  padding-bottom:48px !important;
+}
+
+.pagina-sobre .sobre-trajetoria > .sobre-wrap > .sobre-kicker{
+  margin-bottom:13px !important;
+}
+
+.pagina-sobre .marcos{
+  margin-top:32px !important;
+}
+
+.pagina-sobre .marco{
+  padding-top:14px !important;
+  padding-bottom:14px !important;
+}
+
+.pagina-sobre .pilares{
+  margin-top:42px !important;
+  padding-top:38px !important;
+}
+
+.pagina-sobre .pilares > .sobre-kicker{
+  margin-bottom:24px !important;
+}
+
+.pagina-sobre .pilar{
+  padding-top:18px !important;
+  padding-bottom:18px !important;
+}
+
+.pagina-sobre .pilares-frase{
+  padding-top:18px !important;
+  padding-bottom:18px !important;
+}
+
+.pagina-sobre .sobre-cursos{
+  min-height:410px !important;
+}
+
+.pagina-sobre .sobre-cursos-grid{
+  min-height:410px !important;
+  padding-top:48px !important;
+  padding-bottom:48px !important;
+}
+
+.pagina-sobre .sobre-cursos .sobre-kicker{
+  margin-bottom:14px !important;
+}
+
+.pagina-sobre .sobre-cursos p:not(.sobre-kicker){
+  margin-top:18px !important;
+  margin-bottom:20px !important;
+}
+
+
+/* ---------- CELULAR ---------- */
+
+@media (max-width:560px){
+
+  .pagina-sobre .sobre-wrap{
+    width:calc(100% - 28px) !important;
+  }
+
+  .pagina-sobre .sobre-hero{
+    min-height:0 !important;
+  }
+
+  .pagina-sobre .sobre-hero-grid{
+    padding-top:28px !important;
+    padding-bottom:32px !important;
+    gap:24px !important;
+  }
+
+  .pagina-sobre .sobre-hero-sub{
+    margin-top:8px !important;
+  }
+
+  .pagina-sobre .sobre-rule{
+    margin-top:12px !important;
+    margin-bottom:12px !important;
+  }
+
+  .pagina-sobre .sobre-hero-desc{
+    margin-bottom:14px !important;
+  }
+
+  .pagina-sobre .sobre-ministerio{
+    margin-top:14px !important;
+    margin-bottom:14px !important;
+    padding:14px !important;
+  }
+
+  .pagina-sobre .sobre-btn{
+    margin-top:10px !important;
+  }
+
+  .pagina-sobre .sobre-photo{
+    margin-top:2px !important;
+  }
+
+  .pagina-sobre .sobre-intro{
+    padding-top:36px !important;
+    padding-bottom:36px !important;
+  }
+
+  .pagina-sobre .sobre-intro .sobre-kicker{
+    margin-bottom:10px !important;
+  }
+
+  .pagina-sobre .sobre-intro-copy{
+    margin-top:16px !important;
+  }
+
+  .pagina-sobre .sobre-intro-copy p + p{
+    margin-top:10px !important;
+  }
+
+  .pagina-sobre .sobre-quote{
+    margin-top:18px !important;
+    padding-top:6px !important;
+    padding-bottom:6px !important;
+  }
+
+  .pagina-sobre .sobre-trajetoria{
+    padding-top:36px !important;
+    padding-bottom:36px !important;
+  }
+
+  .pagina-sobre .sobre-trajetoria > .sobre-wrap > .sobre-kicker{
+    margin-bottom:10px !important;
+  }
+
+  .pagina-sobre .marcos{
+    margin-top:26px !important;
+    gap:24px 12px !important;
+  }
+
+  .pagina-sobre .marco{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  .pagina-sobre .pilares{
+    margin-top:32px !important;
+    padding-top:30px !important;
+  }
+
+  .pagina-sobre .pilares > .sobre-kicker{
+    margin-bottom:20px !important;
+  }
+
+  .pagina-sobre .pilar{
+    padding-top:5px !important;
+    padding-bottom:16px !important;
+  }
+
+  .pagina-sobre .pilares-frase{
+    margin-top:0 !important;
+    padding-top:20px !important;
+    padding-bottom:0 !important;
+  }
+
+  .pagina-sobre .sobre-cursos{
+    min-height:390px !important;
+  }
+
+  .pagina-sobre .sobre-cursos-grid{
+    min-height:390px !important;
+    padding-top:38px !important;
+    padding-bottom:38px !important;
+  }
+
+  .pagina-sobre .sobre-cursos .sobre-kicker{
+    margin-bottom:11px !important;
+  }
+
+  .pagina-sobre .sobre-cursos p:not(.sobre-kicker){
+    margin-top:14px !important;
+    margin-bottom:17px !important;
+  }
+}
