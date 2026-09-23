@@ -19,12 +19,13 @@
 
 
 /* =========================================================
-   ÁREA PRINCIPAL — PRATA METÁLICO
+   ÁREA PRINCIPAL
 ========================================================= */
 
 .footer-metal {
     position: relative;
     width: 100%;
+
     padding: 48px 0 40px;
 
     border-top: 3px solid #0b6fae;
@@ -50,14 +51,16 @@
 }
 
 
-/* TEXTURA METÁLICA */
+/* TEXTURA */
 
 .footer-metal::before {
     content: "";
+
     position: absolute;
     inset: 0;
 
     pointer-events: none;
+
     opacity: 0.35;
 
     background:
@@ -77,6 +80,7 @@
     content: "";
 
     position: absolute;
+
     top: -2px;
     left: 0;
     right: 0;
@@ -109,16 +113,18 @@
 
 .footer-premium .wrap {
     width: min(1180px, calc(100% - 48px));
+
     margin: 0 auto;
 }
 
 
 /* =========================================================
-   GRID PRINCIPAL
+   GRID
 ========================================================= */
 
 .footer-premium-grid {
     position: relative;
+
     z-index: 2;
 
     display: grid;
@@ -142,7 +148,8 @@
 
     padding: 12px 36px;
 
-    border-right: 1px solid rgba(8, 63, 107, 0.55);
+    border-right:
+        1px solid rgba(8, 63, 107, 0.55);
 }
 
 .footer-nav {
@@ -151,6 +158,7 @@
 
 .footer-social {
     padding-right: 0;
+
     border-right: 0;
 }
 
@@ -170,6 +178,7 @@
         serif;
 
     font-size: 20px;
+
     font-weight: 600;
 
     letter-spacing: 3px;
@@ -218,12 +227,13 @@
 
 .footer-col > a:hover {
     color: #0786d1;
+
     transform: translateX(3px);
 }
 
 
 /* =========================================================
-   LOGO CENTRAL
+   LOGO
 ========================================================= */
 
 .footer-logo-area {
@@ -236,6 +246,7 @@
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -248,9 +259,11 @@
     display: block;
 
     width: 100%;
+
     max-width: 430px;
 
     height: auto;
+
     max-height: 190px;
 
     object-fit: contain;
@@ -267,17 +280,20 @@
     color: #073d72;
 
     font-size: 12px;
+
     font-weight: 800;
 
     letter-spacing: 1.5px;
+
     line-height: 1.5;
 
     text-align: center;
 }
 
 .footer-pillars span {
-    color: #087fc6;
     margin: 0 4px;
+
+    color: #087fc6;
 }
 
 
@@ -296,6 +312,7 @@
         serif;
 
     font-size: 17px;
+
     font-style: italic;
 
     line-height: 1.4;
@@ -340,6 +357,7 @@
     color: #ffffff;
 
     font-size: 14px;
+
     font-weight: 800;
 
     text-decoration: none;
@@ -347,18 +365,6 @@
     box-shadow:
         inset 0 0 0 2px rgba(255, 255, 255, 0.28),
         0 6px 12px rgba(4, 53, 89, 0.18);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.social-buttons a:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        inset 0 0 0 2px rgba(255, 255, 255, 0.35),
-        0 9px 17px rgba(4, 53, 89, 0.26);
 }
 
 
@@ -374,6 +380,7 @@
     color: #49677d;
 
     font-size: 12px;
+
     font-weight: 700;
 
     line-height: 1.65;
@@ -386,6 +393,7 @@
 
 .footer-social .footer-whatsapp {
     width: 100%;
+
     max-width: 245px;
 
     min-height: 48px;
@@ -397,6 +405,7 @@
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     border: 1px solid #6bb8e5;
@@ -428,45 +437,63 @@
     color: #ffffff;
 
     transform: translateY(-2px);
-
-    box-shadow:
-        0 13px 25px rgba(4, 65, 108, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 
-/* ÍCONE VERDADEIRO DO WHATSAPP */
+/* =========================================================
+   ÍCONE DO WHATSAPP
+========================================================= */
 
-.wa-icon {
-    width: 21px;
-    height: 21px;
+.footer-social .footer-whatsapp .wa-icon {
+    width: 22px;
+    height: 22px;
+
+    flex: 0 0 22px;
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 21px;
+    color: #ffffff;
 }
 
-.wa-icon svg {
+.footer-social .footer-whatsapp .wa-icon svg {
     display: block;
 
-    width: 21px;
-    height: 21px;
+    width: 22px !important;
+    height: 22px !important;
 
-    fill: #ffffff;
+    fill: #ffffff !important;
+
+    overflow: visible;
 }
 
+.footer-social .footer-whatsapp .wa-icon svg path {
+    fill: #ffffff !important;
+}
+
+
+/* TEXTO BOTÃO */
+
 .footer-whatsapp strong {
+    color: #ffffff !important;
+
     font-size: 11px;
+
     font-weight: 800;
 
     letter-spacing: 0.3px;
 }
 
+
+/* SETA */
+
 .wa-arrow {
+    color: #ffffff;
+
     font-size: 19px;
+
     line-height: 1;
 }
 
@@ -479,6 +506,7 @@
     position: relative;
 
     width: 100%;
+
     min-height: 94px;
 
     background:
@@ -494,13 +522,15 @@
             #031b35 100%
         );
 
-    border-bottom: 1px solid #1c83c0;
+    border-bottom:
+        1px solid #1c83c0;
 }
 
 .footer-bottom-premium::before {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     opacity: 0.16;
@@ -523,6 +553,7 @@
 
 .footer-bottom-content {
     position: relative;
+
     z-index: 2;
 
     min-height: 94px;
@@ -544,40 +575,55 @@
    COPYRIGHT
 ========================================================= */
 
-.footer-copyright {
+.footer-premium .footer-copyright {
     display: flex;
 
     flex-direction: column;
 
     align-items: flex-start;
+
     justify-content: center;
 
-    gap: 6px;
+    gap: 5px;
 }
 
-.footer-copyright p {
-    margin: 0;
 
-    color: #d6e1e8;
+/*
+   IMPORTANTE:
+   força a cor clara para impedir que outro CSS do site
+   deixe o texto escuro.
+*/
+
+.footer-premium .footer-bottom-premium
+.footer-copyright p {
+    margin: 0 !important;
+
+    color: #dcecf5 !important;
 
     font-size: 10px;
+
+    font-weight: 400;
 
     line-height: 1.4;
 }
 
-.footer-developer {
-    color: #a9c9dc !important;
+
+.footer-premium .footer-bottom-premium
+.footer-copyright .footer-developer {
+    color: #a9dcf6 !important;
 }
 
-.footer-developer strong {
-    color: #ffffff;
+
+.footer-premium .footer-bottom-premium
+.footer-copyright .footer-developer strong {
+    color: #ffffff !important;
 
     font-weight: 700;
 }
 
 
 /* =========================================================
-   LOSANGO CENTRAL
+   LOSANGO
 ========================================================= */
 
 .footer-diamond {
@@ -599,6 +645,7 @@
     top: 50%;
 
     width: 145px;
+
     height: 1px;
 
     background:
@@ -624,31 +671,31 @@
    LINKS LEGAIS
 ========================================================= */
 
-.footer-legal {
+.footer-premium .footer-legal {
     display: flex;
 
     align-items: center;
+
     justify-content: flex-end;
 
     gap: 17px;
 }
 
-.footer-legal a {
-    color: #c6d6e0;
+.footer-premium .footer-legal a {
+    color: #dcecf5 !important;
 
     font-size: 10px;
 
     text-decoration: none;
-
-    transition: color 0.2s ease;
 }
 
-.footer-legal a:hover {
-    color: #ffffff;
+.footer-premium .footer-legal a:hover {
+    color: #ffffff !important;
 }
 
-.footer-legal i {
+.footer-premium .footer-legal i {
     width: 1px;
+
     height: 13px;
 
     background:
@@ -833,7 +880,7 @@
         gap: 16px;
     }
 
-    .footer-copyright {
+    .footer-premium .footer-copyright {
         align-items: center;
 
         text-align: center;
@@ -843,7 +890,7 @@
         display: none;
     }
 
-    .footer-legal {
+    .footer-premium .footer-legal {
         justify-content: center;
 
         flex-wrap: wrap;
@@ -879,11 +926,13 @@
 
     .social-buttons a {
         width: 44px;
+
         height: 44px;
     }
 
+    .footer-premium .footer-bottom-premium
     .footer-copyright p,
-    .footer-legal a {
+    .footer-premium .footer-legal a {
         font-size: 9px;
     }
 }
